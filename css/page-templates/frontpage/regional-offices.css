@@ -1,0 +1,214 @@
+.home_equipments {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home_equipments .equipment_item {
+  padding: 5px;
+  position: relative;
+}
+.home_equipments .equipment_item:first-child {
+  margin-left: 0;
+}
+.home_equipments .equipment_item:last-child {
+  margin-right: 0;
+}
+
+.home_equipments .equipment_item a {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 15px;
+  height: 44.44444444444444vh;
+}
+.equipment_item .image_part img {
+  width: 100%;
+  height: auto;
+}
+.home_equipments .equipment_item .title_part {
+  text-align: center;
+}
+
+.section_offices .section_title {
+  margin-bottom: 40px;
+}
+
+.section_offices .section2_container {
+  padding-bottom: 120px;
+}
+
+.regional_office_item {
+  position: relative;
+  padding-top: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.regional_office_item .image_part {
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  margin-left: -25px;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.regional_office_item .image_part img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: 5px solid #fff;
+}
+
+.regional_office_item .bg_content_part {
+  padding: 54px 16px 10px 16px;
+  background: #fff;
+  min-height: 375px;
+  border-radius: 4px;
+}
+
+.regional_office_item .title_part {
+  text-align: center;
+  min-height: 62px;
+  padding-bottom: 5px;
+}
+
+.regional_office_item .item_title {
+  color: #353535;
+  font-size: 18px;
+  line-height: 1.3em;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.regional_office_item .item_subtitle {
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #afafaf;
+}
+
+.regional_office_item .parts_separator {
+  height: 2px;
+  width: 100%;
+  background: #f0f0f0;
+}
+
+.regional_office_item .height_control {
+  min-height: 232px;
+}
+
+.regional_office_item .contacts_part {
+  padding: 20px 0px;
+}
+
+.regional_office_item .contacts_part > div {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 40px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  color: #353535;
+}
+
+.regional_office_item .contacts_part > div:last-of-type {
+  margin-bottom: 0px;
+  min-height: inherit;
+}
+
+.regional_office_item .contacts_part > div .icon {
+  width: 30px;
+  text-align: center;
+}
+
+.regional_office_item .contacts_part > div .icon::before {
+  font-family: "anatol";
+  height: 24px;
+  width: 20px;
+  display: inline;
+  color: #ab1a1f;
+}
+
+.regional_office_item .contacts_part .item_address .icon::before {
+  content: "\e822";
+  font-size: 18px;
+}
+
+.regional_office_item .contacts_part .item_phone .icon::before {
+  content: "\e823";
+  font-size: 18px;
+}
+
+.regional_office_item .contacts_part .item_fax .icon::before {
+  content: "\e825";
+  font-size: 16px;
+}
+
+.regional_office_item .contacts_part .item_email .icon::before {
+  content: "\e81c";
+  font-size: 16px;
+}
+
+.regional_offices .slick-slider {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: initial;
+}
+
+.regional_offices .slick-slide {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.find_content_row {
+  margin-top: 40px;
+}
+
+.find_presses .fp_title {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: #353535;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+}
+
+.find_presses .fp_title::after {
+  display: block;
+  background: #ab1a1f;
+  width: 40px;
+  height: 4px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.find_my_new_press {
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+.find_my_new_press::before {
+  font-family: "anatol";
+  content: "\E819";
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 7px;
+}
+
+.find_presses .pfs_toggle_header {
+  display: none !important;
+}
+
+.find_presses .pfs_inner_content {
+  padding-top: 60px;
+}
+
+.find_presses .pfs_toggle_content {
+  display: block !important;
+  height: auto !important;
+}

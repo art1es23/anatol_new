@@ -1,0 +1,116 @@
+/* Two blocks */
+.section_two_cont {
+  width: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.two_block {
+  width: 50%;
+  padding: 7.5vh 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Testimonials Left Content - Slider Blog (latest) */
+.article-slide {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 -15px;
+}
+.article-slide .article-item {
+  width: 48%;
+  background: #fff;
+}
+.article-slide .slick-slide {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.article-slide .article-item img {
+  max-width: 100%;
+  height: auto;
+}
+.article_desc {
+  padding: 1.15rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.blog-title {
+  color: #363636;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.testimonials {
+  gap: 1.5vw;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.two_block.latest_blogs {
+  background-image: url(../../images/blog-bg.jpg) !important;
+  background-position: 50%;
+  background-size: cover;
+}
+
+/* .two_block_head {
+  margin-bottom: 40px;
+  font-family: "Roboto Condensed", sans-serif;
+} */
+.two_block_title {
+  font-weight: 700;
+  font-size: 2vw;
+}
+.two_block_pretitle {
+  color: #2a2a2a;
+}
+.feedbacks-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.feedbacks-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  width: calc(100% - 20px);
+  position: relative;
+  padding-left: 2rem;
+}
+.feedbacks-item::before {
+  content: "";
+  display: block;
+  top: 50%;
+  left: 0;
+  transform: translate(0, 50%);
+  height: 100%;
+  width: 2rem;
+  background-color: #ab1a1f;
+}
+
+.feedbacks-item .image_item {
+  color: #a2a2a2;
+  margin-right: 15px;
+  background: url(../images/quote-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+}
+.feedbacks-item .blog-title {
+  color: #363636;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.feedbacks-item .feedbacks_desc {
+  width: calc(100% - 20px);
+}
+/* end */

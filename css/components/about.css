@@ -1,0 +1,227 @@
+/* section {
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+} */
+/* .about_us_content {
+  max-width: 75%;
+  width: 100%;
+  margin: 7.5rem auto;
+  display: flex;
+  gap: 7.5vw;
+}
+
+.about_us_content .about_us_text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about_us_content .section_title {
+  text-align: center;
+  text-shadow: none;
+}
+.about_us_content .section_title h2 {
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 4vw;
+  text-shadow: none;
+}
+.about_us_content .about_content {
+  font-size: 1vw;
+  line-height: 1.4;
+  text-align: justify;
+}
+.about_us_content .about_us_img {
+  width: 40%;
+}
+.about_us_content .about_us_img img {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+.about_us_content .about_img {
+  position: relative;
+  z-index: 2;
+}
+.about_us_content .about_img:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 2px solid #cd2122;
+  width: 100%;
+  height: 100%;
+  left: 2.5rem;
+  top: 2.5rem;
+} */
+
+/* .business_cont .section_title {
+  text-align: left;
+  font-size: 2vw;
+}
+.business_opportunities {
+  background: #efefef;
+  display: flex;
+  align-items: center;
+}
+.business_opportunities .business_img {
+  width: 60%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.business_opportunities .business_img img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.business_opportunities .business_content {
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+.business_opportunities .business_cont {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+  padding: 4vw;
+  transform: translateX(-25%);
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+} */
+
+/* .our_map {
+  width: 100%;
+  height: 720px;
+}
+.our_map .section_title {
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 1.5;
+  font-weight: 900;
+  text-align: center;
+}
+
+.section_title .red {
+  color: #cd2122;
+}
+.our_map .section_title span.line1,
+.our_map .section_title span.line5 {
+  font-size: 54px;
+  letter-spacing: 2px;
+}
+.service_full {
+  background-image: url(/wp-content/themes/anatol/images/head-bg/volt.jpg);
+  min-height: 250px;
+}
+.service_full::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.service_full .container {
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto;
+  gap: 1.5vw;
+}
+
+section.service_full .section_title {
+  color: #fff;
+  text-align: center;
+}
+section.service_full .section_content {
+  text-align: center;
+  color: #fff;
+  font-size: 1.1vw;
+  max-width: 740px;
+  margin: 0 auto;
+}
+section.service_full .section_content a {
+  color: #fff !important;
+}
+section.service_full .section_button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 2vw;
+}
+section.service_full .section_button a.button {
+  border: 0;
+  background: transparent;
+}
+section.service_full .section_button a:hover,
+section.service_full .section_button a:active,
+section.service_full .section_button a:focus {
+  text-decoration: none;
+  background: #ab1a1f;
+  color: #fff;
+}
+section.service_full .section_button a:hover::before,
+section.service_full .section_button a:active::before,
+section.service_full .section_button a:focus::before {
+  text-decoration: none;
+} */
+
+/* .anatol_map {
+  background-image: url(/wp-content/themes/anatol/images/map-full.jpg);
+  display: flex;
+}
+
+.anatol_map .container {
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto;
+  gap: 3.5vw;
+}
+.anatol_map .section_title {
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.anatol_map .section_title .brake {
+  display: block;
+  font-size: 2.85vw;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.map_cont {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.map_cont .map_block {
+  width: calc(100% / 3);
+  color: #fff;
+  text-align: center;
+}
+.map_cont .map_number {
+  font-size: 6vw;
+  font-weight: 900;
+}
+.map_cont .map_text {
+  font-size: 1.75vw;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.numbers {
+  color: #fff;
+} */

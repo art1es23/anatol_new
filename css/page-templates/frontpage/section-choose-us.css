@@ -1,0 +1,36 @@
+/* About section (choose us) */
+
+.section-about--wrapper {
+  margin: max(5vh, 2.5rem) auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 5vw;
+}
+
+.section-about__item {
+  width: calc((100% - 7.5vw) / 2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.section-about .section_title {
+  font-size: 2.2vw;
+  color: #252525;
+  line-height: 1;
+  text-shadow: 0em 0.18em 0.27em rgb(0 0 0 / 24%);
+  /* margin-bottom: 30px; */
+  text-align: left;
+}
+.section-about .description_txt {
+  font-family: "Lato", sans-serif;
+  font-size: 1.042vw;
+  line-height: 1.3;
+}
+
+.anatol_flag img {
+  width: 100%;
+}
+/* end */

@@ -1,0 +1,50 @@
+.anatol_map {
+  background-image: url(/wp-content/themes/anatol/images/map-full.jpg);
+  /* min-height: 700px; */
+  /* padding: 100px 0; */
+  display: flex;
+  /* align-items: center; */
+}
+
+.anatol_map .container {
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto;
+  gap: 3.5vw;
+}
+.anatol_map .section_title {
+  color: #fff;
+  text-align: center;
+  /* margin: 60px auto; */
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.anatol_map .section_title .brake {
+  display: block;
+  font-size: 2.85vw;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.map_cont {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  /* margin-bottom: 80px; */
+}
+.map_cont .map_block {
+  width: calc(100% / 3);
+  color: #fff;
+  text-align: center;
+}
+.map_cont .map_number {
+  font-size: 6vw;
+  font-weight: 900;
+}
+.map_cont .map_text {
+  font-size: 1.75vw;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.numbers {
+  color: #fff;
+}

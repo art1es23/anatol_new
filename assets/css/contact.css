@@ -1,0 +1,254 @@
+body {
+  background: #333333;
+}
+.wrapper {
+  background-color: #333333;
+}
+.container {
+  display: block;
+  padding-left: 29px;
+  padding-right: 29px;
+  background-color: #ffffff;
+}
+.cont-tit {
+  color: #ad3232;
+  font-family: "Roboto Slab";
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 0;
+  padding-top: 30px;
+}
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.contacts p {
+  color: #ad3232;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 18px;
+  font-weight: 700;
+}
+.cont {
+  width: 33.333333%;
+}
+.cont > div > div {
+  display: inline-block;
+  width: 48px;
+  margin-bottom: 12px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 600;
+  color: #494949;
+}
+.cont > div > a {
+  color: #494949;
+  text-decoration: none;
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+.address {
+  margin-top: 42px;
+  padding-bottom: 18px;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 18px;
+  color: #494949;
+}
+.container-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.fb-item {
+  width: 40%;
+}
+.fb-item > p {
+  margin-top: 0;
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-size: 24px;
+  color: #fff;
+}
+.fb-item > span {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 300;
+  color: #bfbfbf;
+}
+.feedback {
+  position: relative;
+  width: 60%;
+  padding-right: 76px;
+}
+.form-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.left-wrap {
+  width: 50%;
+}
+.right-wrap {
+  width: 50%;
+}
+.bottom-wrap {
+  width: 100%;
+}
+.name-in-wrap,
+.email-in-wrap,
+.phone-in-wrap {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.message-in-wrap {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.recaptcha-wrap {
+  margin-bottom: 20px;
+}
+.button-wrap {
+  margin-bottom: 20px;
+}
+
+.name-in,
+.email-in,
+.phone-in,
+.message-in {
+  background: none;
+  outline: none;
+  border: 1px solid #717171;
+  border-radius: 5px;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 14px;
+  color: #bfbfbf;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.name-in,
+.email-in,
+.phone-in {
+  height: 26px;
+  width: 94%;
+}
+.message-in {
+  width: 94%;
+  height: 130px;
+  max-height: 200px;
+  max-width: 94%;
+  overflow: hidden;
+}
+.submit-btn {
+  height: 36px;
+  width: 132px;
+  background-color: #ad3232;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 300;
+  -webkit-appearance: none;
+}
+.submit-btn:hover {
+  background-color: #c94e4e;
+}
+
+span.wpcf7-not-valid-tip {
+  color: #ad3232;
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+div.wpcf7-validation-errors {
+  border: none;
+  color: #ad3232;
+}
+div.wpcf7-response-output {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+div.wpcf7-mail-sent-ok {
+  border: none;
+  color: #bfbfbf;
+}
+div.wpcf7 .ajax-loader {
+  background-image: url("../../images/icons/Gray_circles_rotate.gif");
+  background-size: contain;
+  width: 34px;
+  height: 34px;
+}
+
+@media (max-width: 1199px) {
+  .left-wrap {
+    width: 100%;
+  }
+  .right-wrap {
+    width: 100%;
+  }
+  .name-in-wrap,
+  .email-in-wrap,
+  .phone-in-wrap {
+    margin-right: 0;
+  }
+  .message-in-wrap {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1199px) and (min-width: 769px) {
+  .feedback {
+    width: 56%;
+    padding-right: 0;
+    margin-right: 4%;
+  }
+}
+@media (max-width: 768px) {
+  .contacts {
+    display: block;
+  }
+  .cont {
+    width: 94%;
+    margin-bottom: 24px;
+  }
+  .contacts p,
+  .cont > div > div {
+    margin-bottom: 6px;
+  }
+  .container-contact {
+    display: block;
+  }
+  .fb-item,
+  .feedback {
+    width: 94%;
+  }
+  .feedback {
+    margin-top: 24px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 390px) {
+  .recaptcha-wrap,
+  #rc-imageselect,
+  .g-recaptcha {
+    transform: scale(0.77);
+    -webkit-transform: scale(0.77);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+  }
+  .recaptcha-wrap {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,100 @@
+.financing_info_text {
+  width: 100%;
+  /* margin: 60px auto 0 auto;
+  padding: 0 30px; */
+}
+.more_finance {
+  text-align: center;
+  /* padding-bottom: 20px; */
+}
+.more_finance h2 {
+  font-family: "Roboto", sans-serif;
+  color: #353535;
+  font-size: 30px;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  position: relative;
+  /* margin-top: 10px; */
+}
+.more_finance h2::before {
+  display: block;
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: #ab1a1f;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* margin-left: -20px; */
+}
+.item_finance_info {
+  padding-left: 40px;
+  position: relative;
+  /* padding-bottom: 5px; */
+}
+.item_finance_info::before {
+  display: flex;
+  width: 27px;
+  height: 27px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background: rgba(240, 203, 203, 0.29);
+  font-family: "anatol";
+  font-size: 11px;
+  font-weight: bold;
+  color: #ab1a1f;
+  content: "\E830";
+  border-radius: 100px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+.item_finance_info h3 {
+  font-weight: bold;
+}
+
+section.available_opportunities {
+  background-image: linear-gradient(
+      180deg,
+      rgba(27, 31, 37, 0.2) 0%,
+      rgb(27 31 37 / 71%) 100%
+    ),
+    url(../../images/image/anatol_poster1.jpg);
+  min-height: 600px;
+  /* padding: 100px 0; */
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.available_opportunities--wrapper {
+  margin: 7.5vw auto;
+  gap: 3vw;
+}
+
+section.available_opportunities h2 {
+  font-size: 3.2vw;
+  color: #fff;
+  /* margin-bottom: 30px; */
+}
+
+section.available_opportunities ul {
+  display: flex;
+  width: 100%;
+  /* margin: 30px 0; */
+  /* padding: 0px; */
+  /* margin-bottom: 50px; */
+  justify-content: space-around;
+  list-style: none;
+}
+section.available_opportunities ul li {
+  width: calc(100% / 3);
+}
+.section_content p {
+  margin: 1vw auto;
+}
