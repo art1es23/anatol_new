@@ -1,4 +1,4 @@
-anatol tv .page-template-page-template-anatol-tv .nav-tabs,
+.page-template-page-template-anatol-tv .nav-tabs,
 .post-type-archive-anatoltv .nav-tabs {
   display: flex;
   box-shadow: 0 4px 35.26px 7.74px rgb(106 106 106 / 10%);
@@ -18,12 +18,8 @@ anatol tv .page-template-page-template-anatol-tv .nav-tabs,
   padding: 15px 0;
 }
 
-.page-template-page-template-anatol-tv
-  .nav-tabs
-  li:last-of-type
-  .post-type-archive-anatoltv
-  .nav-tabs
-  li:last-of-type {
+.page-template-page-template-anatol-tv .nav-tabs li:last-of-type,
+.post-type-archive-anatoltv .nav-tabs li:last-of-type {
   border-right: none;
 }
 .page-template-page-template-anatol-tv .nav-tabs li a,

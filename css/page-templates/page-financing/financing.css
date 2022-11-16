@@ -64,7 +64,7 @@ section.available_opportunities {
       rgba(27, 31, 37, 0.2) 0%,
       rgb(27 31 37 / 71%) 100%
     ),
-    url(../../images/image/anatol_poster1.jpg);
+    url(../../../../images/image/anatol_poster1.jpg);
   min-height: 600px;
   /* padding: 100px 0; */
   display: flex;

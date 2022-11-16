@@ -150,9 +150,9 @@ function theme_stylesheets() {
 	// 	wp_enqueue_style( 'events-css', get_template_directory_uri() . '/css/components/events.css' );
 	// }
 	//financing
-	if ( is_page('2204') || is_page('financing')) {
-		wp_enqueue_style( 'financing-css', get_template_directory_uri() . '/css/components/financing.css' );
-	}
+	// if ( is_page('2204') || is_page('financing')) {
+	// 	wp_enqueue_style( 'financing-css', get_template_directory_uri() . '/css/components/financing.css' );
+	// }
 	//Support
 	if ( is_page('2037') || is_page('1513') || is_page('support')) {
 		wp_enqueue_style( 'support-css', get_template_directory_uri() . '/css/components/support.css' );
