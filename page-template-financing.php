@@ -7,6 +7,7 @@ get_header(); ?>
 <style>
 <?php include 'css/page-templates/page-financing/financing.css';
 include 'css/components/another-equipments.css';
+include 'css/components/financing-options.css';
 include 'css/components/get-in-touch.css';
 ?>
 </style>
@@ -15,10 +16,10 @@ include 'css/components/get-in-touch.css';
 
 <section id="available_opportunities" class="available_opportunities fix-bg">
     <div class="available_opportunities--wrapper container">
-        <h2 class="section_title fadein">
+        <h2 class="section_title">
             <?PHP echo get_field("f_experience_title"); ?>
         </h2>
-        <div class="section_content fadein">
+        <div class="section_content">
             <?PHP echo get_field("f_experience_content"); ?>
         </div>
     </div>

@@ -1,61 +1,44 @@
 	<section class="section-home-press" id="section2">
 	    <div class="tabs">
-
 	        <input type="radio" id="tab1" name="tab-control" checked>
 	        <input type="radio" id="tab2" name="tab-control">
 	        <input type="radio" id="tab3" name="tab-control">
 	        <input type="radio" id="tab4" name="tab-control">
 	        <input type="radio" id="tab5" name="tab-control">
+
 	        <ul>
-	            <li title="Screen Printing Presses"><label for="tab1" role="button">
+	            <li title="Screen Printing Presses">
+	                <label for="tab1" role="button">
+	                    <span>Screen Printing Presses</span>
+	                </label>
+	            </li>
+	            <li title="Conveyor Dryers">
+	                <label for="tab2" role="button">
+	                    <span>Conveyor Dryers</span>
+	                </label>
+	            </li>
+	            <li title="Flash Cure Unit">
+	                <label for="tab3" role="button">
+	                    <span>Flash Cure Unit</span>
+	                </label>
+	            </li>
 
-	                    <span>Screen Printing Presses</span></label></li>
-	            <li title="Conveyor Dryers"><label for="tab2" role="button">
+	            <li title="Pre-Press Equipment">
+	                <label for="tab4" role="button">
+	                    <span>Pre-Press Equipment</span>
+	                </label>
+	            </li>
 
-	                    <span>Conveyor Dryers</span></label></li>
-	            <li title="Flash Cure Unit"><label for="tab3" role="button">
-
-	                    <span>Flash Cure Unit</span></label></li>
-
-	            <li title="Pre-Press Equipment"><label for="tab4" role="button">
-
-	                    <span>Pre-Press Equipment</span></label></li>
-
-	            <li title="Printing Accessories"><label for="tab5" role="button">
-
-	                    <span>Printing Accessories</span></label></li>
+	            <li title="Printing Accessories">
+	                <label for="tab5" role="button">
+	                    <span>Printing Accessories</span>
+	                </label>
+	            </li>
 	        </ul>
-
 
 	        <div class="content">
 	            <div class="tab_item">
 	                <div class="tab_item_cont home_equipments">
-
-	                    <!--
-								<div class="equipment_item">
-									<a href="#">
-										<div class="image_part"><img width="410" height="286" src="https://anatol.com/wp-content/uploads/2020/02/home-Volt.jpg" class="" alt=""/></div>
-										<div class="equipment_info">
-											<div class="title_part">Professional Electric Automatic VOLT</div>	
-											<div class="equipment-footer">
-											  <div class="main-parameters">
-												<div class="param-left">
-													<i class="fas fa-expand"></i>
-													<span class="label-name">Maximum print area</span>
-													<span class="value d-block">15” x 16” up to 20” x 28”</span>
-												</div>
-												<div class="param-right">
-													<i class="fas fa-fill-drip"></i>
-													<span class="label-name">Stations/colors</span>
-													<span class="value d-block">6/4 up to 20/18</span>
-												</div>
-											  </div>
-											</div>
-										</div>
-									</a>
-								</div>-->
-
-
 
 	                    <?php $the_query = new WP_Query(array('post_type' => 'anatol-products-pres' )); ?>
 	                    <?php if ($the_query->have_posts()) : ?>
@@ -96,20 +79,6 @@
 	            </div>
 	            <div class="tab_item">
 	                <div class="tab_item_cont home_equipments">
-	                    <!--
-			<div class="equipment_item">
-				<a href="#" class="">
-					<div class="image_part">
-						<img width="300" height="210" src="https://anatol.com/wp-content/uploads/2016/04/images_product_conveyor_dryers_electric_conveyor_dryers_solutions_Solutions_electric_dryer-300x210.png" class="wp-post-image" alt="Solutions Electric Dryer"></div>
-					<div class="content_part">
-						<div class="c_icon">
-							<div class="c_default"></div>
-						</div>
-						<div class="equipment_box_title">Solutions Electric Dryer</div>
-						<div class="el_cat"><span>Category:</span> Conveyor Dryers</div>
-					</div>
-				</a>
-			</div>-->
 
 	                    <?php $the_query = new WP_Query(array('post_type' => 'anatol-products-conv' )); ?>
 	                    <?php if ($the_query->have_posts()) : ?>
@@ -133,7 +102,6 @@
 	                    <?php wp_reset_postdata(); ?>
 	                    <?php endif; ?>
 
-
 	                </div>
 	            </div>
 	            <div class="tab_item">
@@ -153,8 +121,6 @@
 	                                <div class="title_part">
 	                                    <h3 class="item_title"><?php the_title(); ?></h3>
 	                                </div>
-
-
 	                            </div>
 	                        </a>
 	                    </div>
@@ -185,8 +151,6 @@
 	                            </div>
 	                        </a>
 	                    </div>
-
-
 	                    </a>
 	                </div>
 	            </div>

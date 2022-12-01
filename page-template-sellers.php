@@ -4,7 +4,7 @@ get_header(); ?>
 <?php get_template_part('template-parts/template-part-head-bg-black'); ?>
 <section class="sellers_content" id="sellers_content">
     <div class="sellers_body_content">
-        <div class="sellers_body_text anim_fade">
+        <div class="sellers_body_text">
             <div class="section_title">
                 <h2><?php the_field('sellers_first_section_title'); ?></h2>
             </div>
@@ -12,7 +12,7 @@ get_header(); ?>
                 <?php the_field('sellers_first_section_content'); ?>
             </div>
         </div>
-        <div class="sellers_body_img anim_fade">
+        <div class="sellers_body_img">
             <div class="sellers_img"><img loading="lazy" class="lozad" src="<?php the_field('first_section_img'); ?>"
                     alt=""></div>
         </div>

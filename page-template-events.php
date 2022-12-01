@@ -58,7 +58,7 @@ include 'css/components/get-in-touch.css';
       foreach($res as $uv):?>
         <?php if(goingOn(get_field("starttime", $uv->ID), get_field("endtime", $uv->ID))) : ?>
         <?php $cntgoing++;  ?>
-        <div class="event_block event event_current anim_fade">
+        <div class="event_block event event_current">
 
             <?php	$attachment_id = get_field('cover', $uv->ID);
             $size = "large";
@@ -67,23 +67,23 @@ include 'css/components/get-in-touch.css';
           ?>
 
             <div class="event_image" style="background-image:url('<?php echo $cover[0]; ?>')">
-                <div class="coming_soon_text_top">
-                    <span>
-                        <?PHP _e('Coming soon'); ?>
-                    </span>
-                </div>
+                <!-- <div class="coming_soon_text_top"> -->
+                <span class="coming_soon_text_top">
+                    <?PHP _e('Coming soon'); ?>
+                </span>
+                <!-- </div> -->
             </div>
 
             <div class="event_info card_info">
                 <div class="event_info_cont">
-                    <div class="coming_soon_text">
-                        <span>
-                            <?PHP _e('Coming soon'); ?>
-                        </span>
-                    </div>
-                    <div class="event_title">
-                        <h3><?php echo get_the_title($uv->ID); ?></h3>
-                    </div>
+                    <!-- <div class="coming_soon_text"> -->
+                    <span class="coming_soon_text">
+                        <?PHP _e('Coming soon'); ?>
+                    </span>
+                    <!-- </div> -->
+                    <!-- <div class="event_title"> -->
+                    <h3 class="event_title"><?php echo get_the_title($uv->ID); ?></h3>
+                    <!-- </div> -->
 
                     <div class="event_separator"></div>
 
@@ -145,9 +145,9 @@ include 'css/components/get-in-touch.css';
 
                         <?PHP if(!empty(get_field("website", $uv->ID))) {?>
                         <!-- <div class="subinfo_separator"></div> -->
-                        <div class="cs_website">
-                            <?PHP echo '<a href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
-                        </div>
+                        <!-- <div class="cs_website"> -->
+                        <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
+                        <!-- </div> -->
                         <?PHP } ?>
                     </div>
 
@@ -166,7 +166,7 @@ include 'css/components/get-in-touch.css';
         foreach($res as $uv) : ?>
         <?php if(goingFuture(get_field("starttime", $uv->ID), get_field("endtime", $uv->ID))) : ?>
         <?php $rowfcount++; ?>
-        <div class="event_block event event_future anim_fade">
+        <div class="event_block event event_future">
 
             <?php	$attachment_id = get_field('cover', $uv->ID);
               $size = "large";
@@ -174,23 +174,23 @@ include 'css/components/get-in-touch.css';
               $image2 = wp_get_attachment_image_src( $attachment_id, $size2 );
             ?>
             <div class="event_image" style="background-image:url('<?php echo $cover[0]; ?>')">
-                <div class="coming_soon_text_top">
-                    <span>
-                        <?PHP _e('Coming soon'); ?>
-                    </span>
-                </div>
+                <!-- <div class="coming_soon_text_top"> -->
+                <span class="coming_soon_text_top">
+                    <?PHP _e('Coming soon'); ?>
+                </span>
+                <!-- </div> -->
             </div>
 
             <div class="event_info card_info">
                 <div class="event_info_cont">
-                    <div class="coming_soon_text">
-                        <span>
-                            <?PHP _e('Coming soon'); ?>
-                        </span>
-                    </div>
-                    <div class="event_title">
-                        <h3><?php echo get_the_title($uv->ID); ?></h3>
-                    </div>
+                    <!-- <div class="coming_soon_text"> -->
+                    <span class="coming_soon_text">
+                        <?PHP _e('Coming soon'); ?>
+                    </span>
+                    <!-- </div> -->
+                    <!-- <div class="event_title"> -->
+                    <h3 class="event_title"><?php echo get_the_title($uv->ID); ?></h3>
+                    <!-- </div> -->
                     <div class="event_separator"></div>
 
                     <?PHP if(!empty(get_field("website", $uv->ID)) || !empty(strip_tags($uv->post_content))) { ?>
@@ -251,9 +251,9 @@ include 'css/components/get-in-touch.css';
 
                         <?PHP if(!empty(get_field("website", $uv->ID))) {?>
                         <!-- <div class="subinfo_separator"></div> -->
-                        <div class="cs_website">
-                            <?PHP echo '<a href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
-                        </div>
+                        <!-- <div class="cs_website"> -->
+                        <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
+                        <!-- </div> -->
                         <?PHP } ?>
                     </div>
                     <?PHP } ?>
@@ -271,7 +271,7 @@ include 'css/components/get-in-touch.css';
           foreach($res as $uv)  : ?>
         <?php if(goingOff(get_field("starttime", $uv->ID), get_field("endtime", $uv->ID))) : ?>
         <?php $rowcount++; ?>
-        <div class="event_block event event_past anim_fade">
+        <div class="event_block event event_past">
 
             <?php $attachment_id = get_field('cover', $uv->ID);
               $size = "large";
@@ -281,14 +281,14 @@ include 'css/components/get-in-touch.css';
             <div class="event_image" style="background-image:url('<?php echo $cover[0]; ?>')"></div>
             <div class="event_info card_info">
                 <div class="event_info_cont">
-                    <div class="coming_soon_text">
-                        <span>
-                            <?PHP _e('Coming soon'); ?>
-                        </span>
-                    </div>
-                    <div class="event_title">
-                        <h3><?php echo get_the_title($uv->ID); ?></h3>
-                    </div>
+                    <!-- <div class="coming_soon_text"> -->
+                    <span class="coming_soon_text">
+                        <?PHP _e('Coming soon'); ?>
+                    </span>
+                    <!-- </div> -->
+                    <!-- <div class="event_title"> -->
+                    <h3 class="event_title"><?php echo get_the_title($uv->ID); ?></h3>
+                    <!-- </div> -->
                     <div class="event_separator"></div>
 
                     <?PHP if(!empty(get_field("website", $uv->ID)) || !empty(strip_tags($uv->post_content))) { ?>
@@ -345,9 +345,9 @@ include 'css/components/get-in-touch.css';
 
                         <?PHP if(!empty(get_field("website", $uv->ID))) {?>
                         <!-- <div class="subinfo_separator"></div> -->
-                        <div class="cs_website">
-                            <?PHP echo '<a href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
-                        </div>
+                        <!-- <div class="cs_website"> -->
+                        <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
+                        <!-- </div> -->
                         <?PHP } ?>
                     </div>
                     <?PHP } ?>

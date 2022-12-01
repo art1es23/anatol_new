@@ -2,13 +2,20 @@
 /* Template Name: Presses old*/
 get_header(); ?>
 
+<style>
+<?php include 'css/page-templates/page-presses/presses-content.css';
+include 'css/page-templates/page-presses/automatic-presses.css';
+include 'css/page-templates/page-presses/manual-presses.css';
+include 'css/page-templates/page-presses/specialty-automatic-presses.css';
+?>
+</style>
+
 <?php get_template_part('template-parts/template-part-head-bg-black'); ?>
 <!-- <?php //get_template_part('template-parts/template-part-head-pr'); ?> -->
 
 <section class="presses_content" id="presses_content">
 
     <div class="presses_content--wrapper container">
-        <!-- <div class="presses_content_row"> -->
         <div class="presses_item">
             <a href="#automatic-presses" class="linkskroll equipment_item">
                 <div class="image_item">
@@ -64,9 +71,9 @@ get_header(); ?>
 </section>
 
 <section class="automatic_presses section_presses fix-bg white_text" id="automatic-presses">
-    <div class="automatic_presses--wrapper container">
+    <div class="swiper automatic_presses--wrapper container">
         <div class="section_title">Automatic Presses</div>
-        <div class="presses_content_row presses_content_row_slider">
+        <div class="swiper-wrapper presses_content_row presses_content_row_slider">
             <?php
 						$args = array(
 	   				'post_type' => 'anatol-products-pres',
@@ -84,7 +91,7 @@ get_header(); ?>
 	    				foreach ( $posts as $post ) {
 	       			setup_postdata($post);
 	       			?>
-            <div class="presses_item">
+            <div class="swiper-slide presses_item">
                 <div class="image_item">
                     <a href="<?= get_permalink(); ?>" class="equipment_item">
                         <?PHP echo get_the_post_thumbnail($item, array(300, 210)); ?>
@@ -234,7 +241,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="compare_content" id="compare_content">
+<!-- <section class="compare_content" id="compare_content">
     <div class="container-fluid">
         <div class="row">
             <div class="container">
@@ -248,7 +255,7 @@ get_header(); ?>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <script>
 $(document).ready(function() {

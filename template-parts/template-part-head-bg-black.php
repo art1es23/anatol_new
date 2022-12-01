@@ -27,15 +27,15 @@ if (!empty(get_field("header_image"))) {
 				?>
             <!-- </div> -->
         </div>
-        <div class="head_description et_had_animation animate fadeInLeft two">
-            <?php
+        <!-- <div class="head_description et_had_animation animate fadeInLeft two"> -->
+        <?php
 			if (empty($anatol_cat_title)) {
 				if (!empty(get_field("title_description"))) {
 					echo '<div class="et_pb_text_inner">' . str_replace("\n", '<br />', get_field("title_description")) . '</div>';
 				}
 			}
 			?>
-        </div>
+        <!-- </div> -->
         <?PHP
 		if (function_exists('bcn_display')) {
 			echo '<div class="breadcrumbs  animate zoomIn three" typeof="BreadcrumbList" vocab="https://schema.org/">';

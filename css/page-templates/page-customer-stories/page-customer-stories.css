@@ -238,7 +238,8 @@
   margin-left: -12px;
   top: 50%;
   margin-top: -12px;
-  background: url("img/it-zoomimage.png") center no-repeat;
+  background: url(../wp-content/themes/anatol/img/it-zoomimage.png) center
+    no-repeat;
 }
 .ideaboxTimeline .it-content .it-image:hover span {
   opacity: 1;
@@ -326,7 +327,8 @@
   margin-left: -12px;
   top: 50%;
   margin-top: -12px;
-  background: url("img/it-zoomimage.png") center no-repeat;
+  background: url(../wp-content/themes/anatol/img/it-zoomimage.png) center
+    no-repeat;
 }
 .ideaboxTimeline .it-minibox {
   display: block;
@@ -513,7 +515,7 @@
   width: 80px;
   height: 80px;
   border-radius: 40px;
-  background: #fff url("../img/default.png") center no-repeat;
+  background: #fff url("img/default.png") center no-repeat;
   top: 25px;
   left: 22px;
   border: 4px #fff solid;

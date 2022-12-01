@@ -35,11 +35,20 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css-new/homepage.css" type="text/css" />
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/stylecss.css" type="text/css" /> -->
 
+    <!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" /> -->
+
     <link rel="icon" type="image/x-icon" href="<?php bloginfo("template_url"); ?>/images/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" as="image" href="<?php bloginfo('template_directory'); ?>/images/logo_new.svg">
+    <link rel="preload" as="image" href="<?php bloginfo('template_directory'); ?>/images/anatol-logo-ico.svg">
+
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.4/swiper-bundle.min.css" /> -->
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Condensed:wght@300;400;700&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"> -->
 
     <?php 
         global $user_ip, $user_country, $SxGeo;
@@ -77,12 +86,14 @@
     <?php } ?>
 
     <?php wp_head(); ?>
+
     <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script>
     const observer = lozad(); // lazy loads elements with default selector as ".lozad"
     observer.observe();
     </script>
-    <script type='text/javascript'>
+
+    <!-- <script type='text/javascript'>
     window.smartlook || (function(d) {
         var o = smartlook = function() {
                 o.api.push(arguments)
@@ -99,7 +110,7 @@
     smartlook('init', '89bb348c3a90f25c4e84b3dbc8f185dfe683952c', {
         region: 'eu'
     });
-    </script>
+    </script> -->
 </head>
 
 
@@ -111,135 +122,168 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <header id="header" class="header">
-        <div class="header-bg "></div>
+        <div class="header-bg"></div>
+
         <div class="header--wrapper container">
-            <div class="header-top">
-                <!-- <div class="container"> -->
-                <div class="flex site-header-top">
-                    <div class="site-header-col-left site-header-top-left fx_row">
-                        <div class="header_social_icons">
-                            <?php
+            <div class="header__item header-top">
+                <div class="header-top__item">
+                    <div class="social-media social-media--header">
+                        <?php
                             $current_language_code = apply_filters( 'wpml_current_language', null );
                             if($current_language_code == 'en'){?>
-                            <a href="https://www.instagram.com/anatolequipment/" target="_blank"
-                                class="item_instagram"><i class="wicon-instagram"></i></a>
-                            <a href="https://facebook.com/AnatolEquipment/" target="_blank" class="item_facebook"><i
-                                    class="wicon-facebook"></i></a>
-                            <a href="https://twitter.com/anatolequipment" target="_blank" class="item_twitter"><i
-                                    class="wicon-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/anatol-equipment-manufacturing-co" target="_blank"
-                                class="item_linked_in"><i class="wicon-linked-in"></i></a>
-                            <a href="https://www.youtube.com/channel/UCcmF2LudDzC1MJyD2d7U2OA" target="_blank"
-                                class="item_youtube"><span class="wicon-youtube"></span></a>
-                            <a href="https://www.tiktok.com/@anatolequipment" target="_blank" class="item_tiktok"><span
-                                    class="wicon-tiktok"></span></a>
-                            <?php 
+                        <a class="social-media__link item_instagram" href="https://www.instagram.com/anatolequipment/"
+                            target="_blank">
+                            <i class="wicon-instagram"></i>
+                        </a>
+                        <a class="social-media__link item_facebook" href="https://facebook.com/AnatolEquipment/"
+                            target="_blank">
+                            <i class="wicon-facebook"></i>
+                        </a>
+                        <a class="social-media__link item_twitter" href="https://twitter.com/anatolequipment"
+                            target="_blank">
+                            <i class="wicon-twitter"></i>
+                        </a>
+                        <a class="social-media__link item_linked_in"
+                            href="https://www.linkedin.com/company/anatol-equipment-manufacturing-co" target="_blank">
+                            <i class="wicon-linked-in"></i>
+                        </a>
+                        <a class="social-media__link item_youtube"
+                            href="https://www.youtube.com/channel/UCcmF2LudDzC1MJyD2d7U2OA" target="_blank">
+                            <span class="wicon-youtube"></span>
+                        </a>
+                        <a class="social-media__link item_tiktok" href="https://www.tiktok.com/@anatolequipment"
+                            target="_blank">
+                            <span class="wicon-tiktok"></span>
+                        </a>
+                        <?php 
                             } elseif($current_language_code == 'ru') {  ?>
-                            <a href="https://www.instagram.com/anatolequipment/" target="_blank"
-                                class="item_instagram"><i class="wicon-instagram"></i></a>
-                            <a href="https://facebook.com/AnatolEquipment/" target="_blank" class="item_facebook"><i
-                                    class="wicon-facebook"></i></a>
-                            <a href="https://twitter.com/anatolequipment" target="_blank" class="item_twitter"><i
-                                    class="wicon-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/anatol-equipment-manufacturing-co" target="_blank"
-                                class="item_linked_in"><i class="wicon-linked-in"></i></a>
-                            <a href="https://www.youtube.com/channel/UCcmF2LudDzC1MJyD2d7U2OA" target="_blank"
-                                class="item_youtube"><span class="wicon-youtube"></span></a>
-                            <a href="https://www.tiktok.com/@anatolequipment" target="_blank" class="item_tiktok"><span
-                                    class="wicon-tiktok"></span></a>
-                            <?php
+                        <a class="social-media__link item_instagram" href="https://www.instagram.com/anatolequipment/"
+                            target="_blank">
+                            <i class="wicon-instagram"></i>
+                        </a>
+                        <a class="social-media__link item_facebook" href="https://facebook.com/AnatolEquipment/"
+                            target="_blank">
+                            <i class="wicon-facebook"></i>
+                        </a>
+                        <a class="social-media__link item_twitter" href="https://twitter.com/anatolequipment"
+                            target="_blank">
+                            <i class="wicon-twitter"></i>
+                        </a>
+                        <a class="social-media__link item_linked_in"
+                            href="https://www.linkedin.com/company/anatol-equipment-manufacturing-co" target="_blank">
+                            <i class="wicon-linked-in"></i>
+                        </a>
+                        <a class="social-media__link item_youtube"
+                            href="https://www.youtube.com/channel/UCcmF2LudDzC1MJyD2d7U2OA" target="_blank">
+                            <span class="wicon-youtube"></span>
+                        </a>
+                        <a class="social-media__link item_tiktok" href="https://www.tiktok.com/@anatolequipment"
+                            target="_blank">
+                            <i class="wicon-tiktok"></span>
+                        </a>
+                        <?php
                             } elseif($current_language_code == 'es'){?>
-                            <a href="https://www.instagram.com/anatollatam/" target="_blank" class="item_instagram"><i
-                                    class="wicon-instagram"></i></a>
-                            <a href="https://www.facebook.com/AnatolLatam/" target="_blank" class="item_facebook"><i
-                                    class="wicon-facebook"></i></a>
-                            <a href="https://twitter.com/anatolequipment" target="_blank" class="item_twitter"><i
-                                    class="wicon-twitter"></i></a>
-                            <a href="https://www.linkedin.com/company/anatol-equipment-manufacturing-co" target="_blank"
-                                class="item_linked_in"><i class="wicon-linked-in"></i></a>
-                            <a href="https://www.youtube.com/channel/UCcmF2LudDzC1MJyD2d7U2OA" target="_blank"
-                                class="item_youtube"><span class="wicon-youtube"></span></a>
-                            <a href="https://www.tiktok.com/@anatolequipment" target="_blank" class="item_tiktok"><span
-                                    class="wicon-tiktok"></span></a>
-                            <?php
+                        <a class="social-media__link item_instagram" href="https://www.instagram.com/anatollatam/"
+                            target="_blank">
+                            <i class="wicon-instagram"></i>
+                        </a>
+                        <a class="social-media__link item_facebook" href="https://www.facebook.com/AnatolLatam/"
+                            target="_blank">
+                            <i class="wicon-facebook"></i>
+                        </a>
+                        <a class="social-media__link item_twitter" href="https://twitter.com/anatolequipment"
+                            target="_blank">
+                            <i class="wicon-twitter"></i>
+                        </a>
+                        <a class="social-media__link item_linked_in"
+                            href="https://www.linkedin.com/company/anatol-equipment-manufacturing-co" target="_blank">
+                            <i class="wicon-linked-in"></i>
+                        </a>
+                        <a class="social-media__link item_youtube"
+                            href="https://www.youtube.com/channel/UCcmF2LudDzC1MJyD2d7U2OA" target="_blank">
+                            <span class="wicon-youtube"></span>
+                        </a>
+                        <a class="social-media__link item_tiktok" href="https://www.tiktok.com/@anatolequipment"
+                            target="_blank">
+                            <span class="wicon-tiktok"></span>
+                        </a>
+                        <?php
                             }?>
-                        </div>
-
-                        <div class="header-contacts header_top_block fx_row">
-                            <div class="top_phone">
-                                <?php if(ICL_LANGUAGE_CODE == 'es'): ?>
-                                <a href="tel:+573167696697"><span class="icon-phone"></span>+57 316 7696697</a>
-                                <?php else: ?>
-                                <a href="tel:+18473679760"><span class="icon-phone"></span>+1 (847) 367-9760</a>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-
                     </div>
 
-                    <div class="fx_row site-header-col-right site-header-top-right">
-                        <?php
-                            if( has_nav_menu('top_line_menu') ){
-                                wp_nav_menu( array( 'theme_location' => 'top_line_menu', 'container'=> false, 'items_wrap' => '<ul class="top-menu">%3$s</ul>', ) );
-                            }?>
-                        <div class="lang-header-menu">
-                            <div class="lang_swither">
-                                <div class="lang_swither_inner1">
-                                    <?PHP echo language_selector_flags(); ?>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- <div class="header-contacts header_top_block"> -->
+                    <!-- <div class="header-contacts top_phone"> -->
+                    <?php if(ICL_LANGUAGE_CODE == 'es'): ?>
+                    <a class="header-contacts" href="tel:+573167696697"><span class="icon-phone"></span>+57
+                        316 7696697</a>
+                    <?php else: ?>
+                    <a class="header-contacts" href="tel:+18473679760"><span class="icon-phone"></span>+1
+                        (847) 367-9760</a>
+                    <?php endif; ?>
+                    <!-- </div> -->
+                    <!-- </div> -->
 
-                        <div class="topmenu-cart">
-                            <?php global $woocommerce; ?>
-                            <a class="menu-cart" href="<?php echo wc_get_cart_url(); ?>"
-                                title="<?php _e('Cart View', 'woothemes'); ?>"><i class="fa fa-shopping-cart"></i><span
-                                    class="mini_count"><?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></span>
-                            </a>
+                </div>
 
-                            <div class="mini_cart_content">
-                                <div class="widget_shopping_cart_content"><?php woocommerce_mini_cart();?></div>
-                            </div>
+                <div class="header-top__item">
+                    <?php
+                        if( has_nav_menu('top_line_menu') ){
+                            wp_nav_menu( array( 'theme_location' => 'top_line_menu', 'container'=> false, 'items_wrap' => '<ul class="top-menu">%3$s</ul>', ) );
+                        }?>
+                    <!-- <div class="lang-header-menu"> -->
+                    <div class="lang_swither">
+                        <!-- <div class="lang_swither_inner1"> -->
+                        <?PHP echo language_selector_flags(); ?>
+                        <!-- </div> -->
+                    </div>
+                    <!-- </div> -->
+
+                    <div class="topmenu-cart">
+                        <?php global $woocommerce; ?>
+                        <a class="menu-cart" href="<?php echo wc_get_cart_url(); ?>"
+                            title="<?php _e('Cart View', 'woothemes'); ?>"><i class="fa fa-shopping-cart"></i><span
+                                class="mini_count"><?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></span>
+                        </a>
+
+                        <div class="mini_cart_content">
+                            <div class="widget_shopping_cart_content"><?php woocommerce_mini_cart();?></div>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="separator site-header-separator "></div> -->
             </div>
 
-            <div class="header-main">
-                <!-- <div class="container flex"> -->
-                <div id="logo-container" class="header-main__item logo-container hasHoverMe">
-                    <!-- <div > -->
-                    <a class="site-logo logo site-logo-anch" id="logo" href="<?php bloginfo('url'); ?>">
-                        <img loading="lazy" class="lozad logo-img site-logo-img"
-                            src="<?php bloginfo('template_directory'); ?>/images/logo_new.svg"
+            <div class="header__item header-main">
+                <!-- hasHoverMe -->
+                <div id="logo-container" class="header-main__item logo-container">
+                    <!-- class="site-logo logo site-logo-anch" -->
+                    <a class="logo" id="logo" href="<?php bloginfo('url'); ?>">
+                        <img class="logo-img" src="<?php bloginfo('template_directory'); ?>/images/logo_new.svg"
                             alt="Anatol screen printing equipment" width="200" height="40">
                     </a>
-                    <!-- </div> -->
-                    <div id="info_card" class="logo_infocard">
+
+                    <div id="info_card" class="logo-infocard">
                         <div class="inf_cont">
                             <div class="inf_left">
-                                <!-- <div class="infocard-wrapper text-center"> -->
-                                <div><img loading="lazy" class="lozad info-img"
+                                <div>
+                                    <img class="info-img"
                                         src="<?php bloginfo('template_directory'); ?>/images/anatol-logo-ico.svg"
-                                        alt=""></div>
+                                        alt="Anatol screen printing equipment logo" width="100%" height="auto">
+                                </div>
                                 <p><?php _e('Revolutionizing the screen printing industry through cutting-edge technology and quality service', 'anatol'); ?>
                                 </p>
-                                <!-- </div> -->
                             </div>
 
                             <div class="inf_right">
-                                <!-- <div class="custom contact-details"> -->
-                                <dive><strong><?php _e('Phone', 'anatol'); ?>:
-                                        <a href="tel:+18473679760">+1 (847) 367-9760</a></strong>
-                                </dive>
+                                <div>
+                                    <strong><?php _e('Phone', 'anatol'); ?>:</strong>
+                                    <a href="tel:+18473679760">+1 (847) 367-9760</a>
+                                </div>
                                 <p><strong>Anatol Equipment Manufacturing Co.</strong></p>
                                 <p> 919 Sherwood Drive<br>Lake Bluff, IL 60044</p>
                                 <a href="https://g.page/AnatolEquipment?share" target="_blank" class="map-link"><span
                                         class="ico_location kl-icon-white"></span>
                                     <span><strong><?php _e('Open in Google Maps', 'anatol'); ?></strong></span>
                                 </a>
-                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
@@ -249,22 +293,26 @@
                     <div class="main-menu-wrapper">
                         <?php get_template_part('template-parts/template-part-topnav'); ?>
                     </div>
-                </div>
-
-                <div class="site-header-main-right">
-                    <div class="header-cart"></div>
-                    <div class="header-quote">
-                        <div class="get_a_quote "><span><?php _e('Get a Quote', 'anatol'); ?></span></div>
+                    <div class="menu_icon">
+                        <div class="menui top-line"></div>
+                        <div class="menui mid-line"></div>
+                        <div class="menui bottom-line"></div>
                     </div>
                 </div>
 
-                <div class="header-main__item menu_icon">
+                <div class="header-main__item site-header-main-right">
+                    <div class="header-cart"></div>
+                    <div class="button header-quote get_a_quote"><?php _e('Get a Quote', 'anatol'); ?></div>
+                </div>
+
+                <!-- <div class="menu_icon">
                     <div class="menui top-line"></div>
                     <div class="menui mid-line"></div>
                     <div class="menui bottom-line"></div>
-                </div>
-                <!-- </div> -->
+                </div> -->
+
             </div>
         </div>
+
 
     </header>

@@ -1,5 +1,13 @@
 <?PHP
 get_header(); ?>
+
+<style>
+<?php include 'css/woocommerce.css';
+include 'css/page-templates/store/woo.css';
+
+?>
+</style>
+
 <?PHP get_template_part('template-parts/template-part-head-press'); ?>
 
 

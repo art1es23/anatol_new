@@ -27,7 +27,7 @@ get_header(); ?>
 	}
 
 	//get_template_part('template-parts/template-part-head-part2'); ?>
-    <div class="clear clearfix"></div>
+    <!-- <div class="clear clearfix"></div> -->
 </div>
 <div class="container blog-container">
     <!-- start content container -->
@@ -127,11 +127,7 @@ get_header(); ?>
 
 
 <section id="related-articles" class="article-section related-articles">
-
     <div class="container">
-
-
-
         <?php
 global $post;
 $current_post_type = get_post_type( $post );

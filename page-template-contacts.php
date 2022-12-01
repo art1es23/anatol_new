@@ -3,9 +3,19 @@
 
 get_header(); ?>
 
+<style>
+<?php include 'css/page-templates/page-contact/contacts.css';
+include 'css/components/get-in-touch.css';
+?>
+</style>
+
 <?php //get_template_part('template-parts/template-part-head-bg'); ?>
 
-<div class="head_section contacts_head">
+<div class="head_section contacts_head" style="linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      #ffffff 100%
+    ), url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/bg-group.jpg);">
     <div class="container">
 
         <div class="et_had_animation animate zoomIn one">
@@ -26,7 +36,7 @@ get_header(); ?>
 <div class="contacts_form_block">
     <div class="contacts_form_block--wrapper container">
 
-        <div class="left_column cont_datas anim_fade">
+        <div class="left_column cont_datas">
             <div class="contact_line ">
                 <div class="et_pb_blurb_container">
                     <h4 class="contact_line_header"><?php _e('World Headquarters', 'anatol'); ?></h4>
@@ -61,9 +71,9 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="container-fluid container">
-        <?php get_template_part('template-parts/regional-offices'); ?>
-    </div>
+    <!-- <div class="container-fluid container"> -->
+    <?php get_template_part('template-parts/regional-offices'); ?>
+    <!-- </div> -->
 
     <style>
     #chartdiv {

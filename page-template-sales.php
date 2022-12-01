@@ -1,9 +1,9 @@
 <?php
 /* Template Name: Direct Sales Template */
 
-function anatol_dequeue_script() {
-  wp_dequeue_script( 'nice-select-js' );
-}
+// function anatol_dequeue_script() {
+//   wp_dequeue_script( 'nice-select-js' );
+// }
 add_action( 'wp_print_scripts', 'anatol_dequeue_script', 100 );
 get_header(); ?>
 

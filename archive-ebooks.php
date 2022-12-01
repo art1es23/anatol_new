@@ -7,34 +7,30 @@
 
 <?php get_template_part('template-parts/template-part-head-press'); ?>
 
-<div class="container ebook_content">
-    <!-- start content container -->
-    <div class="row eb-content">
+<div class="container ebooks">
+    <!-- <div class="row eb-content"> -->
 
-        <?php // theloop
+    <?php // theloop
       if( have_posts() ) { ?>
-        <div class="ebooks_list">
-            <?php while ( have_posts() ) : the_post(); ?>
-            <div class="ebook_item">
-                <div class="ebook_img"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('ebook_img'); ?></a>
-                </div>
-                <div class="ebook_desc">
-                    <div class="ebook_descr_top">
-                        <div class="ebook_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                        <?php if( get_field( "short_description" )) {?>
-                        <div class="ebook_excerpt"><?php the_field( "short_description" );?></div>
-                        <?php }	?>
+    <div class="ebooks-list">
+        <?php while ( have_posts() ) : the_post(); ?>
+        <div class="ebooks-list__item ebook-post">
+            <a class="ebook-post__img" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('ebook_img'); ?></a>
+            <div class="ebook-post__description">
+                <a class="ebook-post__title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <?php if( get_field( "short_description" )) {?>
+                <div class="ebook-post__excerpt"><?php the_field( "short_description" );?></div>
+                <?php }	?>
 
-                    </div>
-                    <div class="ebook_learn_more"><a href="<?php the_permalink(); ?>">Learn More</a></div>
-                </div>
+                <a class="ebook-post__btn" href="<?php the_permalink(); ?>">Learn More</a>
             </div>
-            <?php endwhile; ?>
         </div>
-        <?php } else { ?>
-
-        <?php } ?>
+        <?php endwhile; ?>
     </div>
+    <?php } else { ?>
+
+    <?php } ?>
+    <!-- </div> -->
 </div>
 
 

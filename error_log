@@ -1,0 +1,4 @@
+[20-Nov-2022 09:22:01 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/anatrejh/test22.anatol.space/wp-content/themes/anatol/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/anatrejh/test22.anatol.space/wp-content/themes/anatol/index.php on line 3

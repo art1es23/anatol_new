@@ -783,4 +783,4 @@ function yesnoCheckRoi(that) {
 <script type="text/javascript">
 var anatol_ajax_url = "<?php echo admin_url('admin-ajax.php'); ?>";
 </script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/calculator.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/modules/calculator.js"></script>

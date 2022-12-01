@@ -120,7 +120,7 @@
   /* margin-top: 30px; */
   display: inline-block;
 }
-.section-home-press {
+/* .section-home-press {
   padding: 60px 0;
   background: #f5f5f5;
 }
@@ -464,7 +464,7 @@
   overflow: hidden;
   border-radius: 4px;
   color: #363636;
-}
+} */
 
 .main-nav > ul > .menu-item:not(.has-mega-menu) {
   position: relative;

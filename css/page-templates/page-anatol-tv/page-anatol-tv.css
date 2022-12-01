@@ -1,12 +1,10 @@
-.page-template-page-template-anatol-tv .nav-tabs,
-.post-type-archive-anatoltv .nav-tabs {
+.anatol-videos-navigation {
   display: flex;
   box-shadow: 0 4px 35.26px 7.74px rgb(106 106 106 / 10%);
   border-radius: 10px;
   padding: 0;
 }
-.page-template-page-template-anatol-tv .nav-tabs li,
-.post-type-archive-anatoltv .nav-tabs li {
+.anatol-videos-navigation li {
   width: calc(100% / 8);
   list-style: none;
   display: flex;
@@ -18,16 +16,13 @@
   padding: 15px 0;
 }
 
-.page-template-page-template-anatol-tv .nav-tabs li:last-of-type,
-.post-type-archive-anatoltv .nav-tabs li:last-of-type {
+.anatol-videos-navigation li:last-of-type {
   border-right: none;
 }
-.page-template-page-template-anatol-tv .nav-tabs li a,
-.post-type-archive-anatoltv .nav-tabs li a {
+.anatol-videos-navigation li a {
   display: none;
 }
-.page-template-page-template-anatol-tv .nav-tabs li,
-.post-type-archive-anatoltv .nav-tabs li {
+.anatol-videos-navigation li {
   color: black;
   font-weight: 600;
   font-size: 18px;
@@ -35,74 +30,62 @@
   font-family: "Roboto Condensed", sans-serif;
   transition: all 0.3s ease;
 }
-.page-template-page-template-anatol-tv .nav-tabs li:hover,
-.post-type-archive-anatoltv .nav-tabs li:hover {
+.anatol-videos-navigation li:hover {
   color: #c12126;
 }
-.page-template-page-template-anatol-tv .nav-tabs .active,
-.post-type-archive-anatoltv .nav-tabs .active {
+.anatol-videos-navigation .active {
   color: #c12126;
 }
 
-.page-template-page-template-anatol-tv .tab-content .tab-pane,
-.post-type-archive-anatoltv .tab-content .tab-pane {
+/* .anatol-videos-list__inner {
   display: none;
   transition: 0.5s ease all;
   position: relative;
   top: 100px !important;
   opacity: 0 !important;
 }
-.page-template-page-template-anatol-tv .tab-content .active,
-.post-type-archive-anatoltv .tab-content .active {
+.anatol-videos-list .active {
   display: block;
 }
-.page-template-page-template-anatol-tv .tab-content .tab-pane .video_tag_wrap,
-.post-type-archive-anatoltv .tab-content .tab-pane .video_tag_wrap {
+.anatol-videos-list__inner .video_tag_wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2vw;
 }
-.page-template-page-template-anatol-tv .video_tag_wrap .video_item,
-.post-type-archive-anatoltv .video_tag_wrap .video_item {
-  width: 30%;
+
+.anatol-videos-list__item {
+  width: calc((100% - 5vw) / 3);
   display: flex;
   justify-content: center;
   min-height: 100px;
-  margin: 0 calc(10% / 6);
-  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vh;
+  align-items: center;
+  text-align: center;
 }
 
-.page-template-page-template-anatol-tv .video_tag_wrap .video_item a,
-.post-type-archive-anatoltv .video_tag_wrap .video_item a {
+.anatol-videos-list__item a {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 
-.page-template-page-template-anatol-tv
-  .video_tag_wrap
-  .video_item
-  .thumbnail-wrap,
-.post-type-archive-anatoltv .video_tag_wrap .video_item .thumbnail-wrap {
+.anatol-videos-list__item .thumbnail-wrap {
   margin-bottom: 5px;
   position: relative;
   width: 100%;
   line-height: 0;
 }
-.page-template-page-template-anatol-tv .video_tag_wrap .video_item a img,
-.post-type-archive-anatoltv .video_tag_wrap .video_item a img {
+
+.anatol-videos-list__item a img {
   width: 100%;
   height: 12.65vw;
 }
-.page-template-page-template-anatol-tv
-  .video_tag_wrap
-  .video_item
-  .thumbnail-wrap::before,
-.post-type-archive-anatoltv
-  .video_tag_wrap
-  .video_item
-  .thumbnail-wrap::before {
+
+.anatol-videos-list__item .thumbnail-wrap::before {
   content: "";
   display: block;
   position: absolute;
@@ -115,11 +98,8 @@
   z-index: 5;
   background-color: #c121265c;
 }
-.page-template-page-template-anatol-tv
-  .video_tag_wrap
-  .video_item
-  .thumbnail-wrap::after,
-.post-type-archive-anatoltv .video_tag_wrap .video_item .thumbnail-wrap::after {
+
+.anatol-videos-list__item .thumbnail-wrap::after {
   content: "";
   position: absolute;
   width: 50px;
@@ -141,50 +121,26 @@
   opacity: 0.5;
   z-index: 10;
 }
-.page-template-page-template-anatol-tv
-  .video_tag_wrap
-  .video_item
-  a:hover
-  .thumbnail-wrap::before,
-.post-type-archive-anatoltv
-  .video_tag_wrap
-  .video_item
-  a:hover
-  .thumbnail-wrap::before {
+
+.anatol-videos-list__item a:hover .thumbnail-wrap::before {
   opacity: 1;
 }
-.page-template-page-template-anatol-tv
-  .video_tag_wrap
-  .video_item
-  a:hover
-  .thumbnail-wrap::after,
-.post-type-archive-anatoltv
-  .video_tag_wrap
-  .video_item
-  a:hover
-  .thumbnail-wrap::after {
+
+.anatol-videos-list__item a:hover .thumbnail-wrap::after {
   opacity: 1;
 }
-.page-template-page-template-anatol-tv
-  .video_tag_wrap
-  .video_item
-  a
-  .video_title,
-.post-type-archive-anatoltv .video_tag_wrap .video_item a .video_title {
+
+.anatol-videos-list__item a .video_title {
   text-align: center;
   color: black;
   font-family: "Roboto Condensed", sans-serif;
 }
-.page-template-page-template-anatol-tv
-  .video_tag_wrap
-  .video_item
-  a:hover
-  .video_title,
-.post-type-archive-anatoltv .video_tag_wrap .video_item a:hover .video_title {
+
+.anatol-videos-list__item a:hover .video_title {
   color: #c12126;
 }
-.page-template-page-template-anatol-tv .tab-pane,
-.post-type-archive-anatoltv .tab-pane {
+
+.anatol-videos-list__inner {
   padding: 60px 0 50px 0;
 }
 .cstcw_tp_right_white p a {
@@ -197,13 +153,13 @@
 }
 .cstcw_tp_right_white p {
   font-size: 18px;
-}
-
+} */
+/* 
 .page-template-page-template-anatol-tv .section_title,
 .post-type-archive-anatoltv .section_title {
   font-size: 35px;
   text-align: right;
-}
+} */
 .page-template-page-template-anatol-tv .section_top_bg,
 .post-type-archive-anatoltv .section_top_bg {
   margin-top: 60px;
@@ -213,8 +169,8 @@
 .post-type-archive-anatoltv .customer_st_cw {
   margin-top: 60px;
 }
-.page-template-page-template-anatol-tv .tab-content .active_active,
-.post-type-archive-anatoltv .tab-content .active_active {
+.page-template-page-template-anatol-tv .anatol-videos-list .active_active,
+.post-type-archive-anatoltv .anatol-videos-list .active_active {
   top: 0px !important;
   opacity: 1 !important;
 }
@@ -267,6 +223,113 @@
 .post-type-archive-anatoltv .header_image_top {
   background-image: url("https://anatol.com/wp-content/uploads/2021/10/automatic1.jpg") !important;
 }
-.fancybox-image {
+/* .fancybox-image {
   background-color: white !important;
+} */
+
+.anatol-videos--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+}
+
+.anatol-videos .section_title {
+  font-size: 35px;
+  text-align: right;
+}
+
+/* //////////////////// */
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 26.25%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  max-width: 100%;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  display: none;
+  cursor: pointer;
+}
+
+.video__button-shape {
+  fill: #212121;
+  fill-opacity: 0.8;
+  transition: fill 0.15s ease-in, fill-opacity 0.15s ease-in;
+}
+
+.video:hover .video__button-shape,
+.video__button:focus .video__button-shape {
+  fill: #ab1a1f;
+  fill-opacity: 1;
+}
+.video__button-icon {
+  fill: #fff;
+}
+.video--enabled {
+  cursor: pointer;
+}
+
+.video--enabled .video__button {
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .video {
+    width: 70%;
+    padding: 20.25%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .video {
+    width: 90%;
+    padding: 25.75%;
+  }
+}
+
+.anatol-videos-tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2vw;
+  width: 100%;
+  padding: 3vh 0;
+}
+
+.list-videos {
+  display: flex;
+}
+
+.list-videos__item {
+  width: calc((100% - 5vw) / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2.5vh;
 }

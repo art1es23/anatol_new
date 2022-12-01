@@ -114,14 +114,6 @@ get_header(); ?>
     </div>
 </div>
 
-<script type="text/javascript">
-/* jQuery.noConflict(function($){
-			$(document).ready(function(e) {
-				$("#i-timeline").ideaboxTimeline();
-			});
-		}); */
-</script>
-
 <div class="container-fluid full_bottom_container">
     <!--
 		<div class="row ofices_row">
@@ -129,3 +121,9 @@ get_header(); ?>
 		</div>
 -->
     <?php get_footer(); ?>
+
+    <!-- <script>
+    <?php include 'js/modules/chosen.jquery.min.js';
+        include '/js/libs/ideaboxTimeLine/ideaboxTimeline.js'
+        ?>
+    </script> -->

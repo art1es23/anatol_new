@@ -1,4 +1,4 @@
-<div class="subscribe_us_form innerr">
+<div class="subscribe_us_form innerr hidden">
     <a class="close_pop" style="float: right;"><img loading="lazy" class="lozad"
             src="<?php bloginfo('template_directory'); ?>/images/close.svg" style="width: 20px" alt=""></a>
     <div class="form-title">

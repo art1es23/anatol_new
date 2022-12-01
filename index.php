@@ -18,11 +18,10 @@ get_header(); ?>
 			$anatol_cat_title = sprintf(__('%s Search Results for "%s"'), $total_results, get_search_query());
 		}
 	?>
-    <!-- <div class="clear clearfix"></div> -->
 </div>
+
 <div class="container blog-container">
-    <!-- start content container -->
-    <div class="blogs-content">
+    <div class="blog-list">
         <?php $description = term_description();
 			if ($description) {
 				?>
@@ -46,7 +45,7 @@ get_header(); ?>
 					// single post
 					if (is_single()) : ?>
 
-        <div class="post_item anim_fade">
+        <div class="blog-list__item">
 
             <?php get_template_part('template-parts/template-part-postmeta'); ?>
             <h1 class="page-header"><?php the_title(); ?></h1>
@@ -71,35 +70,27 @@ get_header(); ?>
             <?php comments_template(); ?>
 
         </div>
-        <?php
-				// list of posts
-				else : ?>
+        <?php // list of posts
+            else : ?>
 
-        <div class="post_item anim_fade">
-            <div class="post_thumbnail"><a href="<?php the_permalink(); ?>" class="thumbnail_link">
-                    <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail(array(1200, 500)); ?>
-                    <?php endif; ?></a>
-            </div>
+        <div class="blog-list__item blog-post">
+            <a href="<?php the_permalink(); ?>" class="blog-post__img thumbnail_link">
+                <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail(array(1200, 500)); ?>
+                <?php endif; ?>
+            </a>
 
-            <div class="post_item_caption">
+            <div class="blog-post__description">
 
-                <h3 class="post_item_title">
-                    <a href="<?php the_permalink(); ?>"
-                        title="<?php echo esc_attr(sprintf(__('Permalink to %s'), the_title_attribute('echo=0'))); ?>"
-                        rel="bookmark"><?php the_title(); ?></a>
-                </h3>
+                <a class="blog-post__title" href="<?php the_permalink(); ?>"
+                    title="<?php echo esc_attr(sprintf(__('Permalink to %s'), the_title_attribute('echo=0'))); ?>"
+                    rel="bookmark"><?php the_title(); ?></a>
                 <?php the_excerpt(); ?>
 
-                <!--
-								<div class="post_time"><?php the_date('m,d,y'); ?></div>-->
-                <div class="read_more_content">
-                    <a href="<?php the_permalink(); ?>" class="button rmc_button">
-                        <?PHP _e('Read more'); ?>
-                    </a>
-
-
-                </div>
+                <!-- <div class="post_time"><?php the_date('m,d,y'); ?></div>-->
+                <a href="<?php the_permalink(); ?>" class="read_more_content button rmc_button">
+                    <?PHP _e('Read more'); ?>
+                </a>
             </div>
         </div>
 
@@ -107,7 +98,7 @@ get_header(); ?>
 
         <?php endwhile; ?>
 
-        <nav class="woocommerce-pagination page-pagination anim_fade">
+        <nav class="woocommerce-pagination page-pagination">
             <?php wp_corenavi(); ?>
         </nav>
         <?php

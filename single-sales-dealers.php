@@ -10,15 +10,15 @@
                 <?php // theloop
 					if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php
-                        $e_equipment_gallery = get_field('e_equipment_gallery');
-                        if(get_field('e_enable_equipment_gallery') === true && !empty($e_equipment_gallery)) {
-								$slider_data = array();
-								$slider_data['desrctiption'] = get_the_title();
-								$slider_data['slides'] = array();
-                                echo '<div id="image-carousel-container"><div class="ebook_page-carousel sldots">';
-                                foreach($e_equipment_gallery as $gallery_image) {
-                                    $g_image = wp_get_attachment_image_src($gallery_image['ID'], array());
-                                    ?>
+                    $e_equipment_gallery = get_field('e_equipment_gallery');
+                    if(get_field('e_enable_equipment_gallery') === true && !empty($e_equipment_gallery)) {
+                        $slider_data = array();
+                        $slider_data['desrctiption'] = get_the_title();
+                        $slider_data['slides'] = array();
+                        echo '<div id="image-carousel-container"><div class="ebook_page-carousel sldots">';
+                        foreach($e_equipment_gallery as $gallery_image) {
+                            $g_image = wp_get_attachment_image_src($gallery_image['ID'], array());
+                            ?>
                 <div class="overlay-container">
                     <div class="item">
                         <a href="<?php echo $g_image[0]; ?>" data-fancybox="product-images"
@@ -29,20 +29,20 @@
                     </div>
                 </div>
                 <?php
-									$slider_data['slides'][] = array(
-										'image' 	=> $g_image[0],
-										'alt' 		=> $gallery_image['alt'],
-										'caption' 	=> $gallery_image['caption']
-									);
-                                }
-                                echo '</div></div>';
-								?>
+                                $slider_data['slides'][] = array(
+                                    'image' 	=> $g_image[0],
+                                    'alt' 		=> $gallery_image['alt'],
+                                    'caption' 	=> $gallery_image['caption']
+                                );
+                            }
+                            echo '</div></div>';
+                            ?>
                 <script>
                 var equipment_gallery_data = <?php echo json_encode($slider_data); ?>;
                 </script>
                 <?php
-                            } else {
-                                ?>
+                    } else {
+                        ?>
                 <?php
 					 if ( has_post_thumbnail()) {
 					   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');

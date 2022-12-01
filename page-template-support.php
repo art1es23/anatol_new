@@ -4,18 +4,24 @@ get_header();
 get_template_part('template-parts/template-part-head-big');
  ?>
 
+<style>
+<?php include 'css/page-templates/page-support/support.css';
+include 'css/components/support-section.css';
+include 'css/components/get-in-touch.css';
+?>
+</style>
+
 <div class="support_top_section">
     <div class="support_top--wrapper container">
         <h2 id="register_now" class="section-title regional-offices-title">
             <?php _e('Real Help from Real People', 'anatol'); ?></h2>
         <div class="support_top_pannel">
             <div class="column_support">
-                <!-- <div class="stp_item"> -->
                 <?PHP
 					$cp_phone = get_field('cp_phone');
 					$cp_short_description = get_field('cp_short_description');
 					$content_phone = get_field('content_phone');
-					$content_email = get_field('content_email');
+					// $content_email = get_field('content_email');
 					$content_button_name = get_field('content_button_name');
 					$content_button_url = get_field('content_button_url');
 					?>
@@ -50,13 +56,13 @@ get_template_part('template-parts/template-part-head-big');
                         <?PHP } ?>
                     </div>
                 </div>
+
                 <?PHP if(!empty($content_button_name)) { ?>
                 <div class="stp_button"><a href="#request_service_form" class="button track-button"
                         data-label="Contact Us">
                         <?PHP echo $content_button_name; ?>
                     </a></div>
                 <?PHP } ?>
-                <!-- </div> -->
             </div>
             <?PHP
 				if(have_rows('header_part_content')){
@@ -68,49 +74,48 @@ get_template_part('template-parts/template-part-head-big');
 					$button_url = get_sub_field('button_url');
 					$button_class_click = get_sub_field('button_class_click');
 					?>
+
             <div class="column_support">
-                <?PHP if(!empty($icon_class)) { ?><span class="stp_icon custom_icon <?PHP echo $icon_class; ?>"></span>
+                <?PHP if(!empty($icon_class)) { ?>
+                <span class="stp_icon custom_icon <?PHP echo $icon_class; ?>"></span>
                 <?PHP } ?>
+
                 <?PHP if(!empty($title)) { ?>
                 <h4 class="stp_title">
                     <?PHP echo $title; ?>
                 </h4>
                 <?PHP } ?>
+
                 <div class="stp_content">
                     <?PHP echo get_sub_field('content'); ?>
                 </div>
                 <?PHP if(!empty($button_text)) {
-						  if(strpos($button_url['url'], '#') === 0) {
-							?>
-                <div class="stp_button"><a id="<?php echo $button_class_click ?>" href="#"
-                        class="button transporent_button track-button" data-category="Buttons"
-                        data-label="Warranty Registration - Support page"><span>
-                            <?PHP echo $button_text; ?>
-                        </span></a></div>
-                <?PHP
-						  } else {
-							?>
-                <div class="stp_button"><a href="<?php echo $button_url['url']; ?>"
-                        target="<?php echo $button_url['target']; ?>" class="button transporent_button track-button"
-                        data-category="Buttons" data-label="View Faqs - Support page"><span>
-                            <?PHP echo $button_text; ?>
-                        </span></a></div>
-                <?PHP
-						  }
-						} ?>
+                    if(strpos($button_url['url'], '#') === 0) {
+                ?>
+
+                <a id="<?php echo $button_class_click ?>" href="#"
+                    class="stp_button button transparent_button track-button" data-category="Buttons"
+                    data-label="Warranty Registration - Support page">
+                    <?PHP echo $button_text; ?>
+                </a>
+                <?PHP } else { ?>
+
+                <a href="<?php echo $button_url['url']; ?>" target="<?php echo $button_url['target']; ?>"
+                    class="stp_button button transparent_button track-button" data-category="Buttons"
+                    data-label="View Faqs - Support page">
+                    <?PHP echo $button_text; ?>
+                </a>
+                <?PHP }} ?>
             </div>
-            <?PHP
-				  }
-				}
-				?>
+            <?PHP }} ?>
         </div>
     </div>
 </div>
 
 <section class="section support_team">
-    <div class="support_team--wrapper container">
+    <div class="swiper support_team--wrapper container">
         <div class="section-title support_team-title"><?php _e('Support Team', 'anatol'); ?></div>
-        <div class="support_team_cont sldots ">
+        <div class="swiper-wrapper support_team_cont sldots ">
             <?PHP
 			if(have_rows('support_team')){
 			while (have_rows('support_team')) {
@@ -123,7 +128,7 @@ get_template_part('template-parts/template-part-head-big');
 				$email = get_sub_field('email');
 				$email_2 = get_sub_field('email_2');
 				?>
-            <div class="support_item">
+            <div class="swiper-slide support_item">
                 <?PHP if(!empty($photo)) { ?>
                 <div class="st_photo">
                     <?PHP echo wp_get_attachment_image($photo, 'large'); ?>
@@ -176,13 +181,13 @@ get_template_part('template-parts/template-part-head-big');
 
 <section id="feedbacks" class="support-feedbacks">
 
-    <div class="support-feedbacks--wrapper container">
+    <div class="swiper support-feedbacks--wrapper container">
         <div class="section-title white-title"><?php _e('What Anatol Customers Are Saying', 'anatol'); ?></div>
-        <div class="feedbacks-posts-block sldots ">
+        <div class="swiper-wrapper feedbacks-posts-block sldots ">
             <?php $the_query = new WP_Query(array('post_type' => 'feedbacks')); ?>
             <?php if ($the_query->have_posts()) : ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-            <div class="feedback">
+            <div class="swiper-slide feedback">
                 <div class="feedback_title_block"><?php the_title(); ?></div>
                 <div class="feedback_customer_company"><?php the_field( "customer_company" );?></div>
                 <?php $customer_photologo = get_field('customer_photologo');

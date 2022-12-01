@@ -207,18 +207,18 @@
 ?>
 <?php echo implode("", $class_pres); ?>
 <div class="compare_results">
-  <div class="overflow-container">
-    <table style="display:none;" class="automatic_pres uk-table uk-table-condensed uk-table-hover uk-text-center">
-      <thead>
-        <tr class="ocm-imgs">
-          <th class="ocm-table model_th">
-            <?PHP //_e('Model'); ?>
-          </th>
-          <?php echo implode("",$image_heading); ?>
-        </tr>
-      </thead>
-      
-      <tbody>
+    <div class="overflow-container">
+        <table style="display:none;" class="automatic_pres uk-table uk-table-condensed uk-table-hover uk-text-center">
+            <thead>
+                <tr class="ocm-imgs">
+                    <th class="ocm-table model_th">
+                        <?PHP //_e('Model'); ?>
+                    </th>
+                    <?php echo implode("",$image_heading); ?>
+                </tr>
+            </thead>
+
+            <tbody>
 
                 <tr class="ocm-small">
                     <td class="tr_title ocm-table"></td>

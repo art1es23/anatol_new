@@ -97,16 +97,45 @@ function is_post_type($type){
 // Enqueue Styles (normal style.css and bootstrap.css)
 ////////////////////////////////////////////////////////////////////16792
 function theme_stylesheets() {
+	wp_enqueue_style('AnatolIconsFont', get_template_directory_uri() . '/css/anatol-font.min.css', '', '1.1', 'all');
 
-	wp_enqueue_style('slick-css', get_template_directory_uri() . '/js/slick/slick.css', '', '1.0', 'all');
-	wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/js/slick/slick-theme.css', '', '1.0', 'all');
+	wp_enqueue_style('swiper-css', get_template_directory_uri() . '/css/libs/swiper-bundle.css');
+	wp_enqueue_style('style-main', get_template_directory_uri() . '/style.css');
+
+	if ( is_shop() ||  is_product() || is_product_category()  || is_page('cart') ) { 
+		wp_enqueue_style( 'woo-css', get_template_directory_uri() . '/css/page-templates/store/woo.css' );
+
+		// wp_enqueue_style( 'woocommerce-css', get_template_directory_uri() . '/css/woocommerce.css' );
+		//wp_enqueue_style('select2.min.css','/wp-content/plugins/beautiful-taxonomy-filters/public/css/select2.min.css', '', '1.0', 'all');
+		///////// wp_enqueue_style('style.min.css','/wp-content/plugins/prdctfltr/lib/css/style.min.css', '', '6.5.8', 'all');
+	}
+	if ( is_archive('vacancies')) {
+		wp_enqueue_style( 'vacancies-css', get_template_directory_uri() . '/css/components/vacancies.css' );
+	}
+			
+	if(!is_front_page() && !is_home()){
+		wp_enqueue_style('chosen.css', get_template_directory_uri() . '/css/chosen.min.css', array(), '1', 'all' );
+		wp_enqueue_style('select2.min.css','/wp-content/plugins/beautiful-taxonomy-filters/public/css/select2.min.css', '', '1.0', 'all');
+		
+		// wp_enqueue_style('stacktable-css',get_template_directory_uri().'/css/stacktable.min.css', '', '1.0', 'all');
+		
+		// wp_enqueue_style( 'section-choose-us-css', get_template_directory_uri() . '/css/components/frontpage/section-choose-us.css' );
+		// wp_enqueue_style( 'another-equipments-css', get_template_directory_uri() . '/css/components/frontpage/another-equipments.css' );
+		// wp_enqueue_style( 'testimonials-css', get_template_directory_uri() . '/css/components/frontpage/testimonials.css' );
+		// wp_enqueue_style( 'section-video-css', get_template_directory_uri() . '/css/components/frontpage/section-video.css' );
+		// wp_enqueue_style( 'header-hero-slider-css', get_template_directory_uri() . '/css/components/frontpage/header-hero-slider.css' );
+
+		// wp_enqueue_style('ideaboxTimeline-css', get_template_directory_uri() . '/css/ideaboxTimeline.css', '', '1.0', 'all');
+		// wp_enqueue_style('style.min.css','/wp-content/plugins/prdctfltr/lib/css/style.min.css', '', '6.5.8', 'all');
+	}
+	// wp_enqueue_style('slick-css', get_template_directory_uri() . '/js/libs/slick/slick.css', '', '1.0', 'all');
+	// wp_enqueue_style('slick-theme-css', get_template_directory_uri() . '/js/libs/slick/slick-theme.css', '', '1.0', 'all');
 	//wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Exo+2:400,700,900|Open+Sans:400,600,700,800&amp;subset=cyrillic', '', 'all');
 	// wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic', '', 'all');
 
-	wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap', '', 'all');
-	wp_enqueue_style('vendor-fontawesome', get_template_directory_uri() . '/css/font-awesome/css/fontawesome-all.min.css', '', '1.0', 'all');
-	wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', '', '4.7', 'all');
-	wp_enqueue_style('AnatolIconsFont', get_template_directory_uri() . '/css/anatol-font.min.css', '', '1.1', 'all');
+	// wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap', '', 'all');
+	// wp_enqueue_style('vendor-fontawesome', get_template_directory_uri() . '/css/font-awesome/css/fontawesome-all.min.css', '', '1.0', 'all');
+	// wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css', '', '4.7', 'all');
 	
 	// wp_enqueue_style('aos-css',get_template_directory_uri().'/css/new-style.css', '', '1.0', 'all');
 	// wp_enqueue_style('style-fin-css',get_template_directory_uri().'/css/components/style-fin.css', '', '1.0', 'all');
@@ -115,11 +144,6 @@ function theme_stylesheets() {
 	// if ( is_front_page() ) {
 	// 	wp_enqueue_style( 'homepage-css', get_template_directory_uri() . '/css/components/homepage.css' );
 	// }
-	if ( is_shop() ||  is_product() || is_product_category()  || is_page('cart') ) { 
-		wp_enqueue_style( 'woocommerce-css', get_template_directory_uri() . '/css/woocommerce.css' );
-		//wp_enqueue_style('select2.min.css','/wp-content/plugins/beautiful-taxonomy-filters/public/css/select2.min.css', '', '1.0', 'all');
-		wp_enqueue_style('style.min.css','/wp-content/plugins/prdctfltr/lib/css/style.min.css', '', '6.5.8', 'all');
-	}
 	
 	//about
 	// if ( is_page('1526') || is_page('about') ) {
@@ -130,21 +154,21 @@ function theme_stylesheets() {
 	// 	wp_enqueue_style( 'blogs-css', get_template_directory_uri() . '/css/components/blogs.css' );
 	// }
 	//calculator
-	if ( is_page('1206') || is_page('1210') || is_page('calculator'))  {
-		wp_enqueue_style( 'calculator-css', get_template_directory_uri() . '/css/components/calculator.css' );
-	}
+	// if ( is_page('1206') || is_page('1210') || is_page('calculator'))  {
+	// 	wp_enqueue_style( 'calculator-css', get_template_directory_uri() . '/css/components/calculator.css' );
+	// }
 	//sales
-	if ( is_page('1214') || is_page('1228') || is_page('where-to-buy')) {
-		wp_enqueue_style( 'sales-css', get_template_directory_uri() . '/css/components/sales.css' );
-	}
+	// if ( is_page('1214') || is_page('1228') || is_page('where-to-buy')) {
+	// 	wp_enqueue_style( 'sales-css', get_template_directory_uri() . '/css/components/sales.css' );
+	// }
 	//compare
-	if ( is_page('1872') || is_page('compare')) {
-		wp_enqueue_style( 'compare-css', get_template_directory_uri() . '/css/components/compare.css' );
-	}
+	// if ( is_page('1872') || is_page('compare')) {
+	// 	wp_enqueue_style( 'compare-css', get_template_directory_uri() . '/css/components/compare.css' );
+	// }
 	//contacts
-	if ( is_page('19305') || is_page('contact')) {
-		wp_enqueue_style( 'contacts-css', get_template_directory_uri() . '/css/components/contacts.css' );
-	}
+	// if ( is_page('19305') || is_page('contact')) {
+	// 	wp_enqueue_style( 'contacts-css', get_template_directory_uri() . '/css/components/contacts.css' );
+	// }
 	//events
 	// if ( is_page('1513') || is_page('events-board')) {
 	// 	wp_enqueue_style( 'events-css', get_template_directory_uri() . '/css/components/events.css' );
@@ -154,40 +178,22 @@ function theme_stylesheets() {
 	// 	wp_enqueue_style( 'financing-css', get_template_directory_uri() . '/css/components/financing.css' );
 	// }
 	//Support
-	if ( is_page('2037') || is_page('1513') || is_page('support')) {
-		wp_enqueue_style( 'support-css', get_template_directory_uri() . '/css/components/support.css' );
-	}
+	// if ( is_page('2037') || is_page('1513') || is_page('support')) {
+	// 	wp_enqueue_style( 'support-css', get_template_directory_uri() . '/css/components/support.css' );
+	// }
 	//Support
-	if ( is_single()) {
-		wp_enqueue_style( 'press-css', get_template_directory_uri() . '/css/components/press.css' );
-	}	
-	if ( is_page('2037') || is_page('1513') || is_page('1206')) {
+	// if ( is_single()) {
+	// 	wp_enqueue_style( 'press-css', get_template_directory_uri() . '/css/components/press.css' );
+	// }	
+	// if ( is_page('2037') || is_page('1513') || is_page('1206')) {
 	
-	}
+	// }
 	//equipments
-	if ( is_page('32') || is_page('equipment')) {
-		wp_enqueue_style( 'equipments-css', get_template_directory_uri() . '/css/components/equipments.css' );
-	}
+	// if ( is_page('32') || is_page('equipment')) {
+	// 	wp_enqueue_style( 'equipments-css', get_template_directory_uri() . '/css/components/equipments.css' );
+	// }
 	//vacancies
-	if ( is_archive('vacancies')) {
-		wp_enqueue_style( 'vacancies-css', get_template_directory_uri() . '/css/components/vacancies.css' );
-	}
-			
-	if(!is_front_page() && !is_home()){
-		// wp_enqueue_style('chosen.css', get_template_directory_uri() . '/css/chosen.min.css', array(), '1', 'all' );
-		// wp_enqueue_style('stacktable-css',get_template_directory_uri().'/css/stacktable.min.css', '', '1.0', 'all');
-		
-		// wp_enqueue_style( 'section-choose-us-css', get_template_directory_uri() . '/css/components/frontpage/section-choose-us.css' );
-		// wp_enqueue_style( 'another-equipments-css', get_template_directory_uri() . '/css/components/frontpage/another-equipments.css' );
-		// wp_enqueue_style( 'testimonials-css', get_template_directory_uri() . '/css/components/frontpage/testimonials.css' );
-		// wp_enqueue_style( 'section-video-css', get_template_directory_uri() . '/css/components/frontpage/section-video.css' );
-		// wp_enqueue_style( 'header-hero-slider-css', get_template_directory_uri() . '/css/components/frontpage/header-hero-slider.css' );
-
-
-		wp_enqueue_style('select2.min.css','/wp-content/plugins/beautiful-taxonomy-filters/public/css/select2.min.css', '', '1.0', 'all');
-		// wp_enqueue_style('ideaboxTimeline-css', get_template_directory_uri() . '/css/ideaboxTimeline.css', '', '1.0', 'all');
-		// wp_enqueue_style('style.min.css','/wp-content/plugins/prdctfltr/lib/css/style.min.css', '', '6.5.8', 'all');
-	}
+	
 	// wp_enqueue_style('stylesheet', get_stylesheet_uri(), array(), date("d.m.Y"), 'all' );
     // wp_enqueue_style('mediacss', get_template_directory_uri() . '/css/mediacss.css', '', '', 'all');
    // wp_enqueue_style('media', get_template_directory_uri() . '/media.css', '', '', 'all');
@@ -196,18 +202,18 @@ function theme_stylesheets() {
 add_action('wp_enqueue_scripts', 'theme_stylesheets');
 
 //////////////////////////////////////////
-
-function prefix_add_footer_styles() {
-    wp_enqueue_style('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', '', '1.0', 'all');
-};
-add_action( 'get_footer', 'prefix_add_footer_styles' );
+// DISABLED
+// function prefix_add_footer_styles() {
+//     wp_enqueue_style('fancybox', 'csc/libs/jquery.fancybox.min.css', '', '1.0', 'all');
+// };
+// add_action( 'get_footer', 'prefix_add_footer_styles' );
 //------------------------------
 
 function anatol_enqueue_admin_scripts($hook) {
 	if(get_post_type()!== 'sales-dealers') return;
 
-	wp_enqueue_style('tokenize-css', get_template_directory_uri() . '/js/tokenize/jquery.tokenize.css');
-	wp_enqueue_script('tokenize-js', get_template_directory_uri() . '/js/tokenize/jquery.tokenize.js');
+	wp_enqueue_style('tokenize-css', get_template_directory_uri() . '/js/libs/tokenize/jquery.tokenize.css');
+	wp_enqueue_script('tokenize-js', get_template_directory_uri() . '/js/libs/tokenize/jquery.tokenize.js');
 	wp_enqueue_script('admin_custom_script', get_template_directory_uri() . '/js/admin.js');
 }
 
@@ -221,36 +227,45 @@ add_editor_style('css/editor-style.css');
 // Register Bootstrap JS with jquery
 ////////////////////////////////////////////////////////////////////
 // include custom jQuery
- 
-function shapeSpace_include_custom_jquery() {
-	wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.12.4.min.js', array(), null, false);
-}
-add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery'); 
-
+//  DISABLED
+// function shapeSpace_include_custom_jquery() {
+// 	wp_deregister_script('jquery');
+// 	wp_enqueue_script('jquery', 'js/libs/jquery/jquery-1.12.4.min.js', array(), null, false);
+// }
+// add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery'); 
+// 
 function theme_js()
 {
 	global $version, $google_api_key;
-	wp_enqueue_script('chosen.js', get_template_directory_uri().'/js/chosen.jquery.min.js', '', '', true);
-	wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', '', '', true);
-	wp_enqueue_script('acf_gmap-js', get_template_directory_uri().'/js/acf_gmap.js', '', '', true);
-	wp_enqueue_script('slick-js', get_template_directory_uri().'/js/slick/slick.min.js', null, null, true );
+	wp_enqueue_script('header-js', get_template_directory_uri().'/js/headerPosition.js', false, null, 'footer');
+	wp_enqueue_script('swiper-js', get_template_directory_uri().'/js/libs/swiper/swiper-bundle.min.js', false, null, 'footer');
+	wp_enqueue_script('sliders-js', get_template_directory_uri().'/js/sliders-swiper.js', array('swiper-js'), null, 'footer');
+	wp_enqueue_script('popup-js', get_template_directory_uri().'/js/openModal.js', false, null, 'footer');
+	wp_enqueue_script('main-js', get_template_directory_uri().'/js/main.js', false, null, 'footer');
+
+
+	// wp_enqueue_script('chosen.js', get_template_directory_uri().'/js/modules/chosen.jquery.min.js', '', '', true);
+	// wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', '', '', true);
+	wp_enqueue_script('acf_gmap-js', get_template_directory_uri().'/js/modules/acf_gmap.js', '', '', true);
+	// wp_enqueue_script('slick-js', get_template_directory_uri().'/js/libs/slick/slick.min.js', null, null, true );
 	
 	if(!is_front_page() && !is_home()){
-		wp_enqueue_script('stacktable-js',  get_template_directory_uri().'/js/stacktable.js', '', 1.0, true);
-		wp_enqueue_script('ideaboxTimeline-js', get_template_directory_uri().'/js/ideaboxTimeline.js', '', 1.0, true);
+		// wp_deregister_script('jquery');
+		// wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.12.4.min.js', array(), null, false);
+
+		wp_enqueue_script('chosen.js', get_template_directory_uri().'/js/modules/chosen.jquery.min.js', '', '', true);
+		wp_enqueue_script('ideaboxTimeline-js', get_template_directory_uri().'/js/libs/ideaboxTimeLine/ideaboxTimeline.js', '', 1.0, true);
+		// wp_enqueue_script('stacktable-js',  get_template_directory_uri().'/js/stacktable.js', '', 1.0, true);
 	}
 
 	//about
-	if ( is_page('1526') ) {
-		wp_enqueue_script('element-in-view-js', get_template_directory_uri().'/js/element-in-view.js', '', 1.0, true);
-		wp_enqueue_script('counters-js', get_template_directory_uri().'/js/counters.js', '', 1.0, true);
-	}
+	// if ( is_page('1526') ) {
+	// 	wp_enqueue_script('element-in-view-js', get_template_directory_uri().'/js/element-in-view.js', '', 1.0, true);
+	// 	wp_enqueue_script('counters-js', get_template_directory_uri().'/js/counters.js', '', 1.0, true);
+	// }
 
-	if ( is_page('2037') || is_page('1513')  || is_page('1206') ) {}
-
-	wp_enqueue_script('viewportchecker-js', get_template_directory_uri().'/js/viewportchecker.js', '', '', true);
-	wp_enqueue_script('anatol-js', get_template_directory_uri().'/js/anatol.js', '', '1.3.3', true);
+	// wp_enqueue_script('viewportchecker-js', get_template_directory_uri().'/js/viewportchecker.js', '', '', true);
+	// wp_enqueue_script('anatol-js', get_template_directory_uri().'/js/anatol.js', '', '1.3.3', true);
 }
 add_action('wp_enqueue_scripts', 'theme_js');
 
@@ -408,7 +423,6 @@ register_sidebar(
     )
 );
 
-
 register_sidebar(
 	array(
 		'name' => 'Right Sidebar',
@@ -522,7 +536,6 @@ function excerpt($limit) {
 	return $excerpt;
 }
 
-
 ////////////////////////////////////////////////////////////////////
 // Register hook and action to set Main content area col-md- width based on sidebar declarations
 ////////////////////////////////////////////////////////////////////
@@ -556,6 +569,9 @@ function main_content_width() {
 
 add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size(300,300, true);
+
+add_image_size( 'blog_thumb', 355, 9999, true );
+
 //add_image_size( 'thumbnails-feed', 300, 180, true );
 ////////////////////////////////////////////////////////////////////
 // Adds RSS feed links to for posts and comments.
@@ -619,7 +635,7 @@ function create_anatol_posttypes() {
         'menu_icon'           => 'dashicons-editor-help',
       )
     );
-	    //-------- FAQ categoris ---------
+	    //-------- FAQ categories ---------
     register_taxonomy(
       'topic',
       'faq',
@@ -966,36 +982,9 @@ function create_anatol_posttypes() {
 
 }
 add_action( 'init', 'create_anatol_posttypes' );
-/* 
-function br_shortcode($atts){
-	return "<br />";
-}
-add_shortcode('br', 'br_shortcode');
- */
 
-/* function getTplMainVideo() {
-	global $wpdb;
-	return $wpdb->get_row("SELECT * FROM `oth8q_gv_videos` WHERE `status` = '2'");
+// 
 
-} */
-/* 
-function getTplTagsList() {
-	global $wpdb;
-	return $wpdb->get_results("SELECT * FROM `oth8q_gv_videos_tags` WHERE `published` = '1' ORDER BY `title` DESC");
-
-}
- */
- /* 
-function getTplAllVideos() {
-	global $wpdb;
-	return $wpdb->get_results("SELECT * FROM `oth8q_gv_videos` WHERE `status` NOT IN('2','0') ORDER BY id DESC");
-}
-
-function is_odd($number) {
-	return ($number % 2 ? true : false);
-}
- */
- /* */
 function goingOn($ste, $sto){
 	$strme = trim($ste); $endme = trim($sto);
 	if(!empty($strme)){
@@ -1059,65 +1048,65 @@ function goingFuture($ste, $sto){
 }
 
 
-function galleryOn($gl0, $gl1, $gl2, $gl3, $gl4, $gl5, $gl6, $gl7, $gl8, $gl9){
-	$ingl = Array($gl0, $gl1, $gl2, $gl3, $gl4, $gl5, $gl6, $gl7, $gl8, $gl9);
-	$cnt= 0;
-	foreach($ingl as $chl){
-		if(!empty($chl)){
-			if(file_exists('images/mxevents/galleries/'.$chl)){ $cnt++;  }
-		}
-	}
-	return $cnt;
-}
+// function galleryOn($gl0, $gl1, $gl2, $gl3, $gl4, $gl5, $gl6, $gl7, $gl8, $gl9){
+// 	$ingl = Array($gl0, $gl1, $gl2, $gl3, $gl4, $gl5, $gl6, $gl7, $gl8, $gl9);
+// 	$cnt= 0;
+// 	foreach($ingl as $chl){
+// 		if(!empty($chl)){
+// 			if(file_exists('images/mxevents/galleries/'.$chl)){ $cnt++;  }
+// 		}
+// 	}
+// 	return $cnt;
+// }
 
 
-function galleryView($name, $gf0, $gf1, $gf2, $gf3, $gf4, $gf5, $gf6, $gf7, $gf8, $gf9){
-	echo '<br><div class="gallbox">';
-	$ingal = Array($gf0, $gf1, $gf2, $gf3, $gf4, $gf5, $gf6, $gf7, $gf8, $gf9);
-	$cnt =0;
-	foreach($ingal as $chl) {
-		if(!empty($chl)){
-			if(file_exists('images/mxevents/galleries/'.$chl)){
-				$cnt++;
-				echo '<div class="highslide-caption" id="the-caption"><font class="anatoltextgl">'.$name.'</font>
-				<a href="#" class="highslide-closeimage" onclick="return hs.close(this)"><font size="5.5em" color="silver">x</font></a>';
-				if($cnt>2){
-					echo '<a href="#" class="highslide-control-left" onclick="return hs.previous(this)"></a>';
-				}
-				echo '<a href="#" class="highslide-control-right" onclick="return hs.next(this)"></a></div>';
-				echo "<a title='click to open' href='../images/mxevents/galleries/".$chl."' class=\"highslide\"
-				onclick=\"return hs.expand(this)\"><div class='gallcorn' style='height: 6vh; width: 6vh;  float: left;
-				margin-top: 2px; margin-right: 2px; background-image: url(../images/mxevents/galleries/mini/".$chl.");
-				background-repeat: no-repeat; background-position: top center; background-size: cover; box-shadow: 0px 0px 5px #FFF;'></a></div>";
-			}
-		}
-	}  echo '<font class="anatoltextgl"></font></div>';
-}
+// function galleryView($name, $gf0, $gf1, $gf2, $gf3, $gf4, $gf5, $gf6, $gf7, $gf8, $gf9){
+// 	echo '<br><div class="gallbox">';
+// 	$ingal = Array($gf0, $gf1, $gf2, $gf3, $gf4, $gf5, $gf6, $gf7, $gf8, $gf9);
+// 	$cnt =0;
+// 	foreach($ingal as $chl) {
+// 		if(!empty($chl)){
+// 			if(file_exists('images/mxevents/galleries/'.$chl)){
+// 				$cnt++;
+// 				echo '<div class="highslide-caption" id="the-caption"><font class="anatoltextgl">'.$name.'</font>
+// 				<a href="#" class="highslide-closeimage" onclick="return hs.close(this)"><font size="5.5em" color="silver">x</font></a>';
+// 				if($cnt>2){
+// 					echo '<a href="#" class="highslide-control-left" onclick="return hs.previous(this)"></a>';
+// 				}
+// 				echo '<a href="#" class="highslide-control-right" onclick="return hs.next(this)"></a></div>';
+// 				echo "<a title='click to open' href='../images/mxevents/galleries/".$chl."' class=\"highslide\"
+// 				onclick=\"return hs.expand(this)\"><div class='gallcorn' style='height: 6vh; width: 6vh;  float: left;
+// 				margin-top: 2px; margin-right: 2px; background-image: url(../images/mxevents/galleries/mini/".$chl.");
+// 				background-repeat: no-repeat; background-position: top center; background-size: cover; box-shadow: 0px 0px 5px #FFF;'></a></div>";
+// 			}
+// 		}
+// 	}  echo '<font class="anatoltextgl"></font></div>';
+// }
 
-function galleryViewFromButton($name, $images){
-	if(!empty($images)){
-		$cnt =0;
-		foreach($images as $image ){
-			$image_attributes = wp_get_attachment_image_src($image['ID'], 'full');
-			if($image_attributes) {
-				$cnt++;
-				echo '<div class="highslide-caption" id="the-caption"><font class="anatoltextgl">'.$name.'</font>
-				<a href="#" class="highslide-closeimage" onclick="return hs.close(this)"><font size="5.5em" color="silver">x</font></a>';
-				if($cnt>2){
-					echo '<a href="#" class="highslide-control-left" onclick="return hs.previous(this)"></a>';
-				}
-				echo '<a href="#" class="highslide-control-right" onclick="return hs.next(this)"></a></div>';
-				if($cnt==1){
-					echo "<a title='".addslashes(__('click to open'))."' href='".$image_attributes[0]."' class=\"highslide\"
-					onclick=\"return hs.expand(this)\"><i class='uk-icon-photo'></i> ".__('View photos')."</a>";
-				} else {
-					echo "<a title='".addslashes(__('click to open'))."' href='".$image_attributes[0]."' class=\"highslide\"
-					onclick=\"return hs.expand(this)\"></a>";
-				}
-			}
-		}
-	}
-}
+// function galleryViewFromButton($name, $images){
+// 	if(!empty($images)){
+// 		$cnt =0;
+// 		foreach($images as $image ){
+// 			$image_attributes = wp_get_attachment_image_src($image['ID'], 'full');
+// 			if($image_attributes) {
+// 				$cnt++;
+// 				echo '<div class="highslide-caption" id="the-caption"><font class="anatoltextgl">'.$name.'</font>
+// 				<a href="#" class="highslide-closeimage" onclick="return hs.close(this)"><font size="5.5em" color="silver">x</font></a>';
+// 				if($cnt>2){
+// 					echo '<a href="#" class="highslide-control-left" onclick="return hs.previous(this)"></a>';
+// 				}
+// 				echo '<a href="#" class="highslide-control-right" onclick="return hs.next(this)"></a></div>';
+// 				if($cnt==1){
+// 					echo "<a title='".addslashes(__('click to open'))."' href='".$image_attributes[0]."' class=\"highslide\"
+// 					onclick=\"return hs.expand(this)\"><i class='uk-icon-photo'></i> ".__('View photos')."</a>";
+// 				} else {
+// 					echo "<a title='".addslashes(__('click to open'))."' href='".$image_attributes[0]."' class=\"highslide\"
+// 					onclick=\"return hs.expand(this)\"></a>";
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 function getTextBetweenTags($string, $tagname) {
 	$pattern = "/<$tagname>(.*)<\/$tagname>/";
@@ -1207,8 +1196,6 @@ echo'<div class="lang_dropdoun">';
 
 
 
-
-
 function remove_menu_items( $menu_links ) {
 unset ( $menu_links['subscriptions'] );
 unset( $menu_links['dashboard'] );
@@ -1255,8 +1242,6 @@ public function add_query_vars( $vars ) {
 $vars[] = self::$endpoint;
 return $vars;
 }
-
-
 
 
 
@@ -1361,11 +1346,7 @@ echo '<div id="mob_language_list">
 }
 }
 
-
-
-
-
-
+// /////////////////////
 
 function modify_categories_dropdown($args, $taxonomy) {
 if($taxonomy == 'country') {
@@ -1684,25 +1665,28 @@ function anatol_dequeue_scripts() {
 // });
 
 /**
+ * 
+ * DISABLED
+ * 
  * Add Invisible reCaptcha v3 script
  */
-function add_recaptcha() {
-    if(!is_single('new')) {
-        // if the page is not where we have the form, returns early
-	return;
-    }
-    // actually adds the reCaptcha
-    do_action('google_invre_render_widget_action');
-}
+// function add_recaptcha() {
+//     if(!is_single('new')) {
+//         // if the page is not where we have the form, returns early
+// 	return;
+//     }
+//     // actually adds the reCaptcha
+//     do_action('google_invre_render_widget_action');
+// }
 
 /**
  * Validate with Invisible reCaptcha
  * Returns bool
  */
-function recaptcha_validate() {
-     $is_valid = apply_filters('google_invre_is_valid_request_filter', true);
-     return $is_valid;
-}
+// function recaptcha_validate() {
+//      $is_valid = apply_filters('google_invre_is_valid_request_filter', true);
+//      return $is_valid;
+// }
 
 /***ADD PLU MINUS TO woocommerce CART****/ 
 add_action( 'wp_footer' , 'custom_quantity_fields_script' );

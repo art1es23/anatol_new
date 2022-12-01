@@ -1,69 +1,64 @@
-.ebook_content {
+.ebooks {
   margin: 5vw auto;
 }
 
-.ebooks_list {
+.ebooks-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2.5vw;
 }
-.similar_ebooks_slider .ebook_item,
-.ebooks_list .ebook_item {
+.similar_ebooks_slider .ebook-post,
+.ebook-post {
   width: calc(100% / 2 - 1.5vw);
   position: relative;
   background-color: #eee;
-  /* border: 1px solid #eee; */
-  /* padding: 10px; */
+  border: 1px solid #eee;
   overflow: hidden;
-  /* margin: 15px 0; */
 }
 
-.similar_ebooks_slider .ebook_img,
-.ebooks_list .ebook_img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  /* min-width: 50%;
-  min-height: 50%;
-  width: 50%; */
-  overflow: hidden;
+.ebook-post {
+  display: flex;
+  position: relative;
 }
-.ebook_item .ebook_desc {
-  /* float: right; */
+
+.ebook-post:hover {
+  box-shadow: 0 5px 5px rgba(106, 106, 106, 0.1);
+}
+
+.similar_ebooks_slider .ebook-post__img,
+.ebook-post__img {
+  overflow: hidden;
+  display: flex;
+  max-width: 40%;
+}
+.ebook-post__description {
   z-index: 2;
   background-color: #fff;
   position: relative;
   padding: 1.5vw;
   width: 60%;
-  gap: 1.25vw;
+  gap: 1.5vw;
   height: 100%;
-  /* min-height: 330px; */
-  /* border: 1px solid #eee; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: auto;
-}
-.ebook_descr_top {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25vw;
+  justify-content: center;
 }
 
-.ebook_img img {
+.ebook-post__img img {
   width: 100%;
   height: auto;
 }
-.ebooks_list .ebook_item:hover {
-  box-shadow: 0 5px 5px rgba(106, 106, 106, 0.1);
-}
-.ebook_item .ebook_learn_more a {
+
+.ebook-post__btn {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.85vw;
   color: #353535;
-  float: right;
   position: relative;
 }
-.ebook_item .ebook_learn_more a:before {
+
+.ebook-post__btn:before {
   content: "";
   display: block;
   position: absolute;
@@ -73,25 +68,30 @@
   bottom: 1px;
   transition: width 0.15s cubic-bezier(0.68, 0, 0.265, 1);
 }
-.ebook_item .ebook_learn_more:hover a:before {
+.ebook-post__btn:hover:before {
   width: 100%;
 }
-.ebook_item .ebook_title a {
+.ebook-post__title {
   color: #353535;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 1.15vw;
+  line-height: 1.4vw;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  /* margin-bottom: 15px; */
   display: block;
   text-decoration: none;
 }
-.ebook_item:hover .ebook_title a {
+.ebook-post__title:hover {
+  text-decoration: none;
+}
+
+.ebook-post:hover .ebook-post__title {
   color: #ab1a1f;
 }
-.ebooks_list .ebook_item .ebook_title a:hover {
-  text-decoration: none;
+.ebook-post__excerpt {
+  font-size: 0.9vw;
+  line-height: 1.2vw;
+  text-align: justify;
 }
 
 .single_ebook_content {
@@ -157,7 +157,7 @@
 .similar_ebook_item {
   padding: 15px;
 }
-.similar_ebook_item .ebook_item {
+.similar_ebook_item .ebook-post {
   width: 100%;
 }
 .similar_ebooks .slick-dotted .slick-dots {
@@ -173,23 +173,13 @@
 .single_ebook_content {
   margin: 60px 0 30px 0;
 }
-.single-anatoltv .ebook_img {
+.single-anatoltv .ebook-post__img {
   width: 100%;
 }
 
-.single-anatoltv .ebook_item .ebook_desc {
+.single-anatoltv .ebook-post .ebook-post__description {
   width: 100%;
   min-height: auto;
-}
-
-@media all and (max-width: 1180px) {
-  .ebook_item .ebook_img img {
-    width: auto;
-    height: 100%;
-  }
-  .single-anatoltv .ebook_item .ebook_img img {
-    width: 100%;
-  }
 }
 
 @media all and (max-width: 1100px) {
@@ -211,32 +201,100 @@
     margin-bottom: 0;
   }
 }
-@media all and (max-width: 991px) {
-  .ebooks_list .ebook_item {
+@media all and (max-width: 1080px) {
+  .ebook-post {
     width: 100%;
   }
-  .ebooks_list {
-    padding: 20px;
+
+  .ebook-post__description {
+    width: 80%;
+    padding: 5vw;
+    gap: 3vw;
   }
-  .similar_ebooks_slider {
-    margin-left: 0;
-    margin-right: 0;
+
+  .ebook-post__title {
+    font-size: 2.1vw;
+    line-height: 2.75vw;
+    text-align: justify;
+  }
+  .ebook-post__excerpt {
+    font-size: 1.7vw;
+    line-height: 2.25vw;
+  }
+  .ebook-post__btn {
+    font-size: 1.75vw;
   }
 }
-@media all and (max-width: 900px) {
+
+@media all and (max-width: 768px) {
+  .ebook-post__description {
+    width: 94%;
+  }
+
+  .ebook-post__title {
+    font-size: 2.25vw;
+    line-height: 3vw;
+  }
+  .ebook-post__excerpt {
+    font-size: 2vw;
+    line-height: 2.75vw;
+  }
+
+  .ebook-post__btn {
+    font-size: 2vw;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .ebooks-list {
+    gap: 7.5vw;
+  }
+  .ebook-post {
+    flex-direction: column;
+  }
+  .ebook-post__description {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 7.5vw;
+  }
+
+  .ebook-post__title {
+    font-size: 4vw;
+    line-height: 4.5vw;
+  }
+  .ebook-post__excerpt {
+    font-size: 3.25vw;
+    line-height: 3.75vw;
+  }
+
+  .ebook-post__img {
+    max-width: 100%;
+  }
+  .ebook-post__img img {
+    object-fit: cover;
+  }
+  .ebook-post__btn {
+    font-size: 3.25vw;
+  }
+}
+
+/* @media all and (max-width: 900px) {
   .single-anatoltv .single_ebook_cont {
     padding: 0;
   }
 }
 @media all and (max-width: 460px) {
-  .similar_ebook_item .ebook_item .ebook_img img,
-  .ebooks_list .ebook_img img {
+  .similar_ebook_item .ebook-post .ebook-post__img img,
+  .ebooks-list .ebook-post__img img {
     width: 100%;
     height: auto;
   }
 
-  .similar_ebook_item .ebook_item .ebook_desc,
-  .ebooks_list .ebook_item .ebook_desc {
+  .similar_ebook_item .ebook-post .ebook-post__description,
+  .ebooks-list .ebook-post .ebook-post__description {
     float: none;
     position: relative;
     padding: 14px;
@@ -244,18 +302,18 @@
     min-height: fit-content;
     height: auto;
   }
-  .similar_ebook_item .ebook_item .ebook_img,
-  .ebooks_list .ebook_img {
+  .similar_ebook_item .ebook-post .ebook-post__img,
+  .ebooks-list .ebook-post__img {
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
   }
-  .ebook_item .ebook_desc .ebook_excerpt {
+  .ebook-post .ebook-post__description .ebook-post__excerpt {
     display: none;
   }
-  .ebook_item .ebook_title a {
+  .ebook-post .ebook-post__title {
     font-size: 18px;
     line-height: 20px;
   }
-}
+} */

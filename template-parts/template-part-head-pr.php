@@ -43,12 +43,12 @@
 				}
 			?>
 
-        <div class="head_description et_had_animation  animate fadeInLeft two" style="">
-            <?php 
-				$product_cat_object = get_queried_object();
-				the_field('cat_title_description', 'product_cat_' . $product_cat_object->term_id);
-			?>
-        </div>
+        <!-- <div class="head_description et_had_animation  animate fadeInLeft two" style=""> -->
+        <?php 
+			$product_cat_object = get_queried_object();
+			the_field('cat_title_description', 'product_cat_' . $product_cat_object->term_id);
+		?>
+        <!-- </div> -->
     </div>
 </div>
 <!-- </div>

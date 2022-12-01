@@ -2,6 +2,11 @@
 /* Template Name: Cart Woo */
 
 	get_header(); ?>
+
+<style>
+<?php include 'css/woocommerce.css';
+?>
+</style>
 <?php get_template_part('template-parts/template-part-head-press'); ?>
 
 
@@ -32,11 +37,11 @@
                     <h2 class="page-header"><?php the_title(); ?></h2>
                     <?php // theloop
       					if (have_posts()) : while (have_posts()) : the_post(); ?>
-								<?php the_content(); ?>
-							<?php endwhile; ?>
-                    	<?php else : ?>
-							<?php get_404_template(); ?>
-						<?php endif; ?>
+                    <?php the_content(); ?>
+                    <?php endwhile; ?>
+                    <?php else : ?>
+                    <?php get_404_template(); ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

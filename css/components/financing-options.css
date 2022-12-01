@@ -1,0 +1,130 @@
+.financing_info_text {
+  width: 100%;
+}
+
+.financing_info--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vw;
+}
+.more_finance {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  font-size: max(1.1vw, 16px);
+}
+.more_finance h2 {
+  font-family: "Roboto", sans-serif;
+  color: #353535;
+  font-size: max(2vw, 2rem);
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1vw;
+  position: relative;
+}
+.more_finance h2::before {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 4px;
+  background-color: #ab1a1f;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.more_finance_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  font-size: max(1.1vw, 16px);
+  text-align: justify;
+}
+.item_finance_info {
+  padding-left: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35vw;
+}
+
+.item_finance_info::before {
+  display: flex;
+  width: 27px;
+  height: 27px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background: rgba(240, 203, 203, 0.29);
+  font-family: "anatol";
+  font-size: 11px;
+  font-weight: bold;
+  color: #ab1a1f;
+  content: "\E830";
+  border-radius: 100px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+.item_finance_info h3 {
+  font-weight: bold;
+}
+.where_financing {
+  display: inline-flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  min-height: 40px;
+  min-width: 7.813vw;
+  color: #fff;
+  text-decoration: none !important;
+  outline: none !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: #ab1a1f;
+  border: 2px solid #ab1a1f;
+  box-sizing: border-box;
+  text-shadow: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+  .financing_info--wrapper {
+    gap: 3vw;
+  }
+  .more_finance_info {
+    gap: 1.75vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .financing_info--wrapper {
+    gap: 7.5vw;
+  }
+  .more_finance {
+    gap: 3vw;
+  }
+  .more_finance h2 {
+    padding-bottom: 3vw;
+  }
+  .item_finance_info {
+    gap: 2vw;
+  }
+  .more_finance_info {
+    gap: 2.5vw;
+  }
+}

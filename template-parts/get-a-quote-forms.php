@@ -1,4 +1,10 @@
-<div class="get_quote innerr">
+<style>
+<?php include '../css/components/get-in-touch.css';
+?>
+</style>
+
+
+<div class="get_quote innerr hidden">
     <a class="close_pop" style="float: right;"><img loading="lazy" class="lozad"
             src="<?php bloginfo('template_directory'); ?>/images/close.svg" style="width: 20px" alt=""></a>
     <div class="form-title">Get a Quote</div>
@@ -221,7 +227,8 @@
                         <option class="elements" value="Botswana">Botswana</option>
                         <option class="elements" value="Bouvet Island">Bouvet Island</option>
                         <option class="elements" value="Brazil">Brazil</option>
-                        <option class="elements" value="British Indian Ocean Territory">British Indian Ocean Territory
+                        <option class="elements" value="British Indian Ocean Territory">British Indian Ocean
+                            Territory
                         </option>
                         <option class="elements" value="Brunei Darussalam">Brunei Darussalam</option>
                         <option class="elements" value="Bulgaria">Bulgaria</option>
@@ -322,7 +329,8 @@
                         <option class="elements" value="Lithuania">Lithuania</option>
                         <option class="elements" value="Luxembourg">Luxembourg</option>
                         <option class="elements" value="Macao">Macao</option>
-                        <option class="elements" value="Macedonia">Macedonia, the former Yugoslav Republic of</option>
+                        <option class="elements" value="Macedonia">Macedonia, the former Yugoslav Republic of
+                        </option>
                         <option class="elements" value="Madagascar">Madagascar</option>
                         <option class="elements" value="Malawi">Malawi</option>
                         <option class="elements" value="Malaysia">Malaysia</option>
@@ -335,7 +343,8 @@
                         <option class="elements" value="Mauritius">Mauritius</option>
                         <option class="elements" value="Mayotte">Mayotte</option>
                         <option class="elements" value="Mexico">Mexico</option>
-                        <option class="elements" value="Federated States of Micronesia">Micronesia, Federated States of
+                        <option class="elements" value="Federated States of Micronesia">Micronesia, Federated States
+                            of
                         </option>
                         <option class="elements" value="Moldova">Moldova, Republic of</option>
                         <option class="elements" value="Monaco">Monaco</option>
@@ -361,7 +370,8 @@
                         <option class="elements" value="Oman">Oman</option>
                         <option class="elements" value="Pakistan">Pakistan</option>
                         <option class="elements" value="Palau">Palau</option>
-                        <option class="elements" value="Occupied Palestinian Territory">Palestinian Territory, Occupied
+                        <option class="elements" value="Occupied Palestinian Territory">Palestinian Territory,
+                            Occupied
                         </option>
                         <option class="elements" value="Panama">Panama</option>
                         <option class="elements" value="Papua New Guinea">Papua New Guinea</option>
@@ -380,8 +390,10 @@
                         <option class="elements" value="Saint Helena">Saint Helena</option>
                         <option class="elements" value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
                         <option class="elements" value="Saint Lucia">Saint Lucia</option>
-                        <option class="elements" value="Saint Martin (French part)">Saint Martin (French part)</option>
-                        <option class="elements" value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                        <option class="elements" value="Saint Martin (French part)">Saint Martin (French part)
+                        </option>
+                        <option class="elements" value="Saint Pierre and Miquelon">Saint Pierre and Miquelon
+                        </option>
                         <option class="elements" value="Saint Vincent and The Grenadines">Saint Vincent and The
                             Grenadines</option>
                         <option class="elements" value="Samoa">Samoa</option>
@@ -398,7 +410,8 @@
                         <option class="elements" value="Solomon Islands">Solomon Islands</option>
                         <option class="elements" value="Somalia">Somalia</option>
                         <option class="elements" value="South Africa">South Africa</option>
-                        <option class="elements" value="South Georgia and The South Sandwich Islands">South Georgia and
+                        <option class="elements" value="South Georgia and The South Sandwich Islands">South Georgia
+                            and
                             The South Sandwich Islands</option>
                         <option class="elements" value="Spain">Spain</option>
                         <option class="elements" value="Sri Lanka">Sri Lanka</option>
@@ -461,7 +474,8 @@
                         <option class="usa_state elements" value="Colorado">Colorado</option>
                         <option class="usa_state elements" value="Connecticut">Connecticut</option>
                         <option class="usa_state elements" value="Delaware">Delaware</option>
-                        <option class="usa_state elements" value="District of Columbia">District of Columbia</option>
+                        <option class="usa_state elements" value="District of Columbia">District of Columbia
+                        </option>
                         <option class="usa_state elements" value="Florida">Florida</option>
                         <option class="usa_state elements" value="Georgia">Georgia</option>
                         <option class="usa_state elements" value="Hawaii">Hawaii</option>
@@ -507,12 +521,15 @@
                         <option class="usa_state elements" value="Wyoming">Wyoming</option>
 
                         <option class="canadian_province elements" value="Alberta">Alberta</option>
-                        <option class="canadian_province elements" value="British Columbia">British Columbia</option>
+                        <option class="canadian_province elements" value="British Columbia">British Columbia
+                        </option>
                         <option class="canadian_province elements" value="Manitoba">Manitoba</option>
                         <option class="canadian_province elements" value="New Brunswick">New Brunswick</option>
-                        <option class="canadian_province elements" value="Newfoundland and Labrador">Newfoundland and
+                        <option class="canadian_province elements" value="Newfoundland and Labrador">Newfoundland
+                            and
                             Labrador</option>
-                        <option class="canadian_province elements" value="Northwest Territories">Northwest Territories
+                        <option class="canadian_province elements" value="Northwest Territories">Northwest
+                            Territories
                         </option>
                         <option class="canadian_province elements" value="Nova Scotia">Nova Scotia</option>
                         <option class="canadian_province elements" value="Nunavut">Nunavut</option>
@@ -521,7 +538,8 @@
                         </option>
                         <option class="canadian_province elements" value="Quebec">Quebec</option>
                         <option class="canadian_province elements" value="Saskatchewan">Saskatchewan</option>
-                        <option class="canadian_province elements" value="Yukon Territories">Yukon Territories</option>
+                        <option class="canadian_province elements" value="Yukon Territories">Yukon Territories
+                        </option>
                     </select>
                 </div>
             </div>

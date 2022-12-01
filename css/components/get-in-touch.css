@@ -7,13 +7,14 @@
   color: #fff;
   position: relative;
 }
+
 .get_in_contact {
   background-image: linear-gradient(
       180deg,
       rgba(24, 30, 36, 0.9) 0%,
       rgba(213, 26, 39, 0.69) 100%
     ),
-    url(../../images/bg-img-05.jpg) !important;
+    url(../wp-content/themes/anatol/images/bg-img-05.jpg) !important;
   background-position: 50%;
   background-size: cover;
   width: 50%;
@@ -29,6 +30,7 @@
   flex-direction: column;
   gap: 1.25vw;
   position: relative;
+  align-items: flex-start;
 }
 .get_in_form {
   width: 50%;
@@ -36,16 +38,18 @@
   position: relative;
 }
 .get_in_title {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "RobotoCondensed", sans-serif;
   font-weight: 700;
-  font-size: 3vw;
-}
-.get_in_title h2 {
+  font-size: 3.5vw;
   margin: 0;
   padding: 0;
-  font-size: 4.6vw;
 }
-
+.get-in-touch-pagination {
+  width: 35% !important;
+  bottom: 0 !important;
+  position: relative !important;
+  justify-content: flex-start;
+}
 .contact-form--wrapper {
   display: flex;
   flex-direction: column;
@@ -56,7 +60,7 @@
 .cont_form_title {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
-  font-size: 3vw;
+  font-size: 3.5vw;
 }
 
 .get_forms {
@@ -64,12 +68,29 @@
   display: flex;
   flex-direction: column;
 }
-.contact_line .contact_line_header {
+.cont_datas {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
   font-family: "Roboto Condensed", sans-serif;
+}
+
+.contact_header {
+  font-weight: 700;
+  font-size: 1.4vw;
+}
+
+.contact_line {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35vw;
+}
+
+.contact_line_header {
   font-weight: 700;
   font-size: 1.2vw;
 }
-.contact_line .contact_line_header .cont_ico {
+.contact_line_header .cont_ico {
   margin-right: 10px;
 }
 .contact_line_header .cont_ico.ico_location::before {
@@ -91,6 +112,12 @@
   display: inline;
   color: #fff;
 }
+
+.contact_line_legend {
+  font-size: 1vw;
+}
+
+/* end */
 section#financing_form .get_forms textarea,
 .get_forms .field_full textarea {
   height: 125px;
@@ -139,14 +166,14 @@ input[type="submit"],
 .get_forms input[type="date"],
 .get_forms select,
 .get_forms textarea {
-  font-size: 14px;
+  font-size: 0.8vw;
   font-family: "Roboto", sans-serif;
   background: #fff;
-  border: 1px solid #afafaf;
+  /* border: 1px solid #afafaf; */
   border-radius: 0px;
   color: #777;
   width: 100%;
-  padding: 10px 10px;
+  padding: 1rem;
   outline: none;
   height: 45px;
 }
@@ -196,7 +223,7 @@ input[type="submit"],
   .input[type="radio"]
   + label {
   font-family: "Lato", Helvetica, Arial, Lucida, sans-serif;
-  font-size: 16px;
+  font-size: 0.8vw;
 }
 .feedback_form .form-row select,
 .feedback_form .form-row input,
@@ -224,10 +251,10 @@ input[type="submit"],
   max-width: 100%;
   border-radius: 0;
 
-  border: 1px solid #afafaf;
+  /* border: 1px solid #afafaf; */
   color: #999;
-  font-size: 14px;
-  padding: 12px 15px;
+  font-size: 0.8vw;
+  padding: 1rem;
 }
 .form-row input[type="checkbox"] {
   position: relative;
@@ -243,7 +270,7 @@ input[type="submit"],
   height: 16px;
   top: 0;
   left: 0;
-  border: 2px solid #555555;
+  /* border: 2px solid #555555; */
   border-radius: 3px;
   background-color: white;
 }
@@ -252,7 +279,7 @@ input[type="submit"],
   display: block;
   width: 5px;
   height: 10px;
-  border: solid black;
+  /* border: solid black; */
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -270,8 +297,8 @@ input[type="submit"],
   border-radius: 0;
   border: none;
   color: #fff;
-  font-size: 14px;
-  padding: 12px 15px;
+  font-size: 0.8vw;
+  padding: 1rem 0.5rem;
 }
 .feedback_form .form-row select option {
   color: #242424;
@@ -287,7 +314,7 @@ input[type="submit"],
   border-width: 0;
   border-radius: 0;
   color: #999;
-  font-size: 14px;
+  font-size: 0.8vw;
   padding: 12px 15px;
 }
 .form_borders .form-row textarea {
@@ -354,49 +381,93 @@ input[type="submit"],
 .get_in_form input[type="submit"]:hover {
   box-shadow: 0 0 8px rgb(0 0 0 / 60%);
 }
-.get_in_touch select {
+.get_in_touch_cont select {
   outline: none;
 }
-.get_in_touch #contact_form textarea {
+.get_in_touch_cont #contact_form textarea {
   color: white !important;
 }
-.get_in_touch textarea::placeholder {
+.get_in_touch_cont textarea::placeholder {
   color: white !important;
 }
-.get_in_touch textarea::placeholder {
+.get_in_touch_cont textarea::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white !important;
   opacity: 1; /* Firefox */
 }
 
-.get_in_touch textarea:-ms-input-placeholder {
+.get_in_touch_cont textarea:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: white !important;
 }
 
-.get_in_touch textarea::-ms-input-placeholder {
+.get_in_touch_cont textarea::-ms-input-placeholder {
   /* Microsoft Edge */
   color: white !important;
 }
-.get_in_touch #contact_form .form-row input {
+.get_in_touch_cont #contact_form .form-row input {
   background-color: rgba(255, 255, 255, 0.12);
   color: white;
 }
-.get_in_touch input::placeholder {
+.get_in_touch_cont input::placeholder {
   color: white !important;
 }
-.get_in_touch input::placeholder {
+.get_in_touch_cont input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white !important;
   opacity: 1; /* Firefox */
 }
 
-.get_in_touch input:-ms-input-placeholder {
+.get_in_touch_cont input:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: white !important;
 }
 
-.get_in_touch input::-ms-input-placeholder {
+.get_in_touch_cont input::-ms-input-placeholder {
   /* Microsoft Edge */
   color: white !important;
+}
+
+@media screen and (max-width: 1080px) {
+  .get_in_contact--wrapper {
+    width: 70%;
+    gap: 2.25vw;
+  }
+
+  .get_in_title {
+    font-size: 4.5vw;
+  }
+  .contact_header {
+    font-size: 1.8vw;
+  }
+
+  .contact_line_header {
+    font-size: 1.6vw;
+  }
+
+  .contact_line_legend {
+    font-size: 1.4vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .get_in_contact--wrapper {
+    width: 70%;
+    gap: 2.25vw;
+  }
+
+  .get_in_title {
+    font-size: 5vw;
+  }
+  .contact_header {
+    font-size: 1.9vw;
+  }
+
+  .contact_line_header {
+    font-size: 1.8vw;
+  }
+
+  .contact_line_legend {
+    font-size: 1.65vw;
+  }
 }

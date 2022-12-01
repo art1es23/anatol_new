@@ -1,0 +1,9 @@
+body {
+  background-color: rebeccapurple;
+}
+
+.product_content_row,
+.prtfilter_box_right {
+  display: flex;
+  width: 100%;
+}

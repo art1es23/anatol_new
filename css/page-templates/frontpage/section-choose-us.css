@@ -1,13 +1,13 @@
 /* About section (choose us) */
 
-.section-about--wrapper {
+.choose-us--wrapper {
   margin: max(5vh, 2.5rem) auto;
   display: flex;
   justify-content: space-between;
   gap: 5vw;
 }
 
-.section-about__item {
+.choose-us__item {
   width: calc((100% - 7.5vw) / 2);
   display: flex;
   flex-direction: column;
@@ -16,21 +16,76 @@
   gap: 2vw;
 }
 
-.section-about .section_title {
-  font-size: 2.2vw;
+.choose-us .section_title {
+  font-size: 2.5vw;
   color: #252525;
   line-height: 1;
   text-shadow: 0em 0.18em 0.27em rgb(0 0 0 / 24%);
   /* margin-bottom: 30px; */
   text-align: left;
 }
-.section-about .description_txt {
+.choose-us__description {
   font-family: "Lato", sans-serif;
-  font-size: 1.042vw;
-  line-height: 1.3;
+  font-size: 1.075vw;
+  line-height: 1.5;
+  text-align: justify;
 }
 
-.anatol_flag img {
+.choose-us__img img {
   width: 100%;
 }
 /* end */
+
+@media screen and (max-width: 1120px) {
+  .choose-us--wrapper {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .choose-us--wrapper {
+    max-width: 85vw;
+  }
+
+  .choose-us--wrapper {
+    gap: 2vw;
+  }
+
+  .choose-us__item {
+    width: calc((100% - 2.5vw) / 2);
+  }
+
+  .choose-us .section_title {
+    font-size: 3.25vw;
+  }
+
+  .choose-us__description {
+    font-size: 1.3vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .choose-us--wrapper {
+    max-width: 67.5vw;
+  }
+
+  .choose-us__item {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    gap: 5vw;
+  }
+
+  .choose-us__img {
+    display: none;
+  }
+
+  .choose-us .section_title {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .choose-us__description {
+    font-size: 2.15vw;
+  }
+}

@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="footer_social">
-                    <div class="widget_title"><?php echo get_field('fsi_title', 'option'); ?></div>
+                    <!-- <div class="widget_title"><?php echo get_field('fsi_title', 'option'); ?></div> -->
                     <div class="footer_social_icons">
                         <?php if(!empty(get_field('fsi_instagram', 'option'))) { ?>
                         <a href="<?php echo get_field('fsi_instagram', 'option'); ?>" target="_blank"
@@ -49,7 +49,7 @@
             </div>
 
             <div class="footer__item widget-3">
-                <div class="widget_title"><span><?php _e('Info', 'anatol');?></span></div>
+                <div class="widget_title"><?php _e('Info', 'anatol');?></div>
                 <?php if ( is_active_sidebar( 'footer-info' ) ) : ?>
                 <?php dynamic_sidebar( 'footer-info' ); ?>
                 <?php endif; ?>
@@ -57,25 +57,39 @@
 
             <!-- </div> -->
         </div>
-    </div>
-
-    <div class="copyright">
-        <div class="container">
-            <div class="footer-logo"><a href="/" class="foot-logo"><img loading="lazy"
-                        class="lozad logo-img site-logo-img"
+        <div class="copyright">
+            <div class="copyright--wrapper container">
+                <!-- <div class="footer-logo">
+            foot-logo        
+            -->
+                <a href="/" class="copyright__item footer-logo">
+                    <img loading="lazy" class="lozad logo-img site-logo-img"
                         src="<?php bloginfo('template_directory'); ?>/images/logo_new.svg"
-                        alt="Anatol Equipment Manufacturing Co. - Screen Printing Equipment" width="200"
-                        height="40"></a></div>
-            <div class="copytext">
-                <?php _e('© 2018', 'anatol'); ?>-<?php echo date('Y'); ?>
-                <?php _e('Anatol Equipment Manufacturing Co. All Rights Reserved.', 'anatol'); ?>
+                        alt="Anatol Equipment Manufacturing Co. - Screen Printing Equipment" width="200" height="40">
+                </a>
+                <!-- </div> -->
+                <p class="copyright__item copytext">
+                    <?php _e('© 2018', 'anatol'); ?>-<?php echo date('Y'); ?>
+                    <?php _e('Anatol Equipment Manufacturing Co. All Rights Reserved.', 'anatol'); ?>
+                </p>
+                <ul class="copyright__item policy-terms">
+                    <li class="policy-terms__item">
+                        <a class="policy-terms__link" href="/privacy-policy/">Privacy
+                            Policy</a>
+                    </li>
+                    <li class="policy-terms__item">
+                        <a class="policy-terms__link" href="#">Terms of Service</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="policy-terms">
-                <li class="policy-item"><a href="/privacy-policy/">Privacy Policy</a></li>
-                <li class="policy-item"><a href="#">Terms of Service</a></li>
-            </ul>
         </div>
     </div>
+
+
+    <div id="popupWrapper" class="popupp hidden">
+    </div>
+    <?php get_template_part('templates/forms/get-a-quote-forms'); ?>
+    <?php get_template_part('templates/forms/subscribe-us-forms'); ?>
     </div>
     </div>
 
@@ -85,7 +99,10 @@
     <a id="scrollToTop" class="scroll-to-top-button" href="#"></a>
     <?php wp_footer(); ?>
 
-    <script>
+    <!-- INIT YOUTUBE VIDEOS -->
+    <script src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>
+
+    <!-- <script>
 $(document).ready(function() {
     /*===== Sticky header======*/
     $(window).on('scroll', function(event) {
@@ -97,13 +114,7 @@ $(document).ready(function() {
         }
     });
 });
-    </script>
-
-
-    <div class="popupp" style=""></div>
-
-    <?php get_template_part('templates/forms/get-a-quote-forms'); ?>
-    <?php get_template_part('templates/forms/subscribe-us-forms'); ?>
+    </script> -->
 
     <div id="succes_message">Your message was sent successfully. Thanks</div>
 
@@ -140,8 +151,9 @@ function yesnoChecks(that) {
     }
 }
     </script>
-    <script defer src="https://www.google.com/recaptcha/api.js?render=6LfVhtMUAAAAANWXok-9PsISTBoAZUHg-9rBr6Db">
-    </script>
+    <!-- <script defer src="https://www.google.com/recaptcha/api.js?render=6LfVhtMUAAAAANWXok-9PsISTBoAZUHg-9rBr6Db"></script> -->
+
+
 
     <script type="text/javascript">
 $("#__vtigerWebForm.contactFormEbook").submit(function(e) {

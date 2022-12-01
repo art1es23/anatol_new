@@ -26,7 +26,7 @@ get_header(); ?>
 <div class="contacts_form_block">
     <div class="contacts_form_block--wrapper container">
 
-        <div class="left_column cont_datas anim_fade">
+        <div class="left_column cont_datas">
             <div class="contact_line ">
                 <div class="et_pb_blurb_container">
                     <h4 class="contact_line_header"><?php _e('World Headquarters', 'anatol'); ?></h4>

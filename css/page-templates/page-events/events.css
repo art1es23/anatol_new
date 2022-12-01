@@ -4,15 +4,16 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  
-    position: relative;
+
+  position: relative;
 }
 .event_block .event_image {
   width: 55%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  float: left;
+  /* float: left;
+   */
 }
 .event_block:nth-child(even) {
   flex-direction: row-reverse;
@@ -36,6 +37,9 @@
   flex-wrap: wrap;
   align-content: stretch;
 }
+.events_list .event .coming_soon_text {
+  display: none;
+}
 .events_list .event .coming_soon_text_top {
   position: absolute;
   left: 0;
@@ -44,11 +48,7 @@
   transform: translate(0, -50%);
   text-align: center;
   z-index: 50;
-}
-.events_list .event .coming_soon_text {
-  display: none;
-}
-.events_list .event .coming_soon_text_top span {
+
   display: inline-block;
   padding: 10px 18px;
   background: #f8f8f8;
@@ -60,9 +60,9 @@
 }
 #events_list .event .event_info {
   width: 45%;
-  height: 100%;
+  /* height: 100%; */
   padding: 60px;
-  float: right;
+  /* float: right; */
   position: relative;
 }
 .event_info .event_info_cont {
@@ -91,9 +91,6 @@
   font-size: 1.4vw;
   margin: 0;
 }
-.event_title h3 {
-  margin: 0;
-}
 #events_list .event .event_separator {
   width: 100%;
   height: 2px;
@@ -101,16 +98,22 @@
 }
 #events_list .event .events_date_desc {
   padding: 0 1.5vw;
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
 }
 #events_list .event .machines_for_exhibition,
 #events_list .event .event_dates,
 #events_list .event .event_description {
   padding-left: 2.5rem;
   position: relative;
-  min-height: 20px;
+  /* min-height: 20px; */
   /* margin-bottom: 20px; */
   color: #353535;
   font-size: 1.1vw;
+  display: flex;
+  gap: 0.5vw;
+  flex-direction: column;
 }
 #events_list .event .machines_for_exhibition::before {
   position: absolute;
@@ -138,7 +141,7 @@
   content: "\E824";
 }
 #events_list .event .machines_for_exhibition::before {
-  background: url(/wp-content/themes/anatol/css-new/images/machine_image.svg)
+  background: url(../wp-content/themes/anatol/css-new/images/machine_image.svg)
     no-repeat;
   background-size: contain;
 }
@@ -167,7 +170,7 @@
   height: 60px;
 } */
 .card_subinfo:after {
-  content: '';
+  content: "";
   background-color: #e6e6e6;
   position: absolute;
   top: 50%;
@@ -177,13 +180,10 @@
   display: block;
   transform: translate(-50%, -50%);
 }
-#events_list .event .card_subinfo .cs_logo {
-  width: 25%;
-  text-align: left;
-}
+#events_list .event .card_subinfo .cs_logo,
 #events_list .event .card_subinfo .cs_website {
-  min-width: 36%;
-  text-align: left;
+  width: 35%;
+  /* text-align: left; */
 }
 #events_list .event .card_subinfo .cs_website,
 #events_list .event .card_subinfo .cs_photos {
@@ -203,12 +203,12 @@
 }
 #events_list .event .card_subinfo .gallery-link a,
 #events_list .event .card_subinfo .cs_website,
-#events_list .event .card_subinfo .cs_website a,
+#events_list .event .card_subinfo .cs_website,
 #events_list .event .card_subinfo .cs_photos,
 #events_list .event .card_subinfo .cs_photos a {
   text-align: center;
   font-weight: 700;
-  font-size: 1.1vw;
+  font-size: 1vw;
   text-decoration: none !important;
   color: #353535;
 }
@@ -230,19 +230,19 @@
   object-fit: scale-down;
   object-position: 0% 50%;
 }
-#events_list .event:nth-child(1) {
+/* #events_list .event:nth-child(1) {
   width: 100% !important;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 #events_list .event:nth-child(1) .coming_soon_text_top {
-  display: none !important;
+  display: none;
 }
 #events_list .event:nth-child(1) .card {
   margin-bottom: 0;
   margin-right: -46px;
-  float: left;
+  /* float: left; */
 }
 #events_list .event:nth-child(1) .card-image img {
   width: 674px;
@@ -250,7 +250,7 @@
 }
 #events_list .event:nth-child(1) .card-image {
   width: 674px;
-  float: left;
+  /* float: left; */
 }
 #events_list .event:nth-child(1).event_future .coming_soon_text::before {
   content: "";
@@ -264,4 +264,118 @@
 }
 #events_list .event .card_subinfo .cs_photos {
   display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  #events_list .event .event_info {
+    padding: 0;
+    width: 65%;
+  }
+  .event_info .event_info_cont {
+    transform: translate(0, 0);
+    padding: 3.5vw;
+    top: 0;
+    gap: 2vw;
+  }
+
+  .event_block:nth-child(even) .event_info .event_info_cont {
+    transform: translate(0, 0);
+  }
+
+  #events_list .event .event_title {
+    font-size: 2vw;
+  }
+  #events_list .event .machines_for_exhibition,
+  #events_list .event .event_dates,
+  #events_list .event .event_description {
+    font-size: 1.5vw;
+  }
+
+  #events_list .event .card_subinfo .gallery-link a,
+  #events_list .event .card_subinfo .cs_website,
+  #events_list .event .card_subinfo .cs_website,
+  #events_list .event .card_subinfo .cs_photos,
+  #events_list .event .card_subinfo .cs_photos a {
+    font-size: 1.5vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  #events_list .event .event_info {
+    width: 75%;
+  }
+  .event_info .event_info_cont {
+    padding: 3.5vw;
+    gap: 2vw;
+  }
+
+  #events_list .event .event_title {
+    font-size: 2.35vw;
+  }
+
+  #events_list .event .machines_for_exhibition,
+  #events_list .event .event_dates,
+  #events_list .event .event_description {
+    font-size: 1.75vw;
+  }
+
+  #events_list .event .card_subinfo .gallery-link a,
+  #events_list .event .card_subinfo .cs_website,
+  #events_list .event .card_subinfo .cs_website,
+  #events_list .event .card_subinfo .cs_photos,
+  #events_list .event .card_subinfo .cs_photos a {
+    font-size: 1.75vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .events-content {
+    padding: 2.5vh 0;
+  }
+  .event_block {
+    flex-direction: column;
+    align-items: center;
+    margin: max(2.5vh, 1.5rem) auto;
+    width: 75%;
+    /* box-shadow: 0 1px 50px 2.5px rgba(255, 0, 0, 0.5); */
+  }
+  .event_block:nth-child(even) {
+    flex-direction: column;
+  }
+  .event_block .event_image {
+    /* width: 75%; */
+    height: 27.5vh;
+  }
+
+  #events_list .event .event_info,
+  .event_block .event_image {
+    width: 100%;
+  }
+  .event_info .event_info_cont {
+    padding: 5vw;
+    gap: 3.5vw;
+  }
+
+  #events_list .event .event_title {
+    font-size: 3.25vw;
+  }
+
+  #events_list .event .machines_for_exhibition,
+  #events_list .event .event_dates,
+  #events_list .event .event_description {
+    font-size: 2.75vw;
+  }
+
+  #events_list .event .card_subinfo .gallery-link a,
+  #events_list .event .card_subinfo .cs_website,
+  #events_list .event .card_subinfo .cs_website,
+  #events_list .event .card_subinfo .cs_photos,
+  #events_list .event .card_subinfo .cs_photos a {
+    font-size: 2.5vw;
+  }
+  #events_list .event .events_date_desc {
+    gap: 3vw;
+  }
+  .event_description {
+    gap: 1.5vw;
+  }
 }

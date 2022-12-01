@@ -1,0 +1,242 @@
+.equipments-list {
+  background-color: #000;
+  /* background-image: url(../wp-content/themes/anatol/images/background.jpg); */
+}
+.equipment {
+  display: flex;
+  width: 100%;
+  color: #fff;
+}
+.equipment:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.equipment__item {
+  display: flex;
+}
+
+.equipment__img {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.equipment__img,
+.equipment__info {
+  width: 50%;
+}
+.equipment__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.equipment__info {
+  padding: 2.5vw 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.75vw;
+  background: rgb(0 0 0 / 50%);
+}
+.equipment__info .title_part {
+  font-size: 2vw;
+}
+
+.equipment__description {
+  font-size: 1.2vw;
+  line-height: 1.6vw;
+  text-align: justify;
+}
+
+/* SUPPORT SECTION */
+
+/* .support-section {
+  background-image: url(../wp-content/themes/anatol/images/head-bg/volt.jpg);
+}
+
+.support-section::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.support-section--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  display: flex;
+  gap: 1.5vw;
+  flex-direction: column;
+  align-items: center;
+}
+
+.support-section .section_title {
+  font-size: 4vw;
+}
+
+.support-section .section_title,
+.support-section .section_pretitle {
+  color: #fff;
+  text-align: center;
+}
+.support-section .section_content {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2vw;
+  line-height: 1.6vw;
+  max-width: max(50vw, 75%);
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.support-section .section_button {
+  background: rgba(255, 255, 255, 0);
+}
+.support-section .section_button a:hover,
+.support-section .section_button a:active,
+.support-section .section_button a:focus {
+  text-decoration: none;
+  background: #ab1a1f;
+  color: #fff;
+  border: 1px solid #ab1a1f;
+}
+.support-section .section_button a:hover::before,
+.support-section .section_button a:active::before,
+.support-section .section_button a:focus::before {
+  text-decoration: none;
+}
+.fix-bg {
+  position: relative;
+  background-size: cover !important;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+} */
+
+/* END */
+
+.equipment__info .equipments_icon svg {
+  width: 100%;
+  height: 100%;
+}
+.equipment__info .equipments_icon {
+  position: relative;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  line-height: 120px;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+.equipment.now-in-view .equipment__info .equipments_icon {
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+  -webkit-transition: all 2000ms ease 500ms;
+  -ms-transition: all 2000ms ease 500ms;
+  -o-transition: all 2000ms ease 500ms;
+  -moz-transition: all 2000ms ease 500ms;
+  transition: all 2000ms ease 500ms;
+}
+
+@media screen and (max-width: 1080px) {
+  .equipment__info .title_part {
+    font-size: 2.5vw;
+  }
+
+  .support-section--wrapper {
+    gap: 2vw;
+  }
+
+  .equipment__description,
+  .section_content {
+    font-size: 1.4vw;
+    line-height: 2vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .equipments-list {
+    padding: 5vw 0;
+  }
+  .equipment {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .equipment:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .equipment__item {
+    width: 72.5%;
+  }
+
+  .equipment__img {
+    /* width: 70%; */
+    height: min(35vh, 50vh);
+  }
+
+  .equipment__info {
+    padding: 5vw 2.75vw;
+    gap: 2.5vw;
+  }
+
+  .support-section--wrapper {
+    gap: 3vw;
+  }
+
+  .support-section .section_pretitle,
+  .equipment__info .title_part {
+    font-size: 3.5vw;
+  }
+
+  .support-section .section_content {
+    gap: 2vw;
+  }
+
+  .section_content,
+  .equipment__description {
+    font-size: 2vw;
+    line-height: 2.5vw;
+  }
+
+  .support-section .section_title {
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .equipment__item {
+    width: 85%;
+  }
+
+  .equipment__info {
+    gap: 3.75vw;
+    padding: 7.5vw 2.5vw;
+  }
+  .support-section--wrapper {
+    gap: 3.5vw;
+  }
+
+  .support-section .section_pretitle,
+  .equipment__info .title_part {
+    font-size: 4.2vw;
+  }
+
+  .support-section .section_content {
+    gap: 2.5vw;
+    max-width: max(50vw, 90%);
+  }
+
+  .section_content,
+  .equipment__description {
+    font-size: 2.5vw;
+    line-height: 3.5vw;
+  }
+}
