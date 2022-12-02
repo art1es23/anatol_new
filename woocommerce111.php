@@ -2,9 +2,9 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/woocommerce.css';
+<?php include 'css/components/another-equipments.css';
+include 'css/components/equipments-list.css';
 include 'css/page-templates/store/woo.css';
-
 ?>
 </style>
 
@@ -17,18 +17,24 @@ include 'css/page-templates/store/woo.css';
             class="products_content <?php if ( is_shop() ) { ?>category_cont <?php } else { echo 'single_pr_cont'; } ?>	">
             <div class="product_sidebar">
                 <div class="widget-mob-search">
+
                     <?php dynamic_sidebar('bproduct-sidebar'); ?>
+
                     <div class="filt-content">
                         <span class="more-info">Show filter</span>
                         <div class="more-content" style="display: none;">
                             <?php dynamic_sidebar('mfproduct-sidebar'); ?>
                         </div>
                     </div>
+
                 </div>
+
                 <div class="col-md-3 prtfilter_box">
                     <?php do_action( 'woocommerce_sidebar' ); ?>
                 </div>
             </div>
+
+
             <div class="product_content_row">
                 <div class="prtfilter_box_right">
                     <div class="entry woocommerce">

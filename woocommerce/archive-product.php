@@ -2,7 +2,8 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/woocommerce.css';
+<?php include 'css/components/another-equipments.css';
+include 'css/components/equipments-list.css';
 include 'css/page-templates/store/woo.css';
 ?>
 </style>
@@ -13,7 +14,9 @@ include 'css/page-templates/store/woo.css';
     <div class="container">
         <div
             class="products_content <?php if ( is_shop() ) { ?>category_cont <?php } else { echo 'single_pr_cont'; } ?>	">
+
             <div class="product_sidebar">
+
                 <div class="widget-mob-search">
                     <?php dynamic_sidebar('bproduct-sidebar'); ?>
                     <div class="filt-content">
@@ -23,29 +26,30 @@ include 'css/page-templates/store/woo.css';
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-3 prtfilter_box filt-content">
-                    <span class="more-info filter_button">Show filter</span>
+                    <!-- <span class="more-info filter_button">Show filter</span> -->
                     <div class="woocommerce_filter">
                         <?php do_action( 'woocommerce_sidebar' ); ?>
                     </div>
                 </div>
             </div>
+
             <div class="product_content_row">
-                <div class="prtfilter_box_right">
-                    <?php woocommerce_product_loop_start(); ?>
-                    <?php while ( have_posts() ) : the_post(); ?>
-                    <?php wc_get_template_part( 'content', 'product' ); ?>
-                    <?php endwhile; ?>
-                    <?php woocommerce_product_loop_end(); ?>
+                <!-- <div class="prtfilter_box_right"> -->
+                <?php woocommerce_product_loop_start(); ?>
+                <?php while ( have_posts() ) : the_post(); ?>
+                <?php wc_get_template_part( 'content', 'product' ); ?>
+                <?php endwhile; ?>
+                <?php woocommerce_product_loop_end(); ?>
 
 
-                    <div class="page-pagination">
-                        <?php wp_corenavi(); ?>
-                    </div>
-
-                    <!--
-												<nav class="woocommerce-pagination page-pagination"></nav><?PHP wc_get_template_part( '/loop/pagination'); ?>-->
+                <div class="page-pagination">
+                    <?php wp_corenavi(); ?>
                 </div>
+
+                <!-- <nav class="woocommerce-pagination page-pagination"></nav><?PHP wc_get_template_part( '/loop/pagination'); ?>-->
+                <!-- </div> -->
             </div>
         </div>
         <div class="wc-term-description">
@@ -114,4 +118,4 @@ include 'css/page-templates/store/woo.css';
 -->
 
 <?php get_template_part('templates/equipment/another-equipments'); ?>
-<?PHP get_footer();
+<?PHP get_footer(); ?>

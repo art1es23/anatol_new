@@ -4,7 +4,8 @@
   display: flex;
   margin: 5vw auto;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 5vh 0;
 }
 
 .automatic_presses--wrapper {

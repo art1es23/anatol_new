@@ -2,6 +2,11 @@
 /* Template Name: Сторінка магазину*/
 get_header(); 
 ?>
+
+<style>
+<?php include 'css/woocommerce.css';
+?>
+</style>
 <?PHP get_template_part('template-parts/template-part-head-press'); ?>
 
 <div class="page-wrap woo_page_satalog">

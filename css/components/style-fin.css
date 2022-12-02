@@ -1989,6 +1989,7 @@ textarea {
   background-color: #c12126;
   color: #ffffff;
 }
+/* Account page */
 .account_container {
   padding: 60px 0;
 }
@@ -2150,6 +2151,7 @@ textarea {
   color: #ab1a1f;
 }
 
+/* WARRANTY
 .inf_warranty {
   width: 20%;
   height: 80px;
@@ -2189,7 +2191,7 @@ textarea {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: #ddd;
-}
+} */
 .woocommerce-MyAccount-navigation ul {
   display: flex;
   width: 100%;
@@ -2243,7 +2245,7 @@ textarea {
 /* .page-template-page-template-anatol-tv .nav-tabs,
 .post-type-archive-anatoltv .nav-tabs {
   display: flex;
-  box-shadow: 0 4px 35.26px 7.74px rgb(106 106 106 / 10%);
+  box-shadow: 0 4px 35.26px 7.74px rgb(106 106 106 / 10%  );
   border-radius: 10px;
   padding: 0;
 }

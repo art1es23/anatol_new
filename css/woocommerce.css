@@ -558,3 +558,39 @@
   display: flex;
   flex-direction: column;
 }
+.woocommerce #respond input#submit,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce a.button.alt,
+.cart_content .checkout-button {
+  display: inline-flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  min-height: 40px;
+  min-width: 150px;
+  color: #fff;
+  text-decoration: none !important;
+  outline: none !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.2em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: #ab1a1f;
+  border: 2px solid #ab1a1f;
+  box-sizing: border-box;
+  text-shadow: none;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background: #ab1a1f;
+}

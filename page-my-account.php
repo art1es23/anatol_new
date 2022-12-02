@@ -2,28 +2,29 @@
 /* Template Name: My Account */
 get_header(); ?>
 
+<style>
+<?php include 'css/page-templates/page-account/page-account.css';
+include 'css/components/another-equipments.css';
+include 'css/woocommerce.css';
+?>
+</style>
+
 <?php get_template_part('template-parts/template-part-head-press'); ?>
 
 
 <div class="container account_container">
-  <!-- start content container -->
-  <div class="full-content">
-    <div class="col-md-12 page_background">
-      <?php // theloop
-      if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-      <?php the_content(); ?>
-      <?php wp_link_pages(); ?>
-      <?php comments_template(); ?>
+    <?php // theloop
+      if ( have_posts() ) : 
+        while ( have_posts() ) : the_post(); ?>
+    <?php the_content(); ?>
+    <?php wp_link_pages(); ?>
+    <?php comments_template(); ?>
     <?php endwhile; ?>
-  <?php else: ?>
 
+    <?php else: ?>
     <?php get_404_template(); ?>
-
-  <?php endif; ?>
+    <?php endif; ?>
 </div>
-</div>
-</div>
-<!-- end content container -->
 
 
 

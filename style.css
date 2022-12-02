@@ -60,7 +60,9 @@ Text Domain: anatol.com
   font-display: swap;
 } */
 /* end */
-
+#wpadminbar {
+  display: none;
+}
 /* Reset CSS */
 html,
 body,
@@ -281,8 +283,17 @@ strong {
   font-weight: 700;
   text-align: center;
 }
+
+address {
+  display: block;
+  font-style: italic;
+}
+.page-header {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: max(1.75vw, 16px);
+}
 .page_title_text {
-  /* margin-top: 3vw; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -292,8 +303,15 @@ strong {
   color: #545454;
 }
 .page-content {
-  margin: 60px 0;
+  width: 100%;
 }
+.page-content--wrapper {
+  display: flex;
+  margin: max(7.5vh, 2.5rem) auto;
+  gap: 1.5vh;
+  flex-direction: column;
+}
+
 .aligncenter,
 .alignleft,
 .alignright {
@@ -756,6 +774,8 @@ ul.social-icons {
     z-index: 2;
   }
 }
+
+/* MAIN MENU */
 ul.top-menu,
 .main-nav ul {
   list-style: none;
@@ -883,13 +903,13 @@ ul.top-menu,
   height: 30px;
   opacity: 1;
 } */
-.main-nav .mega_cont .menu-item {
+.main-nav .menu-item {
   padding: 0 10px;
 }
 .mega-menu-colum {
   width: 20%;
 }
-.main-nav .mega_cont .menu-item a:not(.mega-menu-colum):before {
+.main-nav .menu-item a:not(.mega-menu-colum):before {
   content: "";
   display: block;
   position: absolute;
@@ -2566,6 +2586,7 @@ span.wpcf7-list-item {
   -webkit-transform: translate3d(0, -60px, 0);
   transform: translate3d(0, -60px, 0);
 }
+
 .presses_item:hover .link_to_item {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -2922,7 +2943,7 @@ span.wpcf7-list-item {
   align-items: center;
   justify-content: center;
 }
-.page-template-page-my-account .woocommerce-info a {
+/* .page-template-page-my-account .woocommerce-info a {
   color: white;
 }
 .dont_have_warranty {
@@ -2967,14 +2988,14 @@ span.wpcf7-list-item {
   text-shadow: none;
   text-transform: uppercase;
   cursor: pointer;
-}
+} */
 .page-template-page-template-where-to-buy .fix-bg {
   position: static !important;
 }
 .dont_have_warranty_btn a:hover {
   color: white !important;
 }
-.page-template-page-my-account .woocommerce-Message--info {
+/* .page-template-page-my-account .woocommerce-Message--info {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -3031,7 +3052,7 @@ span.wpcf7-list-item {
 }
 .page-template-page-my-account p button {
   min-width: 200px !important;
-}
+} */
 /* .banner_btn {
   position: absolute;
   height: 40px;
@@ -4511,10 +4532,7 @@ input[type="submit"],
     min-width: 185px;
     padding-top: 7px;
   }
-  .main-menu
-    .menu-item:hover
-    > .zn_mega_container.mega_container_0
-    > .mega_cont {
+  .main-menu .menu-item:hover > .zn_mega_container.mega_container_0 {
     margin-top: 0;
   }
   .main-nav ul ul.sub-menu {
@@ -4542,11 +4560,11 @@ input[type="submit"],
     opacity: 1;
   }
 
-  .main-nav .mega_cont .menu-item a:hover {
+  .main-nav .menu-item a:hover {
     color: #cd2122;
   }
-  .main-nav .mega_cont .menu-item.active > a:not(.mega-menu-colum):before,
-  .main-nav .mega_cont .menu-item:not(.mega-menu-colum) a:hover:before {
+  .main-nav .menu-item.active > a:not(.mega-menu-colum):before,
+  .main-nav .menu-item:not(.mega-menu-colum) a:hover:before {
     width: 100%;
   }
 }
@@ -4600,10 +4618,132 @@ input[type="submit"],
     display: block;
   }
 
-  .main-menu-wrapper {
+  /*  */
+  @keyframes animation {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  #check {
+    display: block;
+  }
+
+  .main-nav {
+    position: fixed;
+    height: calc(100vh - 10vh);
+    top: 12vh;
+    left: 0;
+    width: 100%;
+    background-color: #69bde7;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: 0.65s;
+  }
+
+  #check:checked ~ .main-nav {
+    transform: translateX(0);
+  }
+
+  #check:checked ~ .main-nav .menu-item,
+  #check:checked ~ .main-nav .log-sign {
+    /* animation: animation 0.5s ease forwards var(--i); */
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  .main-menu {
+    flex: initial;
+    width: 100%;
+  }
+
+  .main-menu > ul {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  .menu-item > a {
+    line-height: 1;
+    padding: 1.6rem 2rem;
+  }
+
+  .menu-item:hover > a {
+    transform: scale(1);
+    background-color: #50a9d6;
+  }
+
+  /* zn_mega_container */
+
+  .children,
+  .children.second {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    background-color: #3183ac;
+    display: none;
+  }
+
+  .nav-link:hover > .children,
+  .children > .menu-item:hover > .children {
+    display: block;
+  }
+
+  .nav-link:hover > a > i,
+  .children > .menu-item:hover > a > i {
+    transform: rotate(360deg);
+  }
+
+  .children > .menu-item > a {
+    background-color: transparent;
+    color: #fff;
+    padding: 1.2rem 2rem;
+    line-height: 1;
+  }
+
+  .children.second > .menu-item > a {
+    padding: 1.2rem 2rem 1.2rem 3rem;
+  }
+
+  .children.second > .menu-item > a {
+    padding: 1.2rem 2rem 1.2rem 4rem;
+  }
+
+  .children > .menu-item:not(:nth-last-child(2)) {
+    border-bottom: none;
+  }
+
+  /* .nav-link:hover .arrow {
+    background-color: #50a9d6;
+  } */
+
+  /* .dropdown .dropdown .arrow {
+    display: none;
+  } */
+
+  .children.second > .menu-item:hover > a {
+    background-color: #3a91bd;
+  }
+  /* .main-menu-wrapper {
     position: fixed;
     display: flex;
-    /* display: none; */
     top: 0;
     left: 0;
     transform: translate(100%, 0);
@@ -4616,7 +4756,6 @@ input[type="submit"],
     transition: transform 1s ease-in;
   }
   .main-menu-wrapper.visible {
-    /* display: flex; */
     padding: 5rem;
     transform: translate(0, 0);
     visibility: visible;
@@ -4643,7 +4782,7 @@ input[type="submit"],
   .site-header-top-right > ul > .menu-item > a,
   .main-nav > ul > .menu-item > a {
     font-size: 2vw;
-  }
+  } */
 
   /* .main-menu .menu-item {
     position: relative;

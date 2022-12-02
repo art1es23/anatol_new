@@ -103,6 +103,8 @@ function theme_stylesheets() {
 	wp_enqueue_style('style-main', get_template_directory_uri() . '/style.css');
 
 	if ( is_shop() ||  is_product() || is_product_category()  || is_page('cart') ) { 
+		wp_enqueue_style( 'another-equipment-css', get_template_directory_uri() . '/css/components/another-equipments.css' );
+		// wp_enqueue_style( 'product-css', get_template_directory_uri() . '/css/components/equipments-list.css' );
 		wp_enqueue_style( 'woo-css', get_template_directory_uri() . '/css/page-templates/store/woo.css' );
 
 		// wp_enqueue_style( 'woocommerce-css', get_template_directory_uri() . '/css/woocommerce.css' );
@@ -243,20 +245,21 @@ function theme_js()
 	wp_enqueue_script('popup-js', get_template_directory_uri().'/js/openModal.js', false, null, 'footer');
 	wp_enqueue_script('main-js', get_template_directory_uri().'/js/main.js', false, null, 'footer');
 
-
 	// wp_enqueue_script('chosen.js', get_template_directory_uri().'/js/modules/chosen.jquery.min.js', '', '', true);
 	// wp_enqueue_script('fancybox-js', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', '', '', true);
-	wp_enqueue_script('acf_gmap-js', get_template_directory_uri().'/js/modules/acf_gmap.js', '', '', true);
+	
+	// wp_enqueue_script('acf_gmap-js', get_template_directory_uri().'/js/modules/acf_gmap.js', '', '', true);
+	
 	// wp_enqueue_script('slick-js', get_template_directory_uri().'/js/libs/slick/slick.min.js', null, null, true );
 	
-	if(!is_front_page() && !is_home()){
+	// if(!is_front_page() && !is_home()){
 		// wp_deregister_script('jquery');
 		// wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.12.4.min.js', array(), null, false);
 
-		wp_enqueue_script('chosen.js', get_template_directory_uri().'/js/modules/chosen.jquery.min.js', '', '', true);
-		wp_enqueue_script('ideaboxTimeline-js', get_template_directory_uri().'/js/libs/ideaboxTimeLine/ideaboxTimeline.js', '', 1.0, true);
+		// wp_enqueue_script('chosen.js', get_template_directory_uri().'/js/modules/chosen.jquery.min.js', '', '', true);
+		// wp_enqueue_script('ideaboxTimeline-js', get_template_directory_uri().'/js/libs/ideaboxTimeLine/ideaboxTimeline.js', '', 1.0, true);
 		// wp_enqueue_script('stacktable-js',  get_template_directory_uri().'/js/stacktable.js', '', 1.0, true);
-	}
+	// }
 
 	//about
 	// if ( is_page('1526') ) {
@@ -332,12 +335,13 @@ register_nav_menus(
 
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
-		$output .= "\n$indent<div class=\"zn_mega_container mega_container_". $depth . "\"><div class=\"mega_cont\"><ul class=\"children level-".$depth."\">";
+		// $output .= "\n$indent<div class=\"zn_mega_container mega_container_". $depth . "\"><div class=\"mega_cont\"><ul class=\"children level-".$depth."\">";
+		$output .= "\n$indent<div class=\"zn_mega_container mega_container_". $depth . "\"><ul class=\"children level-".$depth."\">";
 	}
    function end_lvl( &$output, $depth = 0, $args = array() )
    {
        $indent = str_repeat("\t", $depth);
-       $output .= "$indent</ul></div></div>\n";
+       $output .= "$indent</ul></div>\n";
    }
 }
 

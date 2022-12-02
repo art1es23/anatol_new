@@ -291,13 +291,16 @@
 
                 <div class="header-main__item site-header-main-center">
                     <div class="main-menu-wrapper">
+                        <!-- <input type="checkbox" name="" id="check" checked /> -->
                         <?php get_template_part('template-parts/template-part-topnav'); ?>
+
                     </div>
-                    <div class="menu_icon">
+
+                    <!-- <div class="menu_icon">
                         <div class="menui top-line"></div>
                         <div class="menui mid-line"></div>
                         <div class="menui bottom-line"></div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="header-main__item site-header-main-right">

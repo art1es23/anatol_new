@@ -1,4 +1,6 @@
     <nav class="anatol-header-menu navbar navbar-inverse" role="navigation">
+        <input type="checkbox" name="" id="check" />
+
         <?php if ( has_nav_menu( 'main_menu' ) ) : ?>
         <div id="main-menu" class="main-nav">
             <?php

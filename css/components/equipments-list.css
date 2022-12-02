@@ -13,12 +13,13 @@
 .product-post {
   width: calc((100% - 10vw) / 3);
   padding: 1vw;
-  border: 3px solid #f4f4f4;
+  border: 2px solid #f4f4f4;
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
   gap: 1vw;
   align-items: center;
+  justify-content: center;
   position: relative;
   cursor: pointer;
 }
