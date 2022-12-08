@@ -44,30 +44,30 @@
 
 <div class="container dmbs-container vacancy_content">
     <!-- start content container -->
-    <div class="row dmbs-content">
-        <div class="col-md-12 dmbs-main">
+    <div class="dmbs-content">
+        <div class="mbs-main">
             <?php // theloop
       if( have_posts() ) { ?>
             <?php while ( have_posts() ) : the_post();?>
             <div <?php post_class(); ?>>
-                <div>
-                    <div class="v_item_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                    <div class="v_item_footer">
-                        <?php
-                    $terms_list1 = wp_get_post_terms($post->ID, ['country']);
-                    $terms_list2 = wp_get_post_terms($post->ID, ['position']);
-                    $terms_list  = array_merge($terms_list1, $terms_list2);
-                    $terms = [];
-                    if($terms_list) {
-                      foreach($terms_list as $term) {
-                        $terms[] = '<a  href="'.get_term_link($term, $term->taxonomy).'">'.$term->name.'</a>';
-                      }
-                    }
-                    if(!empty($terms)) {
-                      echo implode('&nbsp; ' , $terms);
-                    }
-                  ?>
-                    </div>
+                <!-- <div> -->
+                <div class="v_item_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                <div class="v_item_footer">
+                    <?php
+                          $terms_list1 = wp_get_post_terms($post->ID, ['country']);
+                          $terms_list2 = wp_get_post_terms($post->ID, ['position']);
+                          $terms_list  = array_merge($terms_list1, $terms_list2);
+                          $terms = [];
+                          if($terms_list) {
+                            foreach($terms_list as $term) {
+                              $terms[] = '<a  href="'.get_term_link($term, $term->taxonomy).'">'.$term->name.'</a>';
+                            }
+                          }
+                          if(!empty($terms)) {
+                            echo implode('&nbsp; ' , $terms);
+                          }
+                        ?>
+                    <!-- </div> -->
                 </div>
                 <div class="v_item_desc"><?php the_field('vacancy_description'); ?></div>
                 <div class="v_item_title v_item_btn"><a href="<?php the_permalink(); ?>">Learn more...</a></div>
