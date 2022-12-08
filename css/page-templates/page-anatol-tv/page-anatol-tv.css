@@ -1,0 +1,476 @@
+.anatol-videos-navigation {
+  display: flex;
+  box-shadow: 0 4px 35.26px 7.74px rgb(106 106 106 / 10%);
+  border-radius: 10px;
+  padding: 0;
+}
+.anatol-videos-navigation li {
+  width: calc(100% / 8);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(237 237 237);
+  text-align: center;
+  border-collapse: collapse;
+  padding: 15px 0;
+}
+
+.anatol-videos-navigation li:last-of-type {
+  border-right: none;
+}
+.anatol-videos-navigation li a {
+  display: none;
+}
+.anatol-videos-navigation li {
+  color: black;
+  font-weight: 600;
+  font-size: max(1vw, 16px);
+  cursor: pointer;
+  font-family: "RobotoCondensed", sans-serif;
+  transition: all 0.3s ease;
+}
+.anatol-videos-navigation li:hover {
+  color: #c12126;
+}
+.anatol-videos-navigation .active {
+  color: #c12126;
+}
+
+.anatol-videos-list__inner {
+  display: none;
+  transition: 0.5s ease all;
+  position: relative;
+  top: 100px !important;
+  opacity: 0 !important;
+  width: inherit;
+}
+.anatol-videos-list .active {
+  display: flex;
+  justify-content: center;
+}
+.anatol-videos-list__inner .video_tag_wrap {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2vw; */
+
+  width: inherit;
+  display: grid;
+  grid-gap: 2vw;
+  grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
+}
+
+.anatol-videos-list__item {
+  /* width: calc((100% - 5vw) / 3); */
+  display: flex;
+  min-height: 100px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vh;
+  align-items: center;
+  text-align: center;
+}
+
+.anatol-videos-list__item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.anatol-videos-list__item .thumbnail-wrap {
+  margin-bottom: 5px;
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.anatol-videos-list__item a img {
+  width: 100%;
+  /* height: 12.65vw; */
+}
+
+.anatol-videos-list__item .thumbnail-wrap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 5;
+  background-color: #c121265c;
+}
+
+.anatol-videos-list__item .thumbnail-wrap::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #fff url(/wp-content/themes/anatol/img/play-arrow.svg) no-repeat
+    18px center;
+  background-size: 18px;
+  border: 8px solid transparent;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1px white;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  font-family: "anatol";
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.anatol-videos-list__item a:hover .thumbnail-wrap::before {
+  opacity: 1;
+}
+
+.anatol-videos-list__item a:hover .thumbnail-wrap::after {
+  opacity: 1;
+}
+
+.anatol-videos-list__item .video_title {
+  text-align: center;
+  color: black;
+  font-size: max(0.8vw, 1em);
+  font-family: "RobotoCondensed", sans-serif;
+}
+
+.anatol-videos-list__item a:hover .video_title {
+  color: #c12126;
+}
+
+/* .anatol-videos-list__inner {
+  padding: 60px 0 50px 0;
+} */
+.cstcw_tp_right_white p a {
+  color: #c12126;
+}
+.cstcw_tp_right_white p,
+.cstcw_tp_right_white h2 {
+  color: black;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.cstcw_tp_right_white p {
+  font-size: 18px;
+}
+/* 
+.page-template-page-template-anatol-tv .section_title,
+.post-type-archive-anatoltv .section_title {
+  font-size: 35px;
+  text-align: right;
+} */
+.page-template-page-template-anatol-tv .section_top_bg,
+.post-type-archive-anatoltv .section_top_bg {
+  margin-top: 60px;
+}
+
+.page-template-page-template-anatol-tv .customer_st_cw,
+.post-type-archive-anatoltv .customer_st_cw {
+  margin-top: 60px;
+}
+.page-template-page-template-anatol-tv .anatol-videos-list .active_active,
+.post-type-archive-anatoltv .anatol-videos-list .active_active {
+  top: 0px !important;
+  opacity: 1 !important;
+}
+.post-type-archive-anatoltv .col-md-12 .cstcw_top_part {
+  display: none;
+}
+#billing_country_field
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow,
+#billing_state_field
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 100%;
+}
+#billing_country_field .select2-container--default .select2-selection--single,
+#billing_state_field .select2-container--default .select2-selection--single {
+  background-color: #fff;
+  border: 0;
+  height: auto;
+}
+#billing_country_field
+  .select2-container
+  .select2-selection--single
+  .select2-selection__rendered,
+#billing_state_field
+  .select2-container
+  .select2-selection--single
+  .select2-selection__rendered {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  /* border-radius: 4px; */
+  border: 1px solid #dcdcdc;
+  outline: none !important;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.12);
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  width: 100%;
+  border-radius: 0;
+  color: #353535;
+  font-size: 14px;
+  line-height: normal;
+  height: auto;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+.post-type-archive-anatoltv .header_image_top {
+  background-image: url("https://anatol.com/wp-content/uploads/2021/10/automatic1.jpg") !important;
+}
+.fancybox-image {
+  background-color: white !important;
+}
+
+.anatol-videos--wrapper {
+  margin-bottom: max(7.5vh, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+}
+
+.anatol-videos .section_title {
+  font-size: max(3vw, 46px);
+  text-align: right;
+}
+
+/* //////////////////// */
+
+.anatol-tv--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  gap: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.anatol-tv__item {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.anatol-tv__title {
+  font-size: max(1.65vw, 20px);
+  font-weight: 700;
+}
+
+.anatol-tv__description,
+.anatol-tv__link {
+  font-size: max(1vw, 14px);
+}
+
+.anatol-tv__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35vh;
+  width: 100%;
+  text-align: justify;
+}
+
+.anatol-tv__link {
+  color: #ab1a1f;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 28.25%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.tab-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tab-content .video {
+  padding: 26.25%;
+}
+
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  max-width: 100%;
+}
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  display: none;
+  cursor: pointer;
+  border: none;
+}
+
+.video__button-shape {
+  fill: #212121;
+  fill-opacity: 0.8;
+  transition: fill 0.15s ease-in, fill-opacity 0.15s ease-in;
+}
+
+.video:hover .video__button-shape,
+.video__button:focus .video__button-shape {
+  fill: #ab1a1f;
+  fill-opacity: 1;
+}
+.video__button-icon {
+  fill: #fff;
+}
+.video--enabled {
+  cursor: pointer;
+}
+
+.video--enabled .video__button {
+  display: flex;
+}
+
+.anatol-videos-list--wrapper {
+  display: grid;
+  grid-template-columns: 1fr calc(82.5% - 2.25vw);
+  width: 100%;
+  grid-template-rows: auto;
+  grid-gap: 2.25vw;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.anatol-videos-navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.anatol-videos-navigation li {
+  width: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+  .anatol-tv--wrapper {
+    flex-direction: column;
+  }
+
+  .anatol-tv__item {
+    width: 85%;
+    gap: 2.5vh;
+  }
+
+  .anatol-tv__title {
+    text-align: center;
+    font-size: max(3.25vw, 28px);
+  }
+
+  .anatol-tv__description,
+  .anatol-tv__link {
+    font-size: max(2vw, 19px);
+  }
+
+  .anatol-tv__link {
+    text-align: center;
+  }
+
+  .anatol-tv__item .video {
+    width: 80%;
+    padding: 23.25%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .anatol-videos .section_title {
+    text-align: center;
+  }
+  .anatol-videos-list--wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 5vh;
+  }
+
+  .anatol-videos-navigation {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .anatol-videos-navigation li {
+    width: calc(100% / 3);
+    flex-grow: 1;
+
+    border-right: 1px solid rgb(237 237 237);
+  }
+}
+
+/* @media screen and (max-width: 900px) {
+  .video {
+    width: 70%;
+    padding: 20.25%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .anatol-tv__item .video {
+    width: 100%;
+    padding: 28.25%;
+  }
+} */
+
+@media screen and (max-width: 800px) {
+  .anatol-videos-list--wrapper .video_tag_wrap {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+  .anatol-videos-list__inner {
+    width: 94%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .anatol-videos-list__item .video_title {
+    font-size: max(2vw, 0.9em);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .anatol-videos .section_title {
+    font-size: max(9.5vw, 36px);
+  }
+
+  .anatol-tv__title {
+    font-size: max(6vw, 26px);
+  }
+
+  .anatol-tv__description,
+  .anatol-tv__link {
+    font-size: max(4vw, 17px);
+  }
+
+  .anatol-videos-navigation li {
+    width: calc(100% / 2);
+  }
+}

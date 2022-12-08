@@ -1,0 +1,90 @@
+.anatol_map {
+  background-image: url(../wp-content/themes/anatol/images/map-full.jpg);
+  display: flex;
+}
+
+.anatol_map .container {
+  display: flex;
+  flex-direction: column;
+  margin: max(12.5vh, 2.5rem) auto;
+  gap: 3.5vw;
+}
+.anatol_map .section_title {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: max(5.75vw, 64px);
+}
+.anatol_map .section_title .brake {
+  display: block;
+  font-size: max(3vw, 38px);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.map_cont {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+.map_cont .map_block {
+  width: calc(100% / 3);
+  color: #fff;
+  text-align: center;
+}
+.map_cont .map_number {
+  font-size: max(5.75vw, 64px);
+  font-weight: 900;
+}
+.map_cont .map_text {
+  font-size: max(1.75vw, 24px);
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.numbers {
+  color: #fff;
+}
+.our_map {
+  width: 100%;
+  height: 720px;
+}
+.our_map .section_title {
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 1.5;
+  font-weight: 900;
+  text-align: center;
+}
+
+.our_map .section_title span.line1,
+.our_map .section_title span.line5 {
+  font-size: 54px;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 900px) {
+  .anatol_map .section_title,
+  .map_cont .map_number {
+    font-size: max(7vw, 54px);
+  }
+  .anatol_map .section_title .brake {
+    font-size: max(4vw, 28px);
+  }
+  .map_cont .map_text {
+    font-size: max(2.25vw, 16px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .anatol_map .section_title,
+  .map_cont .map_number {
+    font-size: max(7.75vw, 36px);
+  }
+
+  .anatol_map .section_title .brake {
+    font-size: max(5.25vw, 22px);
+  }
+
+  .map_cont .map_text {
+    font-size: max(2.5vw, 12px);
+  }
+}

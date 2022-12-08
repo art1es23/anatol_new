@@ -1,0 +1,233 @@
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: max(7.5vh, 2.5rem) auto;
+}
+
+.blog-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+  justify-content: space-between;
+}
+
+.blog-list__item {
+  position: relative;
+  width: calc((100% - 5vw) / 3);
+}
+.blog-post__img {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  display: flex;
+}
+
+.blog-list__item img {
+  max-width: inherit;
+  width: 100%;
+  will-change: tarnsform;
+  transition: all 0.5s;
+  height: auto;
+  margin: 0;
+}
+.blog-list__item:hover img {
+  transform-origin: center;
+  transform: scale(1.03);
+  opacity: 0.8;
+}
+
+.blog-post__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  padding: 2vw;
+  background: #ffffff;
+  box-shadow: 0 0 22px rgb(0 0 0 / 13%);
+}
+
+.blog-post__title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+  color: #363636;
+}
+
+.blog-post__description p {
+  font-size: 0.8vw;
+  text-align: justify;
+}
+
+.read_more_content {
+  align-self: flex-end;
+}
+
+/* .read_post_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  background: rgb(0 0 0 / 40%);
+  color: #fff;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.read_post_item .read_btn {
+  padding: 15px;
+  border: 2px solid #fff;
+  opacity: 0;
+  font-size: 14px;
+  -webkit-transform: translateY(-20%) scale(0.7);
+  transform: translateY(-20%) scale(0.7);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-list__item:hover .read_post_item {
+  opacity: 1;
+}
+.blog-list__item:hover .read_post_item .read_btn {
+  opacity: 1;
+  -webkit-transform: translateY(0px) scale(1);
+  transform: translateY(0px) scale(1);
+} */
+.pagination a {
+  padding: 5px;
+  border: 1px solid #232323;
+  color: #363636;
+}
+.pagination a:hover,
+.pagination .page-numbers.current {
+  padding: 5px;
+  border: 1px solid #ab1a1f;
+  color: #fff;
+  background: #ab1a1f;
+}
+.pagination a.prev,
+.pagination a.next {
+  border: 1px solid transparent;
+  color: #363636;
+  font-size: 20px;
+}
+.pagination a.prev:hover,
+.pagination a.next:hover {
+  border: 1px solid transparent;
+  color: #ab1a1f;
+  background: transparent;
+}
+nav.pagination,
+nav.woocommerce-pagination {
+  text-align: center;
+  width: 100%;
+  margin: 3vw auto;
+  /* margin-top: 70px; */
+}
+.wp-pagenavi a,
+.wp-pagenavi span {
+  display: inline-block;
+  text-decoration: none;
+  color: #61686e;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0 10px;
+}
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current {
+  background: #c4c9cd;
+  color: #fff;
+}
+
+@media screen and (max-width: 1366px) {
+  .blog-post__title {
+    font-size: 1.25vw;
+    text-align: justify;
+  }
+  .blog-post__description p {
+    font-size: 1vw;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .blog-list {
+    gap: 5vw 3vw;
+  }
+  .blog-list__item {
+    width: calc((100% - 6vw) / 2);
+  }
+
+  .blog-post__description {
+    padding: 2vw 3.5vw;
+    gap: 2.5vw;
+  }
+
+  .blog-post__title {
+    font-size: 2vw;
+  }
+  .blog-post__description p {
+    font-size: 1.35vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .blog-list {
+    gap: 5vw 3vw;
+  }
+  .blog-list__item {
+    width: calc((100% - 4vw) / 2);
+  }
+
+  .blog-post__description {
+    gap: 3vw;
+  }
+
+  .blog-post__title {
+    font-size: 2.15vw;
+  }
+  .blog-post__description p {
+    font-size: 1.65vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  .blog-list {
+    justify-content: center;
+    gap: 7.5vw;
+  }
+  .blog-list__item {
+    width: 85%;
+  }
+
+  .blog-post__description {
+    gap: 4vw;
+    padding: 5vw 7.5vw;
+  }
+
+  .blog-post__title {
+    font-size: 3.1vw;
+  }
+  .blog-post__description p {
+    font-size: 2.25vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .blog-list {
+    gap: 7.5vw;
+  }
+  .blog-list__item {
+    width: 90%;
+  }
+
+  .blog-post__description {
+    gap: 5vw;
+  }
+
+  .blog-post__title {
+    font-size: 3.75vw;
+  }
+  .blog-post__description p {
+    font-size: 2.75vw;
+  }
+}

@@ -1,0 +1,217 @@
+@font-face {
+  font-display: swap;
+  font-family: "anatol";
+  src: url("../fonts/anatol.eot?58386189");
+  src: url("../fonts/anatol.eot?58386189#iefix") format("embedded-opentype"),
+    url("../fonts/anatol.woff2?58386189") format("woff2"),
+    url("../fonts/anatol.woff?58386189") format("woff"),
+    url("../fonts/anatol.ttf?58386189") format("truetype"),
+    url("../fonts/anatol.svg?58386189#anatol") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="wicon-"]:before,
+[class*=" wicon-"]:before {
+  font-family: "anatol";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wicon-calendar:before {
+  content: "\e800";
+}
+.wicon-wall-calendar:before {
+  content: "\e801";
+}
+.wicon-settings:before {
+  content: "\e804";
+}
+.wicon-location:before {
+  content: "\e807";
+}
+.wicon-location-blue:before {
+  content: "\e808";
+}
+.wicon-down_arrow:before {
+  content: "\e80b";
+}
+.wicon-calculator:before {
+  content: "\e811";
+}
+.wicon-chat:before {
+  content: "\e812";
+}
+.wicon-clipboard:before {
+  content: "\e813";
+}
+.wicon-download:before {
+  content: "\e814";
+}
+.wicon-email:before {
+  content: "\e815";
+}
+.wicon-eye:before {
+  content: "\e816";
+}
+.wicon-left-arrow:before {
+  content: "\e817";
+}
+.wicon-lightning:before {
+  content: "\e818";
+}
+.wicon-magnifying-glass:before {
+  content: "\e819";
+}
+.wicon-newspaper:before {
+  content: "\e81a";
+}
+.wicon-envelope-solid:before {
+  content: "\e81c";
+}
+.wicon-facebook:before {
+  content: "\e81d";
+}
+.wicon-instagram:before {
+  content: "\e81f";
+}
+.wicon-google-plus:before {
+  content: "\e820";
+}
+.wicon-linked-in:before {
+  content: "\e821";
+}
+.wicon-location-solid:before {
+  content: "\e822";
+}
+.wicon-phone-solid:before {
+  content: "\e823";
+}
+.wicon-placeholder-fat:before {
+  content: "\e824";
+}
+.wicon-printer:before {
+  content: "\e825";
+}
+.wicon-round-information-button:before {
+  content: "\e826";
+}
+.wicon-rss:before {
+  content: "\e827";
+}
+.wicon-shopping-cart:before {
+  content: "\e828";
+}
+.wicon-twitter:before {
+  content: "\e829";
+}
+.wicon-worldwide:before {
+  content: "\e82a";
+}
+.wicon-play:before {
+  content: "\e82b";
+}
+.wicon-info:before {
+  content: "\e82c";
+}
+.wicon-first-aid-kit:before {
+  content: "\e82d";
+}
+.wicon-mortarboard:before {
+  content: "\e82e";
+}
+.wicon-users:before {
+  content: "\e82f";
+}
+.wicon-tick:before {
+  content: "\e830";
+}
+.wicon-photo-camera:before {
+  content: "\e831";
+}
+.wicon-add:before {
+  content: "\e834";
+}
+.wicon-remove:before {
+  content: "\e835";
+}
+.wicon-check-form:before {
+  content: "\e839";
+}
+.wicon-shopping-cart_2:before {
+  content: "\e83a";
+}
+.wicon-shopping-cart-1:before {
+  content: "\e83b";
+}
+.wicon-vibrating-phone:before {
+  content: "\e83c";
+}
+.wicon-calendar-icon:before {
+  content: "\e83d";
+}
+.wicon-clipboard--solid:before {
+  content: "\e83e";
+}
+.wicon-shield:before {
+  content: "\e83f";
+}
+.wicon-contract:before {
+  content: "\e840";
+}
+.wicon-question:before {
+  content: "\e841";
+}
+.wicon-wallet:before {
+  content: "\e842";
+}
+.wicon-businessman:before {
+  content: "\e843";
+}
+.wicon-upload:before {
+  content: "\e844";
+}
+.wicon-send:before {
+  content: "\e845";
+}
+.wicon-newspaper-1:before {
+  content: "\e846";
+}
+.wicon-lnr-chevron-up:before {
+  content: "\e847";
+}
+.wicon-lnr-chevron-right:before {
+  content: "\e848";
+}
+.wicon-lnr-chevron-left:before {
+  content: "\e849";
+}
+.wicon-speech-bubble:before {
+  content: "\e864";
+}
+.wicon-scales:before {
+  content: "\e866";
+}
+.wicon-angle-pointing-to-right:before {
+  content: "\e86c";
+}
+.wicon-angle-pointing-to-down:before {
+  content: "\e86d";
+}
+.wicon-checked:before {
+  content: "\e86e";
+}
+.fa-skype:before {
+  content: "\f17e";
+  margin: 0 3px;
+}

@@ -1,0 +1,49 @@
+.wrapper {
+  background-color: #242424;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+}
+.error-page {
+  text-align: center;
+  height: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.error-page > h1 {
+  font-size: 36px;
+  color: #cecece;
+  font-family: "Roboto Slab";
+  margin-top: 0;
+}
+.error-text {
+  font-size: 204px;
+  line-height: 204px;
+  font-family: "Roboto Slab";
+  color: #ad3232;
+  margin: 0;
+}
+.error-links {
+  font-family: "Open Sans";
+  color: #cecece;
+  font-size: 18px;
+}
+.error-links > a {
+  color: #ad3232;
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  .error-text {
+    font-size: 160px;
+    line-height: 160px;
+  }
+}
+@media (max-width: 480px) {
+  .error-text {
+    font-size: 120px;
+    line-height: 120px;
+  }
+}

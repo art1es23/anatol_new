@@ -1,0 +1,349 @@
+.event_block {
+  background: #efefef;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+}
+.event_image {
+  width: 55%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.event_block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.events_list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+.coming_soon_text {
+  display: none;
+}
+.coming_soon_text_top {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  text-align: center;
+  z-index: 50;
+
+  display: inline-block;
+  padding: 10px 18px;
+  background: #f8f8f8;
+  color: #ab1a1f;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  border-radius: 3px;
+}
+.event_info {
+  width: 45%;
+  padding: 3.5vw;
+  position: relative;
+}
+.event_info_cont {
+  width: 100%;
+  position: relative;
+  background: #fff;
+  padding: 3vw;
+  left: 0;
+  top: 50%;
+  transform: translate(-25%, -50%);
+  box-shadow: 0 0 46.74px 10.26px rgb(106 106 106 / 10%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+.event_block:nth-child(even) .event_info_cont {
+  transform: translate(25%, -50%);
+}
+.event_title {
+  padding: 0 1.5vw;
+  font-weight: 700;
+  color: #353535;
+  font-family: "RobotoCondensed", sans-serif;
+  font-weight: 700;
+  font-size: max(2vw, 20px);
+  margin: 0;
+}
+.event_separator {
+  width: 100%;
+  height: 2px;
+  background: #f8f8f8;
+}
+.events_date_desc {
+  padding: 0 1.5vw;
+  display: flex;
+  gap: 1.5vw;
+  flex-direction: column;
+}
+.machines_for_exhibition,
+.event_dates,
+.event_description {
+  padding-left: 2.5rem;
+  position: relative;
+  color: #353535;
+  font-size: max(1.1vw, 16px);
+  display: flex;
+  gap: 0.5vw;
+  flex-direction: column;
+}
+.machines_for_exhibition::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 23px;
+  content: " ";
+  font-size: 20px;
+  color: #ab1a1f;
+}
+.event_dates::before,
+.event_description::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 20px;
+  font-family: "anatol";
+  content: "\E801";
+  font-size: 20px;
+  color: #ab1a1f;
+}
+.event_description::before {
+  content: "\E824";
+}
+.machines_for_exhibition::before {
+  background: url(../wp-content/themes/anatol/css-new/images/machine_image.svg)
+    no-repeat;
+  background-size: contain;
+}
+.card_subinfo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 100%;
+  background: #f8f8f8;
+  align-content: center;
+  padding: 1vw 1.5vw;
+  position: relative;
+}
+.card_subinfo:after {
+  content: "";
+  background-color: #e6e6e6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 60%;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+.card_subinfo .cs_logo,
+.card_subinfo .cs_website {
+  width: 40%;
+}
+.card_subinfo .cs_website,
+.card_subinfo .cs_photos {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  align-content: center;
+}
+.card_subinfo .gallery-link a,
+.card_subinfo .cs_website,
+.card_subinfo .cs_website,
+.card_subinfo .cs_photos,
+.card_subinfo .cs_photos a {
+  text-align: center;
+  font-weight: 700;
+  font-size: max(1vw, 13px);
+  text-decoration: none !important;
+  color: #353535;
+}
+.card_subinfo .gallery-link a::before,
+.card_subinfo .cs_website::before {
+  display: inline-block;
+  font-family: "anatol";
+  content: "\E82A";
+  font-size: 20px;
+  margin-right: 16px;
+  color: #ab1a1f;
+}
+.card_subinfo .gallery-link a::before {
+  content: "\E831";
+}
+.card_subinfo .cs_logo img {
+  width: 100%;
+}
+.event:nth-child(1) .coming_soon_text_top {
+  display: none;
+}
+.event:nth-child(1) .card {
+  margin-bottom: 0;
+  margin-right: -46px;
+}
+.event:nth-child(1) .card-image img {
+  width: 674px;
+  height: 375px;
+}
+.event:nth-child(1) .card-image {
+  width: 674px;
+}
+.event:nth-child(1).event_future .coming_soon_text::before {
+  content: "";
+  display: block;
+  background: #ab1a1f;
+  width: 40px;
+  height: 4px;
+  position: absolute;
+  left: 56px;
+  bottom: 22px;
+}
+.card_subinfo .cs_photos {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .event_info {
+    padding: 0;
+    width: 65%;
+  }
+  .event_info_cont {
+    transform: translate(0, 0);
+    padding: 3.5vw;
+    top: 0;
+    gap: 2vw;
+  }
+
+  .event_block:nth-child(even) .event_info_cont {
+    transform: translate(0, 0);
+  }
+
+  .event_title {
+    font-size: max(3vw, 24px);
+  }
+
+  .card_subinfo .gallery-link a,
+  .card_subinfo .cs_website,
+  .card_subinfo .cs_website,
+  .card_subinfo .cs_photos,
+  .card_subinfo .cs_photos a {
+    font-size: max(1.75vw, 15px);
+  }
+}
+@media screen and (max-width: 800px) {
+  .event_info {
+    width: 75%;
+  }
+  .event_info_cont {
+    padding: 3.5vw;
+    gap: 2vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .events-content {
+    padding: 2.5vh 0;
+  }
+  .event_block {
+    flex-direction: column;
+    align-items: center;
+    margin: max(2.5vh, 1.5rem) auto;
+    width: 75%;
+    /* box-shadow: 0 1px 50px 2.5px rgba(255, 0, 0, 0.5); */
+  }
+  .event_block:nth-child(even) {
+    flex-direction: column;
+  }
+  .event_image {
+    /* width: 75%; */
+    height: 27.5vh;
+  }
+
+  .event_info,
+  .event_image {
+    width: 100%;
+  }
+  .event_info_cont {
+    padding: 5vw;
+    gap: 3.5vw;
+  }
+
+  .event_title {
+    font-size: max(4.25vw, 24px);
+  }
+
+  .machines_for_exhibition,
+  .event_dates,
+  .event_description {
+    font-size: max(2.75vw, 18px);
+  }
+
+  .events_date_desc {
+    gap: 3vw;
+  }
+  .event_description {
+    gap: 0.25vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .event_block {
+    width: 90%;
+  }
+
+  .event_info_cont {
+    gap: 5vw;
+  }
+
+  .event_title {
+    font-size: max(5.25vw, 17px);
+  }
+  .machines_for_exhibition,
+  .event_dates,
+  .event_description {
+    font-size: max(3.5vw, 14px);
+  }
+
+  .card_subinfo .gallery-link a,
+  .card_subinfo .cs_website,
+  .card_subinfo .cs_website,
+  .card_subinfo .cs_photos,
+  .card_subinfo .cs_photos a {
+    font-size: max(3.5vw, 14px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card_subinfo .cs_logo,
+  .card_subinfo .cs_website {
+    width: 45%;
+  }
+}

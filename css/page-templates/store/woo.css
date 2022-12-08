@@ -1,0 +1,121 @@
+/* body {
+  background-color: rebeccapurple;
+} */
+
+.product_content_row {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.products_content {
+  display: flex;
+  margin: max(7.5vh, 2.5rem) auto;
+  gap: 5vw;
+}
+
+.equipments_list {
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 2vw;
+  margin-bottom: max(7.5vh, 2.5rem);
+
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.product_item {
+  width: calc((100% - 5vw) / 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 2px solid #f4f4f4;
+  transition: all 0.3s ease-in;
+  text-align: center;
+  color: #555555;
+  min-height: 405px;
+  gap: 1vw;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.product_item:hover {
+  box-shadow: 0 0 22px rgb(0 0 0 / 10%);
+}
+
+.product_item:hover .image_part img {
+  transform-origin: center;
+  transform: scale(1.03);
+}
+
+.image_part {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  will-change: transform;
+  transition: all 0.5s;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_part img {
+  max-width: 80%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  will-change: transform;
+  transition: all 0.5s;
+}
+
+.content_part {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.product_box_title {
+  font-size: max(1vw, 17px);
+  font-weight: bold;
+}
+
+.amount {
+  font-weight: bold;
+  color: #ab1a1f;
+  font-size: 20px;
+}
+
+.add_to_cart {
+  opacity: 0;
+  padding: 0.25rem 1rem;
+
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, -60px, 0);
+  transform: translate3d(0, -60px, 0);
+}
+
+.product_item:hover .add_to_cart {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-color: #c12126;
+  border-color: #c12126;
+  color: #fff;
+}
+.product_item .add_to_cart:hover {
+  background-color: #fff;
+  border-color: #c12126;
+  color: #c12126;
+}
+
+.page-pagination {
+  align-self: center;
+}
