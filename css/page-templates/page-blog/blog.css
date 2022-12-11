@@ -47,7 +47,7 @@
 }
 
 .blog-post__title {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   font-size: 1.1vw;
   color: #363636;

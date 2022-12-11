@@ -590,7 +590,7 @@ section.anatol_videos .tab-content {
 
 .tab_item_title,
 .tab_item_title > p {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   font-size: max(1.75vw, 1.4rem);
   text-transform: uppercase;
@@ -601,7 +601,7 @@ section.anatol_videos .tab-content {
   color: #353535;
   font-size: 20px;
   line-height: 1.3em;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: bold;
   margin-bottom: 10px;
 }

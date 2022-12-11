@@ -2,10 +2,12 @@
 
 get_header(); ?>
 <style>
-<?php include 'css/page-templates/page-blog/blog.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-blog/blog.css';
 ?>
 </style>
 <?php get_template_part('template-parts/template-part-head-blog'); ?>
+
 <div class="simple_bg_head index_template">
     <?php
 		global $anatol_cat_title;

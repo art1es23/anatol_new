@@ -1,0 +1,68 @@
+.page404--wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: max(7.5vh, 2.5rem) auto;
+}
+.page404 {
+  width: 100%;
+  padding: 7% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(/wp-content/themes/anatol/images/biglogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.page404 h2 {
+  font-size: max(6vw, 80px);
+}
+.page404 h3 {
+  font-size: max(3vw, 38px);
+  text-transform: uppercase;
+}
+.page404_btn_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page404 .page404_btn_wrap .button {
+  margin: 20px;
+}
+.page404 .page404_btn_wrap .button a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: white;
+}
+.error404 .dmbs-content {
+  padding: 20px;
+}
+.page404_txt ul {
+  display: flex;
+  padding: 0;
+  gap: 0.35vw;
+}
+.page404_txt ul li {
+  list-style: none;
+}
+.page404_txt ul a {
+  color: black;
+  /* margin: 10px 15px; */
+  transition: all ease 0.5s;
+  text-decoration: underline;
+}
+.page404_txt ul a:hover {
+  color: #ab1a1f;
+}
+.page404_txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: max(1vw, 16px);
+  font-weight: 500;
+  gap: 2.5vh;
+}

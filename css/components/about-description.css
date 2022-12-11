@@ -16,7 +16,7 @@
 }
 
 .about-us .section_title {
-  font-family: "RobotoCondensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   text-align: left;
   font-weight: 700;
   text-transform: uppercase;

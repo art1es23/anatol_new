@@ -16,6 +16,7 @@ include 'css/page-templates/store/woo.css';
         <div
             class="products_content <?php if ( is_shop() ) { ?>category_cont <?php } else { echo 'single_pr_cont'; } ?>	">
             <div class="product_sidebar">
+                <!-- <span class="more-info filter_button active">Show filter</span> -->
                 <div class="widget-mob-search">
 
                     <?php dynamic_sidebar('bproduct-sidebar'); ?>
@@ -33,7 +34,7 @@ include 'css/page-templates/store/woo.css';
                     <?php do_action( 'woocommerce_sidebar' ); ?>
                 </div>
             </div>
-
+            <!-- asdaaaaaaaaaaaa -->
 
             <div class="product_content_row">
                 <div class="prtfilter_box_right">

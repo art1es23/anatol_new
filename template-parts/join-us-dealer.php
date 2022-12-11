@@ -1,19 +1,17 @@
 <!-- Join us -->
-<section class=" become_dealer fix-bg">
-    <div class="become_dealer--wrapper container">
-        <!-- <div class="card text-center join-us">
-		<div class="dealer-body"> -->
+<section class="available_opportunities">
+    <div class="available_opportunities--wrapper container">
         <?php
 				$section_title = get_field('section_title');	
 					if (!empty($section_title ))  { ?>
-        <h3 class="section-title white-title">
+        <h2 class="section-title">
             <?php echo $section_title; ?>
-        </h3>
+        </h2>
         <?php }	?>
         <?php
 				$section_description = get_field('section_description');	
 					if (!empty($section_description ))  { ?>
-        <div class="dealer-text">
+        <div class="section_content">
             <p>
                 <?php echo $section_description; ?>
             </p>
@@ -24,8 +22,6 @@
 					if (!empty($section_button ))  { ?>
         <div class="join_us_dealer button red-button draw-red"><?php echo $section_button; ?></div>
         <?php }	?>
-        <!-- </div>
-	  </div> -->
     </div>
 </section>
 <!-- End Join us -->

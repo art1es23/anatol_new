@@ -1,7 +1,3 @@
-/* body {
-  background-color: rebeccapurple;
-} */
-
 .product_content_row {
   display: flex;
   width: 100%;
@@ -12,12 +8,11 @@
 .products_content {
   display: flex;
   margin: max(7.5vh, 2.5rem) auto;
-  gap: 5vw;
+  gap: max(5vw, 1rem);
 }
 
 .equipments_list {
-  justify-content: space-between;
-  /* align-items: center; */
+  /* justify-content: space-between;
   gap: 2vw;
   margin-bottom: max(7.5vh, 2.5rem);
 
@@ -25,11 +20,17 @@
   display: -webkit-flex;
   display: flex;
   -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5vw, 1fr));
+  grid-gap: 1.5vw;
 }
 
 .product_item {
-  width: calc((100% - 5vw) / 3);
+  width: 100%;
+  /* width: calc((100% - 5vw) / 3); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +40,6 @@
   transition: all 0.3s ease-in;
   text-align: center;
   color: #555555;
-  min-height: 405px;
   gap: 1vw;
   align-items: center;
   position: relative;
@@ -58,6 +58,7 @@
 .image_part {
   display: flex;
   width: 100%;
+  height: 100%;
   overflow: hidden;
   will-change: transform;
   transition: all 0.5s;
@@ -67,7 +68,7 @@
 }
 
 .image_part img {
-  max-width: 80%;
+  max-width: 65%;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -92,16 +93,6 @@
   font-size: 20px;
 }
 
-.add_to_cart {
-  opacity: 0;
-  padding: 0.25rem 1rem;
-
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0, -60px, 0);
-  transform: translate3d(0, -60px, 0);
-}
-
 .product_item:hover .add_to_cart {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
@@ -119,3 +110,34 @@
 .page-pagination {
   align-self: center;
 }
+
+.widget-mob-search {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .equipments_list {
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .products_content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .equipments_list {
+    grid-gap: 5vw;
+    grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
+  }
+  .product_content_row {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .equipments_list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Product Single */

@@ -22,12 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<style>
-<?php include 'css/page-templates/page-woo-item/page-woo-item.css';
-?>
-</style>
 
 <?PHP get_template_part('template-parts/template-part-head-press'); ?>
+<style>
+<?php include 'css/components/related-products-slider.css';
+// include 'css/components/equipments-list.css';
+include 'css/page-templates/store/woo.css';
+include 'css/page-templates/store/page-woo-item.css';
+?>
+</style>
 
 <!-- <div class="single_equipment"> -->
 <?php while ( have_posts() ) : the_post(); ?>
@@ -43,6 +46,10 @@ get_header(); ?>
 
 <?PHP wc_get_template_part( '/single-product/up-sells'); ?>
 <!-- </div> -->
+
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
 
 <?php get_footer();
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

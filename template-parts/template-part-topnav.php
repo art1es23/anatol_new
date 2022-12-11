@@ -11,22 +11,26 @@
 					'walker' => new Prio_Walker()
 				));?>
 
-        <div class="topmenu_cart_mob">
-            <?php global $woocommerce; ?>
-            <a class="menu-cart" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('Cart View', 'woothemes'); ?>">
+        <div class="additionals-buttons">
+            <div class="topmenu_cart_mob">
+                <?php global $woocommerce; ?>
+                <a class="menu-cart" href="<?php echo wc_get_cart_url(); ?>"
+                    title="<?php _e('Cart View', 'woothemes'); ?>">
 
-                <i class="fa fa-shopping-cart"></i>
-                <span
-                    class="mini_count"><?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></span>
-            </a>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span
+                        class="mini_count"><?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></span>
+                </a>
 
-            <div class="mini_cart_content">
-                <div class="widget_shopping_cart_content"><?php woocommerce_mini_cart();?></div>
+                <div class="mini_cart_content">
+                    <div class="widget_shopping_cart_content"><?php woocommerce_mini_cart();?></div>
+                </div>
             </div>
-        </div>
 
-        <div class="lang_swither_mob">
-            <?PHP echo languages_list_mob(); ?>
+            <div class="lang_swither_mob">
+                <?PHP echo languages_list_mob(); ?>
+            </div>
+
         </div>
 
         <?php endif; ?>

@@ -7,39 +7,39 @@
 	    <input type="hidden" name="name" value="Contact Us Form">
 	    <input type="text" name="cf_979" value="Contact Us Form" style="display:none;">
 	    <input type="text" name="leadsource" value="Web Site" style="display:none;">
-	    <div class="form-row">
-	        <div class="half">
+	    <div class="form-inner__item">
+	        <div class="form-inner__item--half">
 	            <label><?php _e('First Name', 'anatol'); ?><span class="field_required">*</span></label>
 	            <input type="text" class="clear_form" name="firstname" placeholder="<?php _e('First Name', 'anatol'); ?>*"
 	                required>
 	        </div>
-	        <div class="half">
+	        <div class="form-inner__item--half">
 	            <label><?php _e('Last Name', 'anatol'); ?><span class="field_required">*</span></label>
 	            <input type="text" class="clear_form" name="lastname" placeholder="<?php _e('Last Name', 'anatol'); ?>*"
 	                required>
 	        </div>
 	    </div>
-	    <div class="form-row">
-	        <div class="field_full">
+	    <div class="form-inner__item">
+	        <div class="form-inner__item--full">
 	            <label><?php _e('Company Name', 'anatol'); ?></label>
 	            <input type="text" class="clear_form" name="company" placeholder="<?php _e('Company Name', 'anatol'); ?>">
 	        </div>
 	    </div>
-	    <div class="form-row">
-	        <div class="half">
+	    <div class="form-inner__item">
+	        <div class="form-inner__item--half">
 	            <label><?php _e('Phone Number', 'anatol'); ?><span class="field_required"></span></label>
 	            <input type="tel" class="clear_form" name="phone" placeholder="<?php _e('Phone Number', 'anatol'); ?>*"
 	                maxlength="18" id="tel">
 	        </div>
-	        <div class="half">
+	        <div class="form-inner__item--half">
 	            <label><?php _e('Email', 'anatol'); ?><span class="field_required"></span></label>
 	            <input type="Email" class="clear_form" name="email" placeholder="<?php _e('Email', 'anatol'); ?>*"
 	                required>
 	        </div>
 	    </div>
 
-	    <div class="form-row">
-	        <div class="field_full">
+	    <div class="form-inner__item">
+	        <div class="form-inner__item--full">
 	            <label>Country</label>
 	            <select name="cf_1085" class="clear_form" onchange="yesnoCheckCon(this);" required>
 	                <option class="choose_elements" value="" selected="selected"><?php _e('Select Country', 'anatol'); ?>*
@@ -298,8 +298,8 @@
 	        </div>
 	    </div>
 
-	    <div id="ifYesCon" class="form-row" style="display: none;">
-	        <div class="field_full">
+	    <div id="ifYesCon" class="form-inner__item" style="display: none;">
+	        <div class="form-inner__item--full">
 	            <label for="state_required">State/Region<span class="form-required">*</span></label>
 	            <select id="state_required" class="clear_form" class="invalid error" name="cf_1093">
 	                <option class="choose_elements" value="" disabled="" selected="">Please Select State/Region*</option>
@@ -372,40 +372,43 @@
 	            </select>
 	        </div>
 	    </div>
-	    <div class="form-row">
-	        <div class="field_full">
+	    <div class="form-inner__item">
+	        <div class="form-inner__item--full">
 	            <label>Your message</label>
 	            <textarea class="clear_form" name="description"
 	                placeholder="<?php _e('Your message', 'anatol'); ?>"></textarea>
 	        </div>
 	    </div>
-	    <div class="form-row text-center">
-	        <?php
+	    <!-- <div class="form-inner__item text-center"> -->
+	    <?php
              $current_language_code = apply_filters( 'wpml_current_language', null );
             if($current_language_code == 'en'):$send_a_message = 'Send A Message';
             ?>
-	        <?php
+	    <?php
             elseif($current_language_code == 'ru'): $send_a_message =  'Отправить сообщение' ;
             ?>
-	        <?php
+	    <?php
             elseif($current_language_code == 'es'): $send_a_message ='Enviar';
             ?>
-	        <?php
+	    <?php
             endif;
             ?>
-	        <input type="submit" class="submit_form button" name="submit_web_form" value="<?php echo $send_a_message?> ">
-	    </div>
+	    <input type="submit" class="submit_form button" name="submit_web_form" value="<?php echo $send_a_message?> ">
+	    <!-- </div> -->
 	</form>
+
 	<script>
 function yesnoCheckCon(that) {
     if (that.value == "United States") {
         document.getElementById("ifYesCon").style.display = "block";
         document.getElementById("state_required").setAttribute("required", "");
-        $('.usa_state').show();
+        document.querySelectorAll('.usa_state').forEach(item => item.style.display = 'block')
+        document.querySelectorAll('.canadian_province').forEach(item => item.style.display = 'none')
+
     } else if (that.value == "Canada") {
         document.getElementById("ifYesCon").style.display = "block";
-        $('.canadian_province').show();
-        $('.usa_state').hide();
+        document.querySelectorAll('.usa_state').forEach(item => item.style.display = 'none')
+        document.querySelectorAll('.canadian_province').forEach(item => item.style.display = 'block')
     } else {
         document.getElementById("ifYesCon").style.display = "none";
         document.getElementById("state_required").removeAttribute("required");

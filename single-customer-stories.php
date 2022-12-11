@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-customer-stories-single/page-cs-single.css';
+<?php include 'css/page-templates/single-pages/page-customer-stories-single/page-cs-single.css';
 ?>
 </style>
 
@@ -151,7 +151,7 @@
         <?php endwhile; ?>
     </div>
     <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+    <div class="swiper-pagination cs-pagination"></div>
 
 </div>
 
@@ -160,5 +160,10 @@
         ?>
 
 
+<!-- INIT YOUTUBE VIDEOS -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
 
 <?php get_footer(); ?>

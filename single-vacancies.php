@@ -48,7 +48,7 @@ get_header();
     <div class="container dmbs-container default_page_tamplate vacancy_content">
         <!-- start content container -->
         <div class="row dmbs-content">
-            <div class="col-md-12 dmbs-main page_background vacancy-content-wrap">
+            <div class="dmbs-main page_background vacancy-content-wrap">
                 <?php // theloop
 			if (have_posts()) : while (have_posts()) : the_post(); ?>
                 <?php the_content(); ?>

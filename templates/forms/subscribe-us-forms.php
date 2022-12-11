@@ -1,11 +1,12 @@
 <div class="subscribe_us_form form hidden">
+
     <button class="close-button">
         <div class="close-button--wrapper">
             <span class="close-button__item close-button__item--top"></span>
             <span class="close-button__item close-button__item--bottom"></span>
         </div>
     </button>
-    <!-- <div class="form-title"> -->
+
     <h4 class="form-title">
         <?php
             if(ICL_LANGUAGE_CODE == 'ru') {
@@ -18,8 +19,7 @@
                 echo 'Don`t miss the Anatol news';
             } ?>
     </h4>
-    <!-- </div> -->
-    <!-- <div id="contact_form_pop" class="form_pop"> -->
+
     <form id="__vtigerWebForm" class="form-inner home_subscribe" name="Email Subscribe" action="" method="post"
         accept-charset="utf-8" enctype="multipart/form-data">
 
@@ -47,18 +47,14 @@
                 <input type="Email" name="email" value="" placeholder="<?php _e('Email', 'anatol'); ?>" required>
             </div>
         </div>
-        <!-- <div class="form-inner__item">
-            <div class="actions"> -->
+
         <input class="button red-button draw-red" type="submit" name="submit_web_form"
             value="<?php _e('Subscribe', 'anatol'); ?>">
-        <!-- </div>
-        </div> -->
     </form>
 
-    <!-- </div> -->
 </div>
 
-<script>
+<!-- <script>
 $("#__vtigerWebForm.home_subscribe").submit(function(e) {
     e.preventDefault();
     var form = $(this);
@@ -83,4 +79,4 @@ $("#__vtigerWebForm.home_subscribe").submit(function(e) {
     //$('.download_click_btn .download_click').show();	
 
 });
-</script>
+</script> -->

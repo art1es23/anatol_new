@@ -2,10 +2,11 @@
 /* Template Name: About */
 get_header(); ?>
 <style>
-<?php include 'css/components/about-description.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/contact-support.css';
+include 'css/components/about-description.css';
 include 'css/page-templates/page-about/business-opportunities.css';
 include 'css/page-templates/page-about/anatol-map.css';
-include 'css/components/contact-support.css';
 ?>
 </style>
 <?php get_template_part('template-parts/template-part-head-bg-black'); ?>

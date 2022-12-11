@@ -95,7 +95,7 @@ include 'css/page-templates/frontpage/section-video.css';
                 <?php }	?>
             </div>
             <div class="choose-us__item choose-us__item--right choose-us__img">
-                <img class="logo-img site-logo-img"
+                <img loading="lazy" class="lozad logo-img site-logo-img"
                     src="<?php bloginfo('template_directory'); ?>/images/anatol-flag.png" alt="Anatol official flag"
                     width="583" height="auto">
             </div>
@@ -196,7 +196,7 @@ include 'css/page-templates/frontpage/section-video.css';
     </section>
 
     <section id="video_bg" class="home-footer-video">
-        <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <video loading="lazy" id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
             <source src="<?php bloginfo('template_directory'); ?>/images/video/volt_intro.mp4" type="video/mp4">
         </video>
 
@@ -234,5 +234,12 @@ include 'css/page-templates/frontpage/section-video.css';
     </section>
 
 </div>
+
+<!-- INIT YOUTUBE VIDEOS -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
+
 
 <?php get_footer(); ?>

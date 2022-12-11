@@ -60,7 +60,7 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
                 </div>
             </a>
 
-            <a href="#specialty-automatic-presses" class="link_to_item btn"
+            <a href="#specialty-automatic-presses" class="link_to_item button"
                 tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
         </div>
     </div>
@@ -281,5 +281,9 @@ $(document).ready(function() {
     }
 });
 </script>
+
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
 
 <?php get_footer(); ?>

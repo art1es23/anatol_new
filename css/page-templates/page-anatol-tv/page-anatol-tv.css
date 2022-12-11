@@ -27,7 +27,7 @@
   font-weight: 600;
   font-size: max(1vw, 16px);
   cursor: pointer;
-  font-family: "RobotoCondensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   transition: all 0.3s ease;
 }
 .anatol-videos-navigation li:hover {
@@ -140,7 +140,7 @@
   text-align: center;
   color: black;
   font-size: max(0.8vw, 1em);
-  font-family: "RobotoCondensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
 }
 
 .anatol-videos-list__item a:hover .video_title {
@@ -156,7 +156,7 @@
 .cstcw_tp_right_white p,
 .cstcw_tp_right_white h2 {
   color: black;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
 }
 .cstcw_tp_right_white p {
   font-size: 18px;

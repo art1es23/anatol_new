@@ -11,7 +11,7 @@ include 'css/page-templates/store/woo.css';
 
 
 <div class="woo_container">
-    <div class="container">
+    <div class="woo_container--wrapper container">
         <div
             class="products_content <?php if ( is_shop() ) { ?>category_cont <?php } else { echo 'single_pr_cont'; } ?>	">
 

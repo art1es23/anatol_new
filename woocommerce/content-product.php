@@ -25,28 +25,31 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 
+<a href="<?PHP echo get_the_permalink(); ?>" class="product_item presses_item press_search_item e_item_for_id_pr">
+    <div class="image_part">
+        <?PHP echo woocommerce_get_product_thumbnail('product_thumb'); ?>
+    </div>
+    <div class="content_part">
 
-<a href="<?PHP echo get_the_permalink(); ?>" class="product_item press_search_item e_item_for_id_pr" >                
-	<div class="image_part">
-		<?PHP echo woocommerce_get_product_thumbnail(); ?>                    
-	</div>           
-	<div class="content_part">
-	
-		<div class="product_box_title"><?PHP the_title(); ?></div>
-		<div class="product_box_cat">
-			<?PHP wc_get_template_part( '/loop/sale-flash'); ?>
-			<?PHP if ( $price_html = $product->get_price_html() ) : ?>
-				<span class="price_wc"><?PHP echo $price_html; ?></span>
-			<?PHP endif; ?>
-		</div>              
-		
-		<div class="id_pr_number">
-			ID # <?php the_ID(); ?>
-		</div> 
-		
-	
-	</div>
-		<div class="add_to_cart">
-			<?php _e('Add to Cart', 'anatol'); ?>
-		</div> 
+        <div class="product_box_title">
+            <?PHP the_title(); ?>
+        </div>
+        <div class="product_box_cat">
+            <?PHP wc_get_template_part( '/loop/sale-flash'); ?>
+            <?PHP if ( $price_html = $product->get_price_html() ) : ?>
+            <span class="price_wc">
+                <?PHP echo $price_html; ?>
+            </span>
+            <?PHP endif; ?>
+        </div>
+
+        <div class="id_pr_number">
+            ID # <?php the_ID(); ?>
+        </div>
+
+
+    </div>
+    <div class="add_to_cart link_to_item">
+        <?php _e('Add to Cart', 'anatol'); ?>
+    </div>
 </a>

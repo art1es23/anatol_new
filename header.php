@@ -244,7 +244,7 @@
                                 <div>
                                     <img class="info-img"
                                         src="<?php bloginfo('template_directory'); ?>/images/anatol-logo-ico.svg"
-                                        alt="Anatol screen printing equipment logo" width="100%" height="auto">
+                                        alt="Anatol screen printing equipment logo" width="100" height="56">
                                 </div>
                                 <p><?php _e('Revolutionizing the screen printing industry through cutting-edge technology and quality service', 'anatol'); ?>
                                 </p>

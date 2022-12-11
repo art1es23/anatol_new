@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page.css';
 ?>
 </style>
 

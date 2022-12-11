@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-opportunities/opportunities.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-opportunities/opportunities.css';
 ?>
 </style>
 
@@ -19,22 +20,17 @@
 			$hero_url = wp_get_attachment_image_src($image_info['id'], '1920x1000');
 		?>
 <div
-    <?php if ($image_info) { echo 'class="head_section white_shadow has_background" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="head_section contacts_head"'; } ?>>
-    <div class="container">
-        <div class="et_had_animation animate zoomIn one">
-            <div class="head_title">
-                <h2 class="page_title">Opportunities</h2>
-            </div>
-        </div>
-        <div class="head_description et_had_animation  animate fadeInLeft two" style="">
-
-            <?PHP 
-				if(function_exists('bcn_display')) {
-					echo '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
-					bcn_display();
-					echo '</div>';
-				}?>
-        </div>
+    <?php if ($image_info) { echo 'class="hero white_shadow" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="hero"'; } ?>>
+    <div class="hero--wrapper container">
+        <h2 class="hero__title page-title">Opportunities</h2>
+        <!-- <div class="head_description"> -->
+        <?PHP 
+          if(function_exists('bcn_display')) {
+            echo '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
+            bcn_display();
+            echo '</div>';
+          }?>
+        <!-- </div> -->
     </div>
 </div>
 <!-- </div>

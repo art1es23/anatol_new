@@ -13,24 +13,32 @@
   align-items: center;
 }
 
-.presses_item:hover .link_to_item {
+.woocommerce-products .presses_item {
+  width: 100%;
+}
+
+.presses_item:hover .link_to_item,
+.product_item:hover .link_to_item {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-.presses_item:hover .link_to_item a {
+.presses_item:hover .link_to_item a,
+.product_item:hover .link_to_item a {
   background-color: #c12126;
   border-color: #c12126;
   color: #fff;
 }
 
-.presses_item:hover .content_part {
+.presses_item:hover .content_part,
+.product_item:hover .link_to_item {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
-.presses_item:hover .image_item img {
+.presses_item:hover .image_item img,
+.product_item:hover .link_to_item img {
   transform-origin: center;
   transform: scale(1.03);
   opacity: 1;
@@ -41,16 +49,16 @@
 }
 
 .image_item img {
-  will-change: tarnsform;
+  will-change: transform;
   transition: all 0.5s;
-  max-width: 100%;
+  max-width: 80%;
   width: 100%;
   object-fit: cover;
 }
 
 .equipment_title {
   color: #363636;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   font-size: max(1.75vw, 23px);
   text-align: center;
@@ -98,4 +106,45 @@
 
 .white_text .equipment_title {
   color: #fff;
+}
+
+.link_to_item {
+  opacity: 0;
+  transition: all 0.25s ease-in;
+  transform: translate3d(0, -60px, 0);
+}
+
+.presses_item:hover .link_to_item {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.presses_item:hover .link_to_item a {
+  background-color: #c12126;
+  border-color: #c12126;
+  color: #fff;
+}
+.presses_item .link_to_item a:hover {
+  background-color: #fff;
+  border-color: #c12126;
+  color: #c12126;
+}
+
+.content_part {
+  transform: translate(0, 30%);
+  transition: transform 0.3s ease-in;
+}
+
+.presses_item:hover .content_part {
+  transform: translate(0, 0);
+}
+
+@media screen and (max-width: 1080px) {
+  .content_part {
+    transform: initial;
+  }
+  .link_to_item {
+    display: none;
+  }
 }

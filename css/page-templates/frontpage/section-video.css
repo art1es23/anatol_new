@@ -37,7 +37,7 @@
 }
 
 .video-description .section-title {
-  font-family: "RobotoCondensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: max(2.75vw, 2.5rem);

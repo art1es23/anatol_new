@@ -595,7 +595,7 @@ body .select2-dropdown {
   text-decoration: none !important;
   display: flex;
   align-items: center;
-  font-family: "RobotoCondensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   font-size: max(1.35vw, 16px);
 }
@@ -718,9 +718,9 @@ body .select2-dropdown {
 .dmbs-content div:not(.vacancies_filtr) .v_item_title a:hover {
   color: #ab1a1f !important;
 }
-.post-type-archive-vacancies .breadcrumbs span a span {
+/* .post-type-archive-vacancies .breadcrumbs span a span {
   color: black;
-}
+} */
 .dmbs-content div:not(.vacancies_filtr) .v_item_footer a:hover {
   color: #ab1a1f;
 }

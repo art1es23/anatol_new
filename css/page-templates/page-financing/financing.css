@@ -1,4 +1,4 @@
-.available_opportunities {
+/* .available_opportunities {
   background-image: linear-gradient(
       180deg,
       rgba(27, 31, 37, 0.2) 0%,
@@ -55,7 +55,6 @@
     gap: 1vw;
     text-align: center;
     align-items: center;
-    /* display: none; */
   }
   .section_content ul li {
     width: 75%;
@@ -64,16 +63,4 @@
   .available_opportunities--wrapper {
     width: 94%;
   }
-  /* .section_content ul li:before {
-    position: absolute;
-    content: "";
-    display: block;
-    height: 0.5rem;
-    width: 0.5rem;
-    top: 10%;
-    left: 0;
-    transform: translate(0, -10%);
-    background-color: rgba(218, 38, 38, 1);
-    border-radius: 50%;
-  } */
-}
+} */

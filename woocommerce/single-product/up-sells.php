@@ -26,43 +26,50 @@ if($field_lang == 'en') {
 $uppsells_items = new WP_Query( $args );
 
 if($uppsells_items->have_posts()) { ?>
-	<section class="uppsells_products">
-	
-		<div class="container">
-			<div class="section_title"><?PHP _e('Also Try These Products'); ?></div>
-			<div class="upsells_wcproducts_slider sldots related_products_list">
-				<?PHP
-				while($uppsells_items->have_posts()) {
-					$uppsells_items->the_post();
-					?>
-							<div class="rp_slide_item" data-aos="zoom-in-down">
-								<a href="<?PHP echo get_the_permalink(); ?>" class="product_item">                
-									<div class="image_part">
-										<?PHP echo get_the_post_thumbnail(get_the_ID(), array(300, 210)); ?>                    
-									</div>               
-									<div class="content_part">
-										<div class="equipment_box_title"><?PHP echo get_the_title(); ?></div>
-										<?php
-											$price = get_post_meta( get_the_ID(), '_regular_price', true);
-											$sale = get_post_meta( get_the_ID(), '_price', true); 
-											if (!empty($sale)){
-											  echo '$';
-											  echo $sale;
-											} else {
-											  echo '$';
-											  echo $price;
-											}
-										?>
-									</div>
-									<div class="add_to_cart">Add to Cart</div>
-								</a>
-							</div>
-					<?PHP
+<section class="uppsells_products">
+    <div class="swiper related-products--wrapper container">
+
+        <div class="section_title">
+            <?PHP _e('Also Try These Products'); ?>
+        </div>
+        <div class="swiper-wrapper related-products_slider related_products_list">
+
+            <?PHP while($uppsells_items->have_posts()) {
+				$uppsells_items->the_post();
+			?>
+
+            <a href="<?PHP echo get_the_permalink(); ?>"
+                class="swiper-slide related-products-list__item product-post presses_item">
+                <div class="image_item product-post__img">
+                    <?PHP echo get_the_post_thumbnail(get_the_ID(), array(300, 210)); ?>
+                </div>
+                <div class="content_part">
+                    <h3 class="product-post__title">
+                        <?PHP echo get_the_title(); ?>
+                    </h3>
+                    <span class="product-post__price">
+                        <?php
+							$price = get_post_meta( get_the_ID(), '_regular_price', true);
+							$sale = get_post_meta( get_the_ID(), '_price', true); 
+							if (!empty($sale)){
+								echo '$';
+								echo $sale;
+							} else {
+								echo '$';
+								echo $price;
+							}
+						?>
+                    </span>
+                </div>
+                <div class="button link_to_item">Add to Cart</div>
+            </a>
+            <?PHP
 				}
 				?>
-			</div>
-		</div>
-	</section>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
 <?PHP } ?>
 
 <?PHP wp_reset_query();

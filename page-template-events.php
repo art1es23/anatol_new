@@ -4,12 +4,13 @@
 get_header(); ?>
 <style>
 <?php // include 'css/components/template-form.css';
+include 'css/components/hero-templates/hero-template.css';
 include 'css/components/get-in-touch.css';
 include 'css/page-templates/page-events/events.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-big'); ?>
+<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
 
 <div class="events-content">
 
@@ -334,4 +335,9 @@ include 'css/page-templates/page-events/events.css';
 </div>
 
 <?php get_template_part('template-parts/get-in-touch'); ?>
+
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
+
 <?php get_footer(); ?>

@@ -171,7 +171,7 @@
 .action_buttons .uk-button:not(.default_button) {
   text-decoration: none !important;
   color: #363636;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -851,7 +851,7 @@ section.anatol_videos .tab-content {
   margin-left: auto;
 }
 .optional_card .card-title {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   font-size: 22px;
 }
@@ -965,7 +965,7 @@ section.anatol_videos .tab-content {
 }
 
 .download_buttons .download_line .d_line_title {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   font-size: max(1.25vw, 18px);
   position: relative;
@@ -992,7 +992,7 @@ section.anatol_videos .tab-content {
 }
 .aequipment_cont a {
   color: #fff;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   font-size: 22px;
   -webkit-transition: all 0.4s;
@@ -1052,7 +1052,7 @@ section.anatol_videos .tab-content {
   opacity: 1;
 }
 /* RELATED SLIDER SECTION */
-
+/* 
 .related-products--wrapper {
   margin: max(7.5vh, 2.5rem) auto;
 }
@@ -1143,7 +1143,7 @@ section.anatol_videos .tab-content {
 }
 .related-products-list__item .product-post__title {
   font-size: max(1.1vw, 18px);
-}
+} */
 
 /* END RELATED SECTION */
 
@@ -1237,7 +1237,7 @@ section.anatol_videos .tab-content {
   background-color: white;
   padding: 25px;
   font-size: 18px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -1267,7 +1267,7 @@ section.anatol_videos .tab-content {
   color: #fff;
   text-decoration: none !important;
   outline: none !important;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
@@ -1292,9 +1292,23 @@ section.anatol_videos .tab-content {
     font-size: 16px;
   }
 } */
+
+.specifications-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.tab-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+}
+
 #specifications table,
 #specifications table p {
   font-size: 12px;
+  width: 100%;
 }
 
 th {
@@ -1390,7 +1404,7 @@ table > thead:first-child > tr:first-child > td {
   font-size: 14px;
   line-height: 18px;
   min-height: 40px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1403,7 +1417,7 @@ table > thead:first-child > tr:first-child > td {
 .section_pretitle {
   color: #353535;
   font-size: 1.6vw;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.3em;
   font-weight: bold;
   position: relative;
@@ -1510,7 +1524,7 @@ table > thead:first-child > tr:first-child > td {
   font-size: 14px;
   line-height: 18px;
   min-height: 40px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1523,7 +1537,7 @@ table > thead:first-child > tr:first-child > td {
 .section_pretitle {
   color: #353535;
   font-size: 1.6vw;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.3em;
   font-weight: bold;
   position: relative;

@@ -53,6 +53,8 @@
                         <h3 class="tab_item_title"><?php the_field('description_title'); ?></h3>
                         <?php the_field('main_description'); ?>
 
+                        <?php if (the_field('video_in_description_tab')) { ?>
+
                         <div class="video">
                             <a href="https://www.youtube.com/embed/<?php echo $video_id;?>" class="video__link">
                                 <picture>
@@ -73,6 +75,8 @@
                         </div>
 
                         <?php the_field('legend_under_video'); ?>
+                        <?php }?>
+
                     </div>
                 </div>
                 <?php } ?>

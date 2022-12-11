@@ -11,7 +11,8 @@ if(!empty($post->ID)) {
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-customer-stories/page-customer-stories.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-customer-stories/page-customer-stories.css';
 ?>
 </style>
 
