@@ -11,7 +11,8 @@ if(!empty($post->ID)) {
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-customer-stories/page-customer-stories.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-customer-stories/page-customer-stories.css';
 ?>
 </style>
 
@@ -51,8 +52,8 @@ get_header(); ?>
                 <div class="c-story-post__header <?php if (!empty(get_field('wpcf-video'))) { echo 'has_video'; } ?>">
                     <?php if (!empty(get_the_title()) && !empty(get_field('wpcf-companyname'))) {?>
 
-                    <a href="<?=get_the_permalink()?>"><?=get_the_title()?></a>,
-                    <?=get_field('wpcf-companyname')?>
+                    <a href="<?=get_the_permalink()?>"><?=get_the_title()?></a>
+                    <span>, <?=get_field('wpcf-companyname')?></span>
 
                     <?php } elseif(!empty(get_the_title())) { ?>
                     <a href="<?=get_the_permalink()?>"><?=get_the_title()?></a>

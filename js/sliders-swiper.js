@@ -8,6 +8,17 @@ const sliderWrapper = (
     loop: true,
     speed: 1200,
     effect: fadeStyle,
+    preloadImages: false,
+    lazy: {
+      loadOnTransitionStart: true,
+      checkInView: true,
+      enabled: true,
+      loadPrevNext: true,
+    },
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -19,7 +30,7 @@ const sliderWrapper = (
     // slidesPerView: slidesPerView,
     spaceBetween: slideGap,
     breakpoints: {
-      700: {
+      800: {
         slidesPerView: slidesPerView,
       },
     },
@@ -30,22 +41,32 @@ const sliderWrapper = (
 const heroSlider = document.querySelector(".main-hero-slider");
 const blogSlider = document.querySelector(".dashboard__item--container");
 const productSlider = document.querySelector("#image-carousel-container");
-const relatedSlider = document.querySelector(".related-products--wrapper");
+const relatedSliders = document.querySelectorAll(".related-products--wrapper");
 const autoPresses = document.querySelector(".automatic_presses--wrapper");
 const getinTouch = document.querySelector(".get_in_contact--wrapper");
 
 const supportTeam = document.querySelector(".support_team--wrapper");
 const feedbacks = document.querySelector(".support-feedbacks--wrapper");
 
+const relatedStories = document.querySelector(".related-stories");
+const relatedBlogPosts = document.querySelector(".related-articles--wrapper");
+const relatedEbookPosts = document.querySelector(".similar-ebooks--wrapper");
+
 if (heroSlider) sliderWrapper(heroSlider, 1, 0, "fade");
 if (blogSlider) sliderWrapper(blogSlider, 2, 60, "slide");
 if (productSlider) sliderWrapper(productSlider, 1, 0, "fade");
-if (relatedSlider) sliderWrapper(relatedSlider, 3, 30);
+if (relatedSliders) {
+  relatedSliders.forEach((item) => sliderWrapper(item, 3, 30));
+}
 if (autoPresses) sliderWrapper(autoPresses, 3, 30);
 if (getinTouch) sliderWrapper(getinTouch, 1, 0, "slide");
 
 if (supportTeam) sliderWrapper(supportTeam, 3, 30);
 if (feedbacks) sliderWrapper(feedbacks, 3, 30, "coverflow");
+
+if (relatedStories) sliderWrapper(relatedStories, 1, 0);
+if (relatedBlogPosts) sliderWrapper(relatedBlogPosts, 3, 30);
+if (relatedEbookPosts) sliderWrapper(relatedEbookPosts, 2, 60);
 
 ///// NEED INVESTIGATE
 

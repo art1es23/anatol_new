@@ -21,33 +21,49 @@ include 'css/page-templates/frontpage/section-video.css';
 			if(get_sub_field('hide_slide')) continue; 
 			$slide_image = get_sub_field('slide_image');
 			$slide_image_mobil = get_sub_field('slide_image_mobil');
+
+            $alt_text = get_sub_field('alt_text_image_banner');
+
 			$btn_baner = get_sub_field('btn_baner');	
 			$url_btn_baner = get_sub_field('url_btn_baner');
 			$btn_position = get_sub_field('btn_position');
 			$btn_name_class = get_sub_field('btn_name_class');
 			?>
 
-        <div class="swiper-slide main-hero-slider__item" style="background-image: url(<?php echo $slide_image ?>);">
+        <div class="swiper-slide main-hero-slider__item">
             <?php if (!empty($url_btn_baner))  { ?>
-            <!-- <img src="url(<?php echo $slide_image ?>)" alt=""> -->
+
+            <picture class="image--wrapper">
+                <!-- <source type="image/webp" srcset="<?php echo $slide_image ?>"> -->
+                <source media="(max-width: 900px)" srcset="<?php echo $slide_image_mobil?>">
+                <source type="image/webp" data-srcset="<?php echo $slide_image ?>">
+                <img class="swiper-lazy" data-src="<?php echo $slide_image ?>" alt="<?php echo $alt_text?>" width="1920"
+                    height="1080">
+            </picture>
+
+            <!-- <div class="container">
+                <?php
+                    $slide_title = get_sub_field('slide_title');		
+                    if (!empty($slide_title ))  { ?>
+                <div class="slide_title"><?php echo $slide_title; ?></div>
+                <?php }	?>
+                <?php
+                    $slide_title_description = get_sub_field('slide_title_description');	
+                    if (!empty($slide_title ))  { ?>
+                <div class="slide_title_description"><?php echo $slide_title_description; ?></div>
+                <?php }	?>
+            </div> -->
 
             <div class="main-hero-slider__btn main-hero-slider__btn--<?php echo $btn_position; ?>">
                 <a href="<?php echo $url_btn_baner; ?>" class="button red-button draw-red"><?php echo $btn_baner; ?></a>
             </div>
             <?php }	?>
 
-            <!-- <div class="home_header_slide_img" style="background-image: url(<?php echo $slide_image ?>);"></div> -->
-
-            <!-- <?php if(get_sub_field('slide_image_mobil')):?>
-            <div class="home_header_slide_item_mob" style="background-image: url(<?php echo $slide_image_mobil ?>);">
-            </div> -->
-            <?php endif; ?>
         </div>
         <?php
 	 endwhile;
 	 endif;
 	 ?>
-        ...
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
@@ -81,7 +97,7 @@ include 'css/page-templates/frontpage/section-video.css';
                 <?php }	?>
             </div>
             <div class="choose-us__item choose-us__item--right choose-us__img">
-                <img class="logo-img site-logo-img"
+                <img loading="lazy" class="lozad logo-img site-logo-img"
                     src="<?php bloginfo('template_directory'); ?>/images/anatol-flag.png" alt="Anatol official flag"
                     width="583" height="auto">
             </div>
@@ -120,9 +136,18 @@ include 'css/page-templates/frontpage/section-video.css';
                         if ($query->have_posts()) :  ?>
 
                 <div class="swiper-wrapper latest-blogs--wrapper">
-                    <?php  while ($query->have_posts()) : $query->the_post(); ?>
+                    <?php  while ($query->have_posts()) : 
+                        $query->the_post(); ?>
                     <div class="swiper-slide latest-blogs__item blog-post">
-                        <div class="blog-post__img"><?php the_post_thumbnail('blog_thumb'); ?></div>
+                        <div class="blog-post__img">
+                            <!-- <div class="blog-post__img"><?php the_post_thumbnail('blog_thumb'); ?></div> -->
+                            <picture>
+                                <source data-srcset="<?php the_field('thumb_for_post'); ?>" type="image/webp">
+                                <img class="swiper-lazy lozad" loading="lazy"
+                                    data-src="<?php the_field('thumb_for_post'); ?>"
+                                    alt="<?php the_field('title_blog_post')?>" width="1024" height="427">
+                            </picture>
+                        </div>
                         <div class="blog-post__description">
                             <a class="blog-post__caption" href="<?php the_permalink();?>"><?php the_title(); ?></a>
                             <a href="<?php the_permalink();?>"
@@ -182,7 +207,7 @@ include 'css/page-templates/frontpage/section-video.css';
     </section>
 
     <section id="video_bg" class="home-footer-video">
-        <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        <video loading="lazy" id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
             <source src="<?php bloginfo('template_directory'); ?>/images/video/volt_intro.mp4" type="video/mp4">
         </video>
 
@@ -220,5 +245,12 @@ include 'css/page-templates/frontpage/section-video.css';
     </section>
 
 </div>
+
+<!-- INIT YOUTUBE VIDEOS -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
+
 
 <?php get_footer(); ?>

@@ -3,7 +3,8 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-account/page-account.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-account/page-account.css';
 include 'css/components/another-equipments.css';
 include 'css/woocommerce.css';
 ?>

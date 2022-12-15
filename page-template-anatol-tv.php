@@ -3,7 +3,8 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-anatol-tv/page-anatol-tv.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-anatol-tv/page-anatol-tv.css';
 ?>
 </style>
 
@@ -205,4 +206,8 @@ for (let i = 0; i < list_tbs.length; i++) {
 <!-- end content container -->
 <!-- </div> -->
 <!-- <div class="container-fluid"> -->
+
+<!-- INIT YOUTUBE VIDEOS -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>
+
 <?php get_footer(); ?>

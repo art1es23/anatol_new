@@ -53,6 +53,8 @@
                         <h3 class="tab_item_title"><?php the_field('description_title'); ?></h3>
                         <?php the_field('main_description'); ?>
 
+                        <?php if (the_field('video_in_description_tab')) { ?>
+
                         <div class="video">
                             <a href="https://www.youtube.com/embed/<?php echo $video_id;?>" class="video__link">
                                 <picture>
@@ -73,6 +75,8 @@
                         </div>
 
                         <?php the_field('legend_under_video'); ?>
+                        <?php }?>
+
                     </div>
                 </div>
                 <?php } ?>
@@ -220,7 +224,8 @@
 
                                     <a id="register_warranty_onclick" href="#"
                                         class="stp_button button transporent_button track-button"
-                                        data-category="Buttons" data-label="Warranty Registration - Support page">
+                                        data-category="Buttons" data-logined="<?php echo is_user_logged_in()?>"
+                                        data-label="Warranty Registration - Support page">
                                         <!-- <span> -->
                                         <?php _e('Register Now', 'anatol'); ?>
                                         <!-- </span> -->

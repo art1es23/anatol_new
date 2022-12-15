@@ -1,46 +1,32 @@
 .event_block {
   background: #efefef;
-  /* height: 500px; */
   width: 100%;
   display: flex;
   flex-direction: row;
 
   position: relative;
 }
-.event_block .event_image {
+.event_image {
   width: 55%;
   height: 100%;
   background-size: cover;
   background-position: center;
-  /* float: left;
-   */
 }
 .event_block:nth-child(even) {
   flex-direction: row-reverse;
 }
-#events_list {
+.events_list {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: stretch;
-  -webkit-flex-align: stretch;
-  -ms-flex-align: stretch;
-  -webkit-align-items: stretch;
   align-items: stretch;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   align-content: stretch;
 }
-.events_list .event .coming_soon_text {
+.coming_soon_text {
   display: none;
 }
-.events_list .event .coming_soon_text_top {
+.coming_soon_text_top {
   position: absolute;
   left: 0;
   top: 50%;
@@ -54,18 +40,17 @@
   background: #f8f8f8;
   color: #ab1a1f;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   border-radius: 3px;
 }
-#events_list .event .event_info {
+.event_info {
   width: 45%;
-  /* height: 100%; */
-  padding: 60px;
-  /* float: right; */
+  padding: 3.5vw;
   position: relative;
 }
-.event_info .event_info_cont {
+.event_info_cont {
+  width: 100%;
   position: relative;
   background: #fff;
   padding: 3vw;
@@ -77,45 +62,41 @@
   flex-direction: column;
   gap: 1.5vw;
 }
-.event_block:nth-child(even) .event_info .event_info_cont {
-  /* left: auto;
-  right: -120px; */
+.event_block:nth-child(even) .event_info_cont {
   transform: translate(25%, -50%);
 }
-#events_list .event .event_title {
+.event_title {
   padding: 0 1.5vw;
   font-weight: 700;
   color: #353535;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
-  font-size: 1.4vw;
+  font-size: max(2vw, 20px);
   margin: 0;
 }
-#events_list .event .event_separator {
+.event_separator {
   width: 100%;
   height: 2px;
   background: #f8f8f8;
 }
-#events_list .event .events_date_desc {
+.events_date_desc {
   padding: 0 1.5vw;
   display: flex;
-  gap: 1vw;
+  gap: 1.5vw;
   flex-direction: column;
 }
-#events_list .event .machines_for_exhibition,
-#events_list .event .event_dates,
-#events_list .event .event_description {
+.machines_for_exhibition,
+.event_dates,
+.event_description {
   padding-left: 2.5rem;
   position: relative;
-  /* min-height: 20px; */
-  /* margin-bottom: 20px; */
   color: #353535;
-  font-size: 1.1vw;
+  font-size: max(1.1vw, 16px);
   display: flex;
   gap: 0.5vw;
   flex-direction: column;
 }
-#events_list .event .machines_for_exhibition::before {
+.machines_for_exhibition::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -125,8 +106,8 @@
   font-size: 20px;
   color: #ab1a1f;
 }
-#events_list .event .event_dates::before,
-#events_list .event .event_description::before {
+.event_dates::before,
+.event_description::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -137,15 +118,15 @@
   font-size: 20px;
   color: #ab1a1f;
 }
-#events_list .event .event_description::before {
+.event_description::before {
   content: "\E824";
 }
-#events_list .event .machines_for_exhibition::before {
+.machines_for_exhibition::before {
   background: url(../wp-content/themes/anatol/css-new/images/machine_image.svg)
     no-repeat;
   background-size: contain;
 }
-#events_list .event .card_subinfo {
+.card_subinfo {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -164,11 +145,6 @@
   padding: 1vw 1.5vw;
   position: relative;
 }
-/* #events_list .event .card_subinfo .subinfo_separator {
-  background: #e6e6e6;
-  width: 1px;
-  height: 60px;
-} */
 .card_subinfo:after {
   content: "";
   background-color: #e6e6e6;
@@ -180,13 +156,12 @@
   display: block;
   transform: translate(-50%, -50%);
 }
-#events_list .event .card_subinfo .cs_logo,
-#events_list .event .card_subinfo .cs_website {
-  width: 35%;
-  /* text-align: left; */
+.card_subinfo .cs_logo,
+.card_subinfo .cs_website {
+  width: 40%;
 }
-#events_list .event .card_subinfo .cs_website,
-#events_list .event .card_subinfo .cs_photos {
+.card_subinfo .cs_website,
+.card_subinfo .cs_photos {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -201,19 +176,19 @@
   align-items: center;
   align-content: center;
 }
-#events_list .event .card_subinfo .gallery-link a,
-#events_list .event .card_subinfo .cs_website,
-#events_list .event .card_subinfo .cs_website,
-#events_list .event .card_subinfo .cs_photos,
-#events_list .event .card_subinfo .cs_photos a {
+.card_subinfo .gallery-link a,
+.card_subinfo .cs_website,
+.card_subinfo .cs_website,
+.card_subinfo .cs_photos,
+.card_subinfo .cs_photos a {
   text-align: center;
   font-weight: 700;
-  font-size: 1vw;
+  font-size: max(1vw, 13px);
   text-decoration: none !important;
   color: #353535;
 }
-#events_list .event .card_subinfo .gallery-link a::before,
-#events_list .event .card_subinfo .cs_website::before {
+.card_subinfo .gallery-link a::before,
+.card_subinfo .cs_website::before {
   display: inline-block;
   font-family: "anatol";
   content: "\E82A";
@@ -221,38 +196,27 @@
   margin-right: 16px;
   color: #ab1a1f;
 }
-#events_list .event .card_subinfo .gallery-link a::before {
+.card_subinfo .gallery-link a::before {
   content: "\E831";
 }
-#events_list .event .card_subinfo .cs_logo img {
+.card_subinfo .cs_logo img {
   width: 100%;
-  height: 60px;
-  object-fit: scale-down;
-  object-position: 0% 50%;
 }
-/* #events_list .event:nth-child(1) {
-  width: 100% !important;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-} */
-#events_list .event:nth-child(1) .coming_soon_text_top {
+.event:nth-child(1) .coming_soon_text_top {
   display: none;
 }
-#events_list .event:nth-child(1) .card {
+.event:nth-child(1) .card {
   margin-bottom: 0;
   margin-right: -46px;
-  /* float: left; */
 }
-#events_list .event:nth-child(1) .card-image img {
+.event:nth-child(1) .card-image img {
   width: 674px;
   height: 375px;
 }
-#events_list .event:nth-child(1) .card-image {
+.event:nth-child(1) .card-image {
   width: 674px;
-  /* float: left; */
 }
-#events_list .event:nth-child(1).event_future .coming_soon_text::before {
+.event:nth-child(1).event_future .coming_soon_text::before {
   content: "";
   display: block;
   background: #ab1a1f;
@@ -262,72 +226,49 @@
   left: 56px;
   bottom: 22px;
 }
-#events_list .event .card_subinfo .cs_photos {
+.card_subinfo .cs_photos {
   display: none;
 }
 
 @media screen and (max-width: 1080px) {
-  #events_list .event .event_info {
+  .event_info {
     padding: 0;
     width: 65%;
   }
-  .event_info .event_info_cont {
+  .event_info_cont {
     transform: translate(0, 0);
     padding: 3.5vw;
     top: 0;
     gap: 2vw;
   }
 
-  .event_block:nth-child(even) .event_info .event_info_cont {
+  .event_block:nth-child(even) .event_info_cont {
     transform: translate(0, 0);
   }
 
-  #events_list .event .event_title {
-    font-size: 2vw;
-  }
-  #events_list .event .machines_for_exhibition,
-  #events_list .event .event_dates,
-  #events_list .event .event_description {
-    font-size: 1.5vw;
+  .event_title {
+    font-size: max(3vw, 24px);
   }
 
-  #events_list .event .card_subinfo .gallery-link a,
-  #events_list .event .card_subinfo .cs_website,
-  #events_list .event .card_subinfo .cs_website,
-  #events_list .event .card_subinfo .cs_photos,
-  #events_list .event .card_subinfo .cs_photos a {
-    font-size: 1.5vw;
+  .card_subinfo .gallery-link a,
+  .card_subinfo .cs_website,
+  .card_subinfo .cs_website,
+  .card_subinfo .cs_photos,
+  .card_subinfo .cs_photos a {
+    font-size: max(1.75vw, 15px);
   }
 }
 @media screen and (max-width: 800px) {
-  #events_list .event .event_info {
+  .event_info {
     width: 75%;
   }
-  .event_info .event_info_cont {
+  .event_info_cont {
     padding: 3.5vw;
     gap: 2vw;
   }
-
-  #events_list .event .event_title {
-    font-size: 2.35vw;
-  }
-
-  #events_list .event .machines_for_exhibition,
-  #events_list .event .event_dates,
-  #events_list .event .event_description {
-    font-size: 1.75vw;
-  }
-
-  #events_list .event .card_subinfo .gallery-link a,
-  #events_list .event .card_subinfo .cs_website,
-  #events_list .event .card_subinfo .cs_website,
-  #events_list .event .card_subinfo .cs_photos,
-  #events_list .event .card_subinfo .cs_photos a {
-    font-size: 1.75vw;
-  }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   .events-content {
     padding: 2.5vh 0;
   }
@@ -341,41 +282,68 @@
   .event_block:nth-child(even) {
     flex-direction: column;
   }
-  .event_block .event_image {
+  .event_image {
     /* width: 75%; */
     height: 27.5vh;
   }
 
-  #events_list .event .event_info,
-  .event_block .event_image {
+  .event_info,
+  .event_image {
     width: 100%;
   }
-  .event_info .event_info_cont {
+  .event_info_cont {
     padding: 5vw;
     gap: 3.5vw;
   }
 
-  #events_list .event .event_title {
-    font-size: 3.25vw;
+  .event_title {
+    font-size: max(4.25vw, 24px);
   }
 
-  #events_list .event .machines_for_exhibition,
-  #events_list .event .event_dates,
-  #events_list .event .event_description {
-    font-size: 2.75vw;
+  .machines_for_exhibition,
+  .event_dates,
+  .event_description {
+    font-size: max(2.75vw, 18px);
   }
 
-  #events_list .event .card_subinfo .gallery-link a,
-  #events_list .event .card_subinfo .cs_website,
-  #events_list .event .card_subinfo .cs_website,
-  #events_list .event .card_subinfo .cs_photos,
-  #events_list .event .card_subinfo .cs_photos a {
-    font-size: 2.5vw;
-  }
-  #events_list .event .events_date_desc {
+  .events_date_desc {
     gap: 3vw;
   }
   .event_description {
-    gap: 1.5vw;
+    gap: 0.25vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .event_block {
+    width: 90%;
+  }
+
+  .event_info_cont {
+    gap: 5vw;
+  }
+
+  .event_title {
+    font-size: max(5.25vw, 17px);
+  }
+  .machines_for_exhibition,
+  .event_dates,
+  .event_description {
+    font-size: max(3.5vw, 14px);
+  }
+
+  .card_subinfo .gallery-link a,
+  .card_subinfo .cs_website,
+  .card_subinfo .cs_website,
+  .card_subinfo .cs_photos,
+  .card_subinfo .cs_photos a {
+    font-size: max(3.5vw, 14px);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card_subinfo .cs_logo,
+  .card_subinfo .cs_website {
+    width: 45%;
   }
 }

@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-opportunities/opportunities.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-opportunities/opportunities.css';
 ?>
 </style>
 
@@ -19,22 +20,17 @@
 			$hero_url = wp_get_attachment_image_src($image_info['id'], '1920x1000');
 		?>
 <div
-    <?php if ($image_info) { echo 'class="head_section white_shadow has_background" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="head_section contacts_head"'; } ?>>
-    <div class="container">
-        <div class="et_had_animation animate zoomIn one">
-            <div class="head_title">
-                <h2 class="page_title">Opportunities</h2>
-            </div>
-        </div>
-        <div class="head_description et_had_animation  animate fadeInLeft two" style="">
-
-            <?PHP 
-				if(function_exists('bcn_display')) {
-					echo '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
-					bcn_display();
-					echo '</div>';
-				}?>
-        </div>
+    <?php if ($image_info) { echo 'class="hero white_shadow" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="hero"'; } ?>>
+    <div class="hero--wrapper container">
+        <h2 class="hero__title page-title">Opportunities</h2>
+        <!-- <div class="head_description"> -->
+        <?PHP 
+          if(function_exists('bcn_display')) {
+            echo '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
+            bcn_display();
+            echo '</div>';
+          }?>
+        <!-- </div> -->
     </div>
 </div>
 <!-- </div>
@@ -44,33 +40,37 @@
 
 <div class="container dmbs-container vacancy_content">
     <!-- start content container -->
-    <div class="row dmbs-content">
-        <div class="col-md-12 dmbs-main">
+    <div class="dmbs-content">
+        <div class="mbs-main">
             <?php // theloop
       if( have_posts() ) { ?>
             <?php while ( have_posts() ) : the_post();?>
             <div <?php post_class(); ?>>
-                <div>
-                    <div class="v_item_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-                    <div class="v_item_footer">
-                        <?php
-                    $terms_list1 = wp_get_post_terms($post->ID, ['country']);
-                    $terms_list2 = wp_get_post_terms($post->ID, ['position']);
-                    $terms_list  = array_merge($terms_list1, $terms_list2);
-                    $terms = [];
-                    if($terms_list) {
-                      foreach($terms_list as $term) {
-                        $terms[] = '<a  href="'.get_term_link($term, $term->taxonomy).'">'.$term->name.'</a>';
-                      }
-                    }
-                    if(!empty($terms)) {
-                      echo implode('&nbsp; ' , $terms);
-                    }
-                  ?>
-                    </div>
+                <!-- <div> -->
+                <!-- <div class="v_item_title"> -->
+                <a class="v_item_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <!-- </div> -->
+                <div class="v_item_footer">
+                    <?php
+                          $terms_list1 = wp_get_post_terms($post->ID, ['country']);
+                          $terms_list2 = wp_get_post_terms($post->ID, ['position']);
+                          $terms_list  = array_merge($terms_list1, $terms_list2);
+                          $terms = [];
+                          if($terms_list) {
+                            foreach($terms_list as $term) {
+                              $terms[] = '<a  href="'.get_term_link($term, $term->taxonomy).'">'.$term->name.'</a>';
+                            }
+                          }
+                          if(!empty($terms)) {
+                            echo implode('&nbsp; ' , $terms);
+                          }
+                        ?>
+                    <!-- </div> -->
                 </div>
-                <div class="v_item_desc"><?php the_field('vacancy_description'); ?></div>
-                <div class="v_item_title v_item_btn"><a href="<?php the_permalink(); ?>">Learn more...</a></div>
+                <p class="v_item_desc"><?php the_field('vacancy_description'); ?></p>
+                <!-- <div class="v_item_title v_item_btn"> -->
+                <a class="button v_item_btn" href="<?php the_permalink(); ?>">Learn more...</a>
+                <!-- </div> -->
             </div>
             <?php endwhile; ?>
         </div>
@@ -78,7 +78,7 @@
             <?php wp_corenavi(); ?>
         </div>
         <div class="vacancy_contact_us"><a data-fancybox data-src="#vacancy_contact_us_hidden" href="javascript:;"
-                class="button"><?php _e('сontact us'); ?></a></div>
+                class="button contact-us__button"><?php _e('сontact us'); ?></a></div>
         <div id="vacancy_contact_us_hidden" style="display:none;">
             <div class="vacancy_form vacancy_contact_us_content">
                 <?php
@@ -99,7 +99,7 @@
         <?php } ?>
     </div>
     <?php if(!have_posts()) {?>
-    <div class="col-md-12 dmbs-main">
+    <div class="dmbs-main">
         <div class="vacancy_sorry_title"><?php _e('We are sorry'); ?></div>
         <p>
             <center>
@@ -132,7 +132,7 @@
             </center>
         </p>
     </div>
-    <div class="col-md-12 vacancy_form">
+    <div class="vacancy_form">
         <div class="vacancy-form-wrap outside-form">
             <?php
       if(ICL_LANGUAGE_CODE == 'ru') {

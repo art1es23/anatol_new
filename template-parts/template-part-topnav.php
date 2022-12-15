@@ -1,9 +1,6 @@
-    <nav class="anatol-header-menu navbar navbar-inverse" role="navigation">
-        <input type="checkbox" name="" id="check" />
-
+    <nav class="header-main__item anatol-header-menu navbar navbar-inverse" role="navigation">
         <?php if ( has_nav_menu( 'main_menu' ) ) : ?>
-        <div id="main-menu" class="main-nav">
-            <?php
+        <?php
 				wp_nav_menu(array(
 					'theme_location'  => 'main_menu',
 					//'fallback_cb'     => false,
@@ -14,6 +11,7 @@
 					'walker' => new Prio_Walker()
 				));?>
 
+        <div class="additionals-buttons">
             <div class="topmenu_cart_mob">
                 <?php global $woocommerce; ?>
                 <a class="menu-cart" href="<?php echo wc_get_cart_url(); ?>"
@@ -34,5 +32,6 @@
             </div>
 
         </div>
+
         <?php endif; ?>
     </nav>

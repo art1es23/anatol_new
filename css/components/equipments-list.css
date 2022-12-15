@@ -22,6 +22,7 @@
   justify-content: center;
   position: relative;
   cursor: pointer;
+  border-radius: 8px;
 }
 .product-post:hover {
   box-shadow: 0 0 22px rgb(0 0 0 / 10%);
@@ -38,21 +39,35 @@
   will-change: transform;
   transition: all 0.5s;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-post__img img {
   max-width: 100%;
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: cover;
   will-change: transform;
   transition: all 0.5s;
 }
 
+.content_part {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  align-items: center;
+}
+
 .product-post__title {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   font-size: max(1.25vw, 20px);
+  text-align: center;
+}
+
+.product-post__price {
+  font-size: max(1vw, 16px);
   text-align: center;
 }
 
@@ -88,6 +103,7 @@
 } */
 
 @media screen and (max-width: 1080px) {
+  .product-post,
   .equipments-list__item {
     width: calc((100% - 7.5vw) / 2);
     padding: 3vw;
@@ -105,6 +121,7 @@
   .equipments-list {
     justify-content: center;
   }
+  .product-post,
   .equipments-list__item {
     width: 80%;
   }

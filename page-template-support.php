@@ -5,15 +5,17 @@ get_template_part('template-parts/template-part-head-big');
  ?>
 
 <style>
-<?php include 'css/page-templates/page-support/support.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
 include 'css/components/support-section.css';
 include 'css/components/get-in-touch.css';
+include 'css/page-templates/page-support/support.css';
 ?>
 </style>
 
 <div class="support_top_section">
     <div class="support_top--wrapper container">
-        <h2 id="register_now" class="section-title regional-offices-title">
+        <h2 id="register_now" class="section_title regional-offices__title">
             <?php _e('Real Help from Real People', 'anatol'); ?></h2>
         <div class="support_top_pannel">
             <div class="column_support">
@@ -94,7 +96,8 @@ include 'css/components/get-in-touch.css';
                 ?>
 
                 <a id="<?php echo $button_class_click ?>" href="#"
-                    class="stp_button button transparent_button track-button" data-category="Buttons"
+                    class="stp_button button transparent_button track-button"
+                    data-logined="<?php echo is_user_logged_in()?>" data-category="Buttons"
                     data-label="Warranty Registration - Support page">
                     <?PHP echo $button_text; ?>
                 </a>
@@ -114,7 +117,7 @@ include 'css/components/get-in-touch.css';
 
 <section class="section support_team">
     <div class="swiper support_team--wrapper container">
-        <div class="section-title support_team-title"><?php _e('Support Team', 'anatol'); ?></div>
+        <div class="section_title support_team-title"><?php _e('Support Team', 'anatol'); ?></div>
         <div class="swiper-wrapper support_team_cont sldots ">
             <?PHP
 			if(have_rows('support_team')){
@@ -182,7 +185,7 @@ include 'css/components/get-in-touch.css';
 <section id="feedbacks" class="support-feedbacks">
 
     <div class="swiper support-feedbacks--wrapper container">
-        <div class="section-title white-title"><?php _e('What Anatol Customers Are Saying', 'anatol'); ?></div>
+        <div class="section_title feedbacks__title"><?php _e('What Anatol Customers Are Saying', 'anatol'); ?></div>
         <div class="swiper-wrapper feedbacks-posts-block sldots ">
             <?php $the_query = new WP_Query(array('post_type' => 'feedbacks')); ?>
             <?php if ($the_query->have_posts()) : ?>
@@ -214,93 +217,94 @@ include 'css/components/get-in-touch.css';
         </div>
     </div>
 </section>
+
 <!--------Request Service Form----------------->
 
 <section class="request_service_form" id="request_service_form">
     <div class="request_service_form--wrapper container">
         <?php
-				$support_form_title= get_field('support_form_title');	
-				if (!empty($support_form_title ))  { ?>
-        <div class="section-title"><?php echo $support_form_title; ?></div>
+            $support_form_title= get_field('support_form_title');	
+            if (!empty($support_form_title ))  { ?>
+        <div class="section_title"><?php echo $support_form_title; ?></div>
         <?php }	?>
 
         <div class="service_form_description">
             <?php
-					$support_form_description_title= get_field('support_form_description_title');	
-					if (!empty($support_form_description_title ))  { ?>
+                $support_form_description_title= get_field('support_form_description_title');	
+                if (!empty($support_form_description_title ))  { ?>
             <div class="form_description_strong"><?php echo $support_form_description_title; ?></div>
             <?php }	?>
 
             <?php
-					$support_form_description= get_field('support_form_description');	
-					if (!empty($support_form_description ))  { ?>
+                $support_form_description= get_field('support_form_description');	
+                if (!empty($support_form_description ))  { ?>
             <div class="form_description"><?php echo $support_form_description; ?></div>
             <?php }	?>
         </div>
 
-        <?php
+        <div class="form service_form">
+            <?php
 				$support_form_subtitle= get_field('support_form_subtitle');	
 				if (!empty($support_form_subtitle ))  { ?>
-        <div class="section-title"><?php echo $support_form_subtitle; ?></div>
-        <?php }	?>
+            <div class="section_title form-title"><?php echo $support_form_subtitle; ?></div>
+            <?php }	?>
 
-        <div class="service_form">
             <form id="__vtigerWebForm" name="Service Request Form"
-                action="https://vtiger.anatol.com/modules/Webforms/capture.php" method="post" class="get_forms"
-                accept-charset="utf-8" enctype="multipart/form-data">
+                action="https://vtiger.anatol.com/modules/Webforms/capture.php" method="post"
+                class="form-inner get_forms" accept-charset="utf-8" enctype="multipart/form-data">
                 <input type="hidden" name="__vtrftk" value="sid:b58348e7419d8dba0377d10dbf934676f156f5c8,1617713921">
                 <input type="hidden" name="publicid" value="6518b1cbe5c624b14e03d80feddf61b2">
                 <input type="hidden" name="urlencodeenable" value="1">
                 <input type="hidden" name="name" value="Service Request Form">
 
-                <div class="form-row">
-                    <div class="field_full">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--full">
                         <label><?php _e('Company Name', 'anatol'); ?>*</label>
                         <input type="text" name="company" placeholder="<?php _e('Company Name', 'anatol'); ?>*"
                             required>
                     </div>
 
                 </div>
-                <div class="form-row flex">
-                    <div class="half">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--half">
                         <label><?php _e('First Name', 'anatol'); ?></label>
                         <input type="text" name="firstname" placeholder="<?php _e('First Name', 'anatol'); ?>*"
                             required>
                     </div>
-                    <div class="half">
+                    <div class="form-inner__item--half">
                         <label><?php _e('Last Name', 'anatol'); ?></label>
                         <input type="text" name="lastname" placeholder="<?php _e('Last Name', 'anatol'); ?>*" required>
                     </div>
                 </div>
-                <div class="form-row flex">
-                    <div class="half">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--half">
                         <label><?php _e('Phone Number', 'anatol'); ?> </label>
                         <input type="tel" name="phone" placeholder="<?php _e('Phone Number', 'anatol'); ?>*"
                             maxlength="18" id="tel" required>
                     </div>
-                    <div class="half">
+                    <div class="form-inner__item--half">
                         <label><?php _e('Email', 'anatol'); ?></label>
                         <input type="Email" name="email" placeholder="<?php _e('Email', 'anatol'); ?>*" required>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="field_full">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--full">
                         <label><?php _e('Address', 'anatol'); ?></label>
                         <input type="text" name="lane" placeholder="<?php _e('Address', 'anatol'); ?>*" required>
                     </div>
                 </div>
-                <div class="form-row flex">
-                    <div class="half">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--half">
                         <label><?php _e('City', 'anatol'); ?></label>
                         <input type="text" name="city" placeholder="<?php _e('City', 'anatol'); ?>*" required>
                     </div>
-                    <div class="half">
+                    <div class="form-inner__item--half">
                         <label><?php _e('Postal Code', 'anatol'); ?></label>
                         <input type="text" name="code" placeholder="<?php _e('Postal Code', 'anatol'); ?>*" required>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="field_full">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--full">
                         <label> <?php _e('Select Country', 'anatol'); ?>*</label>
                         <select required name="country" onchange="yesnoCheckSer(this);">
                             <option class="choose_elements" value="" selected="selected">
@@ -508,8 +512,8 @@ include 'css/components/get-in-touch.css';
 
                     </div>
                 </div>
-                <div id="ifYesSer" class="form-row" style="display: none;">
-                    <div class="field_full">
+                <div id="ifYesSer" class="form-inner__item" style="display: none;">
+                    <div class="form-inner__item--full">
                         <label for="state">State/Region<span class="form-required">*</span></label>
                         <select id="state_required" class="hs-input invalid error" name="state">
                             <option class="choose_elements" value="" disabled="" selected="">- Please Select -
@@ -592,32 +596,32 @@ include 'css/components/get-in-touch.css';
                     </div>
                 </div>
 
-                <div class="form-row">
-                    <div class="field_full">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--full">
                         <label><?php _e('Equipment needing assistance', 'anatol'); ?>*</label>
                         <input type="text" name="cf_947"
                             placeholder="<?php _e('Equipment needing assistance', 'anatol'); ?>*" required>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="field_full">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--full">
                         <label><?php _e('Serial number', 'anatol'); ?>*</label>
                         <input type="text" name="cf_945" placeholder="<?php _e('Serial number', 'anatol'); ?>*"
                             required>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="field_full">
+                <div class="form-inner__item">
+                    <div class="form-inner__item--full">
                         <label><?php _e('Problem/Issue', 'anatol'); ?>*</label>
                         <textarea id="" class="" name="description"
                             placeholder="<?php _e('Problem/Issue', 'anatol'); ?>*" required></textarea>
                         </td>
                     </div>
                 </div>
-                <div class="form-row text-center">
-                    <input type="submit" name="submit_web_form" value="<?php _e('Send Request', 'anatol'); ?>"
-                        class="button">
-                </div>
+                <!-- <div class="form-inner__item text-center"> -->
+                <input type="submit" name="submit_web_form" value="<?php _e('Send Request', 'anatol'); ?>"
+                    class="button button--full">
+                <!-- </div> -->
             </form>
         </div>
     </div>
@@ -628,11 +632,12 @@ function yesnoCheckSer(that) {
     if (that.value == "United States") {
         document.getElementById("ifYesSer").style.display = "block";
         document.getElementById("state_required").setAttribute("required", "");
-        $('.usa_state').show();
+        document.querySelectorAll('.usa_state').forEach(item => item.style.display = 'block')
+        document.querySelectorAll('.canadian_province').forEach(item => item.style.display = 'none')
     } else if (that.value == "Canada") {
         document.getElementById("ifYesSer").style.display = "block";
-        $('.canadian_province').show();
-        $('.usa_state').hide();
+        document.querySelectorAll('.usa_state').forEach(item => item.style.display = 'none');
+        document.querySelectorAll('.canadian_province').forEach(item => item.style.display = 'block');
     } else {
         document.getElementById("ifYesSer").style.display = "none";
     }
@@ -640,6 +645,11 @@ function yesnoCheckSer(that) {
 </script>
 
 
-<?php include 'templates/forms/register-warranty.php' ; ?>
+<!-- <?php include 'templates/forms/register-warranty.php' ; ?> -->
+
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
+
 
 <?php get_footer(); ?>

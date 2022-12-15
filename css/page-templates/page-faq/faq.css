@@ -1,0 +1,76 @@
+.feedback_form .wpcf7-response-output,
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: #c10f1b !important;
+  text-align: center;
+  color: #fff;
+}
+.accordion_item {
+  margin-bottom: 10px;
+}
+.accordion_content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  will-change: max-height;
+  transition: all 0.25s ease-out;
+  opacity: 0;
+}
+.faq-group {
+  margin-bottom: 30px;
+}
+.faq-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.accordion_header {
+  cursor: pointer;
+  padding: 3px;
+}
+.accordion_header:hover,
+.accordion_active .accordion_header {
+  cursor: pointer;
+  color: #c12126;
+}
+.accordion_header h4 span {
+  position: relative;
+  height: 14px;
+  width: 14px;
+  display: inline-block;
+}
+.accordion_header h4 span:before {
+  content: "";
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #353535;
+  position: absolute;
+  top: 6px;
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+.accordion_header h4 span:after {
+  content: "";
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #353535;
+  position: absolute;
+  top: 6px;
+}
+.accordion_active .accordion_header h4 span:before,
+.accordion_active .accordion_header h4 span:after,
+.accordion_header:hover h4 span:before,
+.accordion_header:hover h4 span:after {
+  background-color: #c12126;
+}
+.accordion_active .accordion_header h4 span::before {
+  transform: rotate(0deg);
+}
+.accordion_active .accordion_content {
+  padding: 0 20px 20px;
+  margin-bottom: 20px;
+  opacity: 1;
+}

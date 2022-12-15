@@ -4,7 +4,8 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-compare/compare.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-compare/compare.css';
 include 'css/components/get-in-touch.css';
 include 'css/components/another-equipments.css';
 ?>

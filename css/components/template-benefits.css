@@ -1,0 +1,74 @@
+.available_opportunities {
+  background-image: linear-gradient(
+      180deg,
+      rgba(27, 31, 37, 0.2) 0%,
+      rgb(27 31 37 / 71%) 100%
+    ),
+    url(../wp-content/themes/anatol/images/image/anatol_poster1.jpg);
+  min-height: max(40vh, 20rem);
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-attachment: fixed;
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.available_opportunities--wrapper {
+  margin: 7.5vw auto;
+  gap: 2.5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.available_opportunities h2 {
+  font-size: max(4.35vw, 44px);
+  font-family: var(--base-font-family), sans-serif;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.section_content ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.section_content ul li {
+  width: calc(100% / 3);
+}
+
+.section_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75vw;
+}
+
+.section_content,
+.section_content p {
+  color: #fff;
+  font-size: max(1vw, 1rem);
+}
+
+@media screen and (max-width: 700px) {
+  .section_content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    text-align: center;
+    align-items: center;
+  }
+  .section_content ul li {
+    width: 75%;
+  }
+
+  .available_opportunities--wrapper {
+    width: 94%;
+  }
+}

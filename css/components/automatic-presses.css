@@ -1,0 +1,18 @@
+.automatic_presses,
+.specialty-automatic-presses {
+  background-image: url(/wp-content/themes/anatol/images/black-bg.jpg);
+}
+
+.automatic_presses--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  display: flex;
+  flex-direction: column;
+  gap: max(5vh, 2.5rem);
+}
+.white_text .section_title,
+.white_text .presses_item a {
+  color: #fff;
+}
+.section_title {
+  text-align: center;
+}

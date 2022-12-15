@@ -1,4 +1,4 @@
-.available_opportunities {
+/* .available_opportunities {
   background-image: linear-gradient(
       180deg,
       rgba(27, 31, 37, 0.2) 0%,
@@ -9,7 +9,11 @@
   display: flex;
   align-items: center;
   color: #fff;
+  background-attachment: fixed;
   text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .available_opportunities--wrapper {
   margin: 7.5vw auto;
@@ -19,7 +23,7 @@
 }
 
 .available_opportunities h2 {
-  font-size: 3.2vw;
+  font-size: max(4vw, 32px);
   color: #fff;
 }
 
@@ -51,21 +55,12 @@
     gap: 1vw;
     text-align: center;
     align-items: center;
-    /* display: none; */
   }
   .section_content ul li {
     width: 75%;
   }
-  /* .section_content ul li:before {
-    position: absolute;
-    content: "";
-    display: block;
-    height: 0.5rem;
-    width: 0.5rem;
-    top: 10%;
-    left: 0;
-    transform: translate(0, -10%);
-    background-color: rgba(218, 38, 38, 1);
-    border-radius: 50%;
-  } */
-}
+
+  .available_opportunities--wrapper {
+    width: 94%;
+  }
+} */

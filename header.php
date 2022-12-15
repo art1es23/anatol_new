@@ -31,24 +31,11 @@
     <meta property="og:image" content="/wp-content/themes/anatol/images/anatol-flag.png" />
 
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-    <!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/new-style.css" type="text/css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css-new/homepage.css" type="text/css" />
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/stylecss.css" type="text/css" /> -->
-
-    <!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style.css" type="text/css" /> -->
 
     <link rel="icon" type="image/x-icon" href="<?php bloginfo("template_url"); ?>/images/favicon.ico" />
 
     <link rel="preload" as="image" href="<?php bloginfo('template_directory'); ?>/images/logo_new.svg">
     <link rel="preload" as="image" href="<?php bloginfo('template_directory'); ?>/images/anatol-logo-ico.svg">
-
-
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.4/swiper-bundle.min.css" /> -->
-
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Condensed:wght@300;400;700&display=swap"
-        rel="stylesheet"> -->
 
     <?php 
         global $user_ip, $user_country, $SxGeo;
@@ -211,8 +198,6 @@
                             }?>
                     </div>
 
-                    <!-- <div class="header-contacts header_top_block"> -->
-                    <!-- <div class="header-contacts top_phone"> -->
                     <?php if(ICL_LANGUAGE_CODE == 'es'): ?>
                     <a class="header-contacts" href="tel:+573167696697"><span class="icon-phone"></span>+57
                         316 7696697</a>
@@ -220,8 +205,6 @@
                     <a class="header-contacts" href="tel:+18473679760"><span class="icon-phone"></span>+1
                         (847) 367-9760</a>
                     <?php endif; ?>
-                    <!-- </div> -->
-                    <!-- </div> -->
 
                 </div>
 
@@ -230,13 +213,9 @@
                         if( has_nav_menu('top_line_menu') ){
                             wp_nav_menu( array( 'theme_location' => 'top_line_menu', 'container'=> false, 'items_wrap' => '<ul class="top-menu">%3$s</ul>', ) );
                         }?>
-                    <!-- <div class="lang-header-menu"> -->
                     <div class="lang_swither">
-                        <!-- <div class="lang_swither_inner1"> -->
                         <?PHP echo language_selector_flags(); ?>
-                        <!-- </div> -->
                     </div>
-                    <!-- </div> -->
 
                     <div class="topmenu-cart">
                         <?php global $woocommerce; ?>
@@ -253,9 +232,7 @@
             </div>
 
             <div class="header__item header-main">
-                <!-- hasHoverMe -->
                 <div id="logo-container" class="header-main__item logo-container">
-                    <!-- class="site-logo logo site-logo-anch" -->
                     <a class="logo" id="logo" href="<?php bloginfo('url'); ?>">
                         <img class="logo-img" src="<?php bloginfo('template_directory'); ?>/images/logo_new.svg"
                             alt="Anatol screen printing equipment" width="200" height="40">
@@ -267,7 +244,7 @@
                                 <div>
                                     <img class="info-img"
                                         src="<?php bloginfo('template_directory'); ?>/images/anatol-logo-ico.svg"
-                                        alt="Anatol screen printing equipment logo" width="100%" height="auto">
+                                        alt="Anatol screen printing equipment logo" width="100" height="56">
                                 </div>
                                 <p><?php _e('Revolutionizing the screen printing industry through cutting-edge technology and quality service', 'anatol'); ?>
                                 </p>
@@ -289,33 +266,28 @@
                     </div>
                 </div>
 
-                <div class="header-main__item site-header-main-center">
-                    <div class="main-menu-wrapper">
-                        <!-- <input type="checkbox" name="" id="check" checked /> -->
-                        <?php get_template_part('template-parts/template-part-topnav'); ?>
 
-                    </div>
+                <?php get_template_part('template-parts/template-part-topnav'); ?>
 
-                    <!-- <div class="menu_icon">
-                        <div class="menui top-line"></div>
-                        <div class="menui mid-line"></div>
-                        <div class="menui bottom-line"></div>
-                    </div> -->
+                <div class="menu_icon">
+                    <div class="menui top-line"></div>
+                    <div class="menui mid-line"></div>
+                    <div class="menui bottom-line"></div>
                 </div>
+
 
                 <div class="header-main__item site-header-main-right">
                     <div class="header-cart"></div>
                     <div class="button header-quote get_a_quote"><?php _e('Get a Quote', 'anatol'); ?></div>
                 </div>
 
-                <!-- <div class="menu_icon">
-                    <div class="menui top-line"></div>
-                    <div class="menui mid-line"></div>
-                    <div class="menui bottom-line"></div>
-                </div> -->
-
             </div>
         </div>
 
 
     </header>
+
+    <style>
+    <?php include 'css/components/template-form.css';
+    ?>
+    </style>

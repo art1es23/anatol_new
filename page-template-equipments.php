@@ -4,7 +4,8 @@
 get_header();?>
 
 <style>
-<?php include 'css/page-templates/page-equipments/equipments.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-equipments/equipments.css';
 include 'css/components/contact-support.css';
 ?>
 </style>

@@ -21,37 +21,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
+
+
 <?PHP get_template_part('template-parts/template-part-head-press'); ?>
+<style>
+<?php include 'css/components/related-products-slider.css';
+// include 'css/components/equipments-list.css';
+include 'css/page-templates/store/woo.css';
+include 'css/page-templates/store/page-woo-item.css';
+?>
+</style>
 
-<div class="single_equipment">
-	<?php
-	/*if(function_exists('bcn_display')) {
-		echo '<div class="container"><div class="row"><div class="col-md-12"><section class="breadcrumbs_section"><div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
-			bcn_display();
-		echo '</div></section>
-							</div>
-						</div>
-					</div>';
-	}*/
-	?>
+<?php while ( have_posts() ) : the_post(); ?>
+<section class="equipment_info">
+    <?php wc_get_template_part( 'content', 'single-product' ); ?>
+</section>
+<?php endwhile; ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
-		<section class="equipment_info">
-			<div class="container">
-				<div class="flex_half">
-					<?php wc_get_template_part( 'content', 'single-product' ); ?>
-				</div>
-			</div>
-		</section>
-	<?php endwhile; ?>
-
-	<?PHP wc_get_template_part( '/single-product/up-sells'); ?>
-</div>
+<?PHP wc_get_template_part( '/single-product/up-sells'); ?>
 
 
 
 
-
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
 
 <?php get_footer();
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */

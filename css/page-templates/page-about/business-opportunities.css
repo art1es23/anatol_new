@@ -5,8 +5,6 @@
 }
 .business-img {
   width: 60%;
-  /* background-size: cover;
-  background-position: center; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +12,6 @@
 .business-img img {
   width: 100%;
   object-fit: cover;
-  /* height: 100%; */
 }
 .business-info {
   width: 40%;
@@ -35,14 +32,14 @@
 }
 .business-info--wrapper .section_title {
   text-align: left;
-  font-size: 2vw;
+  font-size: calc(20px + 25 * ((100vw - 320px) / (1920 - 320)));
 }
 
 .business-info__description {
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  font-size: 1.2vw;
+  font-size: max(1.2vw, 15px);
 }
 
 @media screen and (max-width: 1360px) {
@@ -59,7 +56,7 @@
   }
 
   .business-opportunities__item {
-    width: 62.5%;
+    width: 65%;
   }
 
   .business-img {
@@ -67,7 +64,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    transform: translate(-30%, 0);
+    transform: translate(-35%, 0);
   }
 
   .business-info {
@@ -76,18 +73,26 @@
   }
   .business-info--wrapper {
     transform: translate(0, 0);
-    padding: 10vw 5vw;
+    padding: max(5vh, 2.5rem) 5vw;
     gap: 2vw;
   }
   .business-info--wrapper .section_title {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
   .business-info__description {
     font-size: 1.5vw;
-    line-height: 2vw;
     gap: 1.25vw;
   }
 }
+@media screen and (max-width: 900px) {
+  .business-info--wrapper .section_title {
+    font-size: max(4vw, 28px);
+  }
+  .business-info__description {
+    font-size: max(2vw, 18px);
+  }
+}
+
 @media screen and (max-width: 800px) {
   .business-info--wrapper {
     padding: 5vw;
@@ -96,8 +101,7 @@
     font-size: 3.25vw;
   }
   .business-info__description {
-    font-size: 2vw;
-    line-height: 2.75vw;
+    font-size: max(2.15vw, 16px);
   }
 }
 @media screen and (max-width: 650px) {
@@ -121,8 +125,6 @@
     font-size: 5vw;
   }
   .business-info__description {
-    font-size: 2.35vw;
-    line-height: 3vw;
     gap: 2.25vw;
   }
 }
@@ -137,8 +139,6 @@
     font-size: 6.25vw;
   }
   .business-info__description {
-    font-size: 3vw;
-    line-height: 4vw;
     gap: 3.25vw;
   }
 }

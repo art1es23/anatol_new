@@ -1,11 +1,14 @@
 .presses_content--wrapper,
 .manual-presses--wrapper,
 .specialty-automatic-presses--wrapper {
-  display: flex;
-  margin: 5vw auto;
+  margin: max(7.5vh, 2.5rem) auto;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 5vh 0;
+  gap: 5vh 0; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22.5vw, 1fr));
+  grid-gap: 5vh 2.5vw;
 }
 
 .automatic_presses--wrapper {
@@ -15,151 +18,15 @@
   gap: max(5vh, 2.5rem);
 }
 
-.presses_item {
-  width: calc((100% - 10vw) / 3);
-  transition: all 0.3s;
-  text-align: center;
-  gap: 1vh;
-}
-.presses_item .image_item {
-  position: relative;
-}
-.presses_item {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-}
-.presses_item a {
-  color: #363636;
-}
-
-.presses_item .equipment_title {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  font-size: max(1.75vw, 23px);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.presses_content_row_slider {
-  justify-content: initial !important;
-}
-.presses_content_row_slider .presses_item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.white_text .section_title,
-.white_text .presses_item a {
-  color: #fff;
-}
-
-.presses_content_row_slider .slick-prev:before,
-.presses_content_row_slider .slick-next:before {
-  font-size: 40px;
-}
-.presses_content_row_slider .slick-prev,
-.presses_content_row_slider .slick-next {
-  width: 40px;
-  height: 40px;
-  top: 40%;
-}
-.presses_content_row_slider .slick-prev {
-  left: 0px;
-}
-.presses_content_row_slider .slick-next {
-  right: 0px;
-}
-
-.automatic_presses,
-.specialty-automatic-presses {
-  background-image: url(../wp-content/themes/anatol/images/black-bg.jpg);
+.section-presses_title {
+  grid-column: 1/-1;
 }
 
 .presses_item {
-  position: relative;
-  cursor: pointer;
+  width: 100%;
 }
-.presses_item .link_to_item {
-  padding: 20px 0;
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0, -60px, 0);
-  transform: translate3d(0, -60px, 0);
-}
-.presses_item:hover .link_to_item {
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.presses_item:hover .link_to_item a {
-  background-color: #c12126;
-  border-color: #c12126;
-  color: #fff;
-}
-.presses_item .link_to_item a:hover {
-  background-color: #fff;
-  border-color: #c12126;
-  color: #c12126;
-}
-.presses_item .content_part {
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  -webkit-transform: translate3d(0, 60px, 0);
-  transform: translate3d(0, 60px, 0);
-}
-.presses_item:hover .content_part {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
 .presses_item .image_item img {
-  will-change: tarnsform;
-  transition: all 0.5s;
-
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.presses_item:hover .image_item img {
-  transform-origin: center;
-  transform: scale(1.03);
-  opacity: 1;
-}
-
-.link_to_item a {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #c12126;
-  padding: 10px 40px;
-  border: 1px solid #c12126;
-  transition: all 0.3s linear 0s;
-  -moz-transition: all 0.3s linear 0s;
-  -o-transition: all 0.3s linear 0s;
-  -webkit-transition: all 0.3s linear 0s;
-  -ms-transition: all 0.3s linear 0s;
-}
-.page-template-page-template-sellers .section_presses {
-  padding: 50px 0;
-}
-
-.section_title {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 4vw;
-  color: #252525;
-  letter-spacing: 0.05em;
-  line-height: 1.3;
-  text-shadow: 0em 0.18em 0.27em rgb(0 0 0 / 24%);
-  width: 100%;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 1080px) {

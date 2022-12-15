@@ -17,7 +17,7 @@
 }
 
 .choose-us .section_title {
-  font-size: 2.5vw;
+  font-size: max(2.5vw, 40px);
   color: #252525;
   line-height: 1;
   text-shadow: 0em 0.18em 0.27em rgb(0 0 0 / 24%);
@@ -26,8 +26,12 @@
 }
 .choose-us__description {
   font-family: "Lato", sans-serif;
-  font-size: 1.075vw;
-  line-height: 1.5;
+  font-size: max(1vw, 15px);
+  line-height: 1.35;
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: justify;
 }
 
@@ -55,18 +59,18 @@
     width: calc((100% - 2.5vw) / 2);
   }
 
-  .choose-us .section_title {
+  /* .choose-us .section_title {
     font-size: 3.25vw;
   }
 
   .choose-us__description {
     font-size: 1.3vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 800px) {
   .choose-us--wrapper {
-    max-width: 67.5vw;
+    max-width: 80vw;
   }
 
   .choose-us__item {
@@ -81,11 +85,6 @@
   }
 
   .choose-us .section_title {
-    font-size: 5vw;
     text-align: center;
-  }
-
-  .choose-us__description {
-    font-size: 2.15vw;
   }
 }

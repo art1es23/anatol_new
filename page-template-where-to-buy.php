@@ -8,8 +8,11 @@ add_action( 'wp_print_scripts', 'anatol_dequeue_script', 100 );
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-where-to-buy/sales.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
+include 'css/components/template-benefits.css';
 include 'css/components/financing-options.css';
+include 'css/page-templates/page-where-to-buy/sales.css';
 ?>
 </style>
 
@@ -63,6 +66,7 @@ include 'css/components/financing-options.css';
 </div>
 
 <?php get_template_part('template-parts/join-us-dealer'); ?>
+
 <div class="financing_info_text">
     <div class="financing_info--wrapper container">
         <?php the_field('the_benefits_of'); ?>
@@ -71,6 +75,5 @@ include 'css/components/financing-options.css';
     </div>
 
 </div>
-<?php get_template_part('templates/forms/join-us-forms'); ?>
 
 <?php get_footer(); ?>

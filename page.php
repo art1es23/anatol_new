@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<style>
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page.css';
+?>
+</style>
+
 <?php //get_template_part('template-parts/template-part-head-bg'); ?>
 <?php get_template_part('template-parts/template-part-head-bg-black'); ?>
 

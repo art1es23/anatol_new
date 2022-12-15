@@ -91,4 +91,8 @@
         <?php get_template_part('templates/forms/ebook-form'); ?>
     </div>
 </div>
+
+<!-- INIT YOUTUBE VIDEOS -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>
+
 <?php get_footer(); ?>

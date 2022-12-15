@@ -4,30 +4,25 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-contact/contacts.css';
-include 'css/components/get-in-touch.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
+include 'css/page-templates/page-contact/contacts.css';
 ?>
 </style>
 
 <?php //get_template_part('template-parts/template-part-head-bg'); ?>
 
-<div class="head_section contacts_head" style="linear-gradient(
+<div class="hero" style="linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.9) 0%,
       #ffffff 100%
     ), url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/bg-group.jpg);">
-    <div class="container">
-
-        <div class="et_had_animation animate zoomIn one">
-            <div class="head_title">
-                <h1><?php if( get_field( "alternative_title" )) { the_field("alternative_title"); } ?></h1>
-            </div>
-        </div>
+    <div class="hero--wrapper container">
+        <h1 class="hero__title page-title">
+            <?php if( get_field( "alternative_title" )) { the_field("alternative_title"); } ?></h1>
 
         <?php if( get_field( "title_description" )) { ?>
-        <div class="head_description et_had_animation animate fadeInLeft two" style="">
-            <div class="et_pb_text_inner"><?php the_field("title_description"); ?></div>
-        </div>
+        <div class="hero__description page-description"><?php the_field("title_description"); ?></div>
         <?php } ?>
 
     </div>
@@ -37,63 +32,56 @@ include 'css/components/get-in-touch.css';
     <div class="contacts_form_block--wrapper container">
 
         <div class="left_column cont_datas">
-            <div class="contact_line ">
-                <div class="et_pb_blurb_container">
-                    <h4 class="contact_line_header"><?php _e('World Headquarters', 'anatol'); ?></h4>
-                </div>
-            </div>
+            <h3 class="contact_line contact_line_header"><?php _e('World Headquarters', 'anatol'); ?></h3>
+
             <div class="contact_line et_had_animation">
-                <div class="et_pb_blurb_container">
-                    <h4 class="contact_line_header"><span
-                            class="cont_ico ico_location"></span><span><?php _e('Location', 'anatol'); ?></span></h4>
-                    <div class="et_pb_blurb_description">919 Sherwood Drive<br>
-                        Lake Bluff, IL 60044, USA</div>
-                </div>
+                <h4 class="contact_line_header">
+                    <span class="cont_ico ico_location"></span>
+                    <span><?php _e('Location', 'anatol'); ?></span>
+                </h4>
+                <div class="contact_line__description">919 Sherwood Drive<br>
+                    Lake Bluff, IL 60044, USA</div>
             </div>
             <div class="contact_line">
-                <div class="et_pb_blurb_container">
-                    <h4 class="contact_line_header"><span
-                            class="cont_ico ico_phone"></span><span><?php _e('Phone', 'anatol'); ?></span></h4>
-                    <div class="et_pb_blurb_description">847-367-9760</div>
-                </div>
+                <h4 class="contact_line_header">
+                    <span class="cont_ico ico_phone"></span>
+                    <span><?php _e('Phone', 'anatol'); ?></span>
+                </h4>
+                <div class="contact_line__description">847-367-9760</div>
             </div>
         </div>
-        <div class="right_column cont_form ">
-            <div id="et_pb_contact_form_0" class="anim_fade">
-                <h1 class="cont_form_title"><?php _e('Send A Message', 'anatol'); ?></h1>
-                <div class="et_pb_contact">
-                    <div class="feedback_form">
-                        <?php get_template_part('templates/forms/contact-form'); ?>
-                    </div>
-                </div>
 
+        <div class="right_column cont_form ">
+            <div class="form feedback_form">
+                <h1 class="form-title cont_form_title"><?php _e('Send A Message', 'anatol'); ?></h1>
+
+                <?php get_template_part('templates/forms/contact-form'); ?>
             </div>
+
         </div>
     </div>
 
-    <!-- <div class="container-fluid container"> -->
     <?php get_template_part('template-parts/regional-offices'); ?>
-    <!-- </div> -->
 
-    <style>
+    <!-- <style>
     #chartdiv {
         width: 100%;
         height: 680px;
         background: #272727;
     }
-    </style>
+    </style> -->
 
     <!-- Resources -->
-    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <!-- <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/geodata/continentsLow.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/usaLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/dataviz.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script> -->
 
     <!-- Chart code -->
-    <script>
+    <!-- <script>
     am4core.ready(function() {
 
         // Themes begin
@@ -338,6 +326,6 @@ include 'css/components/get-in-touch.css';
             });
         });
     });
-    </script>
+    </script> -->
 
     <?php get_footer(); ?>

@@ -29,55 +29,54 @@
   width: 100%;
 }
 
-.vacancies_list .vacancy_item .v_item_title a,
-.vacancies_list .vacancy_item .v_item_footer {
+/* .v_item_title,
+.v_item_footer {
   padding-left: 50px;
   padding-right: 50px;
   min-height: 65px;
   padding-top: 10px;
   padding-bottom: 10px;
-}
+} */
 
-.vacancies_list .vacancy_item .v_item_title a,
-.vacancies_list .vacancy_item .v_item_footer {
+/* .v_item_title,
+.v_item_footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
   align-items: center;
-}
+} */
 
-.vacancies_list .vacancy_item .v_item_title,
-.vacancies_list .vacancy_item .v_item_title a {
+/* .v_item_title {
   font-weight: bold;
   font-size: 18px;
   color: #ab1a1f !important;
   line-height: 1.1em;
   text-decoration: none !important;
-}
+} */
 
-.vacancies_list .vacancy_item .v_item_footer,
-.vacancies_list .vacancy_item .v_item_footer a {
+/* .v_item_footer,
+.v_item_footer a {
   font-size: 16px;
   font-weight: bold;
   color: #353535;
-}
+} */
 
-.vacancies_list .vacancy_item .v_item_desc {
+/* .v_item_desc {
   background: #fff;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
   min-height: 176px;
-}
+} */
 
 .blockquote p:last-of-type {
   margin-bottom: 0px;
 }
 
-.vacancies_list .vacancy_item .blockquote,
-.vacancies_list .vacancy_item .blockquote p {
+.blockquote,
+.blockquote p {
   font-size: 14px;
   line-height: 1.6em;
 }
@@ -88,12 +87,9 @@
   margin-top: 0px;
   margin-left: 0px;
   width: 100%;
-  /* margin-bottom: 100px; */
   background: #fff;
-  /* padding-top: 40px;
-  padding-bottom: 40px; */
   border-radius: 8px;
-  padding: 3vw 1vw; 
+  padding: 3vw 1vw;
 }
 
 .beautiful-taxonomy-filters-widget {
@@ -202,7 +198,7 @@ body .select2-dropdown {
   align-content: center;
   align-items: center;
   /* margin-top: 60px; */
-  margin: 3vw auto;
+  margin: 0 auto 3vw;
 }
 
 .vacancy_contact_us::before,
@@ -248,7 +244,7 @@ body .select2-dropdown {
 .vacancy_form .vacancy_form_title {
   text-align: center;
   color: #ab1a1f;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
@@ -300,7 +296,8 @@ body .select2-dropdown {
   width: 20px;
   height: 20px;
   margin-left: -20px;
-  background: url("img/compare_sprite.png") no-repeat -20px 0px;
+  background: url(../wp-content/themes/anatol/images/img/compare_sprite.png)
+    no-repeat -20px 0px;
   content: "";
   z-index: 10;
   border-radius: 10px;
@@ -578,45 +575,35 @@ body .select2-dropdown {
   flex-wrap: wrap;
   gap: 2vw;
   justify-content: space-between;
-
 }
 .dmbs-main > div:not(.beautiful-taxonomy-filters) {
   box-shadow: 0 0 22px rgb(0 0 0 / 13%);
   border-radius: 8px;
   background: white;
   width: calc((100% - 3vw) / 2);
-  /* margin: 0 20px 26px 20px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 0.5vw;
+  gap: 1vw;
   padding: 2vw;
 }
-.dmbs-content div:not(.vacancies_filtr) .v_item_title a {
+.dmbs-content div:not(.vacancies_filtr) .v_item_title {
   font-weight: bold;
-  /* font-size: 18px; */
   color: black !important;
   line-height: 1.1em;
   text-decoration: none !important;
-  /* padding-left: 50px;
-  padding-right: 50px; */
   display: flex;
   align-items: center;
-  /* padding-top: 25px;
-  padding-bottom: 10px; */
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: max(1.15vw, 14px);
 }
 .dmbs-content div:not(.vacancies_filtr) .v_item_desc {
   background: #fff;
-  /* padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 10px; */
+  font-size: max(0.8vw, 14px);
+  text-align: justify;
 }
 .dmbs-content div:not(.vacancies_filtr) .v_item_footer {
-  /* padding-left: 50px;
-  padding-right: 50px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -625,7 +612,7 @@ body .select2-dropdown {
   /* padding-bottom: 10px; */
 }
 .dmbs-content div:not(.vacancies_filtr) .v_item_footer a {
-  font-size: 16px;
+  font-size: max(0.8vw, 14px);
   font-weight: bold;
   color: #383838;
   position: relative;
@@ -727,25 +714,29 @@ body .select2-dropdown {
   height: 44px !important;
   width: 44px !important;
 }
-.dmbs-content div:not(.vacancies_filtr) .v_item_title a:hover {
+.dmbs-content div:not(.vacancies_filtr) .v_item_title:hover {
   color: #ab1a1f !important;
 }
-.post-type-archive-vacancies .breadcrumbs span a span {
+/* .post-type-archive-vacancies .breadcrumbs span a span {
   color: black;
-}
+} */
 .dmbs-content div:not(.vacancies_filtr) .v_item_footer a:hover {
   color: #ab1a1f;
 }
 .v_item_btn {
+  --button-horizontall-side-padding: 0;
+  --button-vertical-side-padding: 0.35rem;
+  --button-background-color: transparent;
+  --button-base-color: #353535;
+  --button-font-size: max(0.8vw, 12px);
   display: flex;
   justify-content: flex-end;
-  /* height: 50px; */
-  /* padding-right: 20px; */
+  margin-left: auto;
+  text-transform: initial;
 }
-.v_item_btn a {
-  display: block;
-  padding: 0 !important;
-  font-size: 17px;
+
+.v_item_btn:hover {
+  --button-base-color: var(--main-color);
 }
 
 .select2-hidden-accessible {
@@ -763,6 +754,34 @@ body .select2-dropdown {
 }
 .beautiful-taxonomy-filters-active-filter {
   display: none !important;
+}
+
+/* vacancies */
+
+.dmbs-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+}
+
+.mbs-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5vh 1vw;
+}
+
+.vacancies {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75vh;
+  width: calc((100% - 2vw) / 2);
+  border-radius: 8px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 15%);
+  padding: 1.5vw;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1100px) {
@@ -785,6 +804,30 @@ body .select2-dropdown {
   .post-type-archive-vacancies .page_title {
     text-align: center !important;
   }
+
+  /* .dmbs-main > div:not(.beautiful-taxonomy-filters) {
+    padding: 5vw;
+    gap: 2.5vh;
+  } */
+
+  .vacancies {
+    width: 100%;
+    padding: 5vw;
+    gap: 2.5vh;
+  }
+
+  .dmbs-content div:not(.vacancies_filtr) .v_item_title {
+    font-size: max(3vw, 18px);
+  }
+
+  .dmbs-content div:not(.vacancies_filtr) .v_item_footer a,
+  .dmbs-content div:not(.vacancies_filtr) .v_item_desc {
+    font-size: max(2.25vw, 14px);
+  }
+
+  .v_item_footer a:nth-of-type(1) {
+    padding: 0 1.35rem;
+  }
 }
 @media screen and (max-width: 800px) {
   .post-type-archive-vacancies .wpcf7-form {
@@ -798,6 +841,10 @@ body .select2-dropdown {
   }
   .vacancy_contact_us_hidden {
     width: 90%;
+  }
+
+  .mbs-main {
+    width: 94%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -827,6 +874,7 @@ body .select2-dropdown {
   }
   .dmbs-content div:not(.vacancies_filtr) .v_item_footer {
     flex-direction: column;
+    gap: 1.5vh;
   }
   .v_item_footer a {
     padding: 0 0 0 25px !important;
@@ -846,12 +894,12 @@ body .select2-dropdown {
   .v_item_footer a {
     width: 100%;
   }
-  .v_item_title a,
+  /* .v_item_title,
   .v_item_desc,
   .v_item_footer {
     padding-left: 15px !important;
     padding-right: 15px !important;
-  }
+  } */
 }
 @media screen and (max-width: 400px) {
   .post-type-archive-vacancies .page_title {
@@ -861,4 +909,47 @@ body .select2-dropdown {
   .post-type-archive-vacancies .contacts_head {
     padding: 60px 0 0 0;
   }
+}
+
+.beautiful-taxonomy-filters {
+  width: 100%;
+}
+.v_item_footer a:nth-of-type(1):before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../wp-content/themes/anatol/images/img/country-earth-flag-globe-nation-national-svgrepo-com.svg);
+  top: 45%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: -6px;
+  padding-left: 30px;
+  position: absolute;
+}
+.v_item_footer a:nth-of-type(1) {
+  margin-right: 1.35rem;
+  padding: 0 1.35rem;
+}
+.v_item_footer a:nth-of-type(2):before {
+  content: "";
+  background-image: url(../wp-content/themes/anatol/images/img/search-career-work-job-recruitment-employee-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  left: -22px;
+  top: 45%;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.select2-container {
+  width: 100% !important;
+  min-width: 100% !important;
+}
+.beautiful-taxonomy-filters-tax {
+  margin: 5px 0 5px 0 !important;
+}
+.single-vacancies .breadcrumbs a span {
+  color: black;
 }

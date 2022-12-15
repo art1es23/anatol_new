@@ -13,31 +13,36 @@
 		?>
 <!--  -->
 
-<div class="header_image_top head_section black_shadow"  style="background-image:url('<?php echo $image_attributes[0]; ?>');">
-	
-	<div class="title_row_bg container">
-			<?PHP 
+<style>
+<?php include 'css/components/hero-templates/hero-template.css';
+?>
+</style>
+
+<div class="hero black_shadow" style="background-image:url('<?php echo $image_attributes[0]; ?>');">
+
+    <div class="container">
+        <?PHP 
 				if(function_exists('bcn_display')) {
 					echo '<div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">';
 					bcn_display();
 					echo '</div>';
 				}?>
-				<?php
+        <?php
 				
 					if(!empty(get_field("alternative_title"))) {
-						echo '<h1 class="section_title">' . get_field("alternative_title") . '</h1>';
+						echo '<h1 class="hero__title page-title">' . get_field("alternative_title") . '</h1>';
 					} else {
-						the_title('<h1 class="section_title">', '</h1>');
+						the_title('<h1 class="hero__title page-title">', '</h1>');
 					}
 
 
 				if(empty($anatol_cat_title)) {
 					if(!empty(get_field("title_description"))) {
-						echo '<div class="title_description">'.str_replace("\n", '<br />', get_field("title_description")).'</div>';
+						echo '<div class="hero__description page-description">'.str_replace("\n", '<br />', get_field("title_description")).'</div>';
 					}
 				}
 				?>
-	</div>
+    </div>
 
 </div>
 
@@ -76,8 +81,4 @@
 .header_image_top .breadcrumbs { color: #e6e6e6; }
 .header_image_top .breadcrumbs a { color: #e6e6e6; }
 */
-
-
 </style>
-
-

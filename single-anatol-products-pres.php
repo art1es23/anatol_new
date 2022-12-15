@@ -3,9 +3,13 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/components/equipments-list.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
+include 'css/components/equipments-list.css';
 include 'css/components/support-section.css';
 include 'css/components/another-equipments.css';
+include 'css/components/tabs.css';
+include 'css/components/related-products-slider.css';
 include 'css/page-templates/page-product/product.css';
 ?>
 </style>
@@ -186,13 +190,13 @@ if( $featured_posts ): ?>
                 <div class="product-post__img">
                     <?php echo get_the_post_thumbnail(get_the_ID(), array(300, 210)); ?>
                 </div>
-                <div class="content_part product-post__title">
+                <div class="content_part">
                     <!-- <div class="c_icon">
                             <div class="c_default"></div>
                         </div> -->
-                    <!-- <div class="product-post__title"> -->
-                    <?php echo get_the_title(); ?>
-                    <!-- </div> -->
+                    <h3 class="product-post__title">
+                        <?php echo get_the_title(); ?>
+                    </h3>
 
                 </div>
             </a>
@@ -216,7 +220,7 @@ if( $featured_posts ): ?>
 <?php get_template_part('templates/equipment/another-equipments'); ?>
 <!--------Request Service Form----------------->
 
-<div class="fancybox-hidden" style="display: none;">
+<!-- <div class="fancybox-hidden" style="display: none;">
     <div id="my-id">
         <div class="cf7_popup">
             <?PHP
@@ -236,10 +240,19 @@ if( $featured_posts ): ?>
 		?>
         </div>
     </div>
-</div>
+</div> -->
 
-<?php include 'templates/forms/register-warranty.php' ; ?>
+<!-- <?php include 'templates/forms/register-warranty.php' ; ?> -->
 <!-- <script src="<?php echo get_template_directory_uri(); ?>/js/libs/jquery/jquery-1.12.4.min.js"></script> -->
 <!-- <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" type="text/javascript"></script> -->
+
+<!-- INIT YOUTUBE VIDEOS -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>
+
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
+<!-- MODAL SLIDER -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/modalSlider.js"></script>
 
 <?php get_footer(); ?>

@@ -3,12 +3,14 @@
 
 get_header(); ?>
 <style>
-<?php include 'css/page-templates/page-events/events.css';
+<?php // include 'css/components/template-form.css';
+include 'css/components/hero-templates/hero-template.css';
 include 'css/components/get-in-touch.css';
+include 'css/page-templates/page-events/events.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-big'); ?>
+<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
 
 <div class="events-content">
 
@@ -67,23 +69,17 @@ include 'css/components/get-in-touch.css';
           ?>
 
             <div class="event_image" style="background-image:url('<?php echo $cover[0]; ?>')">
-                <!-- <div class="coming_soon_text_top"> -->
                 <span class="coming_soon_text_top">
                     <?PHP _e('Coming soon'); ?>
                 </span>
-                <!-- </div> -->
             </div>
 
             <div class="event_info card_info">
                 <div class="event_info_cont">
-                    <!-- <div class="coming_soon_text"> -->
                     <span class="coming_soon_text">
                         <?PHP _e('Coming soon'); ?>
                     </span>
-                    <!-- </div> -->
-                    <!-- <div class="event_title"> -->
                     <h3 class="event_title"><?php echo get_the_title($uv->ID); ?></h3>
-                    <!-- </div> -->
 
                     <div class="event_separator"></div>
 
@@ -118,7 +114,6 @@ include 'css/components/get-in-touch.css';
                         <?PHP } ?>
 
                         <?PHP if(!empty(get_field("gallery", $uv->ID)) && !empty(get_field("logo", $uv->ID))) {?>
-                        <!-- <div class="subinfo_separator"></div> -->
                         <?PHP } ?>
 
                         <?PHP if(!empty(get_field("gallery", $uv->ID))) {?>
@@ -144,10 +139,7 @@ include 'css/components/get-in-touch.css';
                         <?PHP echo '';} ?>
 
                         <?PHP if(!empty(get_field("website", $uv->ID))) {?>
-                        <!-- <div class="subinfo_separator"></div> -->
-                        <!-- <div class="cs_website"> -->
                         <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
-                        <!-- </div> -->
                         <?PHP } ?>
                     </div>
 
@@ -174,23 +166,17 @@ include 'css/components/get-in-touch.css';
               $image2 = wp_get_attachment_image_src( $attachment_id, $size2 );
             ?>
             <div class="event_image" style="background-image:url('<?php echo $cover[0]; ?>')">
-                <!-- <div class="coming_soon_text_top"> -->
                 <span class="coming_soon_text_top">
                     <?PHP _e('Coming soon'); ?>
                 </span>
-                <!-- </div> -->
             </div>
 
             <div class="event_info card_info">
                 <div class="event_info_cont">
-                    <!-- <div class="coming_soon_text"> -->
                     <span class="coming_soon_text">
                         <?PHP _e('Coming soon'); ?>
                     </span>
-                    <!-- </div> -->
-                    <!-- <div class="event_title"> -->
                     <h3 class="event_title"><?php echo get_the_title($uv->ID); ?></h3>
-                    <!-- </div> -->
                     <div class="event_separator"></div>
 
                     <?PHP if(!empty(get_field("website", $uv->ID)) || !empty(strip_tags($uv->post_content))) { ?>
@@ -222,7 +208,6 @@ include 'css/components/get-in-touch.css';
                         <?PHP } ?>
 
                         <?PHP if(!empty(get_field("gallery", $uv->ID)) && !empty(get_field("logo", $uv->ID))) {?>
-                        <!-- <div class="subinfo_separator"></div> -->
                         <?PHP } ?>
 
                         <?PHP if(!empty(get_field("gallery", $uv->ID))) {?>
@@ -250,10 +235,7 @@ include 'css/components/get-in-touch.css';
                     } ?>
 
                         <?PHP if(!empty(get_field("website", $uv->ID))) {?>
-                        <!-- <div class="subinfo_separator"></div> -->
-                        <!-- <div class="cs_website"> -->
                         <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
-                        <!-- </div> -->
                         <?PHP } ?>
                     </div>
                     <?PHP } ?>
@@ -281,14 +263,10 @@ include 'css/components/get-in-touch.css';
             <div class="event_image" style="background-image:url('<?php echo $cover[0]; ?>')"></div>
             <div class="event_info card_info">
                 <div class="event_info_cont">
-                    <!-- <div class="coming_soon_text"> -->
                     <span class="coming_soon_text">
                         <?PHP _e('Coming soon'); ?>
                     </span>
-                    <!-- </div> -->
-                    <!-- <div class="event_title"> -->
                     <h3 class="event_title"><?php echo get_the_title($uv->ID); ?></h3>
-                    <!-- </div> -->
                     <div class="event_separator"></div>
 
                     <?PHP if(!empty(get_field("website", $uv->ID)) || !empty(strip_tags($uv->post_content))) { ?>
@@ -318,7 +296,6 @@ include 'css/components/get-in-touch.css';
                         <?PHP } ?>
 
                         <?PHP if(!empty(get_field("gallery", $uv->ID)) && !empty(get_field("logo", $uv->ID))) {?>
-                        <!-- <div class="subinfo_separator"></div> -->
                         <?PHP } ?>
 
                         <?PHP if(!empty(get_field("gallery", $uv->ID))) {?>
@@ -344,15 +321,10 @@ include 'css/components/get-in-touch.css';
                       } ?>
 
                         <?PHP if(!empty(get_field("website", $uv->ID))) {?>
-                        <!-- <div class="subinfo_separator"></div> -->
-                        <!-- <div class="cs_website"> -->
                         <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
-                        <!-- </div> -->
                         <?PHP } ?>
                     </div>
                     <?PHP } ?>
-
-
                 </div>
             </div>
         </div>
@@ -361,5 +333,11 @@ include 'css/components/get-in-touch.css';
         <?php endforeach; ?>
     </div>
 </div>
+
 <?php get_template_part('template-parts/get-in-touch'); ?>
+
+<!-- Slider Init -->
+<!-- <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script> -->
+
 <?php get_footer(); ?>

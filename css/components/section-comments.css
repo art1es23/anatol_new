@@ -1,0 +1,112 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2.5vh;
+}
+
+.comments a {
+  transition: color 0.3s ease-in;
+}
+
+.comments a:hover {
+  color: #ab1a1f;
+}
+.comments__title,
+.comment-reply-title {
+  font-size: max(1.25vw, 16px);
+  font-weight: 600;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.comment-body,
+.meta_avtor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  align-items: stretch;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  font-size: max(0.9vw, 14px);
+  gap: 0.75vw;
+}
+
+.comment-meta,
+.reply {
+  font-size: max(0.7vw, 12px);
+}
+
+.comment-edit-link {
+  font-size: max(0.6vw, 11px);
+}
+
+.comment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.comment-details p {
+  text-align: justify;
+  font-size: max(0.9vw, 14px);
+}
+
+.reply {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.comment-respond {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: stretch; */
+  gap: 1vh;
+}
+
+.comment-form input,
+.comment-form textarea {
+  --input-border: 1px solid #ccc;
+  --input-base-color: #000;
+}
+
+.comment-form label {
+  display: block;
+  font-size: max(0.9vw, 14px);
+}
+
+.logged-in-as {
+  font-size: max(0.9vw, 14px);
+}
+
+.comment-form-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.form-submit {
+  display: flex;
+  width: 30%;
+  max-width: 60%;
+}

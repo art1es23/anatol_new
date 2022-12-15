@@ -3,8 +3,10 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-presses/presses-content.css';
-include 'css/page-templates/page-presses/automatic-presses.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/presses-item.css';
+include 'css/page-templates/page-presses/presses-content.css';
+include 'css/components/automatic-presses.css';
 include 'css/page-templates/page-presses/manual-presses.css';
 include 'css/page-templates/page-presses/specialty-automatic-presses.css';
 ?>
@@ -28,9 +30,8 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
                 </div>
             </a>
 
-            <div class="link_to_item"><a href="#automatic-presses" class="linkskroll btn"
-                    tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
-            </div>
+            <a href="#automatic-presses" class="linkskroll link_to_item button"
+                tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
         </div>
 
         <div class="presses_item">
@@ -45,9 +46,7 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
                 </div>
             </a>
 
-            <div class="link_to_item"><a href="#manual-presses" class="btn"
-                    tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
-            </div>
+            <a href="#manual-presses" class="link_to_item button" tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
         </div>
 
         <div class="presses_item">
@@ -62,15 +61,13 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
                 </div>
             </a>
 
-            <div class="link_to_item"><a href="#specialty-automatic-presses" class="btn"
-                    tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
-            </div>
+            <a href="#specialty-automatic-presses" class="link_to_item button"
+                tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
         </div>
-        <!-- </div> -->
     </div>
 </section>
 
-<section class="automatic_presses section_presses fix-bg white_text" id="automatic-presses">
+<section class="automatic_presses section_presses white_text" id="automatic-presses">
     <div class="swiper automatic_presses--wrapper container">
         <div class="section_title">Automatic Presses</div>
         <div class="swiper-wrapper presses_content_row presses_content_row_slider">
@@ -91,21 +88,20 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
 	    				foreach ( $posts as $post ) {
 	       			setup_postdata($post);
 	       			?>
+
             <div class="swiper-slide presses_item">
                 <div class="image_item">
                     <a href="<?= get_permalink(); ?>" class="equipment_item">
                         <?PHP echo get_the_post_thumbnail($item, array(300, 210)); ?>
                     </a>
                     <?php
-                            $enable_new_product_ico = get_field('enable_no_air_compressor_required');
-                            if(get_field('enable_no_air_compressor_required') === true ) {?>
+                        $enable_new_product_ico = get_field('enable_no_air_compressor_required');
+                        if(get_field('enable_no_air_compressor_required') === true ) {?>
                     <div class="sticker_no_air_compressor"></div>
                     <?php
-                            } else { ?>
-                    <?php
-                            }
-                            ?>
+                        } else {} ?>
                 </div>
+
                 <div class="content_part">
                     <a href="<?= get_permalink(); ?>" class="equipment_item">
                         <div class="equipment_title"><?php echo get_the_title(); ?></div>
@@ -116,19 +112,23 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
                     </blockquote>
                     <?PHP } ?>
                 </div>
-                <div class="link_to_item"><a href="<?= get_permalink(); ?>" class="btn"
-                        tabindex="0"><?php _e('Learn More', 'anatol'); ?></a></div>
+
+                <a href="<?= get_permalink(); ?>" class="link_to_item button"
+                    tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
             </div>
             <?php	    }
 			}
 			?>
         </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </section>
 
 <section class="manual-presses section_presses" id="manual-presses">
     <div class="manual-presses--wrapper container">
-        <div class="section_title">Manual Presses</div>
+        <div class="section-presses_title section_title">Manual Presses</div>
         <!-- <div class="presses_content_row"> -->
         <?php
 			$args = array(
@@ -175,9 +175,10 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
                 <?PHP } ?>
             </div>
 
-            <div class="link_to_item">
-                <a href="<?= get_permalink(); ?>" class="btn" tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
-            </div>
+            <!-- <div class="link_to_item"> -->
+            <a href="<?= get_permalink(); ?>" class="link_to_item button"
+                tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
+            <!-- </div> -->
         </div>
 
         <?php }}?>
@@ -187,7 +188,7 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
 
 <section class="specialty-automatic-presses section_presses fix-bg white_text" id="specialty-automatic-presses">
     <div class="specialty-automatic-presses--wrapper container">
-        <div class="section_title"> Specialty Automatic Presses</div>
+        <div class="section-presses_title section_title"> Specialty Automatic Presses</div>
         <!-- <div class="presses_content_row"> -->
         <?php
 			$args = array(
@@ -231,9 +232,10 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
                 <?PHP } ?>
             </div>
 
-            <div class="link_to_item">
-                <a href="<?= get_permalink(); ?>" class="btn" tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
-            </div>
+            <!-- <div class="link_to_item"> -->
+            <a href="<?= get_permalink(); ?>" class="link_to_item button"
+                tabindex="0"><?php _e('Learn More', 'anatol'); ?></a>
+            <!-- </div> -->
         </div>
 
         <?php }}?>
@@ -280,5 +282,9 @@ $(document).ready(function() {
     }
 });
 </script>
+
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
 
 <?php get_footer(); ?>
