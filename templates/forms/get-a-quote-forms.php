@@ -428,5 +428,8 @@
 
         <input id="my_form_send" type="submit" name="submit_web_form" value="<?php _e('Get a Quote', 'anatol'); ?>"
             class="button red-button draw-red">
+
+        <p class="status">Your message was successfully sending!</p>
+
     </form>
 </div>

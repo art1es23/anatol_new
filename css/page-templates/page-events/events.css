@@ -84,16 +84,26 @@
   display: flex;
   gap: 1.5vw;
   flex-direction: column;
+  font-family: "Montserrat", sans-serif;
 }
-.machines_for_exhibition,
+
 .event_dates,
-.event_description {
-  padding-left: 2.5rem;
+.event_description--wrapper {
   position: relative;
   color: #353535;
-  font-size: max(1.1vw, 16px);
+  font-size: max(1vw, 14px);
   display: flex;
   gap: 0.5vw;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+.machines_for_exhibition,
+.event_description {
+  position: relative;
+  color: #353535;
+  font-size: max(1vw, 14px);
+  display: flex;
   flex-direction: column;
 }
 .machines_for_exhibition::before {
@@ -102,12 +112,39 @@
   top: 0;
   width: 30px;
   height: 23px;
-  content: " ";
+  content: "";
   font-size: 20px;
   color: #ab1a1f;
 }
-.event_dates::before,
-.event_description::before {
+
+/* .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 20px;
+}
+
+.svg-bg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.svg-wrapper svg {
+  max-width: 100%;
+  height: auto;
+  fill: #fff;
+  stroke: #ab1a1f;
+} */
+
+/* .event_dates::before, */
+/* .event_description::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -117,10 +154,10 @@
   content: "\E801";
   font-size: 20px;
   color: #ab1a1f;
-}
-.event_description::before {
+} */
+/* .event_description::before {
   content: "\E824";
-}
+} */
 .machines_for_exhibition::before {
   background: url(../wp-content/themes/anatol/css-new/images/machine_image.svg)
     no-repeat;
@@ -190,11 +227,18 @@
 .card_subinfo .gallery-link a::before,
 .card_subinfo .cs_website::before {
   display: inline-block;
-  font-family: "anatol";
+  /* font-family: "anatol";
   content: "\E82A";
   font-size: 20px;
-  margin-right: 16px;
-  color: #ab1a1f;
+  color: #ab1a1f; */
+  content: "";
+  margin-right: 15px;
+  height: 20px;
+  width: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/wp-content/themes/anatol/images/svg-icons/icon-planet.svg");
 }
 .card_subinfo .gallery-link a::before {
   content: "\E831";

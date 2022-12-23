@@ -82,3 +82,9 @@
 }
 
 /* END RELATED SECTION */
+
+@media screen and (max-width: 1080px) {
+  .related-products--wrapper {
+    --container-width: 90%;
+  }
+}

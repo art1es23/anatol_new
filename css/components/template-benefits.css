@@ -53,7 +53,9 @@
 .section_content,
 .section_content p {
   color: #fff;
-  font-size: max(1vw, 1rem);
+  font-size: max(0.9vw, 1rem);
+
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 700px) {

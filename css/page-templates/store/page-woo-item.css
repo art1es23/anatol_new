@@ -77,33 +77,47 @@ input[type="number"] {
 .quantity {
   display: flex;
   gap: 0.35vw;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  width: 60%;
+  margin: auto;
 }
 
 .qty_button {
   border: none;
   cursor: pointer;
+  font-size: 24px;
+  width: 2rem;
 }
 
-.qty {
+.qty_button:hover,
+.qty_button:focus-visible {
+  color: #ab1a1f;
+}
+
+.woocommerce .quantity .qty {
   border-radius: 3px;
+  width: 2rem;
 }
 
-/* #wc-stripe-payment-request-wrapper {
-  padding: 0;
-  display: none;
-}
-#wc-stripe-payment-request-button-separator {
-  margin: 0;
-} */
+/* Product description */
 
 .product_description {
   text-align: justify;
   display: flex;
   flex-direction: column;
-  gap: 1.25vh;
+  gap: 1.75vh;
   font-size: max(0.8vw, 14px);
+}
+
+.product_description h2 {
+  font-size: max(1vw, 16px);
+  font-weight: 600;
+}
+
+.product_description ul {
+  list-style: initial;
+  padding-left: min(1.75vw, 1.5rem);
 }
 
 .uppsells_products .related-products--wrapper {
@@ -136,4 +150,12 @@ input[type="number"] {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .quantity {
+    width: 100%;
+    margin: initial;
+    justify-content: flex-end;
+  }
 }

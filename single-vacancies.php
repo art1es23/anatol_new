@@ -5,7 +5,7 @@ get_header();
 
 <style>
 <?php include 'css/components/hero-templates/hero-template.css';
-// include 'css/components/template-form.css';
+include 'css/components/template-form.css';
 include 'css/page-templates/single-pages/page-vacancy/page-vacancy-single.css';
 ?>
 </style>
@@ -27,12 +27,12 @@ include 'css/page-templates/single-pages/page-vacancy/page-vacancy-single.css';
 		?>
 <div class="hero white_shadow">
     <div class="hero--wrapper container">
-        <h2 class="page-title">Opportunities</h2>
+        <h2 class="hero__title page-title">Opportunities</h2>
         <?php
 			if(!empty(get_field("alternative_title"))) {
-				echo '<h3 class="page_title">' . get_field("alternative_title") . '</h3>';
+				echo '<h3 class="hero__title page_title">' . get_field("alternative_title") . '</h3>';
 			} else {
-				the_title('<h3 class="page_title">', '</h3>');
+				the_title('<h3 class="hero__title page_title">', '</h3>');
 			}
 		?>
         <?PHP 
@@ -60,14 +60,17 @@ include 'css/page-templates/single-pages/page-vacancy/page-vacancy-single.css';
         </div>
         <div class="vacancy-single__item vacancy-form vacancy_form">
             <div class="vacancy-form-wrap">
+
                 <?php
 				$vacancy_countries = wp_get_post_terms(get_the_ID(), 'country');
 				$vacancy_country = array();
+
 				if (!empty($vacancy_countries)) {
 					foreach ($vacancy_countries as $vc) {
 						$vacancy_country[] = $vc->name;
 					}
 				}
+
 				if (!empty($vacancy_country)) {
 					$vacancy_country = implode(', ', $vacancy_country);
 				} else {
@@ -76,17 +79,20 @@ include 'css/page-templates/single-pages/page-vacancy/page-vacancy-single.css';
 
 				$vacancy_positions = wp_get_post_terms(get_the_ID(), 'position');
 				$vacancy_position = array();
+
 				if (!empty($vacancy_positions)) {
 					foreach ($vacancy_positions as $vp) {
 						$vacancy_position[] = $vp->name;
 					}
 				}
+
 				if (!empty($vacancy_country)) {
 					$vacancy_position = implode(', ', $vacancy_position);
 				} else {
 					$vacancy_position = '';
 				}
 				?>
+
                 <input type="hidden" name="vacancy_country" value="<?php echo esc_attr($vacancy_country) ?>">
                 <input type="hidden" name="vacancy_position" value="<?php echo esc_attr($vacancy_position); ?>">
                 <input type="hidden" name="vacancy_name" value="<?php echo esc_attr(get_the_title()); ?>">
@@ -104,8 +110,22 @@ include 'css/page-templates/single-pages/page-vacancy/page-vacancy-single.css';
             </div>
         </div>
     </div>
+
+
 </section>
 
 <?php get_template_part('template-parts/widgets/offices'); ?>
 
 <?php get_footer(); ?>
+<!-- 
+<input type="file" class="button uploadcv_button" value="Upload CV">
+<input type="submit" class="button button-submit" value="Upload CV"> -->
+
+<!-- <div class="uploadcv_button"><span class="name"><span>upload cv</span></span>[file* uploadcv
+               class:styled_upload]</div>
+        <div class="submit_button">[submit "Send"]</div>
+	
+    <div class="form-inner__item--full vf_upload_filename"></div> -->
+
+<!--         [checkbox* Iagree "I agree with the conditions for the processing of personal data www.anatol.com."]
+ -->

@@ -124,6 +124,7 @@ include 'css/page-templates/single-pages/page-blog-post/page-blog-single.css';
 		endif; ?>
     <!-- </div> -->
 
+    <div class="hide-sidebar">Recent Articles</div>
     <?php get_sidebar('right'); ?>
 </div>
 
@@ -180,4 +181,17 @@ include 'css/page-templates/single-pages/page-blog-post/page-blog-single.css';
 <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
 <script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
 
+<!-- <script>
+const hideSidebarButton = document.querySelector('.hide-sidebar');
+const sidebar = document.querySelector('.sidebar-right');
+
+hideSidebarButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    sidebar.classList.toggle('sidebar--active');
+    hideSidebarButton.classList.toggle('hide-sidebar--active');
+});
+</script> -->
+
+<script src="<?php echo get_template_directory_uri();?>/js/toggleSidebar.js"></script>
 <?php get_footer(); ?>

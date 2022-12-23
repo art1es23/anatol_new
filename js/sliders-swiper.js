@@ -22,6 +22,7 @@ const sliderWrapper = (
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      // dynamicBullets: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -50,7 +51,7 @@ const feedbacks = document.querySelector(".support-feedbacks--wrapper");
 
 const relatedStories = document.querySelector(".related-stories");
 const relatedBlogPosts = document.querySelector(".related-articles--wrapper");
-const relatedEbookPosts = document.querySelector(".similar-ebooks--wrapper");
+const similarItems = document.querySelector(".similar-items--wrapper");
 
 if (heroSlider) sliderWrapper(heroSlider, 1, 0, "fade");
 if (blogSlider) sliderWrapper(blogSlider, 2, 60, "slide");
@@ -66,7 +67,7 @@ if (feedbacks) sliderWrapper(feedbacks, 3, 30, "coverflow");
 
 if (relatedStories) sliderWrapper(relatedStories, 1, 0);
 if (relatedBlogPosts) sliderWrapper(relatedBlogPosts, 3, 30);
-if (relatedEbookPosts) sliderWrapper(relatedEbookPosts, 2, 60);
+if (similarItems) sliderWrapper(similarItems, 2, 60);
 
 ///// NEED INVESTIGATE
 

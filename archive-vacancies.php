@@ -20,7 +20,7 @@ include 'css/page-templates/page-opportunities/opportunities.css';
 			$hero_url = wp_get_attachment_image_src($image_info['id'], '1920x1000');
 		?>
 <div
-    <?php if ($image_info) { echo 'class="hero white_shadow" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="hero"'; } ?>>
+    <?php if ($image_info) { echo 'class="hero white_shadow" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="hero white_shadow"'; } ?>>
     <div class="hero--wrapper container">
         <h2 class="hero__title page-title">Opportunities</h2>
         <!-- <div class="head_description"> -->
@@ -52,19 +52,19 @@ include 'css/page-templates/page-opportunities/opportunities.css';
                 <!-- </div> -->
                 <div class="v_item_footer">
                     <?php
-                          $terms_list1 = wp_get_post_terms($post->ID, ['country']);
-                          $terms_list2 = wp_get_post_terms($post->ID, ['position']);
-                          $terms_list  = array_merge($terms_list1, $terms_list2);
-                          $terms = [];
-                          if($terms_list) {
-                            foreach($terms_list as $term) {
-                              $terms[] = '<a  href="'.get_term_link($term, $term->taxonomy).'">'.$term->name.'</a>';
-                            }
-                          }
-                          if(!empty($terms)) {
-                            echo implode('&nbsp; ' , $terms);
-                          }
-                        ?>
+                      $terms_list1 = wp_get_post_terms($post->ID, ['country']);
+                      $terms_list2 = wp_get_post_terms($post->ID, ['position']);
+                      $terms_list  = array_merge($terms_list1, $terms_list2);
+                      $terms = [];
+                      if($terms_list) {
+                        foreach($terms_list as $term) {
+                          $terms[] = '<a  href="'.get_term_link($term, $term->taxonomy).'">'.$term->name.'</a>';
+                        }
+                      }
+                      if(!empty($terms)) {
+                        echo implode('' , $terms);
+                      }
+                    ?>
                     <!-- </div> -->
                 </div>
                 <p class="v_item_desc"><?php the_field('vacancy_description'); ?></p>
@@ -156,5 +156,6 @@ include 'css/page-templates/page-opportunities/opportunities.css';
 
 <?php get_template_part('template-parts/widgets/offices'); ?>
 
+<script src="<?php echo get_template_directory_uri();?>/js/vacanciesFilter.js"></script>
 
 <?php get_footer(); ?>

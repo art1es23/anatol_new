@@ -90,9 +90,10 @@
   color: #ab1a1f;
 }
 .ebook-post__excerpt {
-  --ebook-post-excerpt-font-size: max(0.8vw, 12px);
+  --ebook-post-excerpt-font-size: max(0.75vw, 12px);
   font-size: var(--ebook-post-excerpt-font-size);
 
+  font-family: "Montserrat", sans-serif;
   text-align: justify;
 }
 

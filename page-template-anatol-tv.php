@@ -21,9 +21,9 @@ include 'css/page-templates/page-anatol-tv/page-anatol-tv.css';
                 <a href="https://www.youtube.com/embed/<?php echo $video_id;?>" class="video__link">
                     <picture>
                         <source type="image/webp"
-                            srcset="https://i.ytimg.com/vi_webp/<?php echo $video_id;?>/maxresdefault.webp">
+                            srcset="https://i.ytimg.com/vi_webp/<?php echo $video_id;?>/hqdefault.webp">
                         <img width="1280" height="720" loading="lazy" class="lozad video__media"
-                            src="https://i.ytimg.com/vi/<?php echo $video_id;?>/maxresdefault.jpg">
+                            src="https://i.ytimg.com/vi/<?php echo $video_id;?>/hqdefault.jpg">
                     </picture>
                 </a>
                 <button class="video__button" aria-label="Play video">
@@ -134,9 +134,9 @@ include 'css/page-templates/page-anatol-tv/page-anatol-tv.css';
                         <a href="https://www.youtube.com/embed/<?php echo $video_youtube_id;?>" class="video__link">
                             <picture>
                                 <source type="image/webp"
-                                    srcset="https://i.ytimg.com/vi_webp/<?php echo $video_youtube_id;?>/maxresdefault.webp">
+                                    srcset="https://i.ytimg.com/vi_webp/<?php echo $video_youtube_id;?>/hqdefault.webp">
                                 <img width="1280" height="720" loading="lazy" class="lozad video__media"
-                                    src="https://i.ytimg.com/vi/<?php echo $video_youtube_id;?>/maxresdefault.jpg">
+                                    src="https://i.ytimg.com/vi/<?php echo $video_youtube_id;?>/hqdefault.jpg">
                             </picture>
                         </a>
                         <button class="video__button" aria-label="Play video">

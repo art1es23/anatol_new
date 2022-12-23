@@ -1,7 +1,7 @@
 .sidebar-right {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 0.75rem;
   align-items: center;
 }
 
@@ -15,7 +15,7 @@
 
 .sidebar__title {
   text-align: center;
-  font-size: max(2.5vw, 32px);
+  font-size: max(2.5vw, 24px);
   font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
 }
@@ -58,4 +58,20 @@
   text-align: center;
   font-family: var(--base-font-family), sans-serif;
   width: inherit;
+}
+.sidebar-right a {
+  font-family: "Montserrat", sans-serif;
+  font-size: max(0.8vw, 10px);
+}
+
+.sidebar-right a:hover {
+  color: #ab1a1f;
+}
+.widget_block {
+  display: flex;
+  align-self: flex-start;
+}
+.widget_block h3 {
+  font-size: max(1.2vw, 16px);
+  font-weight: 600;
 }

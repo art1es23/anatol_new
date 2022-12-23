@@ -67,7 +67,7 @@
   min-height: 100px;
   flex-direction: column;
   align-items: center;
-  gap: 2.5vh;
+  gap: 1.5vh;
   align-items: center;
   text-align: center;
 }
@@ -139,8 +139,10 @@
 .anatol-videos-list__item .video_title {
   text-align: center;
   color: black;
-  font-size: max(0.8vw, 1em);
-  font-family: var(--base-font-family), sans-serif;
+  font-size: max(0.7vw, 13px);
+  font-family: "Montserrat", sans-serif;
+
+  /* font-family: var(--base-font-family), sans-serif; */
 }
 
 .anatol-videos-list__item a:hover .video_title {
@@ -270,7 +272,8 @@
 
 .anatol-tv__description,
 .anatol-tv__link {
-  font-size: max(1vw, 14px);
+  font-size: max(0.8vw, 14px);
+  font-family: "Montserrat", sans-serif;
 }
 
 .anatol-tv__description {
@@ -390,7 +393,7 @@
 
   .anatol-tv__description,
   .anatol-tv__link {
-    font-size: max(2vw, 19px);
+    font-size: max(1.75vw, 15px);
   }
 
   .anatol-tv__link {
@@ -440,7 +443,6 @@
     padding: 28.25%;
   }
 } */
-
 @media screen and (max-width: 800px) {
   .anatol-videos-list--wrapper .video_tag_wrap {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -454,21 +456,25 @@
   .anatol-videos-list__item .video_title {
     font-size: max(2vw, 0.9em);
   }
+  .anatol-tv__item .video {
+    width: 100%;
+    padding: 28.25%;
+  }
 }
 
 @media screen and (max-width: 550px) {
   .anatol-videos .section_title {
     font-size: max(9.5vw, 36px);
   }
-
+  /* 
   .anatol-tv__title {
     font-size: max(6vw, 26px);
-  }
+  } */
 
-  .anatol-tv__description,
+  /* .anatol-tv__description,
   .anatol-tv__link {
     font-size: max(4vw, 17px);
-  }
+  } */
 
   .anatol-videos-navigation li {
     width: calc(100% / 2);

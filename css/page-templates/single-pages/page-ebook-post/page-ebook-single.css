@@ -7,7 +7,7 @@
 .ebook-post-single--wrapper {
   display: grid;
   grid-template-columns: 35% calc(65% - 5vw);
-  margin: max(7.5vh, 2.5rem) auto;
+  margin: max(7.5vh, 2.5rem) auto 0;
   grid-gap: 5vw;
   justify-content: space-between;
 }
@@ -39,19 +39,12 @@
   --section-title-font-size: max(2vw, 1.5rem);
 }
 
-/* .ebook-post-single__decription,
-.ebook-post-single-info__item,
-.ebook-post-single__list {
-  font-size: max(0.8vw, 14px);
-  text-align: justify;
-} */
-
 .ebook-post-single__list {
   display: flex;
   flex-direction: column;
   gap: 0.75vh;
   list-style: initial;
-  padding-left: 1.5vw;
+  padding-left: 2.5vw;
 }
 
 .ebook-post-single-info {
@@ -86,93 +79,30 @@
   align-content: center;
 }
 
-/* Similar Ebooks */
-
-.similar-ebooks {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.similar-ebooks--wrapper {
-  margin: max(7.5vh, 2.5rem) auto;
-  gap: 5vh;
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.similar-ebooks .ebook-post__btn {
-  --ebook-post-excerpt-font-size: max(0.8vw, 12px);
-}
-/* .similar-ebooks .ebook-post__title {
-  --ebook-post-title-font-size: max(1.15vw, 13px);
-} */
-/* .similar-ebooks .ebook-post__excerpt,
-.similar-ebooks .ebook-post__btn {
-  --ebook-post-excerpt-font-size: max(0.8vw, 12px);
-} */
-/* .similar-ebooks-list__item {
-  width: calc((100% - 6vw) / 2);
-  display: flex;
-  flex-direction: column;
-  gap: 1vh;
-  justify-content: space-between;
-  align-items: center;
-} */
-
-.similar-ebooks-pagination {
-  position: relative;
-  bottom: 0;
-}
-
-@media screen and (max-width: 1366px) {
-  .similar-ebooks--wrapper {
-    max-width: 90%;
-  }
-}
-
 @media screen and (max-width: 1080px) {
   .ebook-post-single--wrapper {
     grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .ebook-post-single__item {
+    width: 94%;
   }
 
   .ebook-post-single__img {
-    max-width: 50%;
-    margin: 0 auto;
-  }
-
-  .similar-ebooks .ebook-post__title {
-    --ebook-post-title-font-size: max(1.5vw, 14px);
-  }
-  .similar-ebooks .ebook-post__excerpt,
-  .similar-ebooks .ebook-post__btn {
-    --ebook-post-excerpt-font-size: max(1.5vw, 12px);
-  }
-  .ebook-post__img {
-    display: none;
+    width: 50%;
+    align-self: center;
   }
 }
+
 @media screen and (max-width: 800px) {
-  .similar-ebooks .ebook-post__title {
-    --ebook-post-title-font-size: max(2.25vw, 16px);
-  }
-  .similar-ebooks .ebook-post__excerpt,
-  .similar-ebooks .ebook-post__btn {
-    --ebook-post-excerpt-font-size: max(2vw, 14px);
-  }
-  .ebook-post__img {
+  .ebook-post-single__item .link_to_item {
     display: flex;
   }
 }
-@media screen and (max-width: 550px) {
-  .similar-ebooks .ebook-post__title {
-    --ebook-post-title-font-size: max(3.8vw, 14px);
-  }
-  .similar-ebooks .ebook-post__excerpt,
-  .similar-ebooks .ebook-post__btn {
-    --ebook-post-excerpt-font-size: max(3.6vw, 14px);
+
+@media screen and (max-width: 650px) {
+  .ebook-post-single__title {
+    text-align: center;
   }
 }

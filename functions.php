@@ -1710,34 +1710,36 @@ wp_dequeue_style( 'wp-block-library' );
 add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
 
 
+
+
 /**
- * 
- * DISABLED
- * 
- * Add Invisible reCaptcha v3 script
- */
+*
+* DISABLED
+*
+* Add Invisible reCaptcha v3 script
+*/
 // function add_recaptcha() {
-//     if(!is_single('new')) {
-//         // if the page is not where we have the form, returns early
-// 	return;
-//     }
-//     // actually adds the reCaptcha
-//     do_action('google_invre_render_widget_action');
+// if(!is_single('new')) {
+// // if the page is not where we have the form, returns early
+// return;
+// }
+// // actually adds the reCaptcha
+// do_action('google_invre_render_widget_action');
 // }
 
 /**
- * Validate with Invisible reCaptcha
- * Returns bool
- */
+* Validate with Invisible reCaptcha
+* Returns bool
+*/
 // function recaptcha_validate() {
-//      $is_valid = apply_filters('google_invre_is_valid_request_filter', true);
-//      return $is_valid;
+// $is_valid = apply_filters('google_invre_is_valid_request_filter', true);
+// return $is_valid;
 // }
 
-/***ADD PLU MINUS TO woocommerce CART****/ 
+/***ADD PLU MINUS TO woocommerce CART****/
 add_action( 'wp_footer' , 'custom_quantity_fields_script' );
 function custom_quantity_fields_script(){
-    ?>
+?>
 <script type='text/javascript'>
 jQuery(function($) {
     if (!String.prototype.getDecimals) {

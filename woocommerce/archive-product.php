@@ -14,6 +14,7 @@ include 'css/page-templates/store/woo.css';
     <div class="woo_container--wrapper container">
         <div
             class="products_content <?php if ( is_shop() ) { ?>category_cont <?php } else { echo 'single_pr_cont'; } ?>	">
+            <div class="hide-sidebar">Filters</div>
 
             <div class="product_sidebar">
 
@@ -118,4 +119,6 @@ include 'css/page-templates/store/woo.css';
 -->
 
 <?php get_template_part('templates/equipment/another-equipments'); ?>
+<script src="<?php echo get_template_directory_uri();?>/js/toggleSidebar.js"></script>
+
 <?PHP get_footer(); ?>

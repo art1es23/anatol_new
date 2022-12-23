@@ -19,18 +19,23 @@
                 echo 'Don`t miss the Anatol news';
             } ?>
     </h4>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-    <form id="__vtigerWebForm1" class="form-inner home_subscribe" name="Email Subscribe" action="" method="post"
-        accept-charset="utf-8" enctype="multipart/form-data">
+    <form id="__vtigerWebForm1" class="form-inner home_subscribe" name="SubscribeUs"
+        action="https://vtiger.anatol.com/modules/Webforms/capture.php" method="post" accept-charset="utf-8"
+        enctype="multipart/form-data">
 
         <input type="hidden" name="SFWebFormTimer" value="4335">
-        <input type="hidden" name="__vtrftk" value="sid:117320670c26be7435a870e1421555aa92ad29f6,1614093617">
-        <input type="hidden" name="publicid" value="0aee4eda12acdaf163860fd64d6841da">
+        <input type="hidden" name="__vtrftk" value="sid:cde016ecd10cda4b823826413fcb94801bfcdd48,1671527265">
+        <input type="hidden" name="publicid" value="595b1c496d292efe4e4ff1abbea8c739">
         <input type="hidden" name="urlencodeenable" value="1">
-        <input type="hidden" name="name" value="Email Subscribe">
+        <input type="hidden" name="name" value="SubscribeUs">
+        <input type="text" name="cf_1131" value="Email Subscribe TEST22" style="display:none;">
+
         <input type="text" name="leadsource" value="Web Site" style="display:none;">
-        <input type="text" name="cf_979" value="Email Subscribe <?php echo(ICL_LANGUAGE_CODE); ?>"
-            style="display:none;">
+        <!-- <input type="text" name="cf_979" value="Email Subscribe <?php echo(ICL_LANGUAGE_CODE); ?>"
+            style="display:none;"> -->
+
         <div class="form-inner__item">
             <div class="form-inner__item--full">
                 <input type="text" name="firstname" value="" placeholder="<?php _e('First Name', 'anatol'); ?>"

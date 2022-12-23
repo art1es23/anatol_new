@@ -56,7 +56,8 @@
 }
 
 .stp_content {
-  font-size: max(1vw, 14px);
+  font-size: max(0.8vw, 14px);
+  font-family: "Montserrat", sans-serif;
 }
 
 .support_team--wrapper {

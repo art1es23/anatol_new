@@ -14,6 +14,7 @@ if (is_single() && get_post_type() == 'post' && ICL_LANGUAGE_CODE != 'en') {
 get_header(); ?>
 
 <?php get_template_part('template-parts/template-part-head-blog'); ?>
+
 <div class="simple_bg_head index_template">
     <?php
 	global $anatol_cat_title;

@@ -39,7 +39,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5vw;
-  font-size: max(1.2vw, 15px);
+  font-size: max(0.95vw, 14px);
+  font-family: "Montserrat", sans-serif;
 }
 
 @media screen and (max-width: 1360px) {

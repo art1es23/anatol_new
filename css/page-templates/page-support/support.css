@@ -2,10 +2,11 @@
   margin: 0 auto;
   text-align: center;
   width: min(50rem, 90%);
-  font-size: max(1vw, 16px);
+  font-size: max(0.85vw, 14px);
   display: flex;
   flex-direction: column;
   gap: 1vw;
+  font-family: "Montserrat", sans-serif;
 }
 .service_form {
   margin: 0 auto;
@@ -38,7 +39,8 @@
   display: flex;
   flex-direction: column;
   gap: 1vh;
-  font-size: max(0.9vw, 13px);
+  font-family: "Montserrat", sans-serif;
+  font-size: max(0.75vw, 13px);
 }
 
 .feedback_title_block {

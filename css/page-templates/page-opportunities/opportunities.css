@@ -600,8 +600,9 @@ body .select2-dropdown {
 }
 .dmbs-content div:not(.vacancies_filtr) .v_item_desc {
   background: #fff;
-  font-size: max(0.8vw, 14px);
+  font-size: max(0.75vw, 14px);
   text-align: justify;
+  font-family: "Montserrat", sans-serif;
 }
 .dmbs-content div:not(.vacancies_filtr) .v_item_footer {
   display: flex;
@@ -873,7 +874,7 @@ body .select2-dropdown {
     padding: 40px 15px 15px 15px !important;
   }
   .dmbs-content div:not(.vacancies_filtr) .v_item_footer {
-    flex-direction: column;
+    /* flex-direction: column; */
     gap: 1.5vh;
   }
   .v_item_footer a {
@@ -891,15 +892,24 @@ body .select2-dropdown {
   .v_item_footer a:nth-of-type(2) {
     padding: 0 0 0 25px !important;
   }
-  .v_item_footer a {
+  /* .v_item_footer a {
     width: 100%;
-  }
+  } */
   /* .v_item_title,
   .v_item_desc,
   .v_item_footer {
     padding-left: 15px !important;
     padding-right: 15px !important;
   } */
+
+  .beautiful-taxonomy-filters .beautiful-taxonomy-filters-select-wrap,
+  .beautiful-taxonomy-filters-widget .beautiful-taxonomy-filters-select-wrap {
+    flex-direction: column;
+  }
+  .beautiful-taxonomy-filters .beautiful-taxonomy-filters-tax,
+  .beautiful-taxonomy-filters-widget .beautiful-taxonomy-filters-tax {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 400px) {
   .post-type-archive-vacancies .page_title {

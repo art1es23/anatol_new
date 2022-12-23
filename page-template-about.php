@@ -96,19 +96,6 @@ include 'css/page-templates/page-about/anatol-map.css';
     </div>
 </section>
 
-<!--<section class="available_opportunities" id="available_opportunities">
-			<div class="bg_helper">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="section_title"><?php echo get_field("title_2"); ?></div>
-							<div class="section_content"><?php echo get_field("content_2"); ?></div>
-							<div class="section_button"><a href="<?php echo get_field("button_url_2"); ?>"><?php echo get_field("button_text_2"); ?></a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>-->
-
+<script defer src="<?php echo get_template_directory_uri();?>/js/modules/counters.js"></script>
 
 <?php get_footer(); ?>

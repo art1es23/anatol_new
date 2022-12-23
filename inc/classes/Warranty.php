@@ -7,15 +7,12 @@ defined('ABSPATH') or die();
 if (!class_exists('Warranty')) {
   class Warranty
   {
-
     public function __construct()
     {
-
       add_action('wp_ajax_register_warranty_action', array($this, 'register_warranty_user'));
       add_action('wp_ajax_nopriv_register_warranty_action', array($this, 'register_warranty_user'));
-
-
     }
+
     function is_warranty_user_registered($email)
     {
       $query_args = array(
@@ -25,6 +22,7 @@ if (!class_exists('Warranty')) {
         'post_status' => 'publish',
         'meta_value'  => $email
       );
+      
       $query = new WP_Query($query_args);
       if ($query->post_count) {
         return $query->post->ID;
@@ -50,6 +48,7 @@ if (!class_exists('Warranty')) {
       update_field("installation_date_warranty", $data['installationDate'],$user_id);
       update_field("user_id_warrranty", $data['id'],$user_id);
     }
+
     function register_warranty_user()
     {
       $data = $_POST['data'];
@@ -69,9 +68,7 @@ if (!class_exists('Warranty')) {
       echo json_encode($data, JSON_UNESCAPED_UNICODE);
       wp_die();
     }
-
-
   }
+  
   $war = new Warranty();
 }
-

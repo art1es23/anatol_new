@@ -41,13 +41,15 @@
   background: rgb(0 0 0 / 50%);
 }
 .equipment__info .title_part {
-  font-size: 2vw;
+  font-size: max(2vw, 21px);
+  width: 100%;
+  font-weight: 600;
 }
 
 .equipment__description {
-  font-size: 1.2vw;
-  line-height: 1.6vw;
+  font-size: max(1vw, 14px);
   text-align: justify;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* SUPPORT SECTION */
@@ -145,24 +147,27 @@
 }
 
 @media screen and (max-width: 1080px) {
-  .equipment__info .title_part {
+  /* .equipment__info .title_part {
     font-size: 2.5vw;
-  }
+  } */
 
   .support-section--wrapper {
     gap: 2vw;
   }
 
-  .equipment__description,
+  /* .equipment__description,
   .section_content {
     font-size: 1.4vw;
     line-height: 2vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 800px) {
   .equipments-list {
-    padding: 5vw 0;
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
   }
   .equipment {
     flex-direction: column;
@@ -191,9 +196,14 @@
     gap: 3vw;
   }
 
-  .support-section .section_pretitle,
+  /* .support-section .section_pretitle,
   .equipment__info .title_part {
     font-size: 3.5vw;
+  } */
+
+  .equipment__info .title_part {
+    font-size: max(3.5vw, 28px);
+    text-align: center;
   }
 
   .support-section .section_content {
@@ -202,8 +212,7 @@
 
   .section_content,
   .equipment__description {
-    font-size: 2vw;
-    line-height: 2.5vw;
+    font-size: max(2.25vw, 15px);
   }
 
   .support-section .section_title {
@@ -224,19 +233,36 @@
     gap: 3.5vw;
   }
 
-  .support-section .section_pretitle,
+  /* .support-section .section_pretitle,
   .equipment__info .title_part {
     font-size: 4.2vw;
-  }
+  } */
 
   .support-section .section_content {
     gap: 2.5vw;
-    max-width: max(50vw, 90%);
+    max-width: 94%;
   }
 
-  .section_content,
+  .equipment__btn {
+    --button-horizontall-side-padding: 1.5rem;
+    --button-vertical-side-padding: 0.75rem;
+    --button-width: 50%;
+    align-self: center;
+  }
+
+  /* .section_content,
   .equipment__description {
     font-size: 2.5vw;
     line-height: 3.5vw;
+  } */
+}
+
+@media screen and (max-width: 500px) {
+  .equipment__btn {
+    --button-width: 60%;
+  }
+
+  .equipment__info {
+    padding: 2.5vh 0;
   }
 }

@@ -31,7 +31,7 @@ include 'css/page-templates/single-pages/page-customer-stories-single/page-cs-si
 
             // echo get_the_post_thumbnail(get_the_ID(), array(800, 600));
           } else {
-                        echo get_the_post_thumbnail(get_the_ID(), array(800, 600));
+              echo get_the_post_thumbnail(get_the_ID(), array(800, 600));
 
             // echo '<div class="empty"></div>';
           }?>

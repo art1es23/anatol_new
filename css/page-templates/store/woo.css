@@ -182,7 +182,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .woocommerce ul.cart_list li img,
@@ -191,23 +191,93 @@
   width: 100%;
 }
 
+.hide-sidebar {
+  display: none;
+}
+
 @media screen and (max-width: 1080px) {
   .equipments_list {
     grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
   }
+
+  .products_content {
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .products_content .related-products--wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .products_content .related-products-list__item {
+    min-height: initial;
+  }
+
+  .product_sidebar {
+    display: flex;
+    flex-direction: column;
+    max-width: 15rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    /* transform: translate(0, -50%); */
+    z-index: 99;
+    height: 100vh;
+    background-color: rgb(255 0 0 / 20%);
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in;
+  }
+
+  .product_sidebar.sidebar--active {
+    transform: translate(0%, -50%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hide-sidebar {
+    display: flex;
+    position: fixed;
+    top: 50vh;
+    left: 0;
+    padding: 1rem 0.35rem;
+
+    z-index: 99;
+    background-color: #ab1a1f;
+    transform: translate(0, -50%);
+    transition: all 0.5s ease-in;
+    writing-mode: vertical-rl;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .hide-sidebar--active {
+    left: 15rem;
+  }
 }
 
 @media screen and (max-width: 800px) {
-  .products_content {
+  /* .products_content {
     flex-direction: column;
     align-items: center;
-  }
+  } */
   .equipments_list {
     grid-gap: 5vw;
     grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
   }
   .product_content_row {
-    width: 90%;
+    width: 80%;
   }
 }
 @media screen and (max-width: 550px) {

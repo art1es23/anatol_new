@@ -644,9 +644,6 @@ function yesnoCheckSer(that) {
 }
 </script>
 
-
-<!-- <?php include 'templates/forms/register-warranty.php' ; ?> -->
-
 <!-- Slider Init -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
 <script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>

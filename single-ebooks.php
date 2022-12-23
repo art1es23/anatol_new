@@ -2,6 +2,7 @@
 
 <style>
 <?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/sliders/slider-similar-items.css';
 include 'css/components/another-equipments.css';
 include 'css/page-templates/page-ebooks/ebooks.css';
 include 'css/page-templates/single-pages/page-ebook-post/page-ebook-single.css';
@@ -103,15 +104,15 @@ include 'css/page-templates/single-pages/page-ebook-post/page-ebook-single.css';
     $related_items = new WP_Query( $args );
     if ( $related_items->have_posts() ) : ?>
 
-<div class="swiper similar-ebooks">
-    <div class="swiper similar-ebooks--wrapper container">
+<div class="swiper similar-items">
+    <div class="swiper similar-items--wrapper container">
         <h3 class="section_title">Other eBooks</h3>
-        <div class="similar-ebooks-list swiper-wrapper">
+        <div class="similar-items-list swiper-wrapper">
 
             <?php while ( $related_items->have_posts() ) : $related_items->the_post(); ?>
 
             <!-- <div class="swiper-slide similar_ebook_item"> -->
-            <div class="swiper-slide similar-ebooks-list__item ebook-post">
+            <div class="swiper-slide similar-items-list__item ebook-post">
                 <a class="ebook-post__img"
                     href="<?php the_permalink(); ?>"><?php the_post_thumbnail('ebook_img'); ?></a>
 
@@ -129,7 +130,7 @@ include 'css/page-templates/single-pages/page-ebook-post/page-ebook-single.css';
             <?php endwhile; ?>
         </div>
 
-        <div class="swiper-pagination similar-ebooks-pagination"></div>
+        <div class="swiper-pagination similar-items-pagination"></div>
         <?php endif;
             wp_reset_postdata(); ?>
     </div>

@@ -112,16 +112,23 @@ body .gv-region a {
   .chosen-container-single
   .chosen-single.chosen-default
   span:before {
-  content: "";
-  font-family: "FontAwesome";
-  color: #c7c7c7;
-  margin-right: 10px;
-  padding: 2px;
-  font-size: 12px;
+  content: "";
+  height: 18px;
+  width: 18px;
+  background-image: url(/wp-content/themes/anatol/images/svg-icons/search.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
 }
 .map-nav-wrap .map-search-wrap .chosen-container-single .chosen-single > span {
   height: 45px;
   line-height: 45px;
+  padding-left: 1.5rem;
 }
 .map-nav-wrap .map-search-wrap .chosen-container-single .chosen-single > div {
   width: 16px;

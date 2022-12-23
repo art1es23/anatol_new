@@ -1,25 +1,28 @@
 const modalSlider = () => {
   const gallerySlider = document.querySelectorAll(".image-carousel-container");
 
+  const scrollToTopButton = document.querySelector("#scrollToTop");
+
   gallerySlider.forEach((gallery, index) => {
+    // document.documentElement.classList.toggle("overflow--hidden");
+
     const slideshowModal = document.createElement("div");
+
     slideshowModal.classList.add("slideshow-modal", "popin", "popin--closed");
-    // slideshowModal.setAttribute("id", `slideshow-${index}`);
+
+    // scrollToTopButton.classList.add("hidden");
 
     const wrapperSlideshowModal = document.createElement("div");
     wrapperSlideshowModal.classList.add("slideshow-modal--wrapper");
 
-    const closeButton = document.createElement("a");
+    const closeButton = document.createElement("button");
     closeButton.classList.add("slideshow-close");
     closeButton.innerHTML = "&times;";
-
     wrapperSlideshowModal.prepend(closeButton);
 
-    // const paginationSlideshow = cloneGallery("swiper-pagination");
-    const screen = cloneGallery("swiper-screen");
+    const screen = cloneGallery("equipment_gallery-modal");
 
     wrapperSlideshowModal.appendChild(screen);
-    // wrapperSlideshowModal.appendChild(paginationSlideshow);
     slideshowModal.appendChild(wrapperSlideshowModal);
     document.body.appendChild(slideshowModal);
 
@@ -29,7 +32,6 @@ const modalSlider = () => {
       loop: true,
       spaceBetween: 10,
       centeredSlides: true,
-
       keyboard: {
         enabled: true,
       },
@@ -43,26 +45,26 @@ const modalSlider = () => {
     function cloneGallery(cloneClassName) {
       const clone = gallery.cloneNode(cloneClassName);
 
-      // console.log("====================================");
-      // console.log(clone.children[0]);
-      // console.log("====================================");
       clone.className = "";
-      clone.classList.add(
-        "swiper",
-        cloneClassName
-        // `${cloneClassName}-${index}`
-      );
+      clone.classList.add("swiper", cloneClassName);
 
       const wrapperSlideshowModal = clone.querySelector(".equipment_gallery");
-      wrapperSlideshowModal
-        .querySelectorAll(".gallery-item")
-        .forEach((item) => {
-          // item.classList.replace("gallery-item", "swiper-slide");
-          item.className = "";
-          item.classList.add("gallery-item", "swiper-slide");
-          item.setAttribute("href", "#");
-          // item.style.opacity = "1";
-        });
+
+      const itemsFromSlideshowModal = Array.from(
+        wrapperSlideshowModal.querySelectorAll(".gallery-item")
+      ).filter((item) => !item.classList.contains("swiper-slide-duplicate"));
+
+      itemsFromSlideshowModal.forEach((item) => {
+        item.className = "";
+        item.classList.add(
+          "gallery-item",
+          "gallery-item-modal",
+          "swiper-slide"
+        );
+        item.setAttribute("href", "#");
+        item.style.opacity = "1";
+        item.style.transform = "translate3d(0,0,0)";
+      });
       return clone;
     }
 
@@ -85,6 +87,7 @@ const modalSlider = () => {
         });
       });
       actionWithPopin(slideshowModal, "close");
+      closeWrapper(slideshowModal);
     }
 
     function actionWithPopin(item, state) {
@@ -94,11 +97,25 @@ const modalSlider = () => {
           .addEventListener("click", (e) => {
             item.classList.add("popin--closed");
             document.body.classList.remove("popin--opened");
+            document.documentElement.classList.remove("overflow--hidden");
+            scrollToTopButton.classList.remove("hidden");
           });
       } else {
+        document.documentElement.classList.add("overflow--hidden");
         item.classList.remove("popin--closed");
         document.body.classList.add("popin--opened");
+        scrollToTopButton.classList.add("hidden");
       }
+    }
+    function closeWrapper(item) {
+      wrapperSlideshowModal.addEventListener("click", (e) => {
+        if (e.target === wrapperSlideshowModal) {
+          document.documentElement.classList.remove("overflow--hidden");
+          item.classList.add("popin--closed");
+          document.body.classList.remove("popin--opened");
+          scrollToTopButton.classList.remove("hidden");
+        }
+      });
     }
   });
 };

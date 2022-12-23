@@ -36,7 +36,7 @@
 }
 
 .blog-post__description {
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,11 @@
 .feedback-post__caption {
   color: #363636;
   font-weight: 600;
-  font-size: max(0.9vw, 15px);
+  font-size: max(0.75vw, 14px);
+}
+
+.blog-post__caption {
+  min-height: 2.75rem;
 }
 
 .testimonials {
@@ -57,11 +61,12 @@
   background-color: #fff;
 }
 
-.latest_blogs {
-  background-image: url(../wp-content/themes/anatol/images/blog-bg.jpg) !important;
+/* .latest-blogs {
+  background-image: url(/wp-content/themes/anatol/images/blog-bg.jpg);
   background-position: 50%;
   background-size: cover;
-}
+  background-repeat: no-repeat;
+} */
 .dashboard__head {
   display: flex;
   flex-direction: column;
@@ -79,8 +84,9 @@
 }
 
 .feedback-post__excerpt {
-  font-size: max(0.85vw, 14px);
+  font-size: max(0.75vw, 14px);
   text-align: justify;
+  font-family: "Montserrat", sans-serif;
 }
 .feedbacks-list {
   display: flex;
