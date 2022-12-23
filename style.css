@@ -1052,16 +1052,10 @@ mark {
   display: block;
 }
 
-.logo-infocard .ico_location:before {
-  content: "\e822";
-  font-size: 16px;
-}
-.logo-infocard .ico_location:before {
-  font-family: "anatol";
-  height: 24px;
-  width: 24px;
-  display: inline;
-  color: #fff;
+.map-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .logo-container .logo-infocard {
@@ -1350,6 +1344,7 @@ mark {
 }
 .scroll-to-top-button.visible:hover {
   opacity: 1;
+  fill: #fff;
 }
 
 /* Cart */

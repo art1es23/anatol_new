@@ -74,7 +74,8 @@
 
     <?php wp_head(); ?>
 
-    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/libs/lozad//lozad.min.js">
+    </script>
     <script>
     const observer = lozad(); // lazy loads elements with default selector as ".lozad"
     observer.observe();
@@ -333,8 +334,16 @@
                                 </div>
                                 <p><strong>Anatol Equipment Manufacturing Co.</strong></p>
                                 <p> 919 Sherwood Drive<br>Lake Bluff, IL 60044</p>
-                                <a href="https://g.page/AnatolEquipment?share" target="_blank" class="map-link"><span
-                                        class="ico_location kl-icon-white"></span>
+                                <a href="https://g.page/AnatolEquipment?share" target="_blank" class="map-link">
+                                    <span class="ico_location kl-icon-white svg-wrapper">
+                                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                            <g data-name="10-location" id="_10-location">
+                                                <path class="cls-1"
+                                                    d="M27,12A11,11,0,0,0,5,12C5,22,16,31,16,31S27,22,27,12Z" />
+                                                <circle class="cls-1" cx="16" cy="12" r="5" />
+                                            </g>
+                                        </svg>
+                                    </span>
                                     <span><strong><?php _e('Open in Google Maps', 'anatol'); ?></strong></span>
                                 </a>
                             </div>

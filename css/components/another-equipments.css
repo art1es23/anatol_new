@@ -2,7 +2,10 @@
 .another-equipment {
   width: 100%;
   overflow: hidden;
-  background-image: url(../wp-content/themes/anatol/images/fon6.jpg);
+  background-image: image-set(
+    url(/wp-content/themes/anatol/images/fon6.webp) type("image/webp"),
+    url(/wp-content/themes/anatol/images/fon6.jpg)
+  );
   background-position: center;
   background-attachment: fixed;
   background-size: cover !important;

@@ -23,10 +23,10 @@ const drops = document.querySelectorAll(".dropdown-level-0");
 
 menuTrigger.addEventListener("click", (event) => {
   event.preventDefault();
-
+  // Header wrapper
   const headerQuote = document.querySelector(".header-quote");
   const headerTopSection = document.querySelector(".header-top");
-
+  // Trigger button
   const menuIconTop = menuTrigger.querySelector(".top-line");
   const menuIconMid = menuTrigger.querySelector(".mid-line");
   const menuIconBottom = menuTrigger.querySelector(".bottom-line");
@@ -41,9 +41,11 @@ menuTrigger.addEventListener("click", (event) => {
 
     menuNav.classList.toggle(isVisibleClass);
 
+    // Header wrapper actions
     headerTopSection.classList.toggle("hidden");
     headerQuote.classList.toggle("hidden");
 
+    // Trigger button animation
     menuIconTop.classList.toggle("top-animate");
     menuIconMid.classList.toggle("mid-animate");
     menuIconBottom.classList.toggle("bottom-animate");
@@ -60,58 +62,22 @@ menuTrigger.addEventListener("click", (event) => {
         let currentLink = e.currentTarget;
         let drop = currentLink.closest(".menu-item").querySelector(".dropdown");
 
-        const submenuDrops = item.querySelectorAll(".dropdown-level-1");
+        // const submenuDrops = item.querySelectorAll(".dropdown-level-1");
 
-        if (currentLink.classList.contains("has-mega-menu")) {
-          // Ovserve for click on link in Mega menu
-          const submenusFromMegaContainer = Array.from(
-            document.querySelectorAll(".menu-item")
-          ).filter((item) => item.classList.contains("mega-menu-colum"));
+        // if (currentLink.classList.contains("has-mega-menu")) {
+        //   // Ovserve for click on link in Mega menu
+        //   // const submenusFromMegaContainer = Array.from(
+        //   //   document.querySelectorAll(".menu-item")
+        //   // ).filter((item) => item.classList.contains("mega-menu-colum"));
 
-          submenusFromMegaContainer.forEach((el) => {
-            el.addEventListener("click", (evt) => {
-              evt.preventDefault();
-              // debugger;
-
-              let curentSubmenuLink = evt.currentTarget;
-
-              // debugger;
-              let submenu = curentSubmenuLink
-                .closest(".mega-menu-colum")
-                .querySelector(".dropdown-level-1");
-
-              drops.forEach((item) => {
-                if (item !== currentLink) {
-                  // debugger;
-                  item.classList.remove("menu-item--active");
-                }
-              });
-              curentSubmenuLink.classList.toggle("menu-item--active");
-
-              submenuDrops.forEach((el) => {
-                if (el !== submenu) {
-                  if (backButton) {
-                    el.removeChild(backButton);
-                  }
-
-                  el.classList.remove("dropdown--active");
-                }
-              });
-
-              submenu.classList.toggle("dropdown--active");
-              submenu.prepend(back);
-            });
-          });
-
-          ///
-        } else {
-          navigationItemWithSubmenu.forEach((item) => {
-            if (item !== currentLink) {
-              item.classList.remove("menu-item--active");
-            }
-          });
-          currentLink.classList.toggle("menu-item--active");
-        }
+        // } else {
+        navigationItemWithSubmenu.forEach((item) => {
+          if (item !== currentLink) {
+            item.classList.remove("menu-item--active");
+          }
+        });
+        currentLink.classList.toggle("menu-item--active");
+        // }
 
         drops.forEach((item) => {
           if (item !== drop) {
@@ -122,7 +88,7 @@ menuTrigger.addEventListener("click", (event) => {
           }
         });
 
-        drop.classList.toggle("dropdown--active");
+        drop.classList.add("dropdown--active");
         drop.prepend(back);
       });
     });
@@ -130,12 +96,12 @@ menuTrigger.addEventListener("click", (event) => {
   const backButton = document.querySelector(".back");
 
   if (backButton) {
-    backButton.addEventListener("click", (evt) => {
-      evt.preventDefault();
+    backButton.addEventListener("click", (e) => {
+      e.preventDefault();
 
-      drops.forEach((el) => {
-        el.classList.remove("dropdown--active");
-        el.removeChild(backButton);
+      drops.forEach((item) => {
+        item.classList.remove("dropdown--active");
+        item.removeChild(backButton);
       });
     });
   }
