@@ -75,7 +75,7 @@ td a {
 
 .woocommerce .cart-collaterals .cart_totals,
 .woocommerce-page .cart-collaterals .cart_totals {
-  /* width: 50%; */
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 2.5vh;
@@ -98,4 +98,117 @@ td a {
   gap: 1.5vh;
   justify-content: center;
   align-items: stretch;
+}
+
+.woocommerce #respond input#submit.disabled,
+.woocommerce #respond input#submit:disabled,
+.woocommerce #respond input#submit:disabled[disabled],
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce input.button.disabled,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled] {
+  padding: 0.75rem 1.25rem;
+}
+
+.woocommerce .cart .button,
+.woocommerce .cart input.button {
+  padding: 0.75rem 1.25rem;
+}
+
+.woocommerce a.remove {
+  margin: auto;
+}
+
+.woocommerce-shipping-calculator {
+  margin-left: auto;
+}
+
+td.actions .button {
+  margin-left: auto;
+  padding: 0.75rem 1.25rem;
+}
+
+@media screen and (max-width: 900px) {
+  .products_content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .cart_content {
+    width: 90%;
+  }
+
+  .woocommerce {
+    gap: 2.5vh;
+  }
+  .woocommerce .cart .button,
+  .woocommerce .cart input.button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  .woocommerce table.shop_table_responsive tbody tr:first-child td:first-child,
+  .woocommerce-page
+    table.shop_table_responsive
+    tbody
+    tr:first-child
+    td:first-child {
+    display: none;
+  }
+
+  td.product-thumbnail {
+    display: none;
+  }
+
+  .woocommerce table.shop_table_responsive tr td,
+  .woocommerce-page table.shop_table_responsive tr td {
+    display: flex;
+    text-align: initial !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .woocommerce table.shop_table_responsive tr td.product-thumbnail,
+  .woocommerce-page table.shop_table_responsive tr td.product-thumbnail {
+    display: none;
+  }
+
+  .woocommerce .cart-collaterals .cart_totals,
+  .woocommerce-page .cart-collaterals .cart_totals {
+    width: 100%;
+  }
+
+  .woocommerce-shipping-calculator {
+    margin: initial;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .shop_table .woocommerce-shipping-totals.shipping td {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .woocommerce #respond input#submit.disabled,
+  .woocommerce #respond input#submit:disabled,
+  .woocommerce #respond input#submit:disabled[disabled],
+  .woocommerce a.button.disabled,
+  .woocommerce a.button:disabled,
+  .woocommerce a.button:disabled[disabled],
+  .woocommerce button.button.disabled,
+  .woocommerce button.button:disabled,
+  .woocommerce button.button:disabled[disabled],
+  .woocommerce input.button.disabled,
+  .woocommerce input.button:disabled,
+  .woocommerce input.button:disabled[disabled] {
+    padding: 1rem 1.25rem;
+    font-size: 20px;
+  }
 }

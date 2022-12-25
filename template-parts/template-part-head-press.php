@@ -1,31 +1,27 @@
 <?php
 	if (is_single() && is_post_type('anatol-products-pres')){?>
-<!-- single_eq -->
 <div class="hero" style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/volt.jpg);">
     <?}
 		else if (is_single() && is_post_type('anatol-products-flas')){?>
-    <div class="hero single_eq"
+    <div class="hero "
         style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/flash.jpg);">
         <?}
 		else if (is_single() && is_post_type('anatol-products-conv')){?>
-        <div class="hero single_eq"
+        <div class="hero "
             style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/head_dryer.jpg);">
             <?}
 			else if (is_single() && is_post_type('anatol-products-pre-')){?>
-            <div class="hero single_eq"
+            <div class="hero "
                 style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/head_pre.jpg);">
                 <?}
 			else if (is_single() && is_post_type('anatol-products-acce')){?>
-                <div class="hero single_eq"
+                <div class="hero "
                     style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/head_acc.jpg);">
                     <?}
 			else{				
-				echo '<div class="hero head_section single_eq products_header">';
+				echo '<div class="hero products_header">';
 			} ?>
                     <div class="hero--wrapper container">
-
-                        <!-- <div class="container title_row_bg">
-                        <div class="head_title animate zoomIn one"> -->
                         <?php
 								if ( is_shop() || is_product_category() ) {?>
 
@@ -35,7 +31,7 @@
 									echo '<h1 class="hero__title page-title">Anatol eBook Library</h1>';
 								}
 								else if(is_archive('faq') || is_singular('faq')) {
-									echo '<h1 class="hero__title page-title">Knowledge base</h1>';
+									echo '<h1 class="hero__title page-title">Knowledgebase</h1>';
 								}
 								else if(is_archive('anatoltv') || is_singular('anatoltv')) {
 									echo '<h1 class="hero__title page-title">Anatol TV</h1>';
@@ -46,10 +42,9 @@
 								else if(!empty(get_field("alternative_title"))) {
 									echo '<h1 class="hero__title page-title">' . get_field("alternative_title") . '</h1>';
 								} else {
-									the_title('<h1 class="hero__title page-title single_pr_title">', '</h1>');
+									the_title('<h1 class="hero__title page-title">', '</h1>');
 								}
 							?>
-                        <!-- </div> -->
 
                         <?php
 							if(empty($anatol_cat_title)) {

@@ -393,7 +393,8 @@
 	    <?php
             endif;
             ?>
-	    <input type="submit" class="submit_form button" name="submit_web_form" value="<?php echo $send_a_message?> ">
+	    <input type="submit" class="submit_form button button--full" name="submit_web_form"
+	        value="<?php echo $send_a_message?> ">
 	    <!-- </div> -->
 	</form>
 

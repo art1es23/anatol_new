@@ -24,12 +24,13 @@
 }
 
 .about-us-description__content {
-  font-size: 1vw;
+  font-size: max(0.9vw, 14px);
   line-height: 1.5vw;
   text-align: justify;
   display: flex;
   flex-direction: column;
   gap: 0.75vw;
+  font-family: "Montserrat", sans-serif;
 }
 .about-us-img--wrapper {
   width: 40%;

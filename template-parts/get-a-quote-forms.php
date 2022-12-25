@@ -1,7 +1,7 @@
-<style>
+<!-- <style>
 <?php include '../css/components/get-in-touch.css';
 ?>
-</style>
+</style> -->
 
 
 <div class="get_quote innerr hidden">

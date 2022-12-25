@@ -3,7 +3,8 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/components/presses-item.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/presses-item.css';
 include 'css/page-templates/page-presses/presses-content.css';
 include 'css/components/automatic-presses.css';
 include 'css/page-templates/page-presses/manual-presses.css';
@@ -127,7 +128,7 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
 
 <section class="manual-presses section_presses" id="manual-presses">
     <div class="manual-presses--wrapper container">
-        <div class="section_title">Manual Presses</div>
+        <div class="section-presses_title section_title">Manual Presses</div>
         <!-- <div class="presses_content_row"> -->
         <?php
 			$args = array(
@@ -187,7 +188,7 @@ include 'css/page-templates/page-presses/specialty-automatic-presses.css';
 
 <section class="specialty-automatic-presses section_presses fix-bg white_text" id="specialty-automatic-presses">
     <div class="specialty-automatic-presses--wrapper container">
-        <div class="section_title"> Specialty Automatic Presses</div>
+        <div class="section-presses_title section_title"> Specialty Automatic Presses</div>
         <!-- <div class="presses_content_row"> -->
         <?php
 			$args = array(

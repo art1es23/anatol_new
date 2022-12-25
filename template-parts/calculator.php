@@ -1,37 +1,35 @@
 <?php
-/* Check if user registered */
-$registered = '';
-if (!isset($_COOKIE['ROI_user'])) {
-	$registered = false;
-} else {
-	if (!empty($_COOKIE['ROI_user'])) {
-		$roi_user = json_decode(stripcslashes($_COOKIE['ROI_user']));
-		if (!empty($roi_user->roi_user_id)) $registered = true;
-		
-	}
-}
+    /* Check if user registered */
+    $registered = '';
+    if (!isset($_COOKIE['ROI_user'])) {
+        $registered = false;
+    } else {
+        if (!empty($_COOKIE['ROI_user'])) {
+            $roi_user = json_decode(stripcslashes($_COOKIE['ROI_user']));
+            if (!empty($roi_user->roi_user_id)) $registered = true;
+            
+        }
+    }
 ?>
 
 <div class="calculator">
-    <div class="registration step">
-        <div class="row">
-            <div class="field_full">
-                <h1 class="page-title">
-                    <i class="uk-icon-calculator"></i>
-                    <?php _e('Anatol ROI Calculator', 'anatol'); ?>
-                </h1>
-                <div class="description">
-                    <p>
-                        <?php _e('This calculator generates the possible return on investment you could achieve when you switch from a manual screen printing press to an automatic.', 'anatol'); ?>
-                    </p>
-                    <p>
-                        <?php _e('Enter your information below to get started.', 'anatol'); ?>
-                    </p>
-                </div>
-            </div>
+    <!-- <div class="calculator--wrapper container"> -->
+    <div class="form calculator-form registration step">
+        <h2 class="calculator__title section_title">
+            <i class="uk-icon-calculator"></i>
+            <?php _e('Anatol ROI Calculator', 'anatol'); ?>
+        </h2>
+        <div class="calculator__description form-description">
+            <p>
+                <?php _e('This calculator generates the possible return on investment you could achieve when you switch from a manual screen printing press to an automatic.', 'anatol'); ?>
+            </p>
+            <p>
+                <?php _e('Enter your information below to get started.', 'anatol'); ?>
+            </p>
         </div>
+
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-        <form id="__vtigerWebForm" class="register-form get_forms step-container" name="register-form" action
+        <form id="__vtigerWebForm" class="form-inner register-form get_forms step-container" name="register-form" action
             method="post" accept-charset="utf-8" enctype="multipart/form-data">
             <input type="hidden" name="SFWebFormTimer" value="4335">
             <input type="hidden" name="__vtrftk" value="sid:117320670c26be7435a870e1421555aa92ad29f6,1614093617">
@@ -40,8 +38,8 @@ if (!isset($_COOKIE['ROI_user'])) {
             <input type="hidden" name="name" value="Data ROI Calculator">
             <input type="text" name="leadsource" value="Web Site" style="display:none;">
             <input type="text" name="cf_979" value="Data ROI Calculator" style="display:none;">
-            <div class="form-row flex">
-                <div class="form-group half" id="Enterfirstname">
+            <div class="form-inner__item">
+                <div class="form-inner__item--half" id="Enterfirstname">
                     <label for="inputName">
                         <?php _e('1. Enter your Name', 'anatol'); ?>
                     </label>
@@ -49,23 +47,24 @@ if (!isset($_COOKIE['ROI_user'])) {
                         placeholder="<?php _e('First Name', 'anatol'); ?>" required>
                     <input type="hidden" class="form-control" name="first_name" id="inputFirstName1">
                 </div>
-                <div class="form-group half" id="Enterlastname">
+                <div class="form-inner__item--half" id="Enterlastname">
                     <label for="inputLastName">&nbsp;</label>
                     <input type="text" class="form-control" name="lastname" id="inputLastName"
                         placeholder="<?php _e('Last Name', 'anatol'); ?>" required>
                     <input type="hidden" class="form-control" name="last_name" id="inputLastName1">
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group field_full">
+            <div class="form-inner__item">
+                <div class="form-inner__item--full">
                     <label for="inputEmail">
                         <?php _e('2. Enter your E-mail Address *', 'anatol'); ?>
                     </label>
                     <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email" required>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group field_full">
+
+            <div class="form-inner__item">
+                <div class="form-inner__item--full">
                     <label for="inputCountry">
                         <?php _e('3. Select your Country / State *', 'anatol'); ?>
                     </label>
@@ -106,7 +105,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="elements" value="Botswana">Botswana</option>
                         <option class="elements" value="Bouvet Island">Bouvet Island</option>
                         <option class="elements" value="Brazil">Brazil</option>
-                        <option class="elements" value="British Indian Ocean Territory">British Indian Ocean Territory
+                        <option class="elements" value="British Indian Ocean Territory">British Indian Ocean
+                            Territory
                         </option>
                         <option class="elements" value="Brunei Darussalam">Brunei Darussalam</option>
                         <option class="elements" value="Bulgaria">Bulgaria</option>
@@ -182,7 +182,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="elements" value="Iceland">Iceland</option>
                         <option class="elements" value="India">India</option>
                         <option class="elements" value="Indonesia">Indonesia</option>
-                        <option class="elements" value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                        <option class="elements" value="Iran, Islamic Republic of">Iran, Islamic Republic of
+                        </option>
                         <option class="elements" value="Iraq">Iraq</option>
                         <option class="elements" value="Ireland">Ireland</option>
                         <option class="elements" value="Israel">Israel</option>
@@ -224,7 +225,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="elements" value="Mauritius">Mauritius</option>
                         <option class="elements" value="Mayotte">Mayotte</option>
                         <option class="elements" value="Mexico">Mexico</option>
-                        <option class="elements" value="Micronesia, Federated States of">Micronesia, Federated States of
+                        <option class="elements" value="Micronesia, Federated States of">Micronesia, Federated
+                            States of
                         </option>
                         <option class="elements" value="Moldova, Republic of">Moldova, Republic of</option>
                         <option class="elements" value="Monaco">Monaco</option>
@@ -250,7 +252,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="elements" value="Oman">Oman</option>
                         <option class="elements" value="Pakistan">Pakistan</option>
                         <option class="elements" value="Palau">Palau</option>
-                        <option class="elements" value="Palestinian Territory, Occupied">Palestinian Territory, Occupied
+                        <option class="elements" value="Palestinian Territory, Occupied">Palestinian Territory,
+                            Occupied
                         </option>
                         <option class="elements" value="Panama">Panama</option>
                         <option class="elements" value="Papua New Guinea">Papua New Guinea</option>
@@ -269,7 +272,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="elements" value="Saint Helena">Saint Helena</option>
                         <option class="elements" value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
                         <option class="elements" value="Saint Lucia">Saint Lucia</option>
-                        <option class="elements" value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                        <option class="elements" value="Saint Pierre and Miquelon">Saint Pierre and Miquelon
+                        </option>
                         <option class="elements" value="Saint Vincent and The Grenadines">Saint Vincent and The
                             Grenadines
                         </option>
@@ -287,7 +291,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="elements" value="Solomon Islands">Solomon Islands</option>
                         <option class="elements" value="Somalia">Somalia</option>
                         <option class="elements" value="South Africa">South Africa</option>
-                        <option class="elements" value="South Georgia and The South Sandwich Islands">South Georgia and
+                        <option class="elements" value="South Georgia and The South Sandwich Islands">South Georgia
+                            and
                             The
                             South Sandwich Islands</option>
                         <option class="elements" value="Spain">Spain</option>
@@ -299,7 +304,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="elements" value="Sweden">Sweden</option>
                         <option class="elements" value="Switzerland">Switzerland</option>
                         <option class="elements" value="Syrian Arab Republic">Syrian Arab Republic</option>
-                        <option class="elements" value="Taiwan, Province of China">Taiwan, Province of China</option>
+                        <option class="elements" value="Taiwan, Province of China">Taiwan, Province of China
+                        </option>
                         <option class="elements" value="Tajikistan">Tajikistan</option>
                         <option class="elements" value="Tanzania, United Republic of">Tanzania, United Republic of
                         </option>
@@ -337,8 +343,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                     </select>
                 </div>
             </div>
-            <div id="ifYesRoi" class="form-row" style="display: none;">
-                <div class="form-group field_full">
+            <div id="ifYesRoi" class="form-inner__item" style="display: none;">
+                <div class="form-inner__item--full">
                     <label for="state">
                         <?php _e('State/Region', 'anatol'); ?><span class="form-required"> *</span>
                     </label>
@@ -353,7 +359,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="usa_state elements" value="Colorado">Colorado</option>
                         <option class="usa_state elements" value="Connecticut">Connecticut</option>
                         <option class="usa_state elements" value="Delaware">Delaware</option>
-                        <option class="usa_state elements" value="District of Columbia">District of Columbia</option>
+                        <option class="usa_state elements" value="District of Columbia">District of Columbia
+                        </option>
                         <option class="usa_state elements" value="Florida">Florida</option>
                         <option class="usa_state elements" value="Georgia">Georgia</option>
                         <option class="usa_state elements" value="Hawaii">Hawaii</option>
@@ -398,12 +405,15 @@ if (!isset($_COOKIE['ROI_user'])) {
                         <option class="usa_state elements" value="Wisconsin">Wisconsin</option>
                         <option class="usa_state elements" value="Wyoming">Wyoming</option>
                         <option class="canadian_province elements" value="Alberta">Alberta</option>
-                        <option class="canadian_province elements" value="British Columbia">British Columbia</option>
+                        <option class="canadian_province elements" value="British Columbia">British Columbia
+                        </option>
                         <option class="canadian_province elements" value="Manitoba">Manitoba</option>
                         <option class="canadian_province elements" value="New Brunswick">New Brunswick</option>
-                        <option class="canadian_province elements" value="Newfoundland and Labrador">Newfoundland and
+                        <option class="canadian_province elements" value="Newfoundland and Labrador">Newfoundland
+                            and
                             Labrador</option>
-                        <option class="canadian_province elements" value="Northwest Territories">Northwest Territories
+                        <option class="canadian_province elements" value="Northwest Territories">Northwest
+                            Territories
                         </option>
                         <option class="canadian_province elements" value="Nova Scotia">Nova Scotia</option>
                         <option class="canadian_province elements" value="Nunavut">Nunavut</option>
@@ -416,149 +426,92 @@ if (!isset($_COOKIE['ROI_user'])) {
                     </select>
                 </div>
             </div>
-            <div class="form-row not_border">
-                <div style="display:flex; justify-content: center;" class="form-group field_full">
-                    <!--<input name="submit" type="submit" class="button red-button draw-red"
+            <!--<input name="submit" type="submit" class="button red-button draw-red"
                      value="<?php _e('Enter Savings Calculator*', 'anatol'); ?>">-->
-                    <button type="submit" class="button btn-one btn-primary track-button" data-category="Buttons"
-                        data-label="Make ROI calculation">
-                        <?php _e('Enter Savings Calculator*', 'anatol'); ?>
-                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                        <span class="sr-only">Loading...</span>
-                    </button>
-                </div>
-            </div>
+            <button type="submit" class="button btn-one btn-primary track-button" data-category="Buttons"
+                data-label="Make ROI calculation">
+                <?php _e('Enter Savings Calculator*', 'anatol'); ?>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                <span class="sr-only">Loading...</span>
+            </button>
+
             <input type="hidden" name="submitted" id="submitted" value="true" />
         </form>
     </div>
+    <!-- </div> -->
 
+    <!-- Step first -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="calculation step first_form_active">
-        <div class="row">
-            <div class="field_full">
-                <h1 class="page-title">
-                    <i class="uk-icon-calculator"></i>
-                    <?php _e('Welcome', 'anatol'); ?>
-                    <span class="past_name"></span>
-                </h1>
-                <div class="description">
-                    <p>
-                        <?php _e('Fill in the form below and we`ll tell you just how much you`ll be saving.*', 'anatol'); ?>
-                    </p>
-                </div>
-            </div>
+    <div class="form calculation step first_form_active">
+        <!-- <div class="row"> -->
+        <!-- <div class="field_full"> -->
+        <h1 class="calculator__title section_title">
+            <i class="uk-icon-calculator"></i>
+            <?php _e('Welcome', 'anatol'); ?>
+            <span class="past_name"></span>
+        </h1>
+        <div class="calculator__description form-description">
+            <p>
+                <?php _e('Fill in the form below and we`ll tell you just how much you`ll be saving.*', 'anatol'); ?>
+            </p>
         </div>
-        <form class="calculation-form step-container get_forms" name="calculation-form" method="post">
+        <!-- </div> -->
+        <!-- </div> -->
+
+        <form class="form-inner calculator-form step-container get_forms" name="calculation-form" method="post">
             <input type="hidden" name="currency" value="<?php echo $roi_user->currency; ?>">
             <input type="hidden" name="phone_code" value="<?php echo $roi_user->phone_code; ?>">
             <input type="hidden" name="roi_user_id" value="<?php echo $roi_user->roi_user_id; ?>">
-            <div class="form-row flex">
-                <div class="form-group col-md-4">
+            <div class="form-inner__item">
+                <div class="form-inner__item--full">
                     <label>
                         <?php _e('1. How many shirts do I want to print per week?', 'anatol'); ?>
                     </label>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-inner__item--full">
                     <input type="number" min="0" step="1" value="" class="form-control" name="fronts" id="fronts"
                         placeholder="<?php _e('Fronts', 'anatol'); ?>" required>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-inner__item--full">
                     <input type="number" min="0" step="1" value="" class="form-control" name="backs" id="backs"
                         placeholder="<?php _e('Backs', 'anatol'); ?>" required>
                 </div>
             </div>
-            <div class="form-row flex">
-                <div class="form-group col-md-4">
+            <div class="form-inner__item">
+                <div class="form-inner__item--half">
                     <label>
                         <?php _e('2. How many shirts can I print per hour manually?', 'anatol'); ?>
                     </label>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-inner__item--half">
                     <input type="number" min="1" step="1" value="" class="form-control" name="shirtsPerHour"
                         id="shirtsPerHour" placeholder="" required>
                 </div>
-                <div class="col-md-4">
-
-                </div>
             </div>
-            <div class="form-row flex">
-                <div class="form-group col-md-4">
+            <div class="form-inner__item">
+                <div class="form-inner__item--half">
                     <label>
                         <?php _e('3. How many printers will be working the press?', 'anatol'); ?>
                     </label>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-inner__item--half">
                     <input type="number" min="1" step="1" value="" class="form-control" name="printersPerPress"
                         id="printersPerPress" placeholder="" required>
                 </div>
-                <div class="col-md-4">
-                </div>
             </div>
-            <div class="form-row flex">
-                <div class="form-group col-md-4">
+            <div class="form-inner__item">
+                <div class="form-inner__item--half">
                     <label>
                         <?php _e('4. How much do I pay each printer per hour? (in USD)', 'anatol'); ?>
                     </label>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-inner__item--half">
                     <input type="number" min="1" step="any" value="" class="form-control" name="printerPerHour"
                         id="printerPerHour" placeholder="" required>
                 </div>
-                <div class="col-md-4">
-                </div>
             </div>
-            <div class="form-row">
-                <div class="form-group field_full cvbnm">
+            <div class="form-inner__item">
+                <div class="form-inner__item--full cvbnm">
                     <button type="submit" class="button btn-two btn-primary track-button" data-category="Buttons"
                         data-label="Make ROI calculation">
                         <?php _e('Click here and we`ll do the math!', 'anatol'); ?>
@@ -568,190 +521,188 @@ if (!isset($_COOKIE['ROI_user'])) {
                 </div>
             </div>
         </form>
-        <div class="result-row">
-            <div class="field_full">
-                <div class="result">
-                    <div class="cards">
-                        <div id="completion-time" class="card preload">
-                            <div class="card-header">
-                                <?php _e('Job(s) Completion Time (Labor Hours per Week)', 'anatol'); ?>
+        <!-- <div class="result-row">
+            <div class="field_full"> -->
+        <div class="result">
+            <div class="cards">
+                <div id="completion-time" class="card preload">
+                    <div class="card-header">
+                        <?php _e('Job(s) Completion Time (Labor Hours per Week)', 'anatol'); ?>
+                    </div>
+                    <div class="card-body">
+                        <div class="row row-flex">
+                            <div class="col-xs-6">
+                                <h5 class="card-title">
+                                    <?php _e('Manual Press', 'anatol'); ?>
+                                </h5>
+                                <div class="manual value">
+                                    <span class="val"></span> <span class="hours">
+                                        <?php _e('hrs', 'anatol'); ?>
+                                    </span>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="row row-flex">
-                                    <div class="col-xs-6">
-                                        <h5 class="card-title">
-                                            <?php _e('Manual Press', 'anatol'); ?>
-                                        </h5>
-                                        <div class="manual value">
-                                            <span class="val"></span> <span class="hours">
-                                                <?php _e('hrs', 'anatol'); ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <h5 class="card-title">
-                                            <?php _e('Automatic Press', 'anatol'); ?>
-                                        </h5>
-                                        <div class="automatic value">
-                                            <span class="val"></span> <span class="hours">
-                                                <?php _e('hrs', 'anatol'); ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="field_full total-row-title">
-                                        <?php _e('TOTAL HOURS SAVED PER WEEK', 'anatol'); ?>
-                                    </div>
-                                    <div class="field_full">
-                                        <div class="total">
-                                            <span class="val"></span> <span class="hours">
-                                                <?php _e('hours', 'anatol'); ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="field_full">
-                                        <div class="message">
-                                            <?php _e('What would you do with this extra time?', 'anatol'); ?>
-                                        </div>
-                                        <div class="note">
-                                            <?php _e('* Auto production rates figured at 29 dz. per hour for single operator & 45 dz. per hour for 2 operators', 'anatol'); ?>
-                                        </div>
-                                    </div>
+                            <div class="col-xs-6">
+                                <h5 class="card-title">
+                                    <?php _e('Automatic Press', 'anatol'); ?>
+                                </h5>
+                                <div class="automatic value">
+                                    <span class="val"></span> <span class="hours">
+                                        <?php _e('hrs', 'anatol'); ?>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                        <!--  -->
-                        <div id="hourly-wages" class="card preload">
-                            <div class="card-header">
-                                <?php _e('Hourly Wages Paid for Those Jobs', 'anatol'); ?>
+                        <div class="row">
+                            <div class="field_full total-row-title">
+                                <?php _e('TOTAL HOURS SAVED PER WEEK', 'anatol'); ?>
                             </div>
-                            <div class="card-body">
-                                <div class="row row-flex">
-                                    <div class="col-xs-6">
-                                        <h5 class="card-title">
-                                            <?php _e('Manual Press', 'anatol'); ?>
-                                        </h5>
-                                        <div class="value manual">
-                                            <span class="manual val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <h5 class="card-title">
-                                            <?php _e('Automatic Press', 'anatol'); ?>
-                                        </h5>
-                                        <div class="automatic value">
-                                            <span class="val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="field_full total-row-title">
-                                        <?php _e('TOTAL WAGE SAVINGS PER WEEK', 'anatol'); ?>
-                                    </div>
-                                    <div class="field_full">
-                                        <div class="total">
-                                            <span class="val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="field_full">
-                                        <div class="message">
-                                            <?php _e('How would this impact your cash flow?', 'anatol'); ?>
-                                        </div>
-                                        <div class="note">
-                                            <?php _e('* Not including paid benefits, taxes, or insurance costs', 'anatol'); ?>
-                                        </div>
-                                    </div>
+                            <div class="field_full">
+                                <div class="total">
+                                    <span class="val"></span> <span class="hours">
+                                        <?php _e('hours', 'anatol'); ?>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                        <!--  -->
-                        <div id="total-savings" class="card preload">
-                            <div class="card-header">
-                                <?php _e('Total Savings Per Month', 'anatol') ?>
-                            </div>
-                            <div class="card-body">
-                                <div class="row row-flex">
-                                    <div class="col-xs-6">
-                                        <h5 class="card-title">
-                                            <?php _e('Manual Cost', 'anatol') ?>
-                                        </h5>
-                                        <div class="value manual">
-                                            <span class="val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <h5 class="card-title">
-                                            <?php _e('Automatic Cost', 'anatol') ?>
-                                        </h5>
-                                        <div class="value automatic">
-                                            <span class="val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
+                        <div class="row">
+                            <div class="field_full">
+                                <div class="message">
+                                    <?php _e('What would you do with this extra time?', 'anatol'); ?>
                                 </div>
-                                <div class="row">
-                                    <div class="field_full total-row-title">
-                                        <?php _e('TOTAL SAVINGS PER MONTH', 'anatol') ?>
-                                    </div>
-                                    <div class="field_full">
-                                        <div class="total">
-                                            <span class="val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="field_full">
-                                        <div class="message">
-                                            <?php _e('Remember, this is your money!', 'anatol') ?>
-                                        </div>
-                                    </div>
+                                <div class="note">
+                                    <?php _e('* Auto production rates figured at 29 dz. per hour for single operator & 45 dz. per hour for 2 operators', 'anatol'); ?>
                                 </div>
                             </div>
                         </div>
-                        <!--  -->
-                        <div id="total-savings-year" class="card preload">
-                            <div class="card-header">
-                                <?php _e('Total Savings Per Year', 'anatol'); ?>
+                    </div>
+                </div>
+                <!--  -->
+                <div id="hourly-wages" class="card preload">
+                    <div class="card-header">
+                        <?php _e('Hourly Wages Paid for Those Jobs', 'anatol'); ?>
+                    </div>
+                    <div class="card-body">
+                        <div class="row row-flex">
+                            <div class="col-xs-6">
+                                <h5 class="card-title">
+                                    <?php _e('Manual Press', 'anatol'); ?>
+                                </h5>
+                                <div class="value manual">
+                                    <span class="manual val"></span> <span class="currency"></span>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="row row-flex">
-                                    <div class="col-xs-6">
-                                        <h5 class="card-title">
-                                            <?php _e('Manual Operating Costs', 'anatol'); ?>
-                                        </h5>
-                                        <div class="value manual">
-                                            <span class="val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <h5 class="card-title">
-                                            <?php _e('Automatic Operating Costs', 'anatol'); ?>
-                                        </h5>
-                                        <div class="value automatic">
-                                            <span class="val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
+                            <div class="col-xs-6">
+                                <h5 class="card-title">
+                                    <?php _e('Automatic Press', 'anatol'); ?>
+                                </h5>
+                                <div class="automatic value">
+                                    <span class="val"></span> <span class="currency"></span>
                                 </div>
-                                <div class="row">
-                                    <div class="field_full total-row-title">
-                                        <?php _e('TOTAL SAVINGS PER YEAR', 'anatol'); ?>
-                                    </div>
-                                    <div class="field_full">
-                                        <div class="total">
-                                            <span class="val"></span> <span class="currency"></span>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field_full total-row-title">
+                                <?php _e('TOTAL WAGE SAVINGS PER WEEK', 'anatol'); ?>
+                            </div>
+                            <div class="field_full">
+                                <div class="total">
+                                    <span class="val"></span> <span class="currency"></span>
                                 </div>
-                                <div class="row">
-                                    <div class="field_full">
-                                        <div class="message">
-                                            <?php _e('Can you afford NOT to go automatic?', 'anatol'); ?>
-                                        </div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field_full">
+                                <div class="message">
+                                    <?php _e('How would this impact your cash flow?', 'anatol'); ?>
+                                </div>
+                                <div class="note">
+                                    <?php _e('* Not including paid benefits, taxes, or insurance costs', 'anatol'); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div id="total-savings" class="card preload">
+                    <div class="card-header">
+                        <?php _e('Total Savings Per Month', 'anatol') ?>
+                    </div>
+                    <div class="card-body">
+                        <div class="row row-flex">
+                            <div class="col-xs-6">
+                                <h5 class="card-title">
+                                    <?php _e('Manual Cost', 'anatol') ?>
+                                </h5>
+                                <div class="value manual">
+                                    <span class="val"></span> <span class="currency"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5 class="card-title">
+                                    <?php _e('Automatic Cost', 'anatol') ?>
+                                </h5>
+                                <div class="value automatic">
+                                    <span class="val"></span> <span class="currency"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field_full total-row-title">
+                                <?php _e('TOTAL SAVINGS PER MONTH', 'anatol') ?>
+                            </div>
+                            <div class="field_full">
+                                <div class="total">
+                                    <span class="val"></span> <span class="currency"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field_full">
+                                <div class="message">
+                                    <?php _e('Remember, this is your money!', 'anatol') ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div id="total-savings-year" class="card preload">
+                    <div class="card-header">
+                        <?php _e('Total Savings Per Year', 'anatol'); ?>
+                    </div>
+                    <div class="card-body">
+                        <div class="row row-flex">
+                            <div class="col-xs-6">
+                                <h5 class="card-title">
+                                    <?php _e('Manual Operating Costs', 'anatol'); ?>
+                                </h5>
+                                <div class="value manual">
+                                    <span class="val"></span> <span class="currency"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <h5 class="card-title">
+                                    <?php _e('Automatic Operating Costs', 'anatol'); ?>
+                                </h5>
+                                <div class="value automatic">
+                                    <span class="val"></span> <span class="currency"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field_full total-row-title">
+                                <?php _e('TOTAL SAVINGS PER YEAR', 'anatol'); ?>
+                            </div>
+                            <div class="field_full">
+                                <div class="total">
+                                    <span class="val"></span> <span class="currency"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="field_full">
+                                <div class="message">
+                                    <?php _e('Can you afford NOT to go automatic?', 'anatol'); ?>
                                 </div>
                             </div>
                         </div>
@@ -759,6 +710,8 @@ if (!isset($_COOKIE['ROI_user'])) {
                 </div>
             </div>
         </div>
+        <!-- </div>
+        </div> -->
     </div>
 </div>
 
@@ -767,11 +720,14 @@ function yesnoCheckRoi(that) {
     if (that.value == "United States") {
         document.getElementById("ifYesRoi").style.display = "block";
         document.getElementById("state_required").setAttribute("required", "");
-        $('.usa_state').show();
+        document.querySelectorAll('.usa_state').forEach(item => item.style.display = 'block');
+        document.querySelectorAll('.canadian_province').forEach(item => item.style.display = 'none');
+
     } else if (that.value == "Canada") {
         document.getElementById("ifYesRoi").style.display = "block";
-        $('.canadian_province').show();
-        $('.usa_state').hide();
+        document.querySelectorAll('.usa_state').forEach(item => item.style.display = 'none');
+        document.querySelectorAll('.canadian_province').forEach(item => item.style.display = 'block');
+
     } else {
         document.getElementById("ifYesRoi").style.display = "none";
         document.getElementById("state_required").removeAttribute("required");

@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/single-pages/page-customer-stories-single/page-cs-single.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/single-pages/page-customer-stories-single/page-cs-single.css';
 ?>
 </style>
 
@@ -25,13 +26,19 @@
                 </div>
                 <?php } elseif (!empty($video)) {
             echo $video;
+          } else if (!get_the_post_thumbnail()) {
+            echo '<div class="empty"></div>';
+
+            // echo get_the_post_thumbnail(get_the_ID(), array(800, 600));
           } else {
-            echo get_the_post_thumbnail(get_the_ID(), array(800, 600));
-          } ?>
+              echo get_the_post_thumbnail(get_the_ID(), array(800, 600));
+
+            // echo '<div class="empty"></div>';
+          }?>
             </div>
 
             <div class="customer__item customer-info" data-aos="fade-left">
-                <div class="customer-info__title"><?php _e('About сompany'); ?></div>
+                <h2 class="customer-info__title"><?php _e('About сompany'); ?></h2>
                 <ul class="customer-info__list list-info">
                     <?php
                       $companyname = get_field('wpcf-companyname');
@@ -70,13 +77,15 @@
             ?>
 
         <div class="customer-experience">
-            <div class="customer-experience__title"><?php _e('The experience');?></div>
+            <h3 class="customer-experience__title"><?php _e('The experience');?></h3>
             <div class="customer-experience__content"><?php echo $theexperience;?></div>
-            <div class="customer-experience__author"><?php echo get_the_title();?></div>
+            <div class="customer-experience__legend">
+                <span class="customer-experience__author"><?php echo get_the_title();?></span>
 
-            <?php if (!empty($companyname)) { ?>
-            <div class="customer-experience__company"><?php echo $companyname;?></div>
-            <?php } ?>
+                <?php if (!empty($companyname)) { ?>
+                <span class="customer-experience__company"><?php echo $companyname;?></span>
+                <?php } ?>
+            </div>
             <!-- ????? -->
             <div class="share_post_part">
                 <div class="spp_line_part"></div>
@@ -85,8 +94,6 @@
         <!-- ????/ -->
         <?php } ?>
     </div>
-    <!-- </div>
-</div> -->
     <!-- end content container -->
 </div>
 
@@ -138,8 +145,8 @@
                     <div class="it_content_part">
                         <blockquote class="uk-text-left ocm-tstuff">
                             <?php echo $review; ?>
-                            <div style="clear:both;">
-                            </div>
+                            <!-- <div style="clear:both;">
+                            </div> -->
                         </blockquote>
                         <a class="details_link" href="<?php get_the_permalink() ?>">
                             <?php _e('DETAILS'); ?>

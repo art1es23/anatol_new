@@ -14,7 +14,9 @@
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  font-size: max(1.1vw, 16px);
+  font-size: max(1vw, 16px);
+
+  font-family: "Montserrat", sans-serif;
 }
 .more_finance h2 {
   font-family: var(--base-font-family), sans-serif;
@@ -43,8 +45,10 @@
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  font-size: max(1.1vw, 16px);
+  font-size: max(0.9vw, 14px);
   text-align: justify;
+
+  font-family: "Montserrat", sans-serif;
 }
 .item_finance_info {
   padding-left: 2.5rem;
@@ -56,21 +60,27 @@
 
 .item_finance_info::before {
   display: flex;
-  width: 27px;
-  height: 27px;
+  width: 25px;
+  height: 25px;
   justify-content: center;
   align-content: center;
   align-items: center;
-  background: rgba(240, 203, 203, 0.29);
-  font-family: "anatol";
+  background-color: rgba(240, 203, 203, 0.29);
+  /* font-family: "anatol";
   font-size: 11px;
   font-weight: bold;
   color: #ab1a1f;
-  content: "\E830";
-  border-radius: 100px;
+  content: "\E830"; */
+  content: "";
+  border-radius: 50%;
   position: absolute;
   left: 0;
-  top: -5px;
+  top: 0;
+  /* top: -5px; */
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-image: url(/wp-content/themes/anatol/images/svg-icons/icon-check.svg);
 }
 .item_finance_info h3 {
   font-weight: bold;

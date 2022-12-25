@@ -6,22 +6,25 @@
         </div>
     </button>
 
-    <h2 class="form-title"><?php _e('Get a Quote', 'anatol'); ?></h2>
+    <h3 class="form-title"><?php _e('Get a Quote', 'anatol'); ?></h3>
     <!-- <div id="contact_form_pop" class="form_pop"> -->
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-    <form id="__vtigerWebForm" name="Get A Quote - VOLT XL" action="" method="post" accept-charset="utf-8"
-        enctype="multipart/form-data" class="form-inner get_quote get_forms">
-        <input type="hidden" name="__vtrftk" value="sid:117320670c26be7435a870e1421555aa92ad29f6,1614093617">
-        <input type="hidden" name="publicid" value="0aee4eda12acdaf163860fd64d6841da">
-        <input type="hidden" name="urlencodeenable" value="1"><input type="hidden" name="name"
-            value="Get a quote on the equipment page">
+    <form id="__vtigerWebForm" name="test22" action="https://vtiger.anatol.com/modules/Webforms/capture.php"
+        method="post" accept-charset="utf-8" enctype="multipart/form-data" class="form-inner get_quote-inner get_forms">
+        <input type="hidden" name="__vtrftk" value="sid:cfcf65f1926a6df50ed1401eca763aafb89927a0,1671121676">
+        <input type="hidden" name="publicid" value="6f0803a37f9c21e30c0ff14d6821356f">
+        <input type="hidden" name="urlencodeenable" value="1">
+        <input type="hidden" name="name" value="test22">
         <input type="text" name="leadsource" value="Web Site" style="display:none;">
+        <input type="text" name="cf_1131" value="Get a Quote from TEST22" style="display:none;">
 
-        <?php if (is_page( 'where-to-buy' ) ) : ?>
+
+        <!-- <?php if (is_page( 'where-to-buy' ) ) : ?>
         <input type="text" name="cf_979" value="Get a Quote on Where to buy" style="display:none;">
         <?php else : ?>
         <input type="text" name="cf_979" value="Get a Quote on Equipment Page" style="display:none;">
-        <?php endif; ?>
+        <?php endif; ?> -->
 
         <div class="form-inner__item">
             <div class="form-inner__item--half">
@@ -56,7 +59,7 @@
         <div class="form-inner__item">
             <div class="form-inner__item--full">
                 <label><?php _e('select country', 'anatol'); ?></label>
-                <select name="cf_1085" onchange="yesnoCheck(this);" required>
+                <select name="cf_1135" onchange="yesnoCheck(this);" required>
                     <option class="choose_elements" value="" selected="selected">
                         <?php _e('Select country', 'anatol'); ?>*</option>
                     <option class="elements" value="United States">United States</option>
@@ -321,7 +324,7 @@
         <div id="ifYes" class="form-inner__item" style="display: none;">
             <div class="form-inner__item--full">
                 <label for="state_required">State/Region<span class="form-required">*</span></label>
-                <select id="state_required" class="invalid error" name="cf_1093">
+                <select id="state_required" class="invalid error" name="cf_1137">
                     <option class="choose_elements" value="" disabled="" selected="">Please Select State/Region*
                     </option>
                     <option class="usa_state elements" value="Alabama">Alabama</option>
@@ -423,10 +426,10 @@
             </div>
         </div>
 
-        <!-- <div class="form-inner__item text-center"> -->
         <input id="my_form_send" type="submit" name="submit_web_form" value="<?php _e('Get a Quote', 'anatol'); ?>"
             class="button red-button draw-red">
-        <!-- </div> -->
+
+        <p class="status">Your message was successfully sending!</p>
+
     </form>
-    <!-- </div> -->
 </div>

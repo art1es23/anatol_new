@@ -2,7 +2,10 @@
 .another-equipment {
   width: 100%;
   overflow: hidden;
-  background-image: url(../wp-content/themes/anatol/images/fon6.jpg);
+  background-image: image-set(
+    url(/wp-content/themes/anatol/images/fon6.webp) type("image/webp"),
+    url(/wp-content/themes/anatol/images/fon6.jpg)
+  );
   background-position: center;
   background-attachment: fixed;
   background-size: cover !important;
@@ -51,6 +54,7 @@
   text-align: center;
   white-space: normal;
   will-change: transform;
+  font-family: "Montserrat", sans-serif;
 }
 
 .list-equipment__item:hover .list-equipment__title,
@@ -92,7 +96,7 @@
   transition: all var(--base-transition);
   color: var(--base-color);
   text-align: center;
-  font-size: 0.838vw;
+  font-size: 0.75vw;
 }
 
 .list-equipment__info {
@@ -188,6 +192,8 @@
 
 .list-equipment__item:hover .link_to_item {
   opacity: 1;
+  background-color: #ab1a1f;
+  color: #fff;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   transition-delay: 0.5s;
@@ -199,7 +205,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1080px) {
   *,
   *::before,
   *::after {
@@ -230,8 +236,8 @@
   }
 
   .list-equipment__item--front {
-    gap: 1.25rem;
-    pad: 0.5rem 0;
+    /* gap: 1.25rem; */
+    padding: 0.5rem 0;
   }
 
   .list-equipment__item,

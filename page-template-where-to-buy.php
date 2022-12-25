@@ -9,6 +9,7 @@ get_header(); ?>
 
 <style>
 <?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
 include 'css/components/template-benefits.css';
 include 'css/components/financing-options.css';
 include 'css/page-templates/page-where-to-buy/sales.css';
@@ -74,6 +75,5 @@ include 'css/page-templates/page-where-to-buy/sales.css';
     </div>
 
 </div>
-<?php get_template_part('templates/forms/join-us-forms'); ?>
 
 <?php get_footer(); ?>

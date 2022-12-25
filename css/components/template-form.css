@@ -1,6 +1,9 @@
 /* Default form styles */
 label {
+  font-size: max(0.8vw, 14px);
   display: none;
+
+  font-family: "Montserrat", sans-serif;
 }
 
 input,
@@ -9,12 +12,12 @@ select {
   --horizontall-side-padding: 0.5vw;
   --vertical-side-padding: 1vh;
   --input-font-size: max(0.75vw, 14px);
-  --input-base-color: #777;
   --input-background-color: #fff;
+  --input-base-color: #999;
   --input-border: 1px solid var(--input-base-color);
 
   width: 100%;
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   outline: none;
   color: var(--input-base-color);
@@ -33,8 +36,8 @@ textarea {
 ::placeholder {
   --placeholder-base-color: #777;
   color: var(--placeholder-base-color);
+  font-family: "Montserrat", sans-serif;
 }
-
 textarea {
   resize: none;
 }
@@ -42,6 +45,10 @@ textarea {
 input[type="submit"] {
   --button-width: 80%;
   border: none;
+}
+
+input[type="submit"].button--full {
+  --button-width: 100%;
 }
 
 /* Form wrapper */
@@ -57,6 +64,7 @@ input[type="submit"] {
   z-index: 9999;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .form--wrapper.hidden {
@@ -65,10 +73,12 @@ input[type="submit"] {
 
 /* Form */
 .form {
-  --form-padding: 2vw;
+  --form-padding: 3.5vh 2.5vw;
   --form-background-color: #fff;
-  --form-min-width: 37.5vw;
-  --form-inner-gap: 1.75vh;
+  --form-min-width: 40vw;
+  --form-max-width: 100%;
+  --form-inner-gap: 2.5vh;
+  --form-inner-width: 35%;
 
   display: flex;
   background-color: var(--form-background-color);
@@ -78,9 +88,11 @@ input[type="submit"] {
   gap: 2.5vh;
   position: relative;
   min-width: var(--form-min-width);
-  max-width: 100%;
+  max-width: var(--form-max-width);
   margin: 0 auto;
   padding: var(--form-padding);
+  width: var(--form-inner-width);
+  overflow-y: auto;
   /* display: none; */
 }
 
@@ -136,6 +148,18 @@ input[type="submit"] {
   /* max-width: 80%; */
 }
 
+/* Form description */
+
+.form-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1vh;
+  font-size: max(0.8vw, 14px);
+  font-family: "Montserrat", sans-serif;
+}
 /* Form inner */
 .form-inner {
   display: flex;
@@ -152,27 +176,150 @@ input[type="submit"] {
   gap: var(--form-inner-gap);
   align-items: center;
   width: 100%;
+  position: relative;
+}
+
+.form-inner__item--half,
+.form-inner__item--full {
+  gap: calc(var(--form-inner-gap) / 2) var(--form-inner-gap);
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .form-inner__item--half {
-  display: flex;
-  flex-direction: column;
   width: calc((100% - 1.25vw) / 2);
-  justify-content: space-between;
-  gap: var(--form-inner-gap);
 }
 
 .form-inner__item--full {
   width: 100%;
+}
+
+/* Warranty form */
+
+.log_warranty {
+  --form-max-width: 40%;
   display: flex;
-  justify-content: space-between;
-  align-content: center;
+  flex-direction: column;
+}
+
+.log_warranty__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: max(0.9vw, 16px);
+  font-weight: 600;
+}
+
+.btn_wrap_checks {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--main-color);
+  max-width: 50%;
+  width: 25%;
+  cursor: pointer;
+  border: none;
+}
+
+.btn_wrap_checks::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 1px;
+  height: 60%;
+}
+
+.btn_wrap_checks__item {
+  flex-grow: 1;
+  padding: 0.75rem 0.5rem;
+  min-width: 50%;
+  color: #fff;
+}
+
+.check_wrap {
+  --input-background-color: #fff;
+  --input-base-color: #777;
+  --input-border: 1px solid var(--input-base-color);
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  color: #000;
+  gap: min(5vw, 30%);
+  padding: 0.75vh;
+  border: var(--input-border);
+  background-color: var(--input-background-color);
+}
+
+.check_wrap label {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+}
+.check_wrap input[type="checkbox"] {
+  width: auto;
+}
+
+/* Login form */
+
+.xoo-el-form-container ul.xoo-el-tabs li.xoo-el-active,
+.xoo-el-form-container button.btn.button.xoo-el-action-btn,
+.xoo-el-form-container ul.xoo-el-tabs li:hover {
+  background-color: #c12126;
+  color: #ffffff;
+}
+
+.xoo-el-sidebar {
+  background-image: url(https://anatol.com/wp-content/uploads/2021/10/Screenshot_4.png);
+}
+
+/* Status message after submiting form */
+
+.status {
+  display: flex;
+  flex-direction: column;
+  font-size: max(1.25vw, 22px);
+  background-color: var(--base-color);
+  color: #000;
+  min-width: 70%;
+  min-height: 5vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transform: translate(-100%, 0);
+  width: 35%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.75s ease-in;
+  align-self: center;
+  text-align: center;
+}
+
+.status.visible {
+  transform: translate(0%, 0);
+  width: 85%;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.75s ease-in;
 }
 
 @media screen and (max-width: 1080px) {
   .form {
-    --form-min-width: 60vw;
+    --form-min-width: 75vw;
     --form-inner-gap: 2.5vh;
+    --form-padding: 5vh 3.5vw;
   }
 
   /* .form-inner,
@@ -191,9 +338,8 @@ input[type="submit"] {
 
 @media screen and (max-width: 650px) {
   .form {
-    --form-min-width: 80%;
+    --form-min-width: 100%;
     --form-padding: 7.5vw;
-    /* --form-inner-gap:  */
     height: 100%;
     justify-content: center;
   }
@@ -227,6 +373,13 @@ input[type="submit"] {
   .form-inner,
   .form-inner__item,
   .form-inner__item--half {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .warranty-form {
+    padding-top: 30vh;
     width: 100%;
   }
 }

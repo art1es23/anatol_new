@@ -8,14 +8,15 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/page-templates/page-calculator/calculator.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
 include 'css/components/get-in-touch.css';
+include 'css/page-templates/page-calculator/calculator.css';
 ?>
 </style>
 
 <?php get_template_part('template-parts/template-part-head-bg-black'); ?>
-<div class="container">
-</div>
+
 <div class="container">
     <?php get_template_part('template-parts/calculator'); ?>
 </div>

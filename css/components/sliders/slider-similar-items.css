@@ -1,0 +1,111 @@
+/* Similar Ebooks */
+
+.similar-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.similar-items--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  gap: 5vh;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.similar-items .ebook-post__btn {
+  --ebook-post-excerpt-font-size: max(0.8vw, 12px);
+}
+
+.similar-items-pagination {
+  position: relative;
+  bottom: 0;
+}
+
+.ebook-post__img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ebook-post__img img {
+  width: 80%;
+}
+
+.similar-items .ebook-post__excerpt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-clamp: 5;
+  box-orient: vertical;
+}
+
+.ebook-post__description {
+  z-index: 2;
+  background-color: #fff;
+  position: relative;
+  padding: 1.5vh 1.5vw;
+  width: 60%;
+  gap: 1.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 1366px) {
+  .similar-items--wrapper {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .swiper .ebook-post__description {
+    padding: 2.5vh 3vw;
+    gap: 2.5vh;
+  }
+
+  .similar-items .ebook-post__title {
+    --ebook-post-title-font-size: max(1vw, 13px);
+  }
+  .similar-items .ebook-post__excerpt,
+  .similar-items .ebook-post__btn {
+    --ebook-post-excerpt-font-size: max(1vw, 12px);
+
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+  .swiper .ebook-post__img {
+    display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .similar-items .ebook-post__title {
+    --ebook-post-title-font-size: max(2.25vw, 16px);
+  }
+  .similar-items .ebook-post__excerpt,
+  .similar-items .ebook-post__btn {
+    --ebook-post-excerpt-font-size: max(2vw, 14px);
+  }
+  .swiper .ebook-post__img {
+    display: flex;
+  }
+}
+@media screen and (max-width: 550px) {
+  .similar-items .ebook-post__title {
+    --ebook-post-title-font-size: max(3.8vw, 14px);
+  }
+  .similar-items .ebook-post__excerpt,
+  .similar-items .ebook-post__btn {
+    --ebook-post-excerpt-font-size: max(3.6vw, 14px);
+  }
+}

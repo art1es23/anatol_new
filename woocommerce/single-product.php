@@ -32,20 +32,16 @@ include 'css/page-templates/store/page-woo-item.css';
 ?>
 </style>
 
-<!-- <div class="single_equipment"> -->
 <?php while ( have_posts() ) : the_post(); ?>
 <section class="equipment_info">
-    <!-- asljdoajslkdjalksdkl -->
-    <div class="container">
-        <div class="flex_half">
-            <?php wc_get_template_part( 'content', 'single-product' ); ?>
-        </div>
-    </div>
+    <?php wc_get_template_part( 'content', 'single-product' ); ?>
 </section>
 <?php endwhile; ?>
 
 <?PHP wc_get_template_part( '/single-product/up-sells'); ?>
-<!-- </div> -->
+
+
+
 
 <!-- Slider Init -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>

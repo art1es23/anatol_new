@@ -4,7 +4,8 @@
 get_header();?>
 
 <style>
-<?php include 'css/page-templates/page-equipments/equipments.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-equipments/equipments.css';
 include 'css/components/contact-support.css';
 ?>
 </style>
@@ -46,10 +47,7 @@ include 'css/components/contact-support.css';
         </div>
         <!--<a href="<?php echo esc_url( home_url( '/' ) ); ?><?php echo $url; ?>"></a>-->
     </div>
-    <?php 
-					}							
-			}
-			?>
+    <?php  }} ?>
 </div>
 
 <section class="support-section fix-bg" id="">

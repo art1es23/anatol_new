@@ -27,11 +27,13 @@
   box-shadow: 0 5px 5px rgba(106, 106, 106, 0.1);
 }
 
-.similar_ebooks_slider .ebook-post__img,
 .ebook-post__img {
   overflow: hidden;
   display: flex;
   max-width: 40%;
+  justify-content: center;
+  align-self: center;
+  height: 100%;
 }
 .ebook-post__description {
   z-index: 2;
@@ -40,10 +42,11 @@
   padding: 1.5vw;
   width: 60%;
   gap: 1.5vw;
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-grow: 1;
 }
 
 .ebook-post__img img {
@@ -52,10 +55,6 @@
 }
 
 .ebook-post__btn {
-  display: flex;
-  font-size: max(0.85vw, 14px);
-  color: #353535;
-  position: relative;
   margin-left: auto;
 }
 
@@ -73,8 +72,9 @@
   width: 100%;
 }
 .ebook-post__title {
+  --ebook-post-title-font-size: max(1vw, 15px);
   color: #353535;
-  font-size: max(1.25vw, 16px);
+  font-size: var(--ebook-post-title-font-size);
   /* line-height: 1.4vw; */
   font-family: "Lato", sans-serif;
   font-weight: bold;
@@ -90,8 +90,10 @@
   color: #ab1a1f;
 }
 .ebook-post__excerpt {
-  font-size: max(0.9vw, 14px);
-  /* line-height: 1.2vw; */
+  --ebook-post-excerpt-font-size: max(0.75vw, 12px);
+  font-size: var(--ebook-post-excerpt-font-size);
+
+  font-family: "Montserrat", sans-serif;
   text-align: justify;
 }
 
@@ -221,12 +223,14 @@
   }
 
   .ebook-post__title {
-    font-size: max(2.25vw, 16px);
+    --ebook-post-title-font-size: max(2.25vw, 16px);
     text-align: justify;
   }
   .ebook-post__excerpt,
   .ebook-post__btn {
-    font-size: max(2vw, 14px);
+    --ebook-post-excerpt-font-size: max(2vw, 14px);
+
+    font-size: var(--ebook-post-excerpt-font-size);
   }
 }
 
@@ -253,12 +257,12 @@
   }
 
   .ebook-post__title {
-    font-size: max(3.8vw, 14px);
+    --ebook-post-title-font-size: max(3.8vw, 14px);
     text-align: left;
   }
   .ebook-post__excerpt,
   .ebook-post__btn {
-    font-size: max(3.6vw, 14px);
+    --ebook-post-excerpt-font-size: max(3.6vw, 14px);
   }
   .ebook-post__excerpt {
     display: none;
@@ -269,6 +273,7 @@
 
   .ebook-post__img {
     max-width: 100%;
+    width: 100%;
   }
   .ebook-post__img img {
     object-fit: cover;

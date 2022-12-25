@@ -4,7 +4,8 @@
 	get_header(); ?>
 
 <style>
-<?php include 'css/woocommerce.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/woocommerce.css';
 include 'css/page-templates/store/cart.css';
 ?>
 </style>

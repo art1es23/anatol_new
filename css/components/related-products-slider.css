@@ -2,6 +2,7 @@
 
 .related-products--wrapper {
   margin: max(7.5vh, 2.5rem) auto;
+  width: 100%;
 }
 
 /* .uppsells_products .section_title, */
@@ -63,18 +64,6 @@
 .table__specifications-vulcan {
   margin-top: 80px;
 }
-.register_warranty_wrap {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  padding: 20px 30px 30px 30px;
-  font-size: 14px;
-  z-index: 99999;
-  border-radius: 2px;
-  display: none;
-}
 
 .related-products-list {
   align-items: center;
@@ -93,3 +82,9 @@
 }
 
 /* END RELATED SECTION */
+
+@media screen and (max-width: 1080px) {
+  .related-products--wrapper {
+    --container-width: 90%;
+  }
+}

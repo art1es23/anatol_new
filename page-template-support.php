@@ -5,7 +5,8 @@ get_template_part('template-parts/template-part-head-big');
  ?>
 
 <style>
-<?php include 'css/components/template-form.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
 include 'css/components/support-section.css';
 include 'css/components/get-in-touch.css';
 include 'css/page-templates/page-support/support.css';
@@ -95,7 +96,8 @@ include 'css/page-templates/page-support/support.css';
                 ?>
 
                 <a id="<?php echo $button_class_click ?>" href="#"
-                    class="stp_button button transparent_button track-button" data-category="Buttons"
+                    class="stp_button button transparent_button track-button"
+                    data-logined="<?php echo is_user_logged_in()?>" data-category="Buttons"
                     data-label="Warranty Registration - Support page">
                     <?PHP echo $button_text; ?>
                 </a>
@@ -221,21 +223,21 @@ include 'css/page-templates/page-support/support.css';
 <section class="request_service_form" id="request_service_form">
     <div class="request_service_form--wrapper container">
         <?php
-				$support_form_title= get_field('support_form_title');	
-				if (!empty($support_form_title ))  { ?>
+            $support_form_title= get_field('support_form_title');	
+            if (!empty($support_form_title ))  { ?>
         <div class="section_title"><?php echo $support_form_title; ?></div>
         <?php }	?>
 
         <div class="service_form_description">
             <?php
-					$support_form_description_title= get_field('support_form_description_title');	
-					if (!empty($support_form_description_title ))  { ?>
+                $support_form_description_title= get_field('support_form_description_title');	
+                if (!empty($support_form_description_title ))  { ?>
             <div class="form_description_strong"><?php echo $support_form_description_title; ?></div>
             <?php }	?>
 
             <?php
-					$support_form_description= get_field('support_form_description');	
-					if (!empty($support_form_description ))  { ?>
+                $support_form_description= get_field('support_form_description');	
+                if (!empty($support_form_description ))  { ?>
             <div class="form_description"><?php echo $support_form_description; ?></div>
             <?php }	?>
         </div>
@@ -618,7 +620,7 @@ include 'css/page-templates/page-support/support.css';
                 </div>
                 <!-- <div class="form-inner__item text-center"> -->
                 <input type="submit" name="submit_web_form" value="<?php _e('Send Request', 'anatol'); ?>"
-                    class="button">
+                    class="button button--full">
                 <!-- </div> -->
             </form>
         </div>
@@ -630,19 +632,17 @@ function yesnoCheckSer(that) {
     if (that.value == "United States") {
         document.getElementById("ifYesSer").style.display = "block";
         document.getElementById("state_required").setAttribute("required", "");
-        $('.usa_state').show();
+        document.querySelectorAll('.usa_state').forEach(item => item.style.display = 'block')
+        document.querySelectorAll('.canadian_province').forEach(item => item.style.display = 'none')
     } else if (that.value == "Canada") {
         document.getElementById("ifYesSer").style.display = "block";
-        $('.canadian_province').show();
-        $('.usa_state').hide();
+        document.querySelectorAll('.usa_state').forEach(item => item.style.display = 'none');
+        document.querySelectorAll('.canadian_province').forEach(item => item.style.display = 'block');
     } else {
         document.getElementById("ifYesSer").style.display = "none";
     }
 }
 </script>
-
-
-<?php include 'templates/forms/register-warranty.php' ; ?>
 
 <!-- Slider Init -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>

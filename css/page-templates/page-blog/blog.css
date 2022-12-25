@@ -47,15 +47,19 @@
 }
 
 .blog-post__title {
-  font-family: var(--base-font-family), sans-serif;
+  /* font-family: var(--base-font-family), sans-serif; */
   font-weight: 700;
-  font-size: 1.1vw;
+  font-size: max(1vw, 15px);
   color: #363636;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
 }
 
 .blog-post__description p {
-  font-size: 0.8vw;
+  font-size: max(0.75vw, 14px);
   text-align: justify;
+
+  font-family: "Montserrat", sans-serif;
 }
 
 .read_more_content {
@@ -144,13 +148,13 @@ nav.woocommerce-pagination {
 }
 
 @media screen and (max-width: 1366px) {
-  .blog-post__title {
+  /* .blog-post__title {
     font-size: 1.25vw;
     text-align: justify;
-  }
-  .blog-post__description p {
+  } */
+  /* .blog-post__description p {
     font-size: 1vw;
-  }
+  } */
 }
 @media screen and (max-width: 1080px) {
   .blog-list {
@@ -166,11 +170,11 @@ nav.woocommerce-pagination {
   }
 
   .blog-post__title {
-    font-size: 2vw;
+    font-size: max(1.65vw, 17px);
   }
-  .blog-post__description p {
+  /* .blog-post__description p {
     font-size: 1.35vw;
-  }
+  } */
 }
 @media screen and (max-width: 900px) {
   .blog-list {
@@ -184,12 +188,12 @@ nav.woocommerce-pagination {
     gap: 3vw;
   }
 
-  .blog-post__title {
+  /* .blog-post__title {
     font-size: 2.15vw;
-  }
-  .blog-post__description p {
+  } */
+  /* .blog-post__description p {
     font-size: 1.65vw;
-  }
+  } */
 }
 @media screen and (max-width: 700px) {
   .blog-list {
@@ -206,11 +210,11 @@ nav.woocommerce-pagination {
   }
 
   .blog-post__title {
-    font-size: 3.1vw;
+    font-size: max(3.25vw, 17px);
   }
-  .blog-post__description p {
+  /* .blog-post__description p {
     font-size: 2.25vw;
-  }
+  } */
 }
 @media screen and (max-width: 500px) {
   .blog-list {
@@ -224,10 +228,17 @@ nav.woocommerce-pagination {
     gap: 5vw;
   }
 
-  .blog-post__title {
+  .read_more_content {
+    --button-vertical-side-padding: 1rem;
+    --button-font-size: max(0.7vw, 12px);
+
+    align-self: initial;
+  }
+
+  /* .blog-post__title {
     font-size: 3.75vw;
-  }
-  .blog-post__description p {
+  } */
+  /* .blog-post__description p {
     font-size: 2.75vw;
-  }
+  } */
 }

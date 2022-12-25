@@ -1,0 +1,249 @@
+.vacancy-single {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.vacancy-single--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7.5vh;
+  align-content: center;
+}
+
+.vacancy-single__item {
+  box-shadow: 0px 4px 44.28px 9.72px rgb(106 106 106 / 10%);
+  padding: 2.5vw;
+}
+
+.vacancy-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: justify;
+  font-size: max(0.8vw, 16px);
+}
+
+/* .vacancy-form {
+    display: flex;
+} */
+
+.vacancy-info blockquote {
+  font-style: italic;
+  color: #353535;
+  position: relative;
+  display: flex;
+  border-left: 5px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.vacancy-info h2 {
+  font-size: max(1.4vw, 22px);
+  font-weight: 600;
+}
+
+.vacancy-info ul,
+.form-inner__item ul {
+  display: flex;
+  flex-direction: column;
+  list-style: initial;
+  padding-left: 2.5rem;
+  gap: 0.35vh;
+  text-align: justify;
+}
+
+/* Contact Form 7 */
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75vh;
+  align-content: center;
+}
+
+.vacancy_form_title {
+  font-size: max(0.9vw, 16px);
+  color: var(--main-color);
+  font-weight: 600;
+  text-align: center;
+}
+
+.form_block_one {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25vh;
+}
+
+.form_block_one .row {
+  display: flex;
+  gap: 1.5vw;
+  justify-content: space-between;
+}
+
+.form_block_one label {
+  display: inline-block;
+}
+.form_block_one input,
+.form_block_one textarea {
+  --input-base-color: #dcdcdc;
+  width: 100%;
+  flex-grow: 1;
+  /* box-shadow: 0 0 1px 0 #dcdcdc; */
+}
+
+.form_block_one .row > div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+}
+
+/* Agree btn */
+.agree-checkbox {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0 2.5rem;
+  cursor: pointer;
+}
+
+.vf_iagree input {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.agree-checkbox:before {
+  z-index: 99;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+  transition: border 0.3s ease-in;
+}
+.vf_iagree input:checked + .agree-checkbox::before {
+  background: url(/wp-content/themes/anatol/images/img/compare_sprite.png)
+    no-repeat -40px 0;
+  border: none;
+}
+
+.vf_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.form-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form-buttons-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  /* position: relative; */
+  z-index: 2;
+  background-color: #fff;
+  padding: 0 1.5vw;
+}
+
+.form-buttons::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, -50%);
+  background-color: #dcdcdc;
+  width: 100%;
+  height: 1px;
+  z-index: 1;
+}
+.uploadcv_button,
+.button-submit {
+  display: flex;
+  gap: 0.25vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.uploadcv_button,
+.button-submit {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  min-width: 10rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1;
+  font-size: max(0.75vw, 12px);
+  min-height: 3.75vh;
+  transition: all 0.3s ease-in;
+}
+
+.uploadcv_button {
+  color: var(--main-color);
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+}
+
+.uploadcv_button:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.button-submit {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.wpcf7-submit {
+  width: 100%;
+}
+
+.uploadcv_button > .wpcf7-form-control-wrap {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.uploadcv_button span.name span::before {
+  display: inline-block;
+  content: "\E844";
+  font-family: "anatol";
+  font-size: max(0.75vw, 12px);
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .vacancy-single__item {
+    padding: 1.25rem;
+  }
+  .vacancy-info ul,
+  .form-inner__item ul {
+    padding-left: 1.25rem;
+  }
+  .form-buttons-inner {
+    gap: 5vw;
+  }
+}

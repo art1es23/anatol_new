@@ -23,7 +23,7 @@ include 'css/page-templates/page-ebooks/ebooks.css';
                 <div class="ebook-post__excerpt"><?php the_field( "short_description" );?></div>
                 <?php }	?>
 
-                <a class="ebook-post__btn" href="<?php the_permalink(); ?>">Learn More</a>
+                <a class="ebook-post__btn button" href="<?php the_permalink(); ?>">Learn More</a>
             </div>
         </div>
         <?php endwhile; ?>

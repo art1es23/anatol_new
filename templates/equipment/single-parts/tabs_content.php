@@ -224,7 +224,8 @@
 
                                     <a id="register_warranty_onclick" href="#"
                                         class="stp_button button transporent_button track-button"
-                                        data-category="Buttons" data-label="Warranty Registration - Support page">
+                                        data-category="Buttons" data-logined="<?php echo is_user_logged_in()?>"
+                                        data-label="Warranty Registration - Support page">
                                         <!-- <span> -->
                                         <?php _e('Register Now', 'anatol'); ?>
                                         <!-- </span> -->

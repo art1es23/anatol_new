@@ -1,28 +1,59 @@
 <?php get_header(); ?>
+
+<style>
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/sliders/slider-similar-items.css';
+
+include 'css/components/another-equipments.css';
+include 'css/page-templates/single-pages/page-anatoltv/page-anatoltv-single.css';
+?>
+</style>
+
 <?php get_template_part('template-parts/template-part-head-press'); ?>
 
-<div class="single_ebook_container">
-    <div class="container container_anatol-tv ">
+<section class="anatol-tv-single">
+    <div class="anatol-tv-single--wrapper container">
         <!-- start content container -->
-        <div class="single_ebook_content">
-            <div class="single_ebook_img ebook_hulf">
+        <div class="anatol-tv-single-post single-post">
+            <div class="single-post__item single-post-img">
                 <?php 
 						if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-
-                <iframe title="INFINITY All-Servo Oval Automatic Screen Printing Press" width="640" height="360"
+                <?php 
+                        $vimeo_url = get_field('vimeo_url'); 
+                        $video_youtube_id = get_field('video_id_from_youtube');
+                        ?>
+                <!-- <iframe title="INFINITY All-Servo Oval Automatic Screen Printing Press" width="640" height="360"
                     src="<?php echo get_field('vimeo_url');?>" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen=""></iframe>
+                    allowfullscreen=""></iframe> -->
 
+                <div class="video">
+                    <a href="https://www.youtube.com/embed/<?php echo $video_youtube_id;?>" class="video__link">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="https://i.ytimg.com/vi_webp/<?php echo $video_youtube_id;?>/hqdefault.webp">
+                            <img width="1280" height="720" loading="lazy" class="lozad video__media"
+                                src="https://i.ytimg.com/vi/<?php echo $video_youtube_id;?>/hqdefault.jpg">
+                        </picture>
+                    </a>
+                    <button class="video__button" aria-label="Play video">
+                        <svg height="48" version="1.1" viewBox="0 0 68 48" width="68">
+                            <path class="video__button-shape"
+                                d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                            </path>
+                            <path d="M 45,24 27,14 27,34" class="video__button-icon"></path>
+                        </svg>
+                    </button>
+                </div>
 
 
             </div>
-            <div class="single_ebook_cont ebook_hulf">
-                <h1 class="page-header"><?php the_title(); ?></h1>
+            <div class="single-post__item single-post-info">
+                <h1 class="single-post-info__title section_title"><?php the_title(); ?></h1>
                 <?php the_content(); ?>
                 <?php if( get_field( "ebook_pages" )) {?>
-                <div class="ebook_info">
+                <div class="single-post-info__description">
                     <div class="ebook_inf"><span>Format:</span><?php the_field( "ebook_format" );?></div>
                     <div class="ebook_inf"><span>Pages:</span><?php the_field( "ebook_pages" );?></div>
                 </div>
@@ -53,36 +84,41 @@
         );
         $related_items = new WP_Query( $args );
         if ( $related_items->have_posts() ) : ?>
-        <div class="similar_ebooks">
-            <div class="section_title">Other Anatol TV video</div>
-            <div class="similar_video_slider sldots">
-                <?php while ( $related_items->have_posts() ) : $related_items->the_post(); ?>
-                <div class="similar_ebook_item">
-                    <div class="ebook_item">
-                        <div class="ebook_img"><a
-                                href="<?php the_permalink(); ?>"><?php the_post_thumbnail('ebook_img'); ?></a></div>
-                        <div class="ebook_desc">
-                            <div class="ebook_descr_top">
-                                <div class="ebook_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                </div>
-                                <?php if( get_field( "short_description" )) {?>
-                                <div class="ebook_excerpt"><?php the_field( "short_description" );?></div>
-                                <?php }	?>
-                            </div>
-                            <div class="ebook_learn_more"><a href="<?php the_permalink(); ?>">Learn More</a></div>
+        <div class="swiper similar-items">
+            <div class="swiper similar-items--wrapper container">
+
+                <h3 class="section_title">Other Anatol TV video</h3>
+                <div class="similar-items-list swiper-wrapper">
+
+                    <?php while ( $related_items->have_posts() ) : $related_items->the_post(); ?>
+
+                    <div class="swiper-slide similar-items-list__item ebook-post">
+                        <a class="ebook-post__img"
+                            href="<?php the_permalink(); ?>"><?php the_post_thumbnail('ebook_img'); ?></a>
+                        <div class="ebook-post__description">
+                            <a class="single-post-info__title"
+                                href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <?php if( get_field( "short_description" )) {?>
+                            <div class="ebook-post__excerpt"><?php the_field( "short_description" );?></div>
+                            <?php }	?>
+                            <a class="button ebook_learn_more" href="<?php the_permalink(); ?>">Learn More</a>
                         </div>
                     </div>
+                    <?php endwhile; ?>
                 </div>
-                <?php endwhile; ?>
-                </ul>
+                <div class="swiper-pagination similar-items-pagination"></div>
+
             </div>
             <?php endif;
         wp_reset_postdata();
         ?>
         </div>
     </div>
-</div>
+    </div>
+</section>
+
 <?php get_template_part('templates/equipment/another-equipments'); ?>
+
 <div class="download_ebook_b innerr">
     <a class="close_pop" style="float: right;"><img loading="lazy" class="lozad"
             src="<?php bloginfo('template_directory'); ?>/images/close.svg" style="width: 20px" alt=""></a>
@@ -94,5 +130,10 @@
 
 <!-- INIT YOUTUBE VIDEOS -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>
+
+<!-- Slider Init -->
+<script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
+<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script>
+
 
 <?php get_footer(); ?>

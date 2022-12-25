@@ -1,4 +1,12 @@
 /* PAGE TEMPLATE */
+
+.page--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  align-items: center;
+}
 .page-content {
   width: 100%;
 }

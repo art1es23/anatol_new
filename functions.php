@@ -104,6 +104,8 @@ function theme_stylesheets() {
 
 	if ( is_shop() ||  is_product() || is_product_category()  || is_page('cart') ) { 
 		wp_enqueue_style( 'another-equipment-css', get_template_directory_uri() . '/css/components/another-equipments.css' );
+		wp_enqueue_style( 'hero-section-css', get_template_directory_uri() . '/css/components/hero-templates/hero-template.css' );
+
 		// wp_enqueue_style( 'product-css', get_template_directory_uri() . '/css/components/equipments-list.css' );
 		wp_enqueue_style( 'woo-css', get_template_directory_uri() . '/css/page-templates/store/woo.css' );
 		wp_enqueue_style( 'woo-product-css', get_template_directory_uri() . '/css/page-templates/store/page-woo-item.css' );
@@ -113,10 +115,10 @@ function theme_stylesheets() {
 		
 
 		// wp_enqueue_style( 'woocommerce-css', get_template_directory_uri() . '/css/woocommerce.css' );
-		//wp_enqueue_style('select2.min.css','/wp-content/plugins/beautiful-taxonomy-filters/public/css/select2.min.css', '', '1.0', 'all');
 		///////// wp_enqueue_style('style.min.css','/wp-content/plugins/prdctfltr/lib/css/style.min.css', '', '6.5.8', 'all');
 	}
 	if ( is_archive('vacancies')) {
+		wp_enqueue_style('select2.min.css','/wp-content/plugins/beautiful-taxonomy-filters/public/css/select2.min.css', '', '1.0', 'all');
 		wp_enqueue_style( 'vacancies-css', get_template_directory_uri() . '/css/components/vacancies.css' );
 	}
 
@@ -257,8 +259,8 @@ function theme_js()
 	// wp_enqueue_script('swiper-js', get_template_directory_uri().'/js/libs/swiper/swiper-bundle.min.js', false, null, 'footer');
 	// wp_enqueue_script('sliders-js', get_template_directory_uri().'/js/sliders-swiper.js', array('swiper-js'), null, 'footer');
 	wp_enqueue_script('popup-js', get_template_directory_uri().'/js/openModal.js', false, null, 'footer');
-	wp_enqueue_script('submit-form-js', get_template_directory_uri().'/js/submitForm.js', false, null, 'footer');
 	wp_enqueue_script('main-js', get_template_directory_uri().'/js/main.js', false, null, 'footer');
+	wp_enqueue_script('submit-form-js', get_template_directory_uri().'/js/submitForm.js', array('main-js'), 'footer');
 
 	if (is_page(1228)) {
 		wp_enqueue_script('chosen.js', get_template_directory_uri().'/js/modules/chosen.jquery.min.js', '', '', true);
@@ -594,7 +596,7 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size(300,300, true);
 
 // add_image_size( 'blog_thumb', 355, 9999, true );
-add_image_size( 'blog_thumb', 1024, 427, true );
+// add_image_size( 'blog_thumb', 1024, 427, true );
 add_image_size( 'product_thumb', 1200, 1200, true );
 
 // 1200x500
@@ -1404,10 +1406,6 @@ add_image_size('800x600', 800, 600, false);
 //add_image_size('1920x1000', 1920, 1000, false);
 }
 
-
-
-
-
 /*function custom_pre_get_posts_query( $q ) {
 $tax_query = (array) $q->get( 'tax_query' );
 
@@ -1576,8 +1574,6 @@ function anatol_404_redirect()
 /**********************************
 Remove unnecessary tags
 **********************************/
-
-
 function disable_wp_emojicons() {
 	remove_action('wp_head', 'rsd_link'); //removes EditURI/RSD (Really Simple Discovery) link.
 	// all actions related to emojis
@@ -1630,6 +1626,19 @@ function add_nav_menu_items( $items, $args ) {
 }
 add_filter('wp_nav_menu_items','add_nav_menu_items', 10, 2); */
 
+
+	/***********************************************************************
+WordPress - Отключаем загрузку файла dashicons.min.css стилей, не для Админов
+************************************************************************/
+// remove dashicons
+function wpdocs_dequeue_dashicon() {
+    if (current_user_can( 'update_core' )) {
+        return;
+    }	
+    wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' ); 
+
 /********************************************************
 Remove unnecessary scripts and css from home page
 ********************************************************/
@@ -1638,6 +1647,9 @@ remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
 
 add_action( 'wp_enqueue_scripts', 'anatol_dequeue_scripts', 9999 );
 function anatol_dequeue_scripts() {
+
+	wp_dequeue_script('slider-jquery-init', get_template_directory_uri().'/wp-includes/js/jquery/ui/slider.min.js');
+	wp_dequeue_script('ini-css-init', get_template_directory_uri().'/wp-includes/css/classic-themes.min.css');
 
 	if( is_home() || is_front_page() ){
 		//---------- scripts ------------
@@ -1654,7 +1666,6 @@ function anatol_dequeue_scripts() {
 
 	//---------- woocommerce ------------
 	if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() ) {
-		// if ( is_home() || is_front_page() ) {
 		wp_dequeue_script( 'woocommerce_frontend_styles' );
 		wp_dequeue_script( 'woocommerce-general');
 		wp_dequeue_script( 'woocommerce-layout' );
@@ -1699,34 +1710,36 @@ wp_dequeue_style( 'wp-block-library' );
 add_action( 'wp_enqueue_scripts', 'wpassist_remove_block_library_css' );
 
 
+
+
 /**
- * 
- * DISABLED
- * 
- * Add Invisible reCaptcha v3 script
- */
+*
+* DISABLED
+*
+* Add Invisible reCaptcha v3 script
+*/
 // function add_recaptcha() {
-//     if(!is_single('new')) {
-//         // if the page is not where we have the form, returns early
-// 	return;
-//     }
-//     // actually adds the reCaptcha
-//     do_action('google_invre_render_widget_action');
+// if(!is_single('new')) {
+// // if the page is not where we have the form, returns early
+// return;
+// }
+// // actually adds the reCaptcha
+// do_action('google_invre_render_widget_action');
 // }
 
 /**
- * Validate with Invisible reCaptcha
- * Returns bool
- */
+* Validate with Invisible reCaptcha
+* Returns bool
+*/
 // function recaptcha_validate() {
-//      $is_valid = apply_filters('google_invre_is_valid_request_filter', true);
-//      return $is_valid;
+// $is_valid = apply_filters('google_invre_is_valid_request_filter', true);
+// return $is_valid;
 // }
 
-/***ADD PLU MINUS TO woocommerce CART****/ 
+/***ADD PLU MINUS TO woocommerce CART****/
 add_action( 'wp_footer' , 'custom_quantity_fields_script' );
 function custom_quantity_fields_script(){
-    ?>
+?>
 <script type='text/javascript'>
 jQuery(function($) {
     if (!String.prototype.getDecimals) {

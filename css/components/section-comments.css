@@ -14,7 +14,7 @@
 }
 .comments__title,
 .comment-reply-title {
-  font-size: max(1.35vw, 16px);
+  font-size: max(1.25vw, 16px);
   font-weight: 600;
 }
 

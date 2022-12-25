@@ -30,14 +30,17 @@
 .support-section .section_content {
   text-align: center;
   color: #fff;
-  font-size: max(1.1vw, 18px);
+  font-size: max(1vw, 16px);
   line-height: 1.4;
   max-width: max(50vw, 75%);
   display: flex;
   flex-direction: column;
   gap: 1vw;
+  font-family: "Montserrat", sans-serif;
 }
 .support-section .section_button {
+  --button-horizontall-side-padding: 0.75rem;
+  --button-vertical-side-padding: 0.5rem;
   background: rgba(255, 255, 255, 0);
 }
 .support-section .section_button a:hover,
@@ -68,9 +71,9 @@
 
 .section_pretitle {
   color: #353535;
-  font-size: 1.7vw;
+  font-size: max(1.5vw, 22px);
   font-family: "Lato", sans-serif;
-  line-height: 1.3em;
+  /* line-height: 1.3em; */
   font-weight: bold;
   position: relative;
   text-align: center;
@@ -83,10 +86,11 @@
   .support-section .section_content {
     font-size: 1.85vw;
     gap: 1.25vw;
+    max-width: 90%;
   }
-  .section_pretitle {
+  /* .section_pretitle {
     font-size: 2.35vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 900px) {
@@ -94,9 +98,9 @@
     font-size: max(1.75vw, 17px);
     gap: 1.25vw;
   }
-  .section_pretitle {
+  /* .section_pretitle {
     font-size: 2.35vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 800px) {
@@ -109,20 +113,20 @@
   .support-section .section_content {
     font-size: max(2.15vw, 17px);
     gap: 1.75vw;
-    max-width: 85%;
+    /* max-width: 85%; */
   }
-  .section_pretitle {
+  /* .section_pretitle {
     font-size: 3.25vw;
-  }
+  } */
 }
 @media screen and (max-width: 650px) {
   .support-section .section_content {
     gap: 2.25vw;
   }
 
-  .section_pretitle {
+  /* .section_pretitle {
     font-size: 3.5vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 500px) {
@@ -135,7 +139,14 @@
   .support-section .section_content {
     gap: 3.25vw;
   }
-  .section_pretitle {
-    font-size: 3.75vw;
+
+  .support-section .section_button {
+    --button-horizontall-side-padding: 1.5rem;
+    --button-vertical-side-padding: 0.75rem;
+
+    --button-width: 50%;
   }
+  /* .section_pretitle {
+    font-size: 3.75vw;
+  } */
 }

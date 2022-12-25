@@ -1,6 +1,8 @@
 <aside class="sidebar-right sidebar">
     <!-- <div class="latest_from_blog widget widget_block"> -->
+
     <div class="sidebar--wrapper">
+
         <?php
 		global $post;
 		$current_post_type = get_post_type( $post );

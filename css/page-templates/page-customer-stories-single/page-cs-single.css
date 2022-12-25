@@ -1,0 +1,245 @@
+/* Customer stories styles */
+
+.cs-page {
+  width: 100%;
+}
+
+.cs-page--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.customer {
+  display: flex;
+  justify-content: space-around;
+  gap: 5vw;
+}
+.customer__item {
+  width: calc((100% - 5vw) / 2);
+}
+
+.customer-video--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  /* align-items: center; */
+  justify-content: center;
+  box-shadow: 0px 4px 35.26px 7.74px rgb(106 106 106 / 10%);
+  padding: 2.5vw;
+}
+
+.customer-info__title {
+  font-size: max(1.35vw, 16px);
+  text-align: center;
+}
+
+.list-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-info__item {
+  display: flex;
+  gap: 1vw;
+  padding: 1vh 0;
+  width: 100%;
+  border-bottom: 1px solid #e7cdcd;
+  align-items: center;
+  font-size: max(0.75vw, 12px);
+}
+
+.list-info__item:first-child {
+  border-top: 1px solid #e7cdcd;
+}
+
+/* .list-info .box_title,
+.list-info h2 {
+  font-family: "Roboto", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  color: #353535;
+  font-size: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  font-weight: bold;
+}
+
+.home .section2_icon::before,
+.section2_icon::before,
+.section_icon::before,
+.single_equipment .action_buttons .ab_icon::before,
+.post_time::before,
+.widget.email_updates h3::before,
+.widget.email_updates .widget-title::before,
+.widget.slidebar_links_w a span[class^="icon_"]::before,
+.list-info .cs_row_icon::before {
+  content: "\e818";
+  font-family: "anatol";
+  font-size: 25px;
+  line-height: 30px;
+  color: #ab1a1f;
+}
+.list-info .anatol-tv__item--right ul {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+}
+.list-info .anatol-tv__item--right ul li {
+  list-style-type: none;
+  position: relative;
+  border-bottom: 1px solid #f0f0f0;
+  display: block;
+  padding: 18px 18px 18px 74px;
+} */
+
+.list-info .cs_row_icon::before {
+  content: "\e818";
+  font-family: "anatol";
+  font-size: 25px;
+  line-height: 30px;
+  color: #ab1a1f;
+}
+
+.list-info .cs_row_icon {
+  width: 2.5rem;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.list-info .cs_companyname .cs_row_icon::before {
+  content: "\E83E";
+  font-size: 17px;
+}
+.list-info .cs_locationtext .cs_row_icon::before {
+  content: "\E822";
+  font-size: 21px;
+}
+.list-info .cs_phone .cs_row_icon::before {
+  content: "\E823";
+  font-size: 19px;
+}
+.list-info .cs_companyemail .cs_row_icon::before {
+  content: "\E81C";
+  font-size: 20px;
+}
+.list-info .cs_website .cs_row_icon::before {
+  content: "\E82A";
+  font-size: 19px;
+}
+
+/* .related_stories {
+  margin: 60px auto;
+}
+.related_stories .section_title {
+  margin-bottom: 30px;
+  text-align: center;
+} */
+/* end */
+
+.customer-experience__title,
+.list-info h2 {
+  font-family: "Lato", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  color: #353535;
+  font-size: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  font-weight: bold;
+}
+
+.related-stories {
+  margin: max(7.5vh, 2.5rem) auto;
+}
+
+/* .it-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.it_content_part {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+} */
+
+.it-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.it_header_part {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  background-color: #ab1a1f;
+  position: relative;
+  padding: 1.5vh 1vw 1.5vh 10vw;
+  font-size: max(1.25vw, 16px);
+  color: #fff;
+}
+
+.it_header_part a {
+  color: #fff;
+}
+
+.header_thumb {
+  position: absolute;
+  top: 100%;
+  left: 5vw;
+  transform: translate(-50%, -50%);
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px #fff;
+}
+
+.it_content_part {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  padding: 7.5vh 2.5vw 1.5vh 5vw;
+}
+
+.ocm-tstuff {
+  position: relative;
+  font-size: max(0.9vw, 14px);
+  padding: 1vh 1vw;
+}
+
+.ocm-tstuff::before {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #ab1a1f;
+}
+
+.details_link {
+  margin-left: auto;
+  font-size: max(0.8vw, 12px);
+}
+
+.cs-pagination {
+  bottom: 0;
+}

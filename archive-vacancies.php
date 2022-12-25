@@ -20,7 +20,7 @@ include 'css/page-templates/page-opportunities/opportunities.css';
 			$hero_url = wp_get_attachment_image_src($image_info['id'], '1920x1000');
 		?>
 <div
-    <?php if ($image_info) { echo 'class="hero white_shadow" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="hero"'; } ?>>
+    <?php if ($image_info) { echo 'class="hero white_shadow" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="hero white_shadow"'; } ?>>
     <div class="hero--wrapper container">
         <h2 class="hero__title page-title">Opportunities</h2>
         <!-- <div class="head_description"> -->
@@ -47,26 +47,30 @@ include 'css/page-templates/page-opportunities/opportunities.css';
             <?php while ( have_posts() ) : the_post();?>
             <div <?php post_class(); ?>>
                 <!-- <div> -->
-                <div class="v_item_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                <!-- <div class="v_item_title"> -->
+                <a class="v_item_title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <!-- </div> -->
                 <div class="v_item_footer">
                     <?php
-                          $terms_list1 = wp_get_post_terms($post->ID, ['country']);
-                          $terms_list2 = wp_get_post_terms($post->ID, ['position']);
-                          $terms_list  = array_merge($terms_list1, $terms_list2);
-                          $terms = [];
-                          if($terms_list) {
-                            foreach($terms_list as $term) {
-                              $terms[] = '<a  href="'.get_term_link($term, $term->taxonomy).'">'.$term->name.'</a>';
-                            }
-                          }
-                          if(!empty($terms)) {
-                            echo implode('&nbsp; ' , $terms);
-                          }
-                        ?>
+                      $terms_list1 = wp_get_post_terms($post->ID, ['country']);
+                      $terms_list2 = wp_get_post_terms($post->ID, ['position']);
+                      $terms_list  = array_merge($terms_list1, $terms_list2);
+                      $terms = [];
+                      if($terms_list) {
+                        foreach($terms_list as $term) {
+                          $terms[] = '<a  href="'.get_term_link($term, $term->taxonomy).'">'.$term->name.'</a>';
+                        }
+                      }
+                      if(!empty($terms)) {
+                        echo implode('' , $terms);
+                      }
+                    ?>
                     <!-- </div> -->
                 </div>
-                <div class="v_item_desc"><?php the_field('vacancy_description'); ?></div>
-                <div class="v_item_title v_item_btn"><a href="<?php the_permalink(); ?>">Learn more...</a></div>
+                <p class="v_item_desc"><?php the_field('vacancy_description'); ?></p>
+                <!-- <div class="v_item_title v_item_btn"> -->
+                <a class="button v_item_btn" href="<?php the_permalink(); ?>">Learn more...</a>
+                <!-- </div> -->
             </div>
             <?php endwhile; ?>
         </div>
@@ -74,7 +78,7 @@ include 'css/page-templates/page-opportunities/opportunities.css';
             <?php wp_corenavi(); ?>
         </div>
         <div class="vacancy_contact_us"><a data-fancybox data-src="#vacancy_contact_us_hidden" href="javascript:;"
-                class="button"><?php _e('сontact us'); ?></a></div>
+                class="button contact-us__button"><?php _e('сontact us'); ?></a></div>
         <div id="vacancy_contact_us_hidden" style="display:none;">
             <div class="vacancy_form vacancy_contact_us_content">
                 <?php
@@ -95,7 +99,7 @@ include 'css/page-templates/page-opportunities/opportunities.css';
         <?php } ?>
     </div>
     <?php if(!have_posts()) {?>
-    <div class="col-md-12 dmbs-main">
+    <div class="dmbs-main">
         <div class="vacancy_sorry_title"><?php _e('We are sorry'); ?></div>
         <p>
             <center>
@@ -128,7 +132,7 @@ include 'css/page-templates/page-opportunities/opportunities.css';
             </center>
         </p>
     </div>
-    <div class="col-md-12 vacancy_form">
+    <div class="vacancy_form">
         <div class="vacancy-form-wrap outside-form">
             <?php
       if(ICL_LANGUAGE_CODE == 'ru') {
@@ -152,5 +156,6 @@ include 'css/page-templates/page-opportunities/opportunities.css';
 
 <?php get_template_part('template-parts/widgets/offices'); ?>
 
+<script src="<?php echo get_template_directory_uri();?>/js/vacanciesFilter.js"></script>
 
 <?php get_footer(); ?>

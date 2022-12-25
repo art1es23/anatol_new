@@ -28,7 +28,8 @@ global $post, $woocommerce, $product;
 			$image_link  	= wp_get_attachment_url( get_post_thumbnail_id() );
 			$image       	= get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
 				'title'	=> $image_title,
-				'alt'	=> $image_title
+				'alt'	=> $image_title,
+				'id' => 'img_thumb_main'
 				) );
 
 			$attachment_count = count( $product->get_gallery_attachment_ids() );
@@ -64,6 +65,51 @@ global $post, $woocommerce, $product;
             </div>
         </div>
     </div>
+</div>
 
+<div id="modalImg" class="modal-img-wrapper hidden">
+    <button class="close-button">
+        <div class="close-button--wrapper">
+            <span class="close-button__item close-button__item--top"></span>
+            <span class="close-button__item close-button__item--bottom"></span>
+        </div>
+    </button>
+
+    <span></span>
+
+    <div class="modal-img-content">
+        <img class="modal-img" src="" id="img_thumb_modal">
+    </div>
 
 </div>
+
+<script>
+const modalWrapper = document.getElementById('modalImg');
+const mainImg = document.getElementById('img_thumb_main');
+const modalImg = document.getElementById('img_thumb_modal');
+const closeButton = modalWrapper.querySelector('.close-button');
+
+
+mainImg.addEventListener('click', e => {
+    e.preventDefault();
+
+    document.documentElement.classList.add('overflow--hidden');
+    modalImg.src = mainImg.src;
+    modalWrapper.classList.toggle('hidden');
+});
+
+modalWrapper.addEventListener('click', e => {
+    e.preventDefault();
+    if (e.target === modalWrapper) {
+        document.documentElement.classList.remove('overflow--hidden');
+        modalWrapper.classList.add('hidden');
+    }
+});
+
+closeButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    document.documentElement.classList.remove("overflow--hidden");
+    modalWrapper.classList.toggle("hidden");
+})
+</script>

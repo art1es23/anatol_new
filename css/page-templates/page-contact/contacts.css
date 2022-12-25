@@ -44,6 +44,7 @@
 
 .regional_office_item .title_part {
   text-align: center;
+  padding-bottom: 0.75rem;
 }
 
 .regional_office_item .item_title {
@@ -69,7 +70,7 @@
   padding: 20px 0px;
   display: flex;
   flex-direction: column;
-  gap: 1.25vw;
+  gap: 1.5vh;
 }
 
 .contacts_part__item {
@@ -189,7 +190,7 @@
   );
   display: flex;
   flex-direction: column;
-  gap: 1.5vw;
+  gap: 2.5vh;
   padding: 3vw;
   padding-bottom: 6vw;
   width: 30%;
@@ -207,7 +208,7 @@
 .contact_line_header {
   font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
-  font-size: 1.7vw;
+  font-size: max(1.35vw, 16px);
   color: #fff;
 }
 .contact_line_header .cont_ico {
@@ -236,6 +237,8 @@
 
 .contact_line__description {
   color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: max(0.8vw, 14px);
 }
 
 .cont_form_title {
@@ -343,7 +346,7 @@ input[type="submit"],
   font-family: var(--base-font-family), sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: max(3.2vw, 42px);
+  font-size: max(3.2vw, 36px);
   color: #000000 !important;
   letter-spacing: 0.05em;
   line-height: 0.9em;
@@ -451,7 +454,7 @@ input[type="submit"],
   }
 
   .cont_form_title {
-    font-size: max(8vw, 46px);
+    font-size: max(8vw, 37px);
   }
 
   .feedback_form .form-inner,
@@ -461,6 +464,9 @@ input[type="submit"],
 }
 
 @media screen and (max-width: 550px) {
+  .feedback_form {
+    --form-padding: initial;
+  }
   .regional_offices {
     width: 94%;
   }

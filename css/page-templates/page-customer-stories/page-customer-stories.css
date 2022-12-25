@@ -254,17 +254,19 @@ img {
   align-self: flex-end;
   font-family: "Lato", sans-serif;
   font-weight: bold;
-  font-size: max(0.8vw, 12px);
+  font-size: max(0.65vw, 12px);
+  gap: 0.5vw;
 }
 
-.c-story-post__content .details_link::after {
+.details_link::after {
   display: inline-block;
-  font-family: "anatol";
-  color: #ab1a1f;
-  content: "\E817";
-  transform: rotate(180deg);
-  font-size: 10px;
-  margin-left: 7px;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/wp-content/themes/anatol/images/svg-icons/icon-arrow-right.svg);
   position: relative;
 }
 
@@ -272,8 +274,9 @@ img {
   border-left: 2px solid #ab1a1f;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: max(1vw, 15px);
+  font-size: max(0.8vw, 13px);
   overflow: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 .c-story-post__footer {
@@ -292,22 +295,24 @@ img {
   height: 25px;
   justify-content: center;
   align-items: center;
-  background: #f0cbcb;
-  font-family: "anatol";
-  font-size: 11px;
-  color: #cc0000;
-  content: "\E830";
+  content: "";
+
   border-radius: 50%;
   position: absolute;
   transform: translate(0, 75%);
   top: 0;
   left: 2.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-image: url(/wp-content/themes/anatol/images/svg-icons/icon-check.svg);
 }
 
 .c-story-post__footer a {
   font-weight: bold;
   color: #af0001;
-  font-size: max(1vw, 13px);
+  font-family: "Montserrat", sans-serif;
+  font-size: max(0.8vw, 13px);
 }
 
 /*mobile css codes ----------------------------------*/

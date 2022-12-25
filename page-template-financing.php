@@ -14,8 +14,7 @@ include 'css/page-templates/page-financing/financing.css';
 ?>
 </style>
 
-<!-- <?php get_template_part('template-parts/template-part-head-big'); ?> -->
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('template-parts/template-part-head-big'); ?>
 
 <section id="available_opportunities" class="available_opportunities">
     <div class="available_opportunities--wrapper container">

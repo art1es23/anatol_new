@@ -4,23 +4,25 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/components/template-form.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
 include 'css/page-templates/page-contact/contacts.css';
 ?>
 </style>
 
 <?php //get_template_part('template-parts/template-part-head-bg'); ?>
 
-<div class="head_section contacts_head" style="linear-gradient(
+<div class="hero" style="linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.9) 0%,
       #ffffff 100%
     ), url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/bg-group.jpg);">
-    <div class="container">
-        <h1 class="head_title"><?php if( get_field( "alternative_title" )) { the_field("alternative_title"); } ?></h1>
+    <div class="hero--wrapper container">
+        <h1 class="hero__title page-title">
+            <?php if( get_field( "alternative_title" )) { the_field("alternative_title"); } ?></h1>
 
         <?php if( get_field( "title_description" )) { ?>
-        <div class="head_description et_pb_text_inner"><?php the_field("title_description"); ?></div>
+        <div class="hero__description page-description"><?php the_field("title_description"); ?></div>
         <?php } ?>
 
     </div>
@@ -61,25 +63,25 @@ include 'css/page-templates/page-contact/contacts.css';
 
     <?php get_template_part('template-parts/regional-offices'); ?>
 
-    <style>
+    <!-- <style>
     #chartdiv {
         width: 100%;
         height: 680px;
         background: #272727;
     }
-    </style>
+    </style> -->
 
     <!-- Resources -->
-    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <!-- <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/geodata/continentsLow.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/usaLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/dataviz.js"></script>
-    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script> -->
 
     <!-- Chart code -->
-    <script>
+    <!-- <script>
     am4core.ready(function() {
 
         // Themes begin
@@ -324,6 +326,6 @@ include 'css/page-templates/page-contact/contacts.css';
             });
         });
     });
-    </script>
+    </script> -->
 
     <?php get_footer(); ?>

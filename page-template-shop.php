@@ -23,29 +23,30 @@
             <div class="container">
                 <div class="row compare_content_row">
                     <div class="col-md-12">
+                        <!-- <div class="hide-sidebar"></div> -->
                         <div class="equipments_list categories_list_wc template-shop">
                             <?PHP
-									$args = array(
-										'type'                     => 'product',
-										'child_of'                 => 0,
-										'parent'                   => '',
-										'orderby'                  => 'ID',
-										'hide_empty'               => 0,
-										'hierarchical'             => 1,
-										'exclude'                  => '224',
-										'include'                  => '',
-										'number'                   => '4',
-										'taxonomy'                 => 'product_cat',
-										'pad_counts'               => false );
-									$categories = get_categories($args);
-									foreach ($categories as $category) {
-										$cat_name = $category->name;
-										$cat_slug = $category->slug;
-										$cat_id = $category->term_id;
-										$thumbnail_id = get_woocommerce_term_meta( $cat_id, 'thumbnail_id', true );
-										$image = wp_get_attachment_url( $thumbnail_id );
-										$term_link = get_term_link($cat_id,'product_cat');
-										?>
+                                $args = array(
+                                    'type'                     => 'product',
+                                    'child_of'                 => 0,
+                                    'parent'                   => '',
+                                    'orderby'                  => 'ID',
+                                    'hide_empty'               => 0,
+                                    'hierarchical'             => 1,
+                                    'exclude'                  => '224',
+                                    'include'                  => '',
+                                    'number'                   => '4',
+                                    'taxonomy'                 => 'product_cat',
+                                    'pad_counts'               => false );
+                                $categories = get_categories($args);
+                                foreach ($categories as $category) {
+                                    $cat_name = $category->name;
+                                    $cat_slug = $category->slug;
+                                    $cat_id = $category->term_id;
+                                    $thumbnail_id = get_woocommerce_term_meta( $cat_id, 'thumbnail_id', true );
+                                    $image = wp_get_attachment_url( $thumbnail_id );
+                                    $term_link = get_term_link($cat_id,'product_cat');
+                                    ?>
                             <a href="<?PHP echo $term_link; ?>" class="equipment_item press_search_item">
                                 <div class="image_part">
                                     <?PHP echo '<img loading="lazy" class="lozad" src="'.$image.'" alt="'.$cat_name.'" />' ?>
@@ -62,7 +63,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <?PHP  } ?>
+                            <?PHP } ?>
                         </div>
                     </div>
                 </div>

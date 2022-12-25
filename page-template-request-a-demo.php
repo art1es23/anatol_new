@@ -4,8 +4,11 @@
 get_header(); ?>
 
 <style>
-<?php include 'css/components/get-in-touch.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/template-form.css';
+include 'css/components/get-in-touch.css';
 include 'css/components/another-equipments.css';
+include 'css/page-templates/page-request-a-demo/page-request-a-demo.css';
 ?>
 </style>
 
@@ -13,13 +16,13 @@ include 'css/components/another-equipments.css';
 
 
 <div class="request_a_demo">
-    <div class="container">
+    <div class="request_a_demo--wrapper container form">
 
-        <form action=" " method="post" class="get_forms form_borders">
+        <form action=" " method="post" class="form-inner request_a_demo-form get_forms form_borders">
 
             <input type="text" name="custom_field3" value="Request a demo!" style="display:none;">
-            <div class="form-row">
-                <div class="field_full">
+            <div class="form-inner__item">
+                <div class="form-inner__item--full">
                     <label>What machine would you like to see in person?</label>
                     <select id="request_a_demo-" class=" invalid error" name="callback_notes" required>
                         <option value="" disabled="" selected="">What machine would you like to see in person?</option>
@@ -30,8 +33,8 @@ include 'css/components/another-equipments.css';
                     </select>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="field_full">
+            <div class="form-inner__item">
+                <div class="form-inner__item--full">
                     <label>Country</label>
                     <select required name="country" onchange="yesnoCheck(this);">
                         <option class="choose_elements" value="" selected="selected">Select Country*</option>
@@ -293,8 +296,8 @@ include 'css/components/another-equipments.css';
                     </select>
                 </div>
             </div>
-            <div id="ifYes" class="form-row" style="display: none;">
-                <div class="field_full">
+            <div id="ifYes" class="form-inner__item" style="display: none;">
+                <div class="form-inner__item--full">
                     <label for="state_required">State/Region<span class="field_required">*</span></label>
                     <select id="state_required" class="hs-input invalid error" name="custom_field4">
                         <option class="choose_elements" value="" disabled="" selected="">Please Select State/Region*
@@ -371,45 +374,41 @@ include 'css/components/another-equipments.css';
                     </select>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="half">
+            <div class="form-inner__item">
+                <div class="form-inner__item--half">
                     <label>First Name</label>
                     <input type="text" name="contact_first" placeholder="First Name*" required>
                 </div>
-                <div class="half">
+                <div class="form-inner__item--half">
                     <label>Last Name</label>
                     <input type="text" name="contact_last" placeholder="Last Name*" required>
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="half">
+            <div class="form-inner__item">
+                <div class="form-inner__item--half">
                     <label>Phone Number</label>
                     <input type="tel" name="phone" placeholder="Phone Number*" maxlength="18" id="tel" required>
                 </div>
-                <div class="half">
+                <div class="form-inner__item--half">
                     <label>Email</label>
                     <input type="Email" name="email" placeholder="Email*" required>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="field_full">
+            <div class="form-inner__item">
+                <div class="form-inner__item--full">
                     <label>Additional Info</label>
                     <textarea id="" class="" name="custom_field2" placeholder="Additional Info"></textarea>
                     </td>
                 </div>
             </div>
-            <div class="form-row text-center">
-                <input type="submit" name="submit_web_form" value="Send a Request" class="button">
-            </div>
+            <!-- <div class="form-inner__item text-center"> -->
+            <input type="submit" name="submit_web_form" value="Send a Request" class="button button--full">
+            <!-- </div> -->
         </form>
     </div>
 </div>
 
-
-
-
 <?php get_template_part('templates/equipment/another-equipments'); ?>
-
 
 <?php get_footer(); ?>

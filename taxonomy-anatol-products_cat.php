@@ -5,7 +5,8 @@ $anatol_cat_title = single_term_title("", false);
 ?>
 
 <style>
-<?php include 'css/components/presses-item.css';
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/components/presses-item.css';
 include 'css/components/equipments-list.css';
 include 'css/page-templates/page-conveyers/conveyers.css';
 include 'css/components/another-equipments.css';

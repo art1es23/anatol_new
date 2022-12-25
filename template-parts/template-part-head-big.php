@@ -12,19 +12,19 @@
 ?>
 
 <div
-    <?php if ($image_info) { echo 'class="head_section white_shadow has_background" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="head_section contacts_head"'; } ?>>
-    <div class="container">
+    <?php if ($image_info) { echo 'class="hero white_shadow" style="background-image:url('.$hero_url[0].')"'; } else { echo 'class="hero"'; } ?>>
+    <div class="hero--wrapper container">
         <?php
 			if(!empty(get_field("alternative_title"))) {
-				echo '<h1 class="page_title">' . get_field("alternative_title") . '</h1>';
+				echo '<h1 class="hero__title page-title">' . get_field("alternative_title") . '</h1>';
 			} else {
-				the_title('<h1 class="page_title">', '</h1>');
+				the_title('<h1 class="hero__title page-title">', '</h1>');
 			} ?>
 
         <?php
 			if(empty($anatol_cat_title)) {
 				if(!empty(get_field("title_description"))) {
-					echo '<div class="et_pb_text_inner">'.str_replace("\n", '<br />', get_field("title_description")).'</div>';
+					echo '<div class="hero__description page-description">'.str_replace("\n", '<br />', get_field("title_description")).'</div>';
 				}
 			} ?>
     </div>

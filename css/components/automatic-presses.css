@@ -1,6 +1,7 @@
 .automatic_presses,
 .specialty-automatic-presses {
-  background-image: url(/wp-content/themes/anatol/images/black-bg.jpg);
+  background-color: #353535;
+  /* background-image: url(/wp-content/themes/anatol/images/black-bg.jpg); */
 }
 
 .automatic_presses--wrapper {
@@ -8,11 +9,27 @@
   display: flex;
   flex-direction: column;
   gap: max(5vh, 2.5rem);
+  padding: 0 30px;
 }
-.white_text .section_title,
-.white_text .presses_item a {
+
+.automatic_presses--wrapper .swiper-button-prev,
+.automatic_presses--wrapper .swiper-button-next {
+  transform: translate(0, -50%);
+}
+.white_text .section_title {
+  /* .white_text .presses_item a { */
   color: #fff;
 }
+
+.white_text .link_to_item {
+  background-color: #ab1a1f;
+  color: #fff;
+}
+
+.white_text .link_to_item:hover {
+  background-color: rgb(171 26 31 / 75%);
+}
+
 .section_title {
   text-align: center;
 }

@@ -12,6 +12,16 @@
   margin-bottom: max(7.5vh, 2.5rem);
 }
 
+.page_title_text h2 {
+  font-size: max(1.25vw, 20px);
+  font-weight: 600;
+}
+.page_title_text p {
+  font-size: max(0.8vw, 14px);
+
+  font-family: "Montserrat", sans-serif;
+}
+
 .page_title_text a {
   color: #545454;
 }
