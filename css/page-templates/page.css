@@ -10,6 +10,25 @@
 .page-content {
   width: 100%;
 }
+
+.page-content h4 {
+  font-weight: 600;
+  font-size: max(1.15vw, 18px);
+}
+.page-content p,
+.page-content ul li {
+  text-align: justify;
+  font-size: max(0.9vw, 15px);
+}
+
+.page-content ul {
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: initial;
+}
+
 .page-content--wrapper {
   display: flex;
   margin: max(7.5vh, 2.5rem) auto;
@@ -18,9 +37,9 @@
 }
 
 .page-header {
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
   font-weight: 700;
-  font-size: max(1.75vw, 16px);
+  font-size: max(2vw, 30px);
 }
 
 .page_title_text {
@@ -34,3 +53,9 @@
   color: #545454;
 }
 /* End */
+
+@media screen and (max-width: 900px) {
+  .page-content--wrapper {
+    width: 85%;
+  }
+}

@@ -1,7 +1,14 @@
 /* SUPPORT SECTION */
 
 .support-section {
-  background-image: url(../wp-content/themes/anatol/images/head-bg/volt.jpg);
+  background-image: url(/wp-content/themes/anatol/images/head-bg/volt.jpg);
+  background-color: rgb(255 0 0 / 35%);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
 .support-section::before {
@@ -11,7 +18,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0 0 0 / 80%);
+  display: block;
 }
 
 .support-section--wrapper {
@@ -72,8 +80,7 @@
 .section_pretitle {
   color: #353535;
   font-size: max(1.5vw, 22px);
-  font-family: "Lato", sans-serif;
-  /* line-height: 1.3em; */
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   position: relative;
   text-align: center;
@@ -88,9 +95,6 @@
     gap: 1.25vw;
     max-width: 90%;
   }
-  /* .section_pretitle {
-    font-size: 2.35vw;
-  } */
 }
 
 @media screen and (max-width: 900px) {
@@ -98,43 +102,26 @@
     font-size: max(1.75vw, 17px);
     gap: 1.25vw;
   }
-  /* .section_pretitle {
-    font-size: 2.35vw;
-  } */
 }
 
 @media screen and (max-width: 800px) {
   .support-section--wrapper {
     gap: 3vw;
   }
-  .support-section .section_title {
-    font-size: 6vw;
-  }
   .support-section .section_content {
     font-size: max(2.15vw, 17px);
     gap: 1.75vw;
-    /* max-width: 85%; */
   }
-  /* .section_pretitle {
-    font-size: 3.25vw;
-  } */
 }
 @media screen and (max-width: 650px) {
   .support-section .section_content {
     gap: 2.25vw;
   }
-
-  /* .section_pretitle {
-    font-size: 3.5vw;
-  } */
 }
 
 @media screen and (max-width: 500px) {
   .support-section--wrapper {
     gap: 4vw;
-  }
-  .support-section .section_title {
-    font-size: 7.5vw;
   }
   .support-section .section_content {
     gap: 3.25vw;
@@ -146,7 +133,9 @@
 
     --button-width: 50%;
   }
-  /* .section_pretitle {
-    font-size: 3.75vw;
-  } */
+}
+@media screen and (max-width: 550px) {
+  .support-section {
+    background-attachment: initial;
+  }
 }

@@ -13,7 +13,7 @@ include 'css/components/another-equipments.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-pr'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-pr'); ?>
 
 <section class="cat_content" id="cat_content">
     <div class="cat_content--wrapper container">
@@ -22,7 +22,7 @@ include 'css/components/another-equipments.css';
                 if (have_posts()) {
                     while (have_posts()) {
                         the_post();
-                        get_template_part('template-parts/loop/product');
+                        get_template_part('templates/components/product-templates/product');
                     }
                 } ?>
         </div>

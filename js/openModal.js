@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (e) => {
+const openModalForms = () => {
   const popupWrapper = document.querySelector(".form--wrapper");
   popupWrapper.classList.add("hidden");
   const scrollToTopButton = document.querySelector("#scrollToTop");
@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
   const createObjectTriggers = (trigger, modalForm) => {
     const arrayTriggers = document.querySelectorAll(trigger);
     const formWrapper = document.querySelector(modalForm);
-    const closeButton = formWrapper.querySelector(".close-button");
 
     arrayTriggers.forEach((button) =>
       button.addEventListener("click", (e) => {
@@ -33,15 +32,19 @@ document.addEventListener("DOMContentLoaded", (e) => {
       }
     });
 
-    closeButton.addEventListener("click", (e) => {
-      document.documentElement.classList.remove("overflow--hidden");
+    if (formWrapper.querySelector(".close-button")) {
+      const closeButton = formWrapper.querySelector(".close-button");
 
-      popupWrapper.classList.add("hidden");
-      formWrapper.classList.add("hidden");
-      scrollToTopButton.classList.remove("hidden");
+      closeButton.addEventListener("click", (e) => {
+        document.documentElement.classList.remove("overflow--hidden");
 
-      // arrayForms.forEach((form) => form.classList.add("hidden"));
-    });
+        popupWrapper.classList.add("hidden");
+        formWrapper.classList.add("hidden");
+        scrollToTopButton.classList.remove("hidden");
+
+        // arrayForms.forEach((form) => form.classList.add("hidden"));
+      });
+    }
 
     // Open modal form for registration warranty
     const registrationWarranty = (trigger, formInner) => {
@@ -86,6 +89,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
   createObjectTriggers(".subscribe-button", ".subscribe_us_form");
   createObjectTriggers("#register_warranty_onclick", ".warranty-form");
   createObjectTriggers(".get_a_quote", ".get_quote");
-  createObjectTriggers(".get_a_quote_sales-button", ".get_quote");
+  // createObjectTriggers(".get_a_quote_sales-button", ".get_quote");
   createObjectTriggers(".join_us_dealer", ".join_us_form");
-});
+  createObjectTriggers(".download-ebook-button", ".form-download-ebook");
+  createObjectTriggers(".contact-us__button", ".vacancy-contact-us");
+};
+openModalForms();
+
+// export { openModalForms };

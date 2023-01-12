@@ -20,7 +20,7 @@
       rgba(24, 30, 36, 0.9) 0%,
       rgba(213, 26, 39, 0.69) 100%
     ),
-    url(../wp-content/themes/anatol/images/bg-img-05.jpg) !important;
+    url(/wp-content/themes/anatol/images/bg-img-05.jpg) !important;
   background-position: 50%;
   background-size: cover;
   width: 50%;
@@ -44,7 +44,7 @@
   position: relative;
 }
 .get_in_title {
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
   font-weight: 700;
   font-size: max(3.5vw, 36px);
   margin: 0;
@@ -65,7 +65,7 @@
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
 }
 
 .contact_header {
@@ -87,9 +87,12 @@
   align-items: center;
 }
 
-.contact_line_legend {
+.contact_line_legend,
+.contact_line_legend span,
+.contact_line_legend a {
   font-size: max(0.85vw, 13px);
   font-family: "Montserrat", sans-serif;
+  color: #fff;
 }
 
 /* Form */
@@ -100,6 +103,9 @@
   --input-background-color: rgba(255, 255, 255, 0.12);
   --input-border: none;
   --input-base-color: #fff;
+  box-shadow: inset 2px 2px 5px rgb(0 0 0 / 45%),
+    inset -2px -2px 5px rgb(255 35 0 / 60%);
+  border-radius: 3px;
 }
 /* input,
 textarea {
@@ -113,13 +119,13 @@ textarea {
   --form-padding: 0;
   --form-background-color: #c10f1b;
   flex-direction: column;
-  gap: 1.25vw;
+  gap: 1.5rem;
   margin: max(10vh, 2.5rem) auto;
   display: flex;
 }
 
 .cont_form_title {
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
   font-weight: 700;
   font-size: 3.5vw;
 }
@@ -129,6 +135,7 @@ textarea {
   --button-background-color: #fff;
   --button-base-color: #c10f1b;
 
+  box-shadow: none;
   border: none;
 }
 /* .ico_location {
@@ -182,14 +189,14 @@ textarea {
   }
 
   .get_in_title {
-    font-size: max(7vw, 46px);
+    font-size: max(7vw, 40px);
   }
 
   .cont_datas {
     gap: 2.5vh;
   }
   .contact_header {
-    font-size: max(3.25vw, 18px);
+    font-size: max(3.25vw, 20px);
   }
 
   .contact_line {
@@ -197,10 +204,10 @@ textarea {
   }
 
   .contact_line_header {
-    font-size: max(3vw, 16px);
+    font-size: max(3vw, 20px);
   }
   .contact_line_legend {
-    font-size: max(2.25vw, 14px);
+    font-size: max(2.25vw, 16px);
   }
 
   .contact-form--wrapper {
@@ -211,6 +218,13 @@ textarea {
 @media screen and (max-width: 700px) {
   .get_in_contact--wrapper,
   .contact-form--wrapper {
-    width: 80%;
+    width: 90%;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contact-form--wrapper {
+    margin: max(5vh, 2.5rem) auto;
   }
 }

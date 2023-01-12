@@ -37,7 +37,7 @@
 }
 
 .video-description .section-title {
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
   font-weight: 700;
   text-transform: uppercase;
   font-size: max(2.75vw, 2.5rem);
@@ -65,6 +65,10 @@
 }
 
 @media screen and (max-width: 750px) {
+  .home-footer-video {
+    display: none;
+  }
+
   .video-description .section-title {
     font-size: max(5vw, 2rem);
   }

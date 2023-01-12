@@ -1,0 +1,120 @@
+.compare-results {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  align-items: center;
+}
+
+.compare-results table,
+.compare-results tr,
+.compare-results th,
+.compare-results td {
+  border-collapse: collapse;
+  /* border: 0px; */
+}
+
+.compare-results--wrapper {
+  background: #fff;
+  border-radius: 4px;
+  /* overflow: hidden; */
+  overflow-x: auto;
+}
+
+.compare-results tbody > tr:nth-child(4n-2) {
+  background: #efefef;
+}
+
+.compare-results tbody td {
+  height: 3rem;
+  vertical-align: middle;
+  font-size: 14px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #fff;
+}
+.compare-results tbody td.tr_title {
+  font-weight: 600;
+}
+
+.compare-results tr:last-child td {
+  text-align: center;
+}
+
+.compare-results tbody td .button {
+  /* min-width: 80px;
+  width: inherit; */
+  --button-horizontall-side-padding: 1.25rem;
+  --button-vertical-side-padding: 0.5rem;
+  --button-width: 70%;
+}
+
+.compare-results th img {
+  max-width: 100%;
+  width: 50%;
+  height: auto;
+}
+
+.compare-results thead th {
+  height: auto;
+  font-size: 14px;
+  color: #353535;
+  font-weight: bold;
+  text-align: center;
+}
+
+.compare-results .button.white_button {
+  position: relative;
+}
+
+.td_img_wrap {
+  height: 150px !important;
+}
+
+.uk-text-success:not(td) {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("/wp-content/themes/anatol/images/img/yes.png") no-repeat;
+}
+.uk-text-warning:not(td) {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url("/wp-content/themes/anatol/images/img/no.png") no-repeat;
+}
+
+.uk-text-warning {
+  background-image: url("/wp-content/themes/anatol/images/img/no.png");
+}
+
+@media screen and (max-width: 900px) {
+  .compare-results tbody td .button {
+    font-size: 12px;
+    padding: 5px 10px;
+    min-height: inherit;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .compare-results table {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .compare-results .ocm-table {
+    display: table-cell;
+  }
+  .compare-results .ocm-small {
+    display: none;
+  }
+
+  /* .compare-page--wrapper {
+    align-items: initial;
+  } */
+  .compare-results {
+    align-items: initial;
+  }
+  .compare-results tbody td.tr_title {
+    max-width: 20rem;
+    white-space: normal;
+  }
+}

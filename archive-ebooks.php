@@ -6,7 +6,7 @@ include 'css/page-templates/page-ebooks/ebooks.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 
 <div class="container ebooks">
     <!-- <div class="row eb-content"> -->
@@ -20,7 +20,7 @@ include 'css/page-templates/page-ebooks/ebooks.css';
             <div class="ebook-post__description">
                 <a class="ebook-post__title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 <?php if( get_field( "short_description" )) {?>
-                <div class="ebook-post__excerpt"><?php the_field( "short_description" );?></div>
+                <p class="ebook-post__excerpt"><?php the_field( "short_description" );?></p>
                 <?php }	?>
 
                 <a class="ebook-post__btn button" href="<?php the_permalink(); ?>">Learn More</a>

@@ -21,7 +21,7 @@
   background: #fff;
   box-shadow: 0 0 46.74px 10.26px rgba(106, 106, 106, 0.1);
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 .calculator__title {
   text-align: center;
@@ -71,14 +71,20 @@
   margin: 15px 0;
   position: relative;
   z-index: 90;
+  min-width: 60vw;
 }
 .calculator .result .cards {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -15px;
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  /* margin: 0 -15px; */
 }
 .calculator .result .cards .card {
-  margin: 15px;
+  /* margin: 15px; */
+  width: calc(50% - 0.75rem);
+
   font-size: 16px;
   text-align: center;
   background: #fff;
@@ -89,7 +95,7 @@
 .calculator .result .cards .card .card-header {
   padding: 20px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: max(1vw, 14px);
   color: #fff;
 }
 .calculator .result .cards .card .card-body {
@@ -111,7 +117,7 @@
 }
 .calculator .result .cards .card .card-body .value {
   font-weight: 700;
-  font-size: 30px;
+  font-size: max(1.35vw, 22px);
   line-height: normal;
   margin: 0 0 15px;
 }
@@ -131,7 +137,7 @@
   text-transform: uppercase;
 }
 .calculator .result .cards .card .card-body .total {
-  font-size: 30px;
+  font-size: max(1.35vw, 22px);
   font-weight: 700;
   padding: 20px 0;
   color: #d80303;
@@ -185,9 +191,9 @@
   display: flex;
   justify-content: center;
 }
-.calculator .result .cards .card {
+/* .calculator .result .cards .card {
   width: calc(50% - 30px);
-}
+} */
 .calculator .result .cards .card-header {
   background-color: #ab1a1f;
 }
@@ -197,7 +203,7 @@
   align-items: center;
 }
 .calculator .result .cards .col-xs-6 {
-  width: 40%;
+  width: 45%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -241,9 +247,31 @@
   border: 0;
 }
 
+.form.calculation {
+  --form-min-width: 60vw;
+  width: 100%;
+}
+
+.form.calculation .form-inner {
+  width: var(--form-inner-width);
+}
+
 @media screen and (max-width: 1080px) {
   .calculator-form {
     --form-min-width: 80vw;
+  }
+
+  .form.calculation .form-inner {
+    --form-inner-width: 80vw;
+  }
+
+  .calculator .result .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calculator .result .cards .card {
+    width: 80%;
   }
 }
 
@@ -254,6 +282,10 @@
   .calculator .form-inner {
     --form-inner-gap: 3.5vh;
     --form-padding: 5vh 3.5vw;
+  }
+
+  .calculator .result .cards .card {
+    width: 100%;
   }
 
   .calculator .form-inner__item::after {

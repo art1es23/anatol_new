@@ -6,7 +6,7 @@ include 'css/page-templates/single-pages/page-customer-stories-single/page-cs-si
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 
 
 <div class="cs-page">
@@ -133,9 +133,9 @@ include 'css/page-templates/single-pages/page-customer-stories-single/page-cs-si
                 <div class="it-content">
                     <div class="it_header_part <?php if (!empty($video)) echo 'has_video'; ?>"><a
                             href="<?= get_the_permalink() ?>"><?= get_the_title() ?></a>
-                        <?php if (!empty($company)) {
+                        <span><?php if (!empty($company)) {
                             echo ', ' . $company;
-                          } ?>
+                          } ?></span>
                         <div class="header_thumb">
                             <?php if (has_post_thumbnail()) {
                               the_post_thumbnail();

@@ -1,6 +1,12 @@
 .anatol_map {
-  background-image: url(../wp-content/themes/anatol/images/map-full.jpg);
+  background-image: url(/wp-content/themes/anatol/images/map-full.jpg);
   display: flex;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #242424;
 }
 
 .anatol_map .container {
@@ -31,6 +37,11 @@
   color: #fff;
   text-align: center;
 }
+.map_number,
+.map_text {
+  font-family: var(--base-font-family);
+}
+
 .map_cont .map_number {
   font-size: max(5.75vw, 64px);
   font-weight: 900;
@@ -86,5 +97,33 @@
 
   .map_cont .map_text {
     font-size: max(2.5vw, 12px);
+  }
+}
+@media screen and (max-width: 550px) {
+  .anatol_map {
+    background-attachment: initial;
+  }
+
+  .map_cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+  }
+
+  .map_cont .map_block {
+    width: 100%;
+  }
+
+  .map_cont .map_number {
+    font-size: max(10vw, 60px);
+  }
+  .map_cont .map_text {
+    font-size: max(4vw, 20px);
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 900px) and (orientation: landscape) {
+  .anatol_map {
+    background-image: none;
+    background-attachment: initial;
   }
 }

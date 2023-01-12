@@ -79,6 +79,12 @@
 
 @media screen and (max-width: 700px) {
   .main-hero-slider__item {
-    height: 80vh;
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main-hero-slider__btn a {
+    --button-width: 7.5rem;
   }
 }

@@ -27,7 +27,7 @@
   font-weight: 600;
   font-size: max(1vw, 16px);
   cursor: pointer;
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
   transition: all 0.3s ease;
 }
 .anatol-videos-navigation li:hover {
@@ -142,7 +142,7 @@
   font-size: max(0.7vw, 13px);
   font-family: "Montserrat", sans-serif;
 
-  /* font-family: var(--base-font-family), sans-serif; */
+  /* font-family: var(--base-font-family); */
 }
 
 .anatol-videos-list__item a:hover .video_title {
@@ -158,7 +158,7 @@
 .cstcw_tp_right_white p,
 .cstcw_tp_right_white h2 {
   color: black;
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
 }
 .cstcw_tp_right_white p {
   font-size: 18px;
@@ -378,7 +378,7 @@
 
 @media screen and (max-width: 1080px) {
   .anatol-tv--wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .anatol-tv__item {

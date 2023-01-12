@@ -17,7 +17,7 @@
 }
 
 .choose-us .section_title {
-  font-size: max(2.5vw, 40px);
+  font-size: max(2.5vw, 30px);
   color: #252525;
   line-height: 1;
   text-shadow: 0em 0.18em 0.27em rgb(0 0 0 / 24%);
@@ -25,7 +25,7 @@
   text-align: left;
 }
 .choose-us__description {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--text-font-family);
   font-size: max(0.9vw, 14px);
   line-height: 1.35;
   display: flex;
@@ -39,6 +39,7 @@
   width: 100%;
 }
 /* end */
+/*  */
 
 @media screen and (max-width: 1120px) {
   .choose-us--wrapper {
@@ -58,14 +59,6 @@
   .choose-us__item {
     width: calc((100% - 2.5vw) / 2);
   }
-
-  /* .choose-us .section_title {
-    font-size: 3.25vw;
-  }
-
-  .choose-us__description {
-    font-size: 1.3vw;
-  } */
 }
 
 @media screen and (max-width: 800px) {

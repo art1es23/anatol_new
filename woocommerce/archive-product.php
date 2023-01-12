@@ -7,21 +7,21 @@ include 'css/components/equipments-list.css';
 include 'css/page-templates/store/woo.css';
 ?>
 </style>
-<?PHP get_template_part('template-parts/template-part-head-press'); ?>
+<?PHP get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 
 
 <div class="woo_container">
     <div class="woo_container--wrapper container">
         <div
             class="products_content <?php if ( is_shop() ) { ?>category_cont <?php } else { echo 'single_pr_cont'; } ?>	">
-            <div class="hide-sidebar">Filters</div>
+            <div class="hide-sidebar">Show Filters</div>
 
             <div class="product_sidebar">
 
                 <div class="widget-mob-search">
                     <?php dynamic_sidebar('bproduct-sidebar'); ?>
                     <div class="filt-content">
-                        <span class="more-info">Show filter</span>
+                        <!-- <span class="more-info">Show filter</span> -->
                         <div class="more-content" style="display: none;">
                             <?php dynamic_sidebar('mfproduct-sidebar'); ?>
                         </div>

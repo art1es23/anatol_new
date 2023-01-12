@@ -60,7 +60,7 @@
 }
 
 .product-post__title {
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
   font-weight: 700;
   font-size: max(1.25vw, 20px);
   text-align: center;

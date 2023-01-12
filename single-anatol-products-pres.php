@@ -14,13 +14,13 @@ include 'css/page-templates/page-product/product.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 <section class="equipment_info">
     <div class="equipment_info--wrapper container">
 
         <div class="equipment_info__item equipment_info__item--left">
 
-            <?php get_template_part('templates/equipment/single-parts/thumbnails'); ?>
+            <?php get_template_part('templates/components/section-templates/equipment/single-parts/thumbnails'); ?>
             <?php $enable_new_product_ico = get_field('enable_new_product_ico');
                 if(get_field('enable_new_product_ico') === true ) {?>
             <div class="sticker_new">NEW</div>
@@ -36,7 +36,10 @@ include 'css/page-templates/page-product/product.css';
             <?php
                 $enable_no_air_compressor_required = get_field('enable_no_air_compressor_required');
                 if(get_field('enable_no_air_compressor_required') === true ) {?>
-            <div class="sticker_no_air_compressor"></div>
+            <div class="sticker_no_air_compressor">
+                <img src="<?php bloginfo("template_url"); ?>/images/icons/no_air_ico.webp"
+                    alt="No air compressor sticker!" width="54" height="54">
+            </div>
             <?php
                 } else { ?>
             <?php } ?>
@@ -177,7 +180,7 @@ include 'css/page-templates/page-product/product.css';
 
 </section>
 
-<?php get_template_part('templates/equipment/single-parts/tabs_content'); ?>
+<?php get_template_part('templates/components/section-templates/equipment/single-parts/tabs_content'); ?>
 
 <?php
     $term_list = wp_get_post_terms(get_the_ID(), 'anatol-products_cat', array("fields" => "all"));
@@ -272,7 +275,7 @@ if( $featured_posts ): ?>
     wp_reset_postdata(); ?>
 <?php endif; ?>
 
-<?php get_template_part('templates/equipment/another-equipments'); ?>
+<?php get_template_part('templates/components/section-templates/another-equipments'); ?>
 
 <!-- INIT YOUTUBE VIDEOS -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>

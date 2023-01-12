@@ -16,12 +16,12 @@ get_header(); ?>
 <style>
 <?php include 'css/components/hero-templates/hero-template.css';
 include 'css/components/section-comments.css';
-include 'css/components/sidebars/sidebar-blog-right.css';
+include 'css/components/sidebars/sidebar-right.css';
 include 'css/page-templates/single-pages/page-blog-post/page-blog-single.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-blog'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-blog'); ?>
 <div class="simple_bg_head index_template">
     <?php
 	global $anatol_cat_title;
@@ -64,7 +64,7 @@ include 'css/page-templates/single-pages/page-blog-post/page-blog-single.css';
 
     <div class="blog-post">
 
-        <?php get_template_part('template-parts/template-part-postmeta'); ?>
+        <?php get_template_part('templates/components/hero-section/template-part-postmeta'); ?>
         <h1 class="blog-post__title page-title"><?php the_title(); ?></h1>
 
         <div class="post-thumbnail">
@@ -77,7 +77,7 @@ include 'css/page-templates/single-pages/page-blog-post/page-blog-single.css';
             <?php the_content(); ?>
         </div>
 
-        <?php get_template_part('template-parts/template-part-postmeta_bottom'); ?>
+        <?php get_template_part('templates/components/hero-section/template-part-postmeta_bottom'); ?>
 
         <?php wp_link_pages(); ?>
         <div class="share_post_part">

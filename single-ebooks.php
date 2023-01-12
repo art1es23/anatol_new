@@ -8,7 +8,7 @@ include 'css/page-templates/page-ebooks/ebooks.css';
 include 'css/page-templates/single-pages/page-ebook-post/page-ebook-single.css';
 ?>
 </style>
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 
 <div class="ebook-post-single">
     <div class="ebook-post-single--wrapper container">
@@ -79,8 +79,8 @@ include 'css/page-templates/single-pages/page-ebook-post/page-ebook-single.css';
 
             <?php if( get_field( "file_to_download" )) {?>
 
-            <button href="<?php the_field( "file_to_download" );?>" class="button link_to_item download_click"
-                target="_blank">Download eBook</button>
+            <button href="<?php the_field( "file_to_download" );?>"
+                class="download-ebook-button button link_to_item download_click" target="_blank">Download eBook</button>
             <?php }	?>
         </div>
 
@@ -136,18 +136,8 @@ include 'css/page-templates/single-pages/page-ebook-post/page-ebook-single.css';
     </div>
 </div>
 
-<?php get_template_part('templates/equipment/another-equipments'); ?>
+<?php get_template_part('templates/components/section-templates/another-equipments'); ?>
 
-<div class="download_ebook_b innerr">
-    <a class="close_pop" style="float: right;"><img loading="lazy" class="lozad"
-            src="<?php bloginfo('template_directory'); ?>/images/close.svg" style="width: 20px" alt=""></a>
-    <div class="form-title">Download eBook</div>
-    <div id="contact_form_pop" class="form_pop">
-
-        <?php get_template_part('templates/forms/ebook-form'); ?>
-
-    </div>
-</div>
 
 <!-- Slider Init -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>

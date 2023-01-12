@@ -410,6 +410,7 @@ function submitForm(formID) {
   );
 }
 
+// export { submitForm };
+
 submitForm(".get_quote-inner");
 submitForm(".home_subscribe");
-// submitForm(".get_quote > #__vtigerWebForm");

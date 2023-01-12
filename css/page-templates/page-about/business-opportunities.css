@@ -98,9 +98,6 @@
   .business-info--wrapper {
     padding: 5vw;
   }
-  .business-info--wrapper .section_title {
-    font-size: 3.25vw;
-  }
   .business-info__description {
     font-size: max(2.15vw, 16px);
   }
@@ -123,7 +120,6 @@
   }
   .business-info--wrapper .section_title {
     text-align: center;
-    font-size: 5vw;
   }
   .business-info__description {
     gap: 2.25vw;
@@ -137,7 +133,6 @@
   }
   .business-info--wrapper .section_title {
     text-align: center;
-    font-size: 6.25vw;
   }
   .business-info__description {
     gap: 3.25vw;

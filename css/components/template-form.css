@@ -1,20 +1,28 @@
 /* Default form styles */
 label {
   font-size: max(0.8vw, 14px);
-  display: none;
+  text-align: left;
+  /* display: none; */
 
   font-family: "Montserrat", sans-serif;
+}
+
+.get_in_touch_cont label,
+.contact-us-form label,
+.request_service_form label {
+  display: none;
 }
 
 input,
 textarea,
 select {
-  --horizontall-side-padding: 0.5vw;
-  --vertical-side-padding: 1vh;
+  --horizontall-side-padding: 1rem;
+  --vertical-side-padding: 0.75rem;
   --input-font-size: max(0.75vw, 14px);
   --input-background-color: #fff;
-  --input-base-color: #999;
-  --input-border: 1px solid var(--input-base-color);
+  --input-base-color: #000;
+  --input-border-color: #999;
+  --input-border: 1px solid var(--input-border-color);
 
   width: 100%;
   font-family: "Montserrat", sans-serif;
@@ -25,13 +33,21 @@ select {
   font-size: var(--input-font-size);
   border: var(--input-border);
   padding: var(--vertical-side-padding) var(--horizontall-side-padding);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  appearance: none;
+
+  /* font-weight: 600; */
 }
 
-/* input,
-textarea {
-  --input-base-color: #777;
-  color: var(--input-base-color);
-} */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  -webkit-border-radius: initial;
+  appearance: auto;
+}
 
 ::placeholder {
   --placeholder-base-color: #777;
@@ -42,9 +58,18 @@ textarea {
   resize: none;
 }
 
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  appearance: none;
+}
+
 input[type="submit"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  appearance: none;
   --button-width: 80%;
-  border: none;
+  box-shadow: none;
 }
 
 input[type="submit"].button--full {
@@ -85,16 +110,25 @@ input[type="submit"].button--full {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 2.5vh;
+  gap: var(--form-inner-gap);
   position: relative;
   min-width: var(--form-min-width);
   max-width: var(--form-max-width);
-  margin: 0 auto;
+  margin: auto;
   padding: var(--form-padding);
   width: var(--form-inner-width);
-  overflow-y: auto;
   /* display: none; */
 }
+
+.form--wrapper .form {
+  --form-inner-gap: 1.5vh;
+}
+
+/* .get_in_touch_cont form,
+.contact-us-form form,
+.request_service_form form {
+  --form-inner-gap: 2.5vh;
+} */
 
 .form.hidden {
   display: none;
@@ -142,9 +176,12 @@ input[type="submit"].button--full {
 
 /* Form title */
 .form-title {
-  font-family: var(--base-font-family), sans-serif;
-  font-size: max(2vw, 30px);
+  font-family: var(--base-font-family);
+  font-size: max(2vw, 28px);
   text-align: center;
+  max-width: 100%;
+  width: 100%;
+  line-height: 1;
   /* max-width: 80%; */
 }
 
@@ -161,13 +198,23 @@ input[type="submit"].button--full {
   font-family: "Montserrat", sans-serif;
 }
 /* Form inner */
-.form-inner {
+.form-inner,
+.wpcf7-form {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   gap: var(--form-inner-gap);
+}
+
+.form-inner--wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vh;
 }
 
 .form-inner__item {
@@ -222,8 +269,8 @@ input[type="submit"].button--full {
   align-items: center;
   text-align: center;
   background-color: var(--main-color);
-  max-width: 50%;
-  width: 25%;
+  max-width: 60%;
+  width: 50%;
   cursor: pointer;
   border: none;
 }
@@ -314,25 +361,45 @@ input[type="submit"].button--full {
   visibility: visible;
   transition: all 0.75s ease-in;
 }
+#get_in_touch_form select option {
+  color: #000;
+}
+
+.warranty-form {
+  margin: auto;
+}
+
+.register_warranty_wrap {
+  --form-min-width: 50vw;
+}
 
 @media screen and (max-width: 1080px) {
   .form {
     --form-min-width: 75vw;
-    --form-inner-gap: 2.5vh;
+    --form-inner-gap: 2vh;
     --form-padding: 5vh 3.5vw;
   }
 
-  /* .form-inner,
   .form-inner__item,
   .form-inner__item--half {
-    --form-inner-gap: 2.5vh;
-  } */
+    --form-inner-gap: 2vh;
+  }
 
   input,
   textarea,
   select {
-    --horizontall-side-padding: 1vw;
-    --vertical-side-padding: 1.5vh;
+    /* --horizontall-side-padding: 1vw;
+    --vertical-side-padding: 1.5vh; */
+    min-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .register_warranty_wrap {
+    --form-min-width: 90vw;
+  }
+  .form--wrapper {
+    align-items: flex-start;
   }
 }
 
@@ -340,8 +407,41 @@ input[type="submit"].button--full {
   .form {
     --form-min-width: 100%;
     --form-padding: 7.5vw;
-    height: 100%;
+    height: auto;
     justify-content: center;
+  }
+
+  .form,
+  .form-inner,
+  .form-inner__item,
+  .form-inner__item--half {
+    --form-inner-gap: 1rem;
+  }
+
+  .form--wrapper .form {
+    /* overflow-y: scroll; */
+    --form-inner-gap: 0.75rem;
+  }
+
+  /* .get_in_touch_cont .form,
+  .get_in_touch_cont .form-inner,
+  .get_in_touch_cont .form-inner__item,
+  .get_in_touch_cont .form-inner__item--half,
+  .contact-us-form .form,
+  .contact-us-form .form-inner,
+  .contact-us-form .form-inner__item,
+  .contact-us-form .form-inner__item--half,
+  .request_service_form .form,
+  .request_service_form .form-inner,
+  .request_service_form .form-inner__item,
+  .request_service_form .form-inner__item--half {
+    --form-inner-gap: 1.75vh;
+  } */
+
+  .form--wrapper .form-inner,
+  .form--wrapper .form-inner__item,
+  .form--wrapper .form-inner__item--half {
+    --form-inner-gap: 0.75rem;
   }
 
   .form-inner__item--half {
@@ -354,20 +454,43 @@ input[type="submit"].button--full {
   input[type="submit"] {
     --button-width: 100%;
   }
+
+  .register_warranty_wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .close-button {
+    top: 1.5%;
+    right: 1.5%;
+  }
+
+  .warranty-form {
+    width: 100%;
+  }
+
+  .register_warranty_wrap .button {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 550px) {
   input,
   textarea,
   select {
-    --vertical-side-padding: 1.5vh;
-    --horizontall-side-padding: 2.5vw;
+    /* --vertical-side-padding: 1.5vh;
+    --horizontall-side-padding: 2.5vw; */
     --input-font-size: max(3vw, 16px);
   }
   .form {
     --form-min-width: 100%;
-
     width: 94%;
+  }
+
+  .get_in_touch_cont form,
+  .contact-us-form form,
+  .service_form form {
+    padding-top: 0;
   }
 
   .form-inner,
@@ -376,10 +499,8 @@ input[type="submit"].button--full {
     width: 100%;
   }
 }
-
-@media screen and (max-width: 650px) {
-  .warranty-form {
-    padding-top: 30vh;
-    width: 100%;
+@media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+  .form {
+    --form-min-width: 100%;
   }
 }

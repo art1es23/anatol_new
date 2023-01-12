@@ -30,6 +30,9 @@
         content="screen printing, anatol, Anatol Equipment, Screen Printing Machine, Anatol screen printing equipment, screen printing equipment, Anatol, screen printing machines, Textile Printing, Textile Screen Printing, graphic screen printing, t-shirt printing, textile printing, t-shirt press, electric screen printing machine, Automatic Screen Printing Machine, Presses, Conveyor Dryers, Flash Cure Units, Pre-press, Accessories">
     <meta property="og:image" content="/wp-content/themes/anatol/images/anatol-flag.png" />
 
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 
     <link rel="icon" type="image/x-icon" href="<?php bloginfo("template_url"); ?>/images/favicon.ico" />
@@ -74,8 +77,104 @@
 
     <?php wp_head(); ?>
 
-    <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/libs/lozad//lozad.min.js">
+    <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/libs/lozad//lozad.min.js">
+    </script> -->
+
+    <script>
+    !(function(t, e) {
+        "object" == typeof exports && "undefined" != typeof module ? module.exports = e() : "function" ==
+            typeof define && define.amd ? define(e) : t.lozad = e()
+    })(this, (function() {
+        "use strict";
+        var t = "undefined" != typeof document && document.documentMode,
+            e = {
+                rootMargin: "0px",
+                threshold: 0,
+                load: function(e) {
+                    if ("picture" === e.nodeName.toLowerCase()) {
+                        var r = e.querySelector("img"),
+                            a = !1;
+                        null === r && (r = document.createElement("img"), a = !0), t && e.getAttribute(
+                            "data-iesrc") && (r.src = e.getAttribute("data-iesrc")), e.getAttribute(
+                            "data-alt") && (r.alt = e.getAttribute("data-alt")), a && e.append(r)
+                    }
+                    if ("video" === e.nodeName.toLowerCase() && !e.getAttribute("data-src") && e.children) {
+                        for (var o = e.children, i = void 0, n = 0; n <= o.length - 1; n++)(i = o[n]
+                            .getAttribute("data-src")) && (o[n].src = i);
+                        e.load()
+                    }
+                    e.getAttribute("data-poster") && (e.poster = e.getAttribute("data-poster")), e
+                        .getAttribute("data-src") && (e.src = e.getAttribute("data-src")), e.getAttribute(
+                            "data-srcset") && e.setAttribute("srcset", e.getAttribute("data-srcset"));
+                    var d = ",";
+                    if (e.getAttribute("data-background-delimiter") && (d = e.getAttribute(
+                            "data-background-delimiter")), e.getAttribute("data-background-image")) e.style
+                        .backgroundImage = "url('" + e.getAttribute("data-background-image").split(d).join(
+                            "'),url('") + "')";
+                    else if (e.getAttribute("data-background-image-set")) {
+                        var u = e.getAttribute("data-background-image-set").split(d),
+                            g = u[0].substr(0, u[0].indexOf(" ")) || u[0];
+                        g = -1 === g.indexOf("url(") ? "url(" + g + ")" : g, 1 === u.length ? e.style
+                            .backgroundImage = g : e.setAttribute("style", (e.getAttribute("style") || "") +
+                                "background-image: " + g + "; background-image: -webkit-image-set(" + u +
+                                "); background-image: image-set(" + u + ")")
+                    }
+                    e.getAttribute("data-toggle-class") && e.classList.toggle(e.getAttribute(
+                        "data-toggle-class"))
+                },
+                loaded: function() {}
+            };
+
+        function r(t) {
+            t.setAttribute("data-loaded", !0)
+        }
+        var a = function(t) {
+                return "true" === t.getAttribute("data-loaded")
+            },
+            o = function(t) {
+                var e = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : document;
+                return t instanceof Element ? [t] : t instanceof NodeList ? t : e.querySelectorAll(t)
+            };
+        return function() {
+            var t, i, n = 0 < arguments.length && void 0 !== arguments[0] ? arguments[0] : ".lozad",
+                d = 1 < arguments.length && void 0 !== arguments[1] ? arguments[1] : {},
+                u = Object.assign({}, e, d),
+                g = u.root,
+                s = u.rootMargin,
+                c = u.threshold,
+                l = u.load,
+                b = u.loaded,
+                f = void 0;
+            "undefined" != typeof window && window.IntersectionObserver && (f = new IntersectionObserver((
+                t = l, i = b,
+                function(e, o) {
+                    e.forEach((function(e) {
+                        (0 < e.intersectionRatio || e.isIntersecting) && (o
+                            .unobserve(e.target), a(e.target) || (t(e.target), r(e
+                                .target), i(e.target)))
+                    }))
+                }), {
+                root: g,
+                rootMargin: s,
+                threshold: c
+            }));
+            for (var A, m = o(n, g), v = 0; v < m.length; v++)(A = m[v]).getAttribute(
+                "data-placeholder-background") && (A.style.background = A.getAttribute(
+                "data-placeholder-background"));
+            return {
+                observe: function() {
+                    for (var t = o(n, g), e = 0; e < t.length; e++) a(t[e]) || (f ? f.observe(t[e]) : (
+                        l(t[e]), r(t[e]), b(t[e])))
+                },
+                triggerLoad: function(t) {
+                    a(t) || (l(t), r(t), b(t))
+                },
+                observer: f
+            }
+        }
+    }));
     </script>
+
     <script>
     const observer = lozad(); // lazy loads elements with default selector as ".lozad"
     observer.observe();
@@ -319,7 +418,7 @@
                         <div class="inf_cont">
                             <div class="inf_left">
                                 <div>
-                                    <img class="info-img"
+                                    <img loading="lazy" class="lozad info-img"
                                         src="<?php bloginfo('template_directory'); ?>/images/anatol-logo-ico.svg"
                                         alt="Anatol screen printing equipment logo" width="100" height="56">
                                 </div>
@@ -352,7 +451,7 @@
                 </div>
 
 
-                <?php get_template_part('template-parts/template-part-topnav'); ?>
+                <?php get_template_part('templates/components/navigation/template-part-topnav'); ?>
 
                 <div class="menu_icon">
                     <div class="menui top-line"></div>

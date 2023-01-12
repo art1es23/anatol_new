@@ -47,7 +47,7 @@
 }
 
 .blog-post__title {
-  /* font-family: var(--base-font-family), sans-serif; */
+  /* font-family: var(--base-font-family); */
   font-weight: 700;
   font-size: max(1vw, 15px);
   color: #363636;
@@ -177,6 +177,9 @@ nav.woocommerce-pagination {
   } */
 }
 @media screen and (max-width: 900px) {
+  .blog-container {
+    width: 85%;
+  }
   .blog-list {
     gap: 5vw 3vw;
   }
@@ -196,6 +199,9 @@ nav.woocommerce-pagination {
   } */
 }
 @media screen and (max-width: 700px) {
+  .blog-container {
+    width: 94%;
+  }
   .blog-list {
     justify-content: center;
     gap: 7.5vw;

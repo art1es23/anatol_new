@@ -19,10 +19,12 @@
       rgba(27, 31, 37, 0.3) 0%,
       #1b1f25 100%
     ),
-    url(../wp-content/themes/anatol/images/bg-group2.jpg) !important;
+    url(../wp-content/themes/anatol/images/bg-group2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #242424;
+
   color: #fff;
 }
 
@@ -93,9 +95,19 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .request_service_form--wrapper {
+    width: 85%;
+  }
+  .support-feedbacks {
+    background-image: none;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .service_form {
     --form-padding: 0;
+    padding-top: 0;
   }
   .request_service_form--wrapper {
     width: 90%;

@@ -4,17 +4,18 @@
       rgba(27, 31, 37, 0.3) 0%,
       #1b1f25 100%
     ),
-    url(../wp-content/themes/anatol/images/bg-group2.jpg) !important;
+    url(/wp-content/themes/anatol/images/bg-group2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #242424;
 }
 
 .support_top--wrapper {
-  margin: 5vw auto;
+  margin: max(7.5vh, 2.5rem) auto;
   display: flex;
   flex-direction: column;
-  gap: 3vw;
+  gap: max(3vw, 5vh);
 }
 
 .support_top_section .section-title {
@@ -25,7 +26,7 @@
 .support_top_pannel {
   display: flex;
   justify-content: space-between;
-  gap: 3vw;
+  gap: max(3vw, 5vh);
 }
 .column_support {
   width: calc((100% - 7vw) / 3);
@@ -44,12 +45,61 @@
 }
 
 .column_support .stp_icon {
-  text-align: center;
-  color: #cd2122;
-  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
 }
+
+.column_support .stp_icon svg {
+  width: 100%;
+  height: 100%;
+  /* fill: #cd2122;
+  stroke: none; */
+}
+
+.spm_contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.spm_contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  font-size: max(0.8vw, 14px);
+}
+
+.spm_contact svg {
+  fill: #000;
+  stroke: none;
+  width: 100%;
+  height: 100%;
+}
+
+.white-text .spm_contact svg {
+  fill: #fff;
+}
+
+.custom_icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wicon-contract {
+  background-image: url(/wp-content/themes/anatol/images/svg-icons/icon-warranty.svg);
+}
+.wicon-question {
+  background-image: url(/wp-content/themes/anatol/images/svg-icons/icon-question.svg);
+}
+
 .stp_title {
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
   font-weight: 700;
   font-size: max(1.5vw, 18px);
   text-align: center;
@@ -58,13 +108,29 @@
 .stp_content {
   font-size: max(0.8vw, 14px);
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25vh;
+  justify-content: center;
 }
 
+.stp_content a {
+  color: #000;
+}
+
+.white-text .stp_content a {
+  color: #fff;
+}
+.stp_content a:hover {
+  color: var(--main-color);
+}
 .support_team--wrapper {
   display: flex;
   flex-direction: column;
   gap: 3vw;
   margin: max(7.5vh, 2.5rem) auto;
+  max-width: 94%;
 }
 .support_team_cont {
   width: 100%;
@@ -111,6 +177,7 @@
 @media screen and (max-width: 900px) {
   .support_top--wrapper {
     align-items: center;
+    width: 90%;
   }
   .support_top_pannel {
     flex-direction: column;
@@ -120,14 +187,19 @@
     width: 100%;
   }
   .stp_title {
-    font-family: var(--base-font-family), sans-serif;
+    font-family: var(--base-font-family);
     font-weight: 700;
     font-size: max(3vw, 26px);
     text-align: center;
   }
 
-  .stp_content {
-    font-size: max(2.25vw, 18px);
+  .stp_content,
+  .spm_contact {
+    font-size: max(2.25vw, 15px);
+  }
+  .column_support .stp_icon {
+    width: 3.5rem;
+    height: 3.5rem;
   }
 }
 
@@ -148,8 +220,37 @@
   }
 }
 
+@media screen and (max-width: 650px) {
+  .support_top_section {
+    background-image: none;
+    background-attachment: initial;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .support_top_pannel {
     width: 90%;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 900px) and (orientation: landscape) {
+  .st_item_name,
+  .feedback_title_block {
+    font-size: max(1.25vw, 16px);
+  }
+  .sbn_sub_title,
+  .st_content,
+  .feedback,
+  .feedback_customer_company {
+    font-size: max(1vw, 14px);
+  }
+
+  .feedback_title_block {
+    font-size: max(3.25vw, 20px);
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 900px) and (orientation: landscape) {
+  .support_top_section {
+    background-image: none;
+    background-attachment: initial;
   }
 }

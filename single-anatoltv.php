@@ -9,7 +9,7 @@ include 'css/page-templates/single-pages/page-anatoltv/page-anatoltv-single.css'
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 
 <section class="anatol-tv-single">
     <div class="anatol-tv-single--wrapper container">

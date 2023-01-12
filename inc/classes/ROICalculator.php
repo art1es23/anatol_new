@@ -160,6 +160,7 @@ if (!class_exists('ROICalculator')) {
 
     function completion_time($data)
     {
+      // echo $data;
 
       $fronts = $data['fronts'];
       $backs = $data['fronts'];

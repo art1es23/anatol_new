@@ -171,6 +171,7 @@ section.anatol_videos .tab-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 600;
 }
 
 .tabs_navi__item {
@@ -596,7 +597,7 @@ section.anatol_videos .tab-content {
 
 .tab_item_title,
 .tab_item_title > p {
-  font-family: var(--base-font-family), sans-serif;
+  font-family: var(--base-font-family);
   font-weight: 700;
   font-size: max(1.35vw, 1.35rem);
   text-transform: uppercase;
@@ -607,7 +608,7 @@ section.anatol_videos .tab-content {
   color: #353535;
   font-size: 20px;
   line-height: 1.3em;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   margin-bottom: 10px;
 }

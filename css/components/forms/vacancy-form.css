@@ -1,0 +1,340 @@
+/* Trigger button */
+.vacancy_contact_us {
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  /* margin: 0 auto 3vw; */
+  text-transform: uppercase;
+}
+/* Contact Form 7 */
+
+/* .wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75vh;
+}
+
+.vacancy_form_title {
+  font-size: max(1.25vw, 20px);
+  color: var(--main-color);
+  font-weight: 600;
+  text-align: center;
+}
+
+.form_block_one {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25vh;
+}
+
+.form_block_one .row {
+  display: flex;
+  gap: 1.5vw;
+  justify-content: space-between;
+}
+
+.form_block_one label {
+  display: inline-block;
+}
+.form_block_one input,
+.form_block_one textarea {
+  --input-base-color: #dcdcdc;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.form_block_one .row > div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+} */
+
+/* Agree btn */
+.agree-checkbox {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0 2.5rem;
+  cursor: pointer;
+}
+
+.vf_iagree input {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.agree-checkbox:before {
+  z-index: 99;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 1px solid var(--main-color);
+  transition: border 0.3s ease-in;
+}
+.vf_iagree input:checked + .agree-checkbox::before {
+  background: url(/wp-content/themes/anatol/images/img/compare_sprite.png)
+    no-repeat -40px 0;
+  border: none;
+}
+
+.vf_text {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+/* .form-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form-buttons-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  z-index: 2;
+  background-color: #fff;
+  padding: 0 1.5vw;
+}
+
+.form-buttons::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, -50%);
+  background-color: #dcdcdc;
+  width: 100%;
+  height: 1px;
+  z-index: 1;
+}
+.uploadcv_button,
+.button-submit {
+  display: flex;
+  gap: 0.25vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.uploadcv_button,
+.button-submit {
+  --button-box-shadow: none;
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  min-width: 10rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1;
+  font-size: max(0.75vw, 12px);
+  min-height: 3.75vh;
+  transition: all 0.3s ease-in;
+  border: 1px solid var(--main-color);
+}
+
+.uploadcv_button {
+  color: var(--main-color);
+  background-color: #fff;
+}
+
+.uploadcv_button:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.button-submit {
+  background-color: var(--main-color);
+  color: #fff;
+} */
+
+.wpcf7-submit {
+  width: 100%;
+}
+
+.uploadcv_button > .wpcf7-form-control-wrap {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+/* My styles */
+
+/* CV Form */
+
+.vacancy-contact-us {
+  --form-min-width: 60vw;
+}
+.wpcf7-form {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.wpcf7-form label {
+  display: initial;
+  font-size: max(0.65vw, 12px);
+}
+.cv-agreements-info {
+  width: calc(50% - 2.5vh);
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  justify-content: space-between;
+}
+
+.cv-agreements-info__description,
+.cv-agreements-info__user,
+.cv-agreements-list_item {
+  text-align: justify;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.cv-agreements-list {
+  padding-left: 1.5rem;
+  list-style: initial;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#agree {
+  max-width: 1.5rem;
+}
+.form-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form-buttons-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  /* position: relative; */
+  z-index: 2;
+  background-color: #fff;
+  padding: 0 1.5vw;
+}
+
+.form-buttons::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, -50%);
+  background-color: #dcdcdc;
+  width: 100%;
+  height: 1px;
+  z-index: 1;
+}
+.wpcf7-form .uploadcv_button,
+input.button-submit {
+  --button-box-shadow: none;
+
+  display: flex;
+  gap: 0.25vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  /* min-width: 10rem; */
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 1;
+  font-size: max(0.75vw, 12px);
+  min-height: 3.75vh;
+  transition: all 0.3s ease-in;
+  border: 1px solid var(--main-color);
+}
+
+.uploadcv_button {
+  color: var(--main-color);
+  background-color: #fff;
+}
+
+.uploadcv_button:hover {
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.button-submit {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.wpcf7-submit {
+  width: 100%;
+}
+
+.uploadcv_button > .wpcf7-form-control-wrap {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+@media screen and (max-width: 1600px) {
+  .vacancy-contact-us {
+    --form-min-width: 70vw;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .vacancy-contact-us {
+    --form-min-width: 80vw;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .vacancy-contact-us {
+    --form-min-width: 90vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  .vacancy-contact-us {
+    --form-min-width: 100%;
+    /* overflow-y: scroll; */
+  }
+}
+@media screen and (max-width: 800px) {
+  .wpcf7-form {
+    flex-direction: column;
+  }
+  .form-inner--wrapper,
+  .cv-agreements-info {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  /* .vacancy-contact-us {
+    padding-top: 25rem;
+  } */
+}

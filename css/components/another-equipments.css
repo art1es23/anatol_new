@@ -1,17 +1,19 @@
 /* another-equipment */
 .another-equipment {
+  --bg-image: url(/wp-content/themes/anatol/images/fon6.webp);
   width: 100%;
   overflow: hidden;
-  background-image: image-set(
-    url(/wp-content/themes/anatol/images/fon6.webp) type("image/webp"),
-    url(/wp-content/themes/anatol/images/fon6.jpg)
-  );
+  /* background-image: image-set(
+    "/wp-content/themes/anatol/images/fon6.webp" type("image/webp"),
+    "/wp-content/themes/anatol/images/fon6.jpg" type("image/jpg")
+  ); */
+  background-image: var(--bg-image);
   background-position: center;
   background-attachment: fixed;
-  background-size: cover !important;
-  background-position: center center;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #242424;
 }
 
 .another-equipment--wrapper {
@@ -33,6 +35,9 @@
   text-align: center;
   color: var(--base-color);
   text-transform: uppercase;
+
+  font-family: var(--base-font-family);
+  font-size: max(4vw, 3rem);
 }
 
 .list-equipment {
@@ -97,6 +102,7 @@
   color: var(--base-color);
   text-align: center;
   font-size: 0.75vw;
+  font-weight: 600;
 }
 
 .list-equipment__info {
@@ -165,19 +171,19 @@
 }
 
 .list-equipment__item--press .list-equipment__item--back .mouse-parallax {
-  background-image: url(../wp-content/themes/anatol/images/mouse-parallax/001.jpg);
+  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/001.webp);
 }
 .list-equipment__item--dryers .list-equipment__item--back .mouse-parallax {
-  background-image: url(../wp-content/themes/anatol/images/mouse-parallax/003.jpg);
+  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/003.webp);
 }
 .list-equipment__item--flash .list-equipment__item--back .mouse-parallax {
-  background-image: url(../wp-content/themes/anatol/images/mouse-parallax/004.jpg);
+  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/004.webp);
 }
 .list-equipment__item--pre-press .list-equipment__item--back .mouse-parallax {
-  background-image: url(../wp-content/themes/anatol/images/mouse-parallax/005.jpg);
+  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/005.webp);
 }
 .list-equipment__item--accessories .list-equipment__item--back .mouse-parallax {
-  background-image: url(../wp-content/themes/anatol/images/mouse-parallax/006.jpg);
+  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/006.webp);
 }
 .list-equipment .link_to_item {
   color: #fff;
@@ -190,6 +196,8 @@
   transform: translate3d(0, -60px, 0);
 }
 
+.list-equipment__item:active .link_to_item,
+.list-equipment__item:focus .link_to_item,
 .list-equipment__item:hover .link_to_item {
   opacity: 1;
   background-color: #ab1a1f;
@@ -281,18 +289,24 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .another-equipment__title {
+    font-size: max(6vw, 1.5rem);
+  }
+}
+
 @media screen and (max-width: 800px) {
   .link_to_item {
     display: none;
   }
-  .another-equipment__title {
+  /* .another-equipment__title {
     font-size: 4.25vw;
-  }
+  } */
 }
 
 @media screen and (max-width: 700px) {
   .list-equipment {
-    gap: 3vw;
+    gap: 2.5vh;
   }
   .list-equipment__item,
   .list-equipment__item:hover,
@@ -310,16 +324,16 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
   .another-equipment__title {
     font-size: 4.75vw;
   }
-}
+} */
 
 @media screen and (max-width: 600px) {
-  .list-equipment {
+  /* .list-equipment {
     gap: 0;
-  }
+  } */
   .list-equipment__item,
   .list-equipment__item:hover,
   .list-equipment__item:active,
@@ -343,5 +357,17 @@
   }
   .list-equipment__info li {
     font-size: calc(10px + 7.5 * ((100vw - 320px) / (600 - 320)));
+  }
+}
+@media screen and (max-width: 550px) {
+  .another-equipment {
+    background-attachment: initial;
+    background-image: none;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 900px) and (orientation: landscape) {
+  .another-equipment {
+    background-attachment: initial;
+    background-image: none;
   }
 }

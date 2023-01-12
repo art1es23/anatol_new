@@ -20,7 +20,7 @@
 }
 .section_head .section_pretitle {
   font-size: 30px;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.3em;
   font-weight: bold;
   position: relative;
@@ -66,7 +66,7 @@
 }
 .sbn_sub_title {
   font-size: 0.8vw;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
 
@@ -210,7 +210,7 @@
   /* margin: 30px 0 0 0; */
 }
 .head_section .head_description {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.15vw;
   line-height: 1.5em;
   /* margin-bottom: 30px; */
@@ -492,7 +492,7 @@ input[type="submit"],
 .et_pb_contact_form_0.et_pb_contact_form_container
   .input[type="radio"]
   + label {
-  font-family: "Lato", Helvetica, Arial, Lucida, sans-serif;
+  font-family: "Roboto", Helvetica, Arial, Lucida, sans-serif;
   font-size: 16px;
 }
 .feedback_form .form-row select,
@@ -709,7 +709,7 @@ input[type="submit"],
   display: block;
   margin-top: 0;
   text-align: left;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 26px;
   line-height: 1.1;
   font-weight: 700;
@@ -1660,7 +1660,7 @@ nav.woocommerce-pagination {
   color: #fff;
   text-decoration: none !important;
   outline: none !important;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 1.2em;
@@ -2082,7 +2082,7 @@ textarea {
   color: #fff;
   text-decoration: none !important;
   outline: none !important;
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 14px;
   line-height: 1;

@@ -6,7 +6,7 @@ get_header(); ?>
 include 'css/page-templates/page-blog/blog.css';
 ?>
 </style>
-<?php get_template_part('template-parts/template-part-head-blog'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-blog'); ?>
 
 <div class="simple_bg_head index_template">
     <?php
@@ -43,13 +43,12 @@ include 'css/page-templates/page-blog/blog.css';
 
         <?php // theloop
 			if (have_posts()) : while (have_posts()) : the_post();
+                // single post
+                if (is_single()) : ?>
 
-					// single post
-					if (is_single()) : ?>
+        <div class="blog-list__item blog-post">
 
-        <div class="blog-list__item">
-
-            <?php get_template_part('template-parts/template-part-postmeta'); ?>
+            <?php get_template_part('templates/components/hero-section/template-part-postmeta'); ?>
             <h1 class="page-header"><?php the_title(); ?></h1>
 
             <?php if (has_post_thumbnail()) : ?>
@@ -59,7 +58,7 @@ include 'css/page-templates/page-blog/blog.css';
             <div class="post-content">
                 <?php the_content(); ?>
             </div>
-            <?php get_template_part('template-parts/template-part-postmeta_bottom'); ?>
+            <?php get_template_part('templates/components/hero-section/template-part-postmeta_bottom'); ?>
             <?php wp_link_pages(); ?>
             <div class="share_post_part">
                 <div class="spp_line_part"></div>
@@ -72,8 +71,7 @@ include 'css/page-templates/page-blog/blog.css';
             <?php comments_template(); ?>
 
         </div>
-        <?php // list of posts
-            else : ?>
+        <?php else : ?>
 
         <div class="blog-list__item blog-post">
             <a href="<?php the_permalink(); ?>" class="blog-post__img thumbnail_link">
@@ -103,8 +101,7 @@ include 'css/page-templates/page-blog/blog.css';
         <nav class="woocommerce-pagination page-pagination">
             <?php wp_corenavi(); ?>
         </nav>
-        <?php
-		else :
+        <?php else :
 			get_404_template();
 		endif; ?>
 

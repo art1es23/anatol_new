@@ -1,1 +1,1 @@
-<?php get_template_part('page-template-customer-stories'); ?>
+<?php get_template_part('templates/page-template-customer-stories'); ?>

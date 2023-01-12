@@ -13,7 +13,13 @@ if (is_single() && get_post_type() == 'post' && ICL_LANGUAGE_CODE != 'en') {
  */
 get_header(); ?>
 
-<?php get_template_part('template-parts/template-part-head-blog'); ?>
+<style>
+<?php include 'css/components/hero-templates/hero-template.css';
+include 'css/page-templates/page-blog/blog.css';
+?>
+</style>
+
+<?php get_template_part('templates/components/hero-section/template-part-head-blog'); ?>
 
 <div class="simple_bg_head index_template">
     <?php
@@ -30,10 +36,10 @@ get_header(); ?>
 	//get_template_part('template-parts/template-part-head-part2'); ?>
     <!-- <div class="clear clearfix"></div> -->
 </div>
-<div class="container blog-container the-new-class">
+<div class="container blog-container">
     <!-- start content container -->
 
-    <div class="blogs-content">
+    <div class="blog-list">
         <?php $description = term_description();
 			if ($description) {
 				?>
@@ -58,9 +64,8 @@ get_header(); ?>
 				// single post
 				if (is_single()) : ?>
 
-        <div class="post_item">
-
-            <?php get_template_part('template-parts/template-part-postmeta'); ?>
+        <div class="blog-list__item blog-post">
+            <?php get_template_part('templates/components/hero-section/template-part-postmeta'); ?>
             <h1 class="page-header"><?php the_title(); ?></h1>
 
             <?php if (has_post_thumbnail()) : ?>
@@ -70,7 +75,7 @@ get_header(); ?>
             <div class="post-content">
                 <?php the_content(); ?>
             </div>
-            <?php get_template_part('template-parts/template-part-postmeta_bottom'); ?>
+            <?php get_template_part('templates/components/hero-section/template-part-postmeta_bottom'); ?>
             <?php wp_link_pages(); ?>
             <div class="share_post_part">
                 <div class="spp_line_part"></div>
@@ -83,53 +88,42 @@ get_header(); ?>
             <?php comments_template(); ?>
 
         </div>
-        <?php
-				// list of posts
-				else : ?>
+        <?php // list of posts
+            else : ?>
 
-        <div class="post_item anim_fade">
-            <div class="post_thumbnail"><a href="<?php the_permalink(); ?>" class="thumbnail_link">
-                    <?php if (has_post_thumbnail()) : ?>
-                    <?php the_post_thumbnail(array(1200, 500)); ?>
-                    <?php endif; ?></a>
-            </div>
+        <div class="blog-list__item blog-post">
+            <!-- <div class="post_thumbnail"> -->
+            <a href="<?php the_permalink(); ?>" class="blog-post__img thumbnail_link">
+                <?php if (has_post_thumbnail()) : ?>
+                <?php the_post_thumbnail(array(1200, 500)); ?>
+                <?php endif; ?></a>
+            <!-- </div> -->
 
             <div class="post_item_caption">
-
-                <h3 class="post_item_title">
-                    <a href="<?php the_permalink(); ?>"
-                        title="<?php echo esc_attr(sprintf(__('Permalink to %s'), the_title_attribute('echo=0'))); ?>"
-                        rel="bookmark"><?php the_title(); ?></a>
-                </h3>
-                <?php the_excerpt(); ?>
-
                 <!--<div class="post_time"><?php the_date('m,d,y'); ?></div>-->
 
-                <div class="read_more_content">
-                    <a href="<?php the_permalink(); ?>" class="button rmc_button">
+                <div class="blog-post__description">
+                    <a class="blog-post__title" href="<?php the_permalink(); ?>"
+                        title="<?php echo esc_attr(sprintf(__('Permalink to %s'), the_title_attribute('echo=0'))); ?>"
+                        rel="bookmark"><?php the_title(); ?></a>
+                    <?php the_excerpt(); ?>
+
+                    <a href="<?php the_permalink(); ?>" class="read_more_content button rmc_button">
                         <?PHP _e('Read more'); ?>
                     </a>
-
-
                 </div>
             </div>
         </div>
-
         <?php endif; ?>
-
         <?php endwhile; ?>
 
         <nav class="woocommerce-pagination page-pagination">
             <?php wp_corenavi(); ?>
         </nav>
-        <?php
-		else :
+        <?php else :
 			get_404_template();
 		endif; ?>
-
     </div>
-
-    <?php //get_sidebar('right'); ?>
 </div>
 
 
