@@ -12,7 +12,7 @@ include __DIR__ . '/../css/page-templates/page-request-a-demo/page-request-a-dem
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 
 
 <div class="request_a_demo">

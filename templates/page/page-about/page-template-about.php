@@ -2,14 +2,14 @@
 /* Template Name: About NEW*/
 get_header(); ?>
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/components/contact-support.css';
-include __DIR__ . '/../css/components/about-description.css';
-include __DIR__ . '/../css/page-templates/page-about/business-opportunities.css';
-include __DIR__ . '/../css/page-templates/page-about/anatol-map.css';
+<?php include local_template('css/components/hero-templates/hero-template.css');
+include local_template('css/components/contact-support.css');
+include local_template('css/components/about-description.css');
+include local_template('css/page-templates/page-about/business-opportunities.css');
+include local_template('css/page-templates/page-about/anatol-map.css');
 ?>
 </style>
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 
 <section class="about-us" id="about_content">
     <div class="about-us-description">

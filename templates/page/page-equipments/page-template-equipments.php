@@ -9,7 +9,7 @@ include __DIR__ . '/../css/page-templates/page-equipments/equipments.css';
 include __DIR__ . '/../css/components/contact-support.css';
 ?>
 </style>
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 
 
 

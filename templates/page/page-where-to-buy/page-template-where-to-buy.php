@@ -10,18 +10,18 @@ get_header(); ?>
 <style>
 <?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
 // include __DIR__ . '/../css/components/template-form.css';
-// include __DIR__ . '/../css/components/template-benefits.css';
+include __DIR__ . '/../css/components/template-benefits.css';
 include __DIR__ . '/../css/components/financing-options.css';
 include __DIR__ . '/../css/page-templates/page-where-to-buy/sales.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 
 <div class="map-container">
     <div class="container">
         <div class="main">
-            <?php get_template_part('template-parts/widgets/map-navigation'); ?>
+            <?php get_template_part('templates/page/page-where-to-buy/components/map-navigation'); ?>
             <div class="gv-container">
                 <div class="gv-map wide">
                     <div id="map" class="sales-map"></div>
@@ -37,11 +37,11 @@ include __DIR__ . '/../css/page-templates/page-where-to-buy/sales.css';
                         <div class="panels">
                             <div class="panel" id="one-panel">
                                 <div class="panel-title">Direct Sales</div>
-                                <?php get_template_part('template-parts/widgets/profiles-sales'); ?>
+                                <?php get_template_part('templates/page/page-where-to-buy/components/profiles-sales'); ?>
                             </div>
                             <div class="panel" id="two-panel">
                                 <div class="panel-title">Dealers</div>
-                                <?php get_template_part('template-parts/widgets/profiles-dealers'); ?>
+                                <?php get_template_part('templates/page/page-where-to-buy/components/profiles-dealers'); ?>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ include __DIR__ . '/../css/page-templates/page-where-to-buy/sales.css';
     </div>
 </div>
 
-<?php get_template_part('template-parts/join-us-dealer'); ?>
+<?php get_template_part('templates/components/section-templates/join-us-dealer'); ?>
 
 <div class="financing_info_text">
     <div class="financing_info--wrapper container">

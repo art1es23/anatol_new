@@ -8,7 +8,7 @@ include __DIR__ . '/../css/page-templates/page-anatol-tv/page-anatol-tv.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 </div>
 
 <div class="anatol-tv">
@@ -160,10 +160,6 @@ include __DIR__ . '/../css/page-templates/page-anatol-tv/page-anatol-tv.css';
     </div>
 </section>
 
-<!-- <div class="container-fluid full_bottom_container">
-    <div class="row ofices_row">
-        <?php get_template_part('template-parts/widgets/offices'); ?>
-    </div> -->
 <script>
 let list_tbs = document.querySelectorAll('.list_tbs');
 let tab_pane = document.querySelectorAll('.tab-pane');

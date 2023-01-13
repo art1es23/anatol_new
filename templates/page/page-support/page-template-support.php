@@ -1,7 +1,7 @@
 <?PHP
 /* Template Name: Support NEW*/
 get_header(); 
-get_template_part('template-parts/template-part-head-big');
+get_template_part('templates/components/hero-section/template-part-head-big');
  ?>
 
 <style>
@@ -299,7 +299,7 @@ include __DIR__ . '/../css/page-templates/page-support/support.css';
             <?php }	?>
         </div>
 
-        <?php get_template_part('page-template/components/forms/support-service-form');?>
+        <?php get_template_part('templates/components/forms/support-service-form');?>
     </div>
 </section>
 

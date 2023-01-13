@@ -3,15 +3,28 @@
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/page-templates/page-account/page-account.css';
-include __DIR__ . '/../css/components/another-equipments.css';
-include __DIR__ . '/../css/page-templates/store/woo.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/page-templates/page-account/page-account.css');
+include locate_template('css/components/another-equipments.css');
+include locate_template('css/page-templates/store/woo.css');
 // include 'css/woocommerce.css';
 ?>
 </style>
+<style>
+<?php echo include __DIR__.'/../css/page-templates/store/woo.css';
+?>
+</style>
 
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
+
+<h1><?php 
+
+	$term = get_queried_object();
+	$post_slug = $term->slug;
+
+    print_r($post_slug);
+
+?></h1>
 
 <div class="container account_container">
     <?php // theloop

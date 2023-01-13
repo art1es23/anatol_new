@@ -1,10 +1,16 @@
-<?php get_header(); ?>
+<?php 
+/* 
+Template Name: vacancies
+Template Post Type: archive
+*/
+get_header(); 
+?>
 
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
-include 'css/components/template-form.css';
-include 'css/components/forms/vacancy-form.css';
-include 'css/page-templates/page-opportunities/opportunities.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/template-form.css');
+include locate_template('css/components/forms/vacancy-form.css');
+include locate_template('css/page-templates/page-opportunities/opportunities.css');
 ?>
 </style>
 

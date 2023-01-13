@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php 
+/*
+    Template Name: Sales Dealers
+    Template Post Type: post
+*/
+
+get_header(); ?>
+
 <?php get_template_part('template-parts/template-part-head-press'); ?>
 
 <div class="single_ebook_container">

@@ -16,19 +16,19 @@ include __DIR__ . '/../css/page-templates/page-compare/compare.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-big'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-big'); ?>
 
 <section class="compare-page" id="compare_content">
     <div class="compare-page--wrapper container compare_content_row">
         <?PHP
         if(isset($_POST['show_results'])) {
-            get_template_part('template-parts/compare_step_2');
+            get_template_part('templates/page/page-compare/components/compare_step_2');
         } else {
-            get_template_part('template-parts/compare_step_1');
+            get_template_part('templates/page/page-compare/components/compare_step_1');
         }?>
     </div>
 </section>
 
-<?php get_template_part('template-parts/get-in-touch'); ?>
+<?php get_template_part('templates/components/section-templates/get-in-touch'); ?>
 <?php get_template_part('templates/components/section-templates/another-equipments'); ?>
 <?php get_footer(); ?>

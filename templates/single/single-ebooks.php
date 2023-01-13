@@ -1,14 +1,19 @@
-<?php get_header(); ?>
+<?php
+/*
+    Template Name: Ebooks
+    Template Post Type: post
+*/
+get_header(); ?>
 
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
-include 'css/components/sliders/slider-similar-items.css';
-include 'css/components/another-equipments.css';
-include 'css/page-templates/page-ebooks/ebooks.css';
-include 'css/page-templates/single-pages/page-ebook-post/page-ebook-single.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/sliders/slider-similar-items.css');
+include locate_template('css/components/another-equipments.css');
+include locate_template('css/page-templates/page-ebooks/ebooks.css');
+include locate_template('css/page-templates/single-pages/page-ebook-post/page-ebook-single.css');
 ?>
 </style>
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 
 <div class="ebook-post-single">
     <div class="ebook-post-single--wrapper container">
@@ -136,7 +141,7 @@ include 'css/page-templates/single-pages/page-ebook-post/page-ebook-single.css';
     </div>
 </div>
 
-<?php get_template_part('templates/equipment/another-equipments'); ?>
+<?php get_template_part('templates/components/section-templates/another-equipments'); ?>
 
 
 <!-- Slider Init -->

@@ -15,8 +15,8 @@ get_header();
 <div id="mdf_output">
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
     <?php
-            the_content();
-            wp_reset_query();
+        the_content();
+        wp_reset_query();
         endwhile;
     endif;    
     ?>

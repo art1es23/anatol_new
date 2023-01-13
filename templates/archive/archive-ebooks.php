@@ -1,8 +1,14 @@
-<?php get_header(); ?>
+<?php 
+/* 
+    Template Name: Ebooks Archive
+    Template Post Type: archive
+*/
+
+get_header(); ?>
 
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
-include 'css/page-templates/page-ebooks/ebooks.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/page-templates/page-ebooks/ebooks.css');
 ?>
 </style>
 

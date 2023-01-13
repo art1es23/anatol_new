@@ -10,7 +10,7 @@ include __DIR__ . '/../css/components/another-equipments.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 
 <div class="page--wrapper container">
     <?php

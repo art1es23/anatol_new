@@ -1,26 +1,29 @@
 <?php
-/* Template Name: Press Single */
+/* 
+    Template Name: Presses
+    Template Post Type: post 
+*/
 get_header(); ?>
 
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
-include 'css/components/template-form.css';
-include 'css/components/equipments-list.css';
-include 'css/components/support-section.css';
-include 'css/components/another-equipments.css';
-include 'css/components/tabs.css';
-include 'css/components/related-products-slider.css';
-include 'css/page-templates/page-product/product.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/template-form.css');
+include locate_template('css/components/equipments-list.css');
+include locate_template('css/components/support-section.css');
+include locate_template('css/components/another-equipments.css');
+include locate_template('css/components/tabs.css');
+include locate_template('css/components/related-products-slider.css');
+include locate_template('css/page-templates/page-product/product.css');
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 <section class="equipment_info">
     <div class="equipment_info--wrapper container">
 
         <div class="equipment_info__item equipment_info__item--left">
 
-            <?php get_template_part('templates/equipment/single-parts/thumbnails'); ?>
+            <?php get_template_part('templates/components/section-templates/equipment/single-parts/thumbnails'); ?>
             <?php $enable_new_product_ico = get_field('enable_new_product_ico');
                 if(get_field('enable_new_product_ico') === true ) {?>
             <div class="sticker_new">NEW</div>
@@ -180,7 +183,7 @@ include 'css/page-templates/page-product/product.css';
 
 </section>
 
-<?php get_template_part('templates/equipment/single-parts/tabs_content'); ?>
+<?php get_template_part('templates/components/section-templates/equipment/single-parts/tabs_content'); ?>
 
 <?php
     $term_list = wp_get_post_terms(get_the_ID(), 'anatol-products_cat', array("fields" => "all"));
@@ -275,7 +278,7 @@ if( $featured_posts ): ?>
     wp_reset_postdata(); ?>
 <?php endif; ?>
 
-<?php get_template_part('templates/equipment/another-equipments'); ?>
+<?php get_template_part('templates/components/section-templates/another-equipments'); ?>
 
 <!-- INIT YOUTUBE VIDEOS -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>

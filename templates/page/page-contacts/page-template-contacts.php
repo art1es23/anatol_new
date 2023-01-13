@@ -46,9 +46,9 @@ include __DIR__ . '/../css/page-templates/page-contact/contacts.css';
             </div>
         </div>
 
-        <?php get_template_part('page-template/components/forms/default-contact-form'); ?>
+        <?php get_template_part('templates/components/forms/default-contact-form'); ?>
     </div>
 
-    <?php get_template_part('template-parts/regional-offices'); ?>
+    <?php get_template_part('templates/components/section-templates/regional-offices'); ?>
 
     <?php get_footer(); ?>

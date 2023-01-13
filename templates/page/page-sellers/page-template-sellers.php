@@ -13,7 +13,7 @@ include __DIR__ . '/../css/page-templates/page-seller-country/page-seller-countr
 </style>
 
 
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 
 <section class="about-us" id="sellers_content">
     <div class="about-us-description">

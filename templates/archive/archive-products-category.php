@@ -5,11 +5,11 @@ $anatol_cat_title = single_term_title("", false);
 ?>
 
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
-include 'css/components/presses-item.css';
-include 'css/components/equipments-list.css';
-include 'css/page-templates/page-conveyers/conveyers.css';
-include 'css/components/another-equipments.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/presses-item.css');
+include locate_template('css/components/equipments-list.css');
+include locate_template('css/page-templates/page-conveyers/conveyers.css');
+include locate_template('css/components/another-equipments.css');
 ?>
 </style>
 
@@ -36,7 +36,7 @@ include 'css/components/another-equipments.css';
     </div>
 </section>
 
-<?php get_template_part('templates/equipment/another-equipments'); ?>
+<?php get_template_part('templates/components/section-templates/another-equipments'); ?>
 
 
 <!-- <script src="<?php echo get_template_directory_uri();?>/js/libs/fancybox/jquery.fancybox.min.js"></script> -->

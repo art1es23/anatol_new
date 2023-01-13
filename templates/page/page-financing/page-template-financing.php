@@ -14,7 +14,7 @@ include __DIR__ . '/../css/page-templates/page-financing/financing.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-big'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-big'); ?>
 
 <section id="available_opportunities" class="available_opportunities">
     <div class="available_opportunities--wrapper container">
@@ -32,7 +32,7 @@ include __DIR__ . '/../css/page-templates/page-financing/financing.css';
 </div>
 
 <?php get_template_part('templates/components/section-templates/another-equipments'); ?>
-<?php get_template_part('template-parts/get-in-touch'); ?>
+<?php get_template_part('templates/components/section-templates/get-in-touch'); ?>
 
 <!-- Slider Init -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>

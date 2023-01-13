@@ -1,3 +1,1 @@
-<?php get_template_part('page-template-anatol-tv'); ?>
-
-
+<?php get_template_part('templates/page-template-anatol-tv'); ?>

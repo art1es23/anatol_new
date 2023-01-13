@@ -1,5 +1,8 @@
 <?php
-
+/*
+    Template Name: Default
+    Template Post Type: post
+*/
 /* 
 if (is_single() && get_post_type() == 'post' && ICL_LANGUAGE_CODE != 'en') {
 	$url = get_the_permalink();
@@ -14,14 +17,14 @@ if (is_single() && get_post_type() == 'post' && ICL_LANGUAGE_CODE != 'en') {
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/components/section-comments.css';
-include __DIR__ . '/../css/components/sidebars/sidebar-right.css';
-include __DIR__ . '/../css/page-templates/single-pages/page-blog-post/page-blog-single.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/section-comments.css');
+include locate_template('css/components/sidebars/sidebar-right.css');
+include locate_template('css/page-templates/single-pages/page-blog-post/page-blog-single.css');
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-blog'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-blog'); ?>
 <div class="simple_bg_head index_template">
     <?php
 	global $anatol_cat_title;
@@ -64,7 +67,7 @@ include __DIR__ . '/../css/page-templates/single-pages/page-blog-post/page-blog-
 
     <div class="blog-post">
 
-        <?php get_template_part('template-parts/template-part-postmeta'); ?>
+        <?php get_template_part('templates/components/hero-section/template-part-postmeta'); ?>
         <h1 class="blog-post__title page-title"><?php the_title(); ?></h1>
 
         <div class="post-thumbnail">
@@ -77,7 +80,7 @@ include __DIR__ . '/../css/page-templates/single-pages/page-blog-post/page-blog-
             <?php the_content(); ?>
         </div>
 
-        <?php get_template_part('template-parts/template-part-postmeta_bottom'); ?>
+        <?php get_template_part('templates/components/hero-section/template-part-postmeta_bottom'); ?>
 
         <?php wp_link_pages(); ?>
         <div class="share_post_part">

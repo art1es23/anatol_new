@@ -3,9 +3,9 @@
 
 get_header(); ?>
 
-<?php get_template_part('template-parts/template-part-head-part1'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-part1'); ?>
 <div class="simple_bg_head">
-    <?php get_template_part('template-parts/template-part-head-part2'); ?>
+    <?php get_template_part('templates/components/hero-section/template-part-head-part2'); ?>
     <div class="clear clearfix"></div>
 </div>
 <div class="container">
@@ -34,8 +34,4 @@ get_header(); ?>
     </div>
 </div>
 </div>
-<div class="container-fluid full_bottom_container">
-    <div class="row ofices_row">
-        <?php get_template_part('template-parts/widgets/offices'); ?>
-    </div>
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

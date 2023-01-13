@@ -10,7 +10,7 @@ include __DIR__ . '/../css/page-templates/page-events/events.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-big'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-big'); ?>
 
 <div class="events-content">
 
@@ -934,7 +934,7 @@ include __DIR__ . '/../css/page-templates/page-events/events.css';
     </div>
 </div>
 
-<?php get_template_part('template-parts/get-in-touch'); ?>
+<?php get_template_part('templates/components/section-templates/get-in-touch'); ?>
 
 <!-- Slider Init -->
 <!-- <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>

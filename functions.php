@@ -1030,7 +1030,102 @@ function create_anatol_posttypes() {
 }
 add_action( 'init', 'create_anatol_posttypes' );
 
+
+
+/* Pages templates in sub folders */
+/* --------------------------------------------------------------------------------- */
+
+// add_filter('theme_page_templates', function($post_templates) {
+//   $directories = glob(get_template_directory() . '/page/*' , GLOB_ONLYDIR);
+  
+//   foreach ($directories as $dir) {
+//     $templates = glob($dir.'/*.php');
+
+	
+//     foreach ($templates as $template) {
+// 		// print_r("<span>${template}</span>");
+//       if (preg_match('|Template'.' '.'Name: (.*)$|mi', file_get_contents($template), $name)) {
+//         $post_templates['/page/'.basename($dir).'/'.basename($template)] = $name[1];
+//       }
+//     }
+//   }
+
+//   return $post_templates;
+// });
+
 // 
+
+// CREATE PATH TO CUSTOM ARCHIVES TEMPLATES
+add_filter( 'template_include', 'wpse119820_use_different_template' );
+function wpse119820_use_different_template( $template ){
+	
+	$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	// $slug = trim(parse_url($url, PHP_URL_PATH), '/');
+
+	$parsed = parse_url($url);
+	$path = $parsed['path'];
+	$path_parts = explode('/', $path);
+	$slug = $path_parts[1];
+
+	// $current_slug = explode("/", $_GET['params']);
+	// if (str_contains($slug, 'product-category')) {
+	// 	$slug = 'product-directory';
+	// }
+
+	// print_r("<span>${slug}</span>");
+   if( is_post_type_archive( $slug ) || is_tax()) {
+       //"Entry" Post type archive. Find template in sub-dir. Look in child then parent theme
+
+       if( $_template = locate_template( 'templates/archive/archive-' . $slug . '.php' ) ){
+            //Template found, - use that
+            $template = $_template;
+       }
+   }            
+
+   return $template;
+}
+
+// CHANGE THE ROOT FOLDER FOR SINGLE PAGES
+
+function change_template_path($templates) {
+
+  // The custom sub-directory for page templates in your theme. 
+//   $custom_sub_dir = 'templates/single';
+  global $wp_query;
+  $custom_sub_dir = 'templates';
+
+  if ($wp_query->is_single) {
+	  $custom_sub_dir = 'templates/single';
+  } 
+
+//   print_r("<span>${custom_sub_dir}</span>");
+
+  // Don't use the custom template directory in unexpected cases.
+  if(empty($templates) || ! is_array($templates)) {
+    return $templates;
+  }
+
+  $page_template_id = 0;
+  $count = count( $templates);
+  if($templates[0] === get_page_template_slug()) {
+    // if there is a custom template, then our page-{slug}.php template is at the next index
+    $page_template_id = 1;
+  }
+
+  // The last one in $templates is page.php, single.php, or archives.php depending on the type of template hierarchy being read.
+  // Paths of all items starting from $page_template_id will get updated
+  for($i = $page_template_id; $i < $count ; $i++) {
+    $templates[$i] = $custom_sub_dir . '/' . $templates[$i];
+  }
+
+  return $templates;
+}
+
+// add_filter('page_template_hierarchy', 'change_template_path');
+// add_filter('paged_template_hierarchy', 'change_template_path');
+add_filter('single_template_hierarchy', 'change_template_path');
+
+// END
 
 function goingOn($ste, $sto){
 	$strme = trim($ste); $endme = trim($sto);

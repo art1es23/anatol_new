@@ -12,7 +12,7 @@ include __DIR__ . '/../css/page-templates/page-presses/specialty-automatic-press
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 <!-- <?php //get_template_part('template-parts/template-part-head-pr'); ?> -->
 
 <section class="presses_content" id="presses_content">

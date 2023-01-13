@@ -14,12 +14,13 @@ if (is_single() && get_post_type() == 'post' && ICL_LANGUAGE_CODE != 'en') {
 get_header(); ?>
 
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
-include 'css/page-templates/page-blog/blog.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/page-templates/page-blog/blog.css');
 ?>
 </style>
 
 <?php get_template_part('templates/components/hero-section/template-part-head-blog'); ?>
+
 
 <div class="simple_bg_head index_template">
     <?php

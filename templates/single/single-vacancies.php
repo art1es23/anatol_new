@@ -1,13 +1,16 @@
 <?php
-/* Template Name: Vacancy */
+/* 
+    Template Name: Vacancy 
+    Template Post Type: post
+*/
 get_header(); 
 ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-// include __DIR__ . '/../css/components/template-form.css';
-include __DIR__ . '/../css/components/forms/vacancy-form.css';
-include __DIR__ . '/../css/page-templates/single-pages/page-vacancy/page-vacancy-single.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/template-form.css');
+include locate_template('css/components/forms/vacancy-form.css');
+include locate_template('css/page-templates/single-pages/page-vacancy/page-vacancy-single.css');
 ?>
 </style>
 
@@ -113,7 +116,5 @@ include __DIR__ . '/../css/page-templates/single-pages/page-vacancy/page-vacancy
         </div>
     </div>
 </section>
-
-<?php get_template_part('template-parts/widgets/offices'); ?>
 
 <?php get_footer(); ?>

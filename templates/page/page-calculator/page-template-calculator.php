@@ -15,12 +15,12 @@ include __DIR__ . '/../css/page-templates/page-calculator/calculator.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
 
 <div class="container">
-    <?php get_template_part('template-parts/calculator'); ?>
+    <?php get_template_part('templates/page/page-calculator/components/calculator'); ?>
 </div>
-<?php get_template_part('template-parts/get-in-touch'); ?>
+<?php get_template_part('templates/components/section-templates/get-in-touch'); ?>
 <?php get_footer(); ?>
 
 <!-- <script>

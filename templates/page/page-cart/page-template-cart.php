@@ -10,7 +10,7 @@ include __DIR__ . '/../css/page-templates/store/cart.css';
 ?>
 </style>
 
-<?php get_template_part('template-parts/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
 
 <div class="woo_container">
     <div class="woo_container--wrapper container">
