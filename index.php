@@ -6,7 +6,7 @@ get_header(); ?>
 include 'css/page-templates/page-blog/blog.css';
 ?>
 </style>
-<?php get_template_part('templates/components/hero-section/template-part-head-blog'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-blog'); ?>
 
 <div class="simple_bg_head index_template">
     <?php
@@ -48,7 +48,7 @@ include 'css/page-templates/page-blog/blog.css';
 
         <div class="blog-list__item blog-post">
 
-            <?php get_template_part('templates/components/hero-section/template-part-postmeta'); ?>
+            <?php get_template_part('templates/components/hero-templates/template-part-postmeta'); ?>
             <h1 class="page-header"><?php the_title(); ?></h1>
 
             <?php if (has_post_thumbnail()) : ?>
@@ -58,7 +58,7 @@ include 'css/page-templates/page-blog/blog.css';
             <div class="post-content">
                 <?php the_content(); ?>
             </div>
-            <?php get_template_part('templates/components/hero-section/template-part-postmeta_bottom'); ?>
+            <?php get_template_part('templates/components/hero-templates/template-part-postmeta_bottom'); ?>
             <?php wp_link_pages(); ?>
             <div class="share_post_part">
                 <div class="spp_line_part"></div>

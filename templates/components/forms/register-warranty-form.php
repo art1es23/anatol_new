@@ -1,8 +1,3 @@
-<style>
-<?php include __DIR__ . '/../css/components/template-form.css';
-?>
-</style>
-
 <div class="warranty-form hidden">
     <div class="reg_popup"></div>
     <div class="form log_warranty hidden">

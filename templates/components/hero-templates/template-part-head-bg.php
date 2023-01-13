@@ -14,9 +14,10 @@
 <!--  -->
 
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
 ?>
 </style>
+
 
 <div class="hero black_shadow" style="background-image:url('<?php echo $image_attributes[0]; ?>');">
 

@@ -7,7 +7,7 @@ include 'css/page-templates/404.css';
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-press'); ?>
 <!-- <div class="container dmbs-container"> -->
 <?php
   global $title_icon_class;

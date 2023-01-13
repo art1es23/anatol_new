@@ -1,8 +1,3 @@
-<style>
-<?php include __DIR__ . '/../css/components/template-form.css';
-?>
-</style>
-
 <div class="get_quote form hidden">
     <button class="close-button">
         <div class="close-button--wrapper">

@@ -29,7 +29,7 @@
 .calculator__description {
   text-align: center;
 }
-.calculator form input[type="number"],
+/* .calculator form input[type="number"],
 .calculator form input[type="text"],
 .calculator form input[type="email"],
 .calculator form select,
@@ -65,7 +65,7 @@
   display: none;
   margin-left: 15px;
   color: #fff;
-}
+} */
 .calculator .result {
   display: none;
   margin: 15px 0;
@@ -184,7 +184,7 @@
 .calculator form input[type="submit"]:hover {
   box-shadow: 0 0 8px rgb(0 0 0 / 60%);
 }
-.first_form_active {
+.first_form_active.form {
   display: none;
 }
 .get_forms .form-row .cvbnm {

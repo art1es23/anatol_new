@@ -7,7 +7,7 @@ include 'css/components/equipments-list.css';
 include 'css/page-templates/store/woo.css';
 ?>
 </style>
-<?PHP get_template_part('templates/components/hero-section/template-part-head-press'); ?>
+<?PHP get_template_part('templates/components/hero-templates/template-part-head-press'); ?>
 
 
 <div class="woo_container">

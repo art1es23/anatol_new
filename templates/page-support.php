@@ -1,15 +1,15 @@
 <?PHP
 /* Template Name: Support NEW*/
 get_header(); 
-get_template_part('templates/components/hero-section/template-part-head-big');
+get_template_part('templates/components/hero-templates/template-part-head-big');
  ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-// include __DIR__ . '/../css/components/template-form.css';
-include __DIR__ . '/../css/components/support-section.css';
-include __DIR__ . '/../css/components/get-in-touch.css';
-include __DIR__ . '/../css/page-templates/page-support/support.css';
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
+// include locate_template('css/components/template-form.css');
+include locate_template('css/components/support-section.css');
+include locate_template('css/components/get-in-touch.css');
+include locate_template('css/page-templates/page-support/support.css');
 ?>
 </style>
 

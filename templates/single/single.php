@@ -17,14 +17,14 @@ if (is_single() && get_post_type() == 'post' && ICL_LANGUAGE_CODE != 'en') {
 get_header(); ?>
 
 <style>
-<?php include locate_template('css/components/hero-templates/hero-template.css');
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
 include locate_template('css/components/section-comments.css');
 include locate_template('css/components/sidebars/sidebar-right.css');
 include locate_template('css/page-templates/single-pages/page-blog-post/page-blog-single.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-blog'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-blog'); ?>
 <div class="simple_bg_head index_template">
     <?php
 	global $anatol_cat_title;
@@ -67,7 +67,7 @@ include locate_template('css/page-templates/single-pages/page-blog-post/page-blo
 
     <div class="blog-post">
 
-        <?php get_template_part('templates/components/hero-section/template-part-postmeta'); ?>
+        <?php get_template_part('templates/components/hero-templates/template-part-postmeta'); ?>
         <h1 class="blog-post__title page-title"><?php the_title(); ?></h1>
 
         <div class="post-thumbnail">
@@ -80,7 +80,7 @@ include locate_template('css/page-templates/single-pages/page-blog-post/page-blo
             <?php the_content(); ?>
         </div>
 
-        <?php get_template_part('templates/components/hero-section/template-part-postmeta_bottom'); ?>
+        <?php get_template_part('templates/components/hero-templates/template-part-postmeta_bottom'); ?>
 
         <?php wp_link_pages(); ?>
         <div class="share_post_part">

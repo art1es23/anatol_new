@@ -8,15 +8,15 @@ add_action( 'wp_print_scripts', 'anatol_dequeue_script', 100 );
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-// include __DIR__ . '/../css/components/template-form.css';
-include __DIR__ . '/../css/components/template-benefits.css';
-include __DIR__ . '/../css/components/financing-options.css';
-include __DIR__ . '/../css/page-templates/page-where-to-buy/sales.css';
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
+// include locate_template('css/components/template-form.css';
+include locate_template('css/components/template-benefits.css');
+include locate_template('css/components/financing-options.css');
+include locate_template('css/page-templates/page-where-to-buy/sales.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-bg-black'); ?>
 
 <div class="map-container">
     <div class="container">

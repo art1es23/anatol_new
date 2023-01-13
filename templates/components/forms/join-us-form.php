@@ -1,8 +1,3 @@
-<style>
-<?php include __DIR__ . '/../css/components/template-form.css';
-?>
-</style>
-
 <div class="join_us_form form hidden">
 
     <button class="close-button">

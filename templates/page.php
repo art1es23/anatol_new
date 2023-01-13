@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/page-templates/page.css';
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/page-templates/page.css');
 ?>
 </style>
 
 <?php //get_template_part('template-parts/template-part-head-bg'); ?>
-<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-bg-black'); ?>
 
 <div class="page-content">
     <!-- start content container -->

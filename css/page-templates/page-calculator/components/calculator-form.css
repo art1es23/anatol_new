@@ -1,0 +1,48 @@
+/* Calculator Form Styles */
+
+.calculator form input[type="number"],
+.calculator form input[type="text"],
+.calculator form input[type="email"],
+.calculator form select,
+.calculator form .btn {
+  height: auto;
+  display: inline-block;
+  border: 1px solid #dcdcdc;
+  box-shadow: none;
+  background: #fff;
+  padding: 10px 15px;
+  font-weight: 400;
+}
+.calculator form .form-row {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f2f3f6;
+}
+.calculator form .form-row.not_border {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.calculator form .btn:hover,
+.calculator form .btn:focus {
+  background: #ab1a1f;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+.calculator form .btn.load .spinner-border {
+  display: inline-block;
+}
+.calculator form .btn .spinner-border {
+  display: none;
+  margin-left: 15px;
+  color: #fff;
+}
+.calculator
+  .result
+  .cards
+  .card
+  .card-body
+  .form-row:first-child
+  div:first-child {
+  border-right: 2px solid #dcdcdc;
+}

@@ -3,16 +3,16 @@
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/components/presses-item.css';
-include __DIR__ . '/../css/page-templates/page-presses/presses-content.css';
-include __DIR__ . '/../css/components/automatic-presses.css';
-include __DIR__ . '/../css/page-templates/page-presses/manual-presses.css';
-include __DIR__ . '/../css/page-templates/page-presses/specialty-automatic-presses.css';
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/presses-item.css');
+include locate_template('css/page-templates/page-presses/presses-content.css');
+include locate_template('css/components/automatic-presses.css');
+include locate_template('css/page-templates/page-presses/manual-presses.css');
+include locate_template('css/page-templates/page-presses/specialty-automatic-presses.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-bg-black'); ?>
 <!-- <?php //get_template_part('template-parts/template-part-head-pr'); ?> -->
 
 <section class="presses_content" id="presses_content">

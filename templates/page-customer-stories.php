@@ -11,12 +11,11 @@ if(!empty($post->ID)) {
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/page-templates/page-customer-stories/page-customer-stories.css';
+<?php include locate_template('css/page-templates/page-customer-stories/page-customer-stories.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-bg-black'); ?>
 
 </div>
 

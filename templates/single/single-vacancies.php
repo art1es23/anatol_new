@@ -8,7 +8,7 @@ get_header();
 
 <style>
 <?php include locate_template('css/components/hero-templates/hero-template.css');
-include locate_template('css/components/template-form.css');
+// include locate_template('css/components/template-form.css');
 include locate_template('css/components/forms/vacancy-form.css');
 include locate_template('css/page-templates/single-pages/page-vacancy/page-vacancy-single.css');
 ?>

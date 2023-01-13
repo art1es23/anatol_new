@@ -6,8 +6,8 @@
 get_header(); ?>
 
 <style>
-<?php include locate_template('css/components/hero-templates/hero-template.css');
-include locate_template('css/components/template-form.css');
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
+// include locate_template('css/components/template-form.css');
 include locate_template('css/components/equipments-list.css');
 include locate_template('css/components/support-section.css');
 include locate_template('css/components/another-equipments.css');
@@ -17,7 +17,7 @@ include locate_template('css/page-templates/page-product/product.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-press'); ?>
 <section class="equipment_info">
     <div class="equipment_info--wrapper container">
 

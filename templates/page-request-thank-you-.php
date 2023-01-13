@@ -3,9 +3,9 @@
 
 get_header(); ?>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-part1'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-part1'); ?>
 <div class="simple_bg_head">
-    <?php get_template_part('templates/components/hero-section/template-part-head-part2'); ?>
+    <?php get_template_part('templates/components/hero-templates/template-part-head-part2'); ?>
     <div class="clear clearfix"></div>
 </div>
 <div class="container">

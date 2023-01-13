@@ -14,7 +14,7 @@ if (is_single() && get_post_type() == 'post' && ICL_LANGUAGE_CODE != 'en') {
 get_header(); ?>
 
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
+<?php // include 'css/components/hero-templates/hero-template.css';
 include 'css/page-templates/page-blog/blog.css';
 ?>
 </style>

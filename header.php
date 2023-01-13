@@ -396,7 +396,9 @@
                     <div class="topmenu-cart">
                         <?php global $woocommerce; ?>
                         <a class="menu-cart" href="<?php echo wc_get_cart_url(); ?>"
-                            title="<?php _e('Cart View', 'woothemes'); ?>"><i class="fa fa-shopping-cart"></i><span
+                            title="<?php _e('Cart View', 'woothemes'); ?>">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span
                                 class="mini_count"><?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></span>
                         </a>
 
@@ -435,13 +437,13 @@
                                 <p> 919 Sherwood Drive<br>Lake Bluff, IL 60044</p>
                                 <a href="https://g.page/AnatolEquipment?share" target="_blank" class="map-link">
                                     <span class="ico_location kl-icon-white svg-wrapper">
-                                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                             <g data-name="10-location" id="_10-location">
                                                 <path class="cls-1"
                                                     d="M27,12A11,11,0,0,0,5,12C5,22,16,31,16,31S27,22,27,12Z" />
                                                 <circle class="cls-1" cx="16" cy="12" r="5" />
                                             </g>
-                                        </svg>
+                                        </svg> -->
                                     </span>
                                     <span><strong><?php _e('Open in Google Maps', 'anatol'); ?></strong></span>
                                 </a>
@@ -470,8 +472,3 @@
 
 
     </header>
-
-    <style>
-    <?php include 'css/components/template-form.css';
-    ?>
-    </style>

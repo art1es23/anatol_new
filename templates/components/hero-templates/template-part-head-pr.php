@@ -1,6 +1,11 @@
 <!-- 
 <div id="main-content" class="category_head">
 <div class="entry-content"> -->
+<style>
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+?>
+</style>
+
 <div <?php 
 		if ($image_info) { echo 'class="hero" style="background-image:url('.$hero_url[0].')"'; } 
 		else { echo 'class="hero"'; } ?>>

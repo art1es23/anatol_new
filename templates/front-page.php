@@ -3,12 +3,12 @@
 
 get_header(); ?>
 <style>
-<?php include __DIR__ . '/../css/page-templates/frontpage/header-hero-slider.css';
-include __DIR__ . '/../css/page-templates/frontpage/section-choose-us.css';
-include __DIR__ . '/../css/page-templates/frontpage/regional-offices.css';
-include __DIR__ . '/../css/components/another-equipments.css';
-include __DIR__ . '/../css/page-templates/frontpage/testimonials.css';
-include __DIR__ . '/../css/page-templates/frontpage/section-video.css';
+<?php include locate_template('css/page-templates/frontpage/header-hero-slider.css');
+include locate_template('css/page-templates/frontpage/section-choose-us.css');
+include locate_template('css/page-templates/frontpage/regional-offices.css');
+include locate_template('css/components/another-equipments.css');
+include locate_template('css/page-templates/frontpage/testimonials.css');
+include locate_template('css/page-templates/frontpage/section-video.css');
 ?>
 </style>
 
@@ -40,19 +40,6 @@ include __DIR__ . '/../css/page-templates/frontpage/section-video.css';
                 <img class="swiper-lazy" data-src="<?php echo $slide_image ?>" alt="<?php echo $alt_text?>" width="1920"
                     height="1080">
             </picture>
-
-            <!-- <div class="container">
-                <?php
-                    $slide_title = get_sub_field('slide_title');		
-                    if (!empty($slide_title ))  { ?>
-                <div class="slide_title"><?php echo $slide_title; ?></div>
-                <?php }	?>
-                <?php
-                    $slide_title_description = get_sub_field('slide_title_description');	
-                    if (!empty($slide_title ))  { ?>
-                <div class="slide_title_description"><?php echo $slide_title_description; ?></div>
-                <?php }	?>
-            </div> -->
 
             <div class="main-hero-slider__btn main-hero-slider__btn--<?php echo $btn_position; ?>">
                 <a href="<?php echo $url_btn_baner; ?>" class="button red-button draw-red"><?php echo $btn_baner; ?></a>
@@ -124,16 +111,16 @@ include __DIR__ . '/../css/page-templates/frontpage/section-video.css';
 
             <div class="dashboard__item--container swiper">
                 <?php
-                        $args = array(
-                            'posts_per_page' => 5,
-                            'offset' => 0,
-                            'orderby' => 'post_date',
-                            'order' => 'DESC',
-                            'post_type' => 'post',
-                            'post_status' => 'publish'
-                        );
-                        $query = new WP_Query($args);
-                        if ($query->have_posts()) :  ?>
+                    $args = array(
+                        'posts_per_page' => 5,
+                        'offset' => 0,
+                        'orderby' => 'post_date',
+                        'order' => 'DESC',
+                        'post_type' => 'post',
+                        'post_status' => 'publish'
+                    );
+                    $query = new WP_Query($args);
+                    if ($query->have_posts()) :  ?>
 
                 <div class="swiper-wrapper latest-blogs--wrapper">
                     <?php  while ($query->have_posts()) : 
@@ -176,7 +163,7 @@ include __DIR__ . '/../css/page-templates/frontpage/section-video.css';
                 <?php
                 $block_pretitle = get_field('block_pretitle');	
                 if (!empty($block_pretitle ))  { ?>
-                <div class="dashboard__pretitle"><?php echo $block_pretitle; ?></div>
+                <p class="dashboard__pretitle"><?php echo $block_pretitle; ?></p>
                 <?php }	?>
             </div>
 
@@ -196,8 +183,8 @@ include __DIR__ . '/../css/page-templates/frontpage/section-video.css';
                 <?php while ($query->have_posts()) : $query->the_post(); ?>
 
                 <div class="feedback-post--wrapper">
-                    <span class="svg-wrapper">
-                        <svg class="svg-quote" xmlns="http://www.w3.org/2000/svg"
+                    <span class="svg-wrapper svg-quote">
+                        <!-- <svg class="svg-quote" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="51pt" height="50pt" viewBox="0 0 51 50"
                             version="1.1">
                             <g id="surface1">
@@ -206,7 +193,7 @@ include __DIR__ . '/../css/page-templates/frontpage/section-video.css';
                                 <path style="fill-rule:nonzero;fill-opacity:1;"
                                     d="M 46.746094 0 C 43.257812 2.628906 36.355469 8.636719 32.867188 18.78125 C 31.847656 21.726562 29.414062 29.089844 31.628906 37.667969 C 32.433594 40.78125 34.105469 47.21875 39.246094 49.277344 C 39.859375 49.523438 43.164062 50.84375 46.523438 49.164062 C 47.117188 48.867188 49.289062 47.703125 50.328125 45.292969 C 51.722656 42.03125 50.511719 37.71875 47.1875 34.710938 C 45.925781 32.996094 43.8125 29.636719 43.164062 24.921875 C 42.386719 19.335938 44.097656 15.050781 44.957031 12.976562 C 46.335938 9.652344 48.394531 6.667969 50.996094 4.214844 Z M 46.746094 0 " />
                             </g>
-                        </svg>
+                        </svg> -->
                     </span>
                     <div class="feedbacks-list__item feedback-post">
 

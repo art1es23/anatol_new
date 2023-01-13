@@ -1,8 +1,3 @@
-<style>
-<?php include __DIR__ . '/../css/components/template-form.css';
-?>
-</style>
-
 <div class="form service_form">
     <?php
         $support_form_subtitle= get_field('support_form_subtitle');	

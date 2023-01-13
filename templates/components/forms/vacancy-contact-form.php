@@ -1,5 +1,5 @@
 <style>
-<?php include __DIR__ . '/../css/components/template-form.css';
+<?php include locate_template('css/components/forms/vacancy-form.css');
 ?>
 </style>
 

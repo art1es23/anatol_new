@@ -1,7 +1,8 @@
-<!-- <style>
-<?php include 'css/components/hero-templates/hero-template.css';
+<style>
+<?php include locate_template('css/components/hero-templates/hero-template.css');
 ?>
-</style> -->
+</style>
+
 <?php
 	// Get post ID
 	$post_id = get_queried_object_id();

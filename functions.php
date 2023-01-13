@@ -1036,7 +1036,7 @@ add_action( 'init', 'create_anatol_posttypes' );
 /* --------------------------------------------------------------------------------- */
 
 // add_filter('theme_page_templates', function($post_templates) {
-//   $directories = glob(get_template_directory() . '/page/*' , GLOB_ONLYDIR);
+//   $directories = glob(get_template_directory() . '/templates/page/*' , GLOB_ONLYDIR);
   
 //   foreach ($directories as $dir) {
 //     $templates = glob($dir.'/*.php');
@@ -1045,7 +1045,12 @@ add_action( 'init', 'create_anatol_posttypes' );
 //     foreach ($templates as $template) {
 // 		// print_r("<span>${template}</span>");
 //       if (preg_match('|Template'.' '.'Name: (.*)$|mi', file_get_contents($template), $name)) {
+
+// 		echo $name[1];
+// 		$newName = substr($name, 0, strpos($name, ' *'));
+// 		echo $newName[0];
 //         $post_templates['/page/'.basename($dir).'/'.basename($template)] = $name[1];
+// 		// echo $post_templates;
 //       }
 //     }
 //   }
@@ -1053,7 +1058,46 @@ add_action( 'init', 'create_anatol_posttypes' );
 //   return $post_templates;
 // });
 
-// 
+// defining the sub-directory so that it can be easily accessed from elsewhere as well.
+// define( 'WPSE_PAGE_TEMPLATE_SUB_DIR', 'templates' );
+
+// function wpse227006_page_template_add_subdir( $templates = array() ) {
+//     // Generally this doesn't happen, unless another plugin / theme does modifications
+//     // of their own. In that case, it's better not to mess with it again with our code.
+//     if( empty( $templates ) || ! is_array( $templates ) || count( $templates ) < 3 )
+// 	// echo $templates;
+//         return $templates;
+
+//     $page_tpl_idx = 0;
+//     $cnt = count( $templates );
+//     if( $templates[0] === get_page_template_slug() ) {
+//         // if there is custom template, then our page-{slug}.php template is at the next index 
+//         $page_tpl_idx = 1;
+//     }
+
+//     // the last one in $templates is page.php, so
+//     // all but the last one in $templates starting from $page_tpl_idx will be moved to sub-directory
+    
+// 	for( $i = $page_tpl_idx; $i < $cnt; $i++ ) {
+
+// 		// $slug = get_page_template_slug();
+// 		// print_r("<span>slug: ${slug}</span>");
+//         // $templates[$i] = WPSE_PAGE_TEMPLATE_SUB_DIR . $slug;
+       
+// 		$templates[$i] = WPSE_PAGE_TEMPLATE_SUB_DIR . '/page/page-about/' . $templates[$i];
+		
+// 		$slugNew = $templates[$i];
+// 		print_r("<span>${slugNew}</span>");
+
+//     }
+
+//     return $templates;
+// }
+// // the original filter hook is {$type}_template_hierarchy,
+// // wihch is located in wp-includes/template.php file
+// add_filter( 'page_template_hierarchy', 'wpse227006_page_template_add_subdir' );
+// add_filter('paged_template_hierarchy', 'wpse227006_page_template_add_subdir');
+// // 
 
 // CREATE PATH TO CUSTOM ARCHIVES TEMPLATES
 add_filter( 'template_include', 'wpse119820_use_different_template' );
@@ -1073,14 +1117,20 @@ function wpse119820_use_different_template( $template ){
 	// }
 
 	// print_r("<span>${slug}</span>");
-   if( is_post_type_archive( $slug ) || is_tax()) {
+   if( is_post_type_archive( $slug )) {
        //"Entry" Post type archive. Find template in sub-dir. Look in child then parent theme
 
        if( $_template = locate_template( 'templates/archive/archive-' . $slug . '.php' ) ){
             //Template found, - use that
             $template = $_template;
        }
-   }            
+   } else if(is_tax()) {
+       //"Entry" Post type archive. Find template in sub-dir. Look in child then parent theme
+       if( $_template = locate_template( 'templates/taxonomy/taxonomy-' . $slug . '.php' ) ){
+            //Template found, - use that
+            $template = $_template;
+       }
+   }                      
 
    return $template;
 }
@@ -1096,7 +1146,7 @@ function change_template_path($templates) {
 
   if ($wp_query->is_single) {
 	  $custom_sub_dir = 'templates/single';
-  } 
+  }
 
 //   print_r("<span>${custom_sub_dir}</span>");
 
@@ -1116,6 +1166,8 @@ function change_template_path($templates) {
   // Paths of all items starting from $page_template_id will get updated
   for($i = $page_template_id; $i < $count ; $i++) {
     $templates[$i] = $custom_sub_dir . '/' . $templates[$i];
+		// 	$slugNew = $templates[$i];
+		// print_r("<span>${slugNew}</span>");
   }
 
   return $templates;

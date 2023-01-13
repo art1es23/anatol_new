@@ -1,0 +1,68 @@
+/* Form On Get In Touch */
+
+.contact-form--wrapper input,
+.contact-form--wrapper textarea,
+.contact-form--wrapper select {
+  --input-background-color: rgba(255, 255, 255, 0.12);
+  --input-border: none;
+  --input-base-color: #fff;
+  box-shadow: inset 2px 2px 5px rgb(0 0 0 / 45%),
+    inset -2px -2px 5px rgb(255 35 0 / 60%);
+  border-radius: 3px;
+}
+/* input,
+textarea {
+  --input-base-color: #fff;
+} */
+
+.contact-form--wrapper.form ::placeholder {
+  --placeholder-base-color: #fff;
+}
+.contact-form--wrapper.form {
+  --form-padding: 0;
+  --form-background-color: #c10f1b;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: max(10vh, 2.5rem) auto;
+  display: flex;
+}
+
+.cont_form_title {
+  font-family: var(--base-font-family);
+  font-weight: 700;
+  font-size: 3.5vw;
+}
+
+.contact-form--wrapper input[type="submit"] {
+  --button-width: 100%;
+  --button-background-color: #fff;
+  --button-base-color: #c10f1b;
+
+  box-shadow: none;
+  border: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .contact-form--wrapper.form {
+    --form-min-width: 100%;
+    --form-padding: 5vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contact-form--wrapper.form {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact-form--wrapper.form {
+    width: 90%;
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .contact-form--wrapper.form {
+    margin: max(5vh, 2.5rem) auto;
+  }
+}

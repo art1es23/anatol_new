@@ -421,6 +421,9 @@ mark {
   justify-content: center;
   width: 22.5px;
   height: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .svg-bg-wrapper {
@@ -503,7 +506,7 @@ input[type="submit"] {
 
 .button {
   --button-box-shadow: inset -2px -2px 5px rgb(0 0 0 / 45%),
-    inset 2px 2px 5px rgb(255 35 0 / 60%);
+    inset 2px 2px 5px rgb(171 26 31 / 60%);
 }
 /* .button:hover,
 .button:active,
@@ -530,7 +533,7 @@ input[type="submit"] {
 .draw-red:hover,
 .draw-white:hover {
   --button-box-shadow: inset 2px 2px 5px rgb(0 0 0 / 45%),
-    inset -2px -2px 5px rgb(255 0 0 / 60%), 0 0 5px 1px rgb(255 0 0 / 100%);
+    inset -2px -2px 5px rgb(171 26 31 / 60%), 0 0 5px 1px rgb(171 26 31 / 100%);
 }
 
 .draw-red::before,
@@ -559,14 +562,14 @@ input[type="submit"] {
 }
 .draw-white:hover::before,
 .draw-white:hover::after {
-  border-color: #ab1a1f;
+  border-color: #fff;
   transition: border-color 0s, width 0.25s, height 0.25s;
   width: 100%;
   height: 100%;
 }
 .draw-red:hover::before,
 .draw-red:hover::after {
-  border-color: #fff;
+  border-color: #ab1a1f;
   transition: border-color 0s, width 0.25s, height 0.25s;
   width: 100%;
   height: 100%;
@@ -1083,6 +1086,10 @@ input[type="submit"] {
 .logo-container:focus .logo-infocard,
 .logo-container:hover .logo-infocard {
   display: block;
+}
+
+.ico_location {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' fill='%23fff'%3E%3Cg data-name='10-location' id='_10-location'%3E%3Cpath class='cls-1' d='M27,12A11,11,0,0,0,5,12C5,22,16,31,16,31S27,22,27,12Z' /%3E%3Ccircle class='cls-1' cx='16' cy='12' r='5' stroke='red'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .map-link {

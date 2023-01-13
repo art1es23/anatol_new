@@ -1,3 +1,8 @@
+<style>
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+?>
+</style>
+
 <?php
 	if(!empty(get_field("header_image"))) {
 		$image_info = get_field("header_image");

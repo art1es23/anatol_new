@@ -7,12 +7,12 @@
 get_header(); ?>
 
 <style>
-<?php include locate_template('css/components/hero-templates/hero-template.css');
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
 include locate_template('css/page-templates/page-ebooks/ebooks.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-press'); ?>
 
 <div class="container ebooks">
     <!-- <div class="row eb-content"> -->

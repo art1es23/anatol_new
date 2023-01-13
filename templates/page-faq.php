@@ -3,14 +3,14 @@
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/page-templates/page-faq/faq.css';
-include __DIR__ . '/../css/page-templates/page.css';
-include __DIR__ . '/../css/components/another-equipments.css';
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/page-templates/page-faq/faq.css');
+include locate_template('css/page-templates/page.css');
+include locate_template('css/components/another-equipments.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-bg-black'); ?>
 
 <div class="page--wrapper container">
     <?php

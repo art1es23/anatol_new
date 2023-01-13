@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-bg'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-bg'); ?>
 
 <div class="container ebook_content">
     <!-- start content container -->

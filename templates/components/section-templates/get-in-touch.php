@@ -1,3 +1,10 @@
+<style>
+<?php include locate_template('css/components/template-form.css');
+include locate_template('css/components/get-in-touch.css');
+include locate_template('css/components/get-in-touch-form.css');
+?>
+</style>
+
 <section class="get_in_touch_cont">
     <div class="get_in_contact__item get_in_contact">
         <div class="swiper get_in_contact--wrapper">

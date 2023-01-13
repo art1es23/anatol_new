@@ -109,12 +109,13 @@
 
     <div id="popupWrapper" class="form--wrapper hidden">
         <?php 
-            get_template_part('templates/components/forms/get-a-quote-form');
-            get_template_part('templates/components/forms/subscribe-us-form');
-            get_template_part('templates/components/forms/download-ebook-form');
-            get_template_part('templates/components/forms/join-us-form');
-            get_template_part('templates/components/forms/register-warranty-form');
-            get_template_part('templates/components/forms/vacancy-contact-form');
+            // get_template_part('templates/components/forms/get-a-quote-form');
+            // get_template_part('templates/components/forms/subscribe-us-form');
+            // get_template_part('templates/components/forms/download-ebook-form');
+            // get_template_part('templates/components/forms/join-us-form');
+            // get_template_part('templates/components/forms/register-warranty-form');
+            // get_template_part('templates/components/forms/vacancy-contact-form');
+            get_template_part('templates/components/forms/form-template');
 
             // function is_tree( $pid ){
             //     global $post;

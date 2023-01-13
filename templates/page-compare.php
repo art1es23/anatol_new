@@ -4,19 +4,18 @@
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/components/get-in-touch.css';
-include __DIR__ . '/../css/components/another-equipments.css';
+<?php include locate_template('css/components/get-in-touch.css');
+include locate_template('css/components/another-equipments.css');
 
-include __DIR__ . '/../css/page-templates/page-compare/compare-filter.css';
-include __DIR__ . '/../css/page-templates/page-compare/compare-items.css';
-include __DIR__ . '/../css/page-templates/page-compare/compare-results.css';
+include locate_template('css/page-templates/page-compare/compare-filter.css');
+include locate_template('css/page-templates/page-compare/compare-items.css');
+include locate_template('css/page-templates/page-compare/compare-results.css');
 
-include __DIR__ . '/../css/page-templates/page-compare/compare.css';
+include locate_template('css/page-templates/page-compare/compare.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-big'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-big'); ?>
 
 <section class="compare-page" id="compare_content">
     <div class="compare-page--wrapper container compare_content_row">

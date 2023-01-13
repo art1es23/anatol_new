@@ -4,13 +4,12 @@
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/woocommerce.css';
-include __DIR__ . '/../css/page-templates/store/cart.css';
+<?php include locate_template('css/woocommerce.css');
+include locate_template('css/page-templates/store/cart.css');
 ?>
 </style>
 
-<?php get_template_part('templates/components/hero-section/template-part-head-press'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-press'); ?>
 
 <div class="woo_container">
     <div class="woo_container--wrapper container">

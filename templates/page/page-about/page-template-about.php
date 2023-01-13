@@ -1,5 +1,5 @@
 <?php
-/* Template Name: About NEW*/
+/* Template Name: About NEW */
 get_header(); ?>
 <style>
 <?php include local_template('css/components/hero-templates/hero-template.css');

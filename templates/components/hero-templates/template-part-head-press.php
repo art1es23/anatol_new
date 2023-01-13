@@ -1,3 +1,8 @@
+<style>
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+?>
+</style>
+
 <?php
 	if (is_single() && is_post_type('anatol-products-pres')){?>
 <div class="hero" style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/volt.jpg);">

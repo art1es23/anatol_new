@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header(); ?>
 
 
-<?PHP get_template_part('templates/components/hero-section/template-part-head-press'); ?>
+<?PHP get_template_part('templates/components/hero-templates/template-part-head-press'); ?>
 <style>
 <?php include 'css/components/related-products-slider.css';
 // include 'css/components/equipments-list.css';

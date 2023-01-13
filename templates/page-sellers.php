@@ -1,19 +1,19 @@
-<?php
+)<?php
 /* Template Name: Sellers NEW*/
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/components/another-equipments.css';
-include __DIR__ . '/../css/components/about-description.css';
-include __DIR__ . '/../css/components/presses-item.css';
-include __DIR__ . '/../css/components/automatic-presses.css';
-include __DIR__ . '/../css/page-templates/page-seller-country/page-seller-country.css';
+<?php // include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/another-equipments.css');
+include locate_template('css/components/about-description.css');
+include locate_template('css/components/presses-item.css');
+include locate_template('css/components/automatic-presses.css');
+include locate_template('css/page-templates/page-seller-country/page-seller-country.css');
 ?>
 </style>
 
 
-<?php get_template_part('templates/components/hero-section/template-part-head-bg-black'); ?>
+<?php get_template_part('templates/components/hero-templates/template-part-head-bg-black'); ?>
 
 <section class="about-us" id="sellers_content">
     <div class="about-us-description">

@@ -86,13 +86,20 @@ const openModalForms = () => {
     };
   };
 
-  createObjectTriggers(".subscribe-button", ".subscribe_us_form");
-  createObjectTriggers("#register_warranty_onclick", ".warranty-form");
-  createObjectTriggers(".get_a_quote", ".get_quote");
-  // createObjectTriggers(".get_a_quote_sales-button", ".get_quote");
-  createObjectTriggers(".join_us_dealer", ".join_us_form");
-  createObjectTriggers(".download-ebook-button", ".form-download-ebook");
-  createObjectTriggers(".contact-us__button", ".vacancy-contact-us");
+  const _getElem = (className) => document.querySelector(className);
+
+  const checkElem = (classNameTrigger, classNameForm) => {
+    if (_getElem(classNameForm)) {
+      createObjectTriggers(classNameTrigger, classNameForm);
+    }
+  };
+
+  checkElem(".subscribe-button", ".subscribe_us_form");
+  checkElem(".get_a_quote", ".get_quote");
+  checkElem("#register_warranty_onclick", ".warranty-form");
+  checkElem(".join_us_dealer", ".join_us_form");
+  checkElem(".download-ebook-button", ".form-download-ebook");
+  checkElem(".contact-us__button", ".vacancy-contact-us");
 };
 openModalForms();
 

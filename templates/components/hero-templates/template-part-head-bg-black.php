@@ -11,10 +11,11 @@ if (!empty(get_field("header_image"))) {
 }
 ?>
 
-<!-- <style>
-<?php include 'css/components/hero-templates/hero-template.css';
+<style>
+<?php include locate_template('css/components/hero-templates/hero-template.css');
 ?>
-</style> -->
+</style>
+
 
 <div class="hero black_shadow" style="background-image:url('<?php echo $image_attributes[0]; ?>');">
     <div class="hero--wrapper container">

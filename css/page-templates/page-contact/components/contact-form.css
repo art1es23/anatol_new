@@ -1,0 +1,41 @@
+/* Contact Us Form  */
+
+.contact-us-form.form {
+  width: 47.25%;
+  --form-background-color: transparent;
+  margin: initial;
+}
+
+.contact-us-form__title {
+  color: #fff;
+  font-family: var(--base-font-family);
+  font-size: max(3.5vw, 42px);
+}
+
+.contact-us-form input,
+.contact-us-form select,
+.contact-us-form textarea {
+  box-shadow: inset 1px 1px 5px rgb(0 0 0 / 45%),
+    inset -1px -1px 5px rgb(255 255 255 / 60%);
+  border-radius: 3px;
+}
+
+.contact-us-form input[type="submit"] {
+  box-shadow: none;
+}
+@media screen and (max-width: 1080px) {
+  .contact-us-form.form {
+    width: 85%;
+  }
+
+  .contact-us-form__title {
+    font-size: max(8vw, 37px);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contact-us-form.form {
+    width: 90%;
+    padding: 0;
+  }
+}
