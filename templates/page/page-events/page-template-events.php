@@ -4,9 +4,9 @@
 get_header(); ?>
 <style>
 <?php // include 'css/components/template-form.css';
-include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/components/get-in-touch.css';
-include __DIR__ . '/../css/page-templates/page-events/events.css';
+include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/get-in-touch.css');
+include locate_template('css/page-templates/page-events/events.css');
 ?>
 </style>
 

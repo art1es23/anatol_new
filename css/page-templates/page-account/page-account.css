@@ -38,7 +38,7 @@
   width: 100%;
 }
 
-.page-template-page-my-account .woocommerce-info a {
+.woocommerce-info a {
   color: white;
 }
 .dont_have_warranty {
@@ -85,7 +85,7 @@
   cursor: pointer;
 }
 
-.page-template-page-my-account .woocommerce-Message--info {
+.woocommerce-Message--info {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -95,34 +95,37 @@
   font-size: 22px;
   font-weight: 600;
 }
-.page-template-page-my-account .woocommerce-Message--info a {
+.woocommerce-Message--info a {
   margin-top: 30px;
 }
 .woocommerce-subscriptions .woocommerce-Message--info {
   flex-direction: column;
 }
-.page-template-page-my-account .woocommerce-MyAccount-orders {
+.woocommerce-MyAccount-orders {
   width: 100%;
 }
-.page-template-page-my-account
-  .woocommerce-MyAccount-orders
-  .woocommerce-orders-table__header,
-.page-template-page-my-account
-  .woocommerce-MyAccount-orders
-  .woocommerce-orders-table__cell {
-  text-align: center;
+
+.woocommerce-orders-table__row {
+  border: 1px solid rgb(171 26 31 / 20%);
 }
-.page-template-page-my-account
-  .woocommerce-MyAccount-orders
-  .woocommerce-orders-table__cell-order-actions
-  a {
+
+.woocommerce-orders-table__header,
+.woocommerce-orders-table__cell {
+  text-align: center;
+  font-size: max(1vw, 14px);
+  padding: 0.75rem 0.5rem;
+  font-weight: 600;
+}
+
+.woocommerce-MyAccount-orders .woocommerce-orders-table__cell-order-actions a {
   color: white;
 }
 .woocommerce-view-order .woocommerce-order-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  gap: 1.25rem;
 }
 .woocommerce-view-order .woocommerce-customer-details {
   display: none;
@@ -131,16 +134,16 @@
   text-align: center;
 }
 
-.page-template-page-my-account .wooccm-file-button {
+.wooccm-file-button {
   min-width: 200px !important;
   width: auto !important;
   margin-top: 20px;
 }
-.page-template-page-my-account .wooccm-type-file {
+.wooccm-type-file {
   display: flex;
   flex-direction: column;
 }
-.page-template-page-my-account p button {
+p button {
   min-width: 200px !important;
 }
 
@@ -199,7 +202,7 @@ textarea {
   transition: all 0.3s ease;
 }
 /* WARRANTY */
-.inf_warranty {
+/* .inf_warranty {
   width: 20%;
   height: 80px;
   display: flex;
@@ -207,8 +210,8 @@ textarea {
   border-collapse: collapse;
   margin: 0 auto;
   flex-direction: column;
-}
-.inf_warranty span {
+} */
+/* .inf_warranty span {
   width: 100%;
   height: 50%;
   display: flex;
@@ -216,27 +219,53 @@ textarea {
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   line-height: 1.3;
-}
-.inf_warranty_title {
+} */
+.warranty__title {
   font-family: var(--base-font-family);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 2.4vw;
-  color: #000000;
+  font-size: max(2.4vw, 26px);
+  /* color: #000000; */
   letter-spacing: 0.05em;
-  line-height: 0.9em;
   text-shadow: 0em 0.18em 0.27em rgb(0 0 0 / 24%);
-  margin: 30px 0;
   text-align: center;
   width: 100%;
 }
-.desc_warranty {
+.warranty {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  /* flex-wrap: wrap; */
 }
-.inf_warranty span:nth-child(1) {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+
+.warranty-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.warranty-info__item {
+  width: calc(100% / 5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.warranty-info__item span {
+  padding: 0.75rem 0.2rem;
+  width: 100%;
+  font-size: max(0.9vw, 13px);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
+}
+
+.warranty-info__item span:nth-child(1) {
+  /* border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; */
   background-color: #ddd;
 }
 
@@ -263,11 +292,17 @@ textarea {
 }
 .woocommerce-account .woocommerce-MyAccount-content {
   width: 100%;
-  float: none;
-  padding: max(5vh, 2.5rem) 0;
+  /* float: none; */
+  /* padding: 0; */
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.5rem;
+  font-size: max(0.9vw, 18px);
+  padding-top: 1.5rem;
+}
+
+.woocommerce-MyAccount-content h2 {
+  font-weight: 600;
 }
 /* MY ACCOUNT */
 .my-account-content .woocommerce {
@@ -307,3 +342,230 @@ textarea {
   font-size: 20px;
 }
 /* end */
+
+.woocommerce-MyAccount-content .woocommerce-notices-wrapper {
+  position: relative;
+  left: initial;
+  top: initial;
+  transform: initial;
+  width: 100%;
+}
+
+.hide-tabs-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, 0);
+  width: 2.25rem;
+  height: 2.25rem;
+  z-index: 3;
+}
+
+.hide-tabs-button svg {
+  fill: #000;
+  stroke: none;
+  transition: transform 0.3s ease-in, fill 0.3s ease-in;
+}
+/* MY ACCOUNT */
+/* ORDER */
+
+.woocommerce-OrderUpdates,
+.woocommerce-OrderUpdate {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.woocommerce-OrderUpdates {
+  flex-direction: column;
+}
+
+.woocommerce-OrderUpdate {
+  justify-content: space-between;
+  border: 1px solid rgb(171 26 31 / 20%);
+  padding: 0.5rem 1rem;
+}
+
+.woocommerce-table__product-name {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+.woocommerce-OrderUpdate-description {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.woocommerce-OrderUpdate-description p:first-child {
+  color: #ab1a1f;
+}
+
+.woocommerce-table--order-details th,
+.woocommerce-table--order-details td {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.woocommerce-table--order-details tr th:first-child {
+  text-align: left;
+}
+
+/* ACCOUNT DETAILS */
+.woocommerce h3 {
+  margin: 0;
+}
+
+.edit-account,
+.edit-account .form-row,
+.woocommerce-form-row,
+.edit-account fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.edit-account legend {
+  font-size: max(1vw, 18px);
+  font-weight: 600;
+  margin: 0.75rem 0;
+}
+.woocommerce-form-row span {
+  font-size: max(0.8vw, 14px);
+}
+.woocommerce-Address,
+.woocommerce-Address-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.woocommerce-password-strength {
+  font-size: max(0.95vw, 16px);
+}
+
+.woocommerce-password-hint {
+  font-size: max(0.8vw, 14px);
+}
+
+@media screen and (max-width: 1080px) {
+  .warranty-info__item span {
+    min-height: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .woocommerce-MyAccount-navigation ul {
+    flex-direction: column;
+    position: relative;
+  }
+  .hide-tabs-button {
+    display: flex;
+  }
+
+  .hide-tabs-button.hide-tabs-button--active svg {
+    fill: #ab1a1f;
+    transform: rotate(180deg);
+  }
+
+  .woocommerce-MyAccount-navigation-link {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    height: 100%;
+    position: relative;
+    transition: all 0.25s ease-in;
+  }
+
+  .woocommerce-MyAccount-navigation-link.woocommerce-MyAccount-navigation-link--disabled {
+    /* display: none; */
+    opacity: 0;
+    position: absolute;
+    /* left: 50%; */
+    height: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+
+  .account_container .woocommerce-MyAccount-navigation ul li a {
+    font-size: max(4vw, 26px);
+  }
+
+  .woocommerce-orders-table thead {
+    display: none;
+  }
+
+  .woocommerce-orders-table__row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+
+  .woocommerce-orders-table__cell {
+    display: flex;
+    /* justify-content: flex-end; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.25rem;
+    position: relative;
+    border: 1px solid rgb(171 26 31 / 20%);
+    font-size: max(0.9vw, 14px);
+  }
+  .woocommerce-orders-table__cell::before {
+    content: attr(data-title) ": ";
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 10rem;
+  }
+
+  .woocommerce-Price-amount.amount {
+    margin-left: auto;
+    font-size: max(0.9vw, 14px);
+  }
+
+  .woocommerce-OrderUpdate {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 0.25rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .warranty-info {
+    flex-wrap: wrap;
+  }
+
+  .warranty-info__item {
+    width: 50%;
+  }
+  .warranty-info__item:last-child {
+    width: 100%;
+  }
+
+  .warranty-info__item span {
+    min-height: auto;
+    font-size: max(2.25vw, 14px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .warranty-info {
+    flex-wrap: initial;
+    flex-direction: column;
+  }
+
+  .warranty-info__item {
+    width: 100%;
+  }
+  .woocommerce-view-order .woocommerce-MyAccount-content p,
+  .woocommerce-table--order-details th,
+  .woocommerce-table--order-details td {
+    font-size: 15px;
+  }
+  .order-again {
+    width: 100%;
+  }
+}

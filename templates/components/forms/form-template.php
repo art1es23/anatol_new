@@ -14,7 +14,7 @@
 	$path_parts = explode('/', $path);
 	$slug = $path_parts[1];
 
-    if (is_page('support') || is_page('my-account') || $slug === "presses" || $slug === "conveyor-dryers" || $slug === "flash-cure-units" || $slug === "pre-press" || $slug === "accessories" ) {
+    if (is_page(['support', 'my-account']) || in_array($slug, ["presses" , "conveyor-dryers" , "flash-cure-units" , "pre-press", "accessories"]) ) {
         get_template_part('templates/components/forms/register-warranty-form');
     }
     

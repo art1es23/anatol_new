@@ -41,9 +41,9 @@ $allowed_html = array(
 		)
    );
    query_posts($args);
-   if ( have_posts() ) : ?>				
-		<?php while(have_posts()) : the_post(); ?>
-		<?php $post_id = get_the_ID();
+   if ( have_posts() ) : ?>
+<?php while(have_posts()) : the_post(); ?>
+<?php $post_id = get_the_ID();
 		$first_name_warranty = get_post_meta( $post_id, 'first_name_warranty', true );
 		$last_name_warranty = get_post_meta( $post_id, 'last_name_warranty', true );
 		$address_line_one = get_post_meta( $post_id, 'address_line_one', true );
@@ -58,32 +58,45 @@ $allowed_html = array(
 		$purchase_date_warranty = get_post_meta( $post_id, 'purchase_date_warranty', true );
 		$installation_date_warranty = get_post_meta( $post_id, 'installation_date_warranty', true );
 		$user_id_warrranty = get_post_meta( $post_id, 'user_id_warrranty', true );
-		?>							
-			<div class="desc_warranty">
-				<div class='inf_warranty_title' ><?php echo $equipment_purchased_warranty?> / SN: <?php echo $serial_number_warranty ?> </span></div>
-				<div class='inf_warranty' ><span><?php _e('Equipment Purchased', 'anatol'); ?></span><span><?php echo $equipment_purchased_warranty ?></span></div>
-				<div class='inf_warranty' ><span><?php _e('Serial Number', 'anatol'); ?></span><span><?php echo $serial_number_warranty ?></span></div>
-				<div class='inf_warranty' ><span><?php _e('Purchase Date', 'anatol'); ?></span><span><?php echo $purchase_date_warranty ?></span></div>
-				<div class='inf_warranty' ><span><?php _e('Installation Date', 'anatol'); ?></span><span><?php echo $installation_date_warranty ?></span></div>
-				<div class='inf_warranty' ><span><?php _e('Warranty registration date', 'anatol'); ?></span><span><?php echo get_the_date('n-j-Y') ?></span></div>
-			</div>
+		?>
+<div class="warranty">
+    <div class='warranty__title'><?php echo $equipment_purchased_warranty?> / SN:
+        <?php echo $serial_number_warranty ?> </span></div>
+    <div class="warranty-info">
+        <div class='warranty-info__item'>
+            <span><?php _e('Equipment Purchased', 'anatol'); ?></span><span><?php echo $equipment_purchased_warranty ?></span>
+        </div>
+        <div class='warranty-info__item'>
+            <span><?php _e('Serial Number', 'anatol'); ?></span><span><?php echo $serial_number_warranty ?></span>
+        </div>
+        <div class='warranty-info__item'>
+            <span><?php _e('Purchase Date', 'anatol'); ?></span><span><?php echo $purchase_date_warranty ?></span>
+        </div>
+        <div class='warranty-info__item'>
+            <span><?php _e('Installation Date', 'anatol'); ?></span><span><?php echo $installation_date_warranty ?></span>
+        </div>
+        <div class='warranty-info__item'>
+            <span><?php _e('Warranty registration date', 'anatol'); ?></span><span><?php echo get_the_date('n-j-Y') ?></span>
+        </div>
+    </div>
+</div>
 <?php endwhile; ?>
 <?php endif; ?>
 <?php if ( !have_posts() ): ?>
-				<?php
+<?php
              $current_language_code = apply_filters( 'wpml_current_language', null );
             if($current_language_code == 'en'):?>
-				<div class="dont_have_warranty">You do not have a registered warranty.</div>
-				<div class="dont_have_warranty_btn"><a id="register_warranty_onclick" href="#">Register your product</a></div>
-            <?php
+<div class="dont_have_warranty">You do not have a registered warranty.</div>
+<div class="dont_have_warranty_btn"><a id="register_warranty_onclick" href="#">Register your product</a></div>
+<?php
             elseif($current_language_code == 'ru'):?>
-				<div class="dont_have_warranty">У вас нет зарегистрированной гарантии.</div>
-				<div class="dont_have_warranty_btn"><a id="register_warranty_onclick" href="#">Зарегистрируйте свой продукт</a></div>
-            <?php
+<div class="dont_have_warranty">У вас нет зарегистрированной гарантии.</div>
+<div class="dont_have_warranty_btn"><a id="register_warranty_onclick" href="#">Зарегистрируйте свой продукт</a></div>
+<?php
             elseif($current_language_code == 'es'):?>
-				<div class="dont_have_warranty">No tienes una garantía registrada.</div>
-				<div class="dont_have_warranty_btn"><a id="register_warranty_onclick" href="#">Registre su producto</a></div>
-            <?php
+<div class="dont_have_warranty">No tienes una garantía registrada.</div>
+<div class="dont_have_warranty_btn"><a id="register_warranty_onclick" href="#">Registre su producto</a></div>
+<?php
             endif;
             ?>
 <?php endif; ?>

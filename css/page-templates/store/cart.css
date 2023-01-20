@@ -157,9 +157,12 @@ td.product-thumbnail {
 .form-row-wide {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.5rem;
 }
-
+.form-row-wide span {
+  width: 100%;
+}
 .woocommerce-shipping-calculator .button {
   --button-width: 50%;
 }
@@ -467,7 +470,7 @@ table.shop_table
 
 @media screen and (max-width: 770px) {
   .cart_content {
-    width: 85%;
+    width: 90%;
   }
 
   .woocommerce {
@@ -576,6 +579,15 @@ table.shop_table
     .woocommerce-shipping-totals
     td {
     padding-left: 0;
+  }
+  table.shop_table .woocommerce-shipping-totals .shipping-calculator-button {
+    margin-right: 0;
+    padding: 0.5rem 0;
+  }
+
+  .shipping-calculator-form p,
+  .woocommerce .shipping-calculator-form .button {
+    width: 100%;
   }
 }
 

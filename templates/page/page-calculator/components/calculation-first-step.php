@@ -412,7 +412,7 @@
     </div>
     <!--<input name="submit" type="submit" class="button red-button draw-red"
                      value="<?php _e('Enter Savings Calculator*', 'anatol'); ?>">-->
-    <button type="submit" class="button btn-one btn-primary track-button" data-category="Buttons"
+    <button type="submit" class="button btn-one btn-primary red-button draw-red" data-category="Buttons"
         data-label="Make ROI calculation">
         <?php _e('Enter Savings Calculator*', 'anatol'); ?>
         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>

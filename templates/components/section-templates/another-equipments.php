@@ -1,4 +1,11 @@
-<!-- style="--bg-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/fon6.webp);" -->
+<!-- style="--bg-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/assets/images/fon6.webp);" -->
+
+<style>
+<?php locate_template('css/components/another-equipments.css');
+
+// echo locate_template();
+?>
+</style>
 
 <div class="another-equipment">
     <div class="another-equipment--wrapper">
@@ -7,7 +14,7 @@
             <div class="list-equipment__item list-equipment__item--press">
                 <div class="list-equipment__item--back">
                     <div class="mouse-parallax"
-                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/mouse-parallax/001.jpg);">
+                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/assets/images/mouse-parallax/001.jpg);">
                     </div>
                 </div>
                 <div class="list-equipment__item--front">
@@ -29,7 +36,7 @@
             <div class="list-equipment__item list-equipment__item--dryers">
                 <div class="list-equipment__item--back">
                     <div class="mouse-parallax"
-                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/mouse-parallax/003.jpg);">
+                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/assets/images/mouse-parallax/003.jpg);">
                     </div>
                 </div>
                 <div class="list-equipment__item--front">
@@ -50,7 +57,7 @@
             <div class="list-equipment__item list-equipment__item--flash">
                 <div class="list-equipment__item--back">
                     <div class="mouse-parallax"
-                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/mouse-parallax/004.jpg);">
+                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/assets/images/mouse-parallax/004.jpg);">
                     </div>
                 </div>
                 <div class="list-equipment__item--front">
@@ -71,7 +78,7 @@
             <div class="list-equipment__item list-equipment__item--pre-press">
                 <div class="list-equipment__item--back">
                     <div class="mouse-parallax"
-                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/mouse-parallax/005.jpg);">
+                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/assets/images/mouse-parallax/005.jpg);">
                     </div>
                 </div>
                 <div class="list-equipment__item--front">
@@ -93,7 +100,7 @@
             <div class="list-equipment__item list-equipment__item--accessories">
                 <div class="list-equipment__item--back">
                     <div class="mouse-parallax"
-                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/mouse-parallax/006.jpg);">
+                        style="background-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/assets/images/mouse-parallax/006.jpg);">
                     </div>
                 </div>
                 <div class="list-equipment__item--front">

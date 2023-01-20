@@ -18,7 +18,7 @@ include locate_template('css/page-templates/page-ebooks/ebooks.css');
     <!-- <div class="row eb-content"> -->
 
     <?php // theloop
-      if( have_posts() ) { ?>
+      if ( have_posts() ) { ?>
     <div class="ebooks-list">
         <?php while ( have_posts() ) : the_post(); ?>
         <div class="ebooks-list__item ebook-post">
@@ -35,7 +35,7 @@ include locate_template('css/page-templates/page-ebooks/ebooks.css');
         <?php endwhile; ?>
     </div>
     <?php } else { ?>
-
+    <p>Sorry.. Posts not found.</p>
     <?php } ?>
     <!-- </div> -->
 </div>

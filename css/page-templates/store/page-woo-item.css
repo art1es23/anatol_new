@@ -183,7 +183,7 @@ input[type="number"] {
   }
   .single-product__item {
     width: 85%;
-    align-items: center;
+    /* align-items: center; */
   }
   .flex-price-box {
     align-items: center;
@@ -208,7 +208,11 @@ input[type="number"] {
     height: 93.5vh;
   }
 }
-
+@media screen and (max-width: 600px) {
+  .price_cart_box {
+    align-self: center;
+  }
+}
 @media screen and (max-width: 550px) {
   .modal-img-content {
     width: 20rem;
@@ -242,10 +246,10 @@ input[type="number"] {
     max-width: 80%;
   }
 
-  .price_cart_box {
+  /* .price_cart_box {
     align-self: flex-start;
     display: flex;
-  }
+  } */
   .cart {
     justify-content: flex-start;
   }

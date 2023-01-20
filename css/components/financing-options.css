@@ -28,6 +28,7 @@
   text-align: center;
   padding-bottom: 1vw;
   position: relative;
+  line-height: 1;
 }
 .more_finance h2::before {
   display: block;
@@ -80,7 +81,7 @@
   background-position: center;
   background-size: 40%;
   background-repeat: no-repeat;
-  background-image: url(/wp-content/themes/anatol/images/svg-icons/icon-check.svg);
+  background-image: url(/wp-content/themes/anatol/assets/images/svg-icons/icon-check.svg);
 }
 .item_finance_info h3 {
   font-weight: bold;

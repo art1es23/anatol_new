@@ -16,6 +16,7 @@ get_header(); ?>
             <?php $video_id = get_field('video_id');
                     if(!empty($video_id)) {
                     ?>
+
             <div class="video">
                 <a href="https://www.youtube.com/embed/<?php echo $video_id;?>" class="video__link">
                     <picture>
@@ -36,8 +37,8 @@ get_header(); ?>
             </div>
 
             <?php } ?>
-
         </div>
+
         <div class="anatol-tv__item anatol-tv__item--right" data-aos="fade-left">
             <h2 class="anatol-tv__title"><?php echo get_field('title_section');?></h2>
             <p class="anatol-tv__description"><?php echo get_field('content'); ?></p>
@@ -45,28 +46,6 @@ get_header(); ?>
                 href="https://test22.anatol.space/presses/infinity/"><?php echo get_field('link_to_check_more'); ?></a>
         </div>
     </div>
-
-    <!-- <?php
-      $theexperience = get_field('wpcf-theexperience');
-      if(!empty($theexperience)) {
-        $companyname = get_field('wpcf-companyname');
-        ?>
-
-    <div class="theexperience">
-        <div class="box_title"><?php _e('The experience'); ?></div>
-        <div class="theexperience_content"><?php echo $theexperience; ?></div>
-        <div class="theexperience_author"><?php echo get_the_title(); ?></div>
-        <?php if(!empty($companyname)) {?><div class="theexperience_companyname"><?php echo $companyname; ?>
-        </div><?php } ?>
-        <div class="share_post_part">
-            <div class="spp_line_part"></div>
-            <div class="spp_content_part"><span class="spp_text"><?php _e('Share') ?></span>
-                <?php echo do_shortcode('[addtoany]'); ?></div>
-        </div>
-    </div>
-    <?php
-      }
-      ?> -->
 </div>
 </div>
 
@@ -82,13 +61,14 @@ get_header(); ?>
                   ) );
                   if(!empty($terms)){
                     foreach ($terms as $key => $term) {
-                      $active_class = ($key == 0)? 'active': '';
-                      echo '<li class="list_tbs '. $active_class .'">' . $term->name . '<a data-toggle="tab" href="#video_category_' . $term->term_id . '">' . $term->name . '</a></li>';
+                      $active_class = ($key == 0) ? 'active' : '';
+                      echo '<li class="anatol-videos-navigation__item '. $active_class .'">' . $term->name . '<a data-toggle="tab" class="anatol-videos-navigation__link" href="#video_category_' . $term->term_id . '">' . $term->name . '</a></li>';
                     }
                   }
                   ?>
             </ul>
-            <div class="anatol-videos-list tab-content">
+
+            <div class="anatol-videos-list">
                 <?php
                 if(!empty($terms)){
                   foreach ($terms as $key => $term) {
@@ -108,7 +88,7 @@ get_header(); ?>
                       )
                     );
                     if( $videos->have_posts() ){
-                      echo '<div id="video_category_' . $term->term_id . '" class="anatol-videos-list__inner tab-pane ' . $active_class . '"><div class="video_tag_wrap">';
+                      echo '<div id="video_category_' . $term->term_id . '" class="anatol-videos-list__inner ' . $active_class . '">';
                       while( $videos->have_posts() ){
                         $videos->the_post(); ?>
 
@@ -118,17 +98,6 @@ get_header(); ?>
                         $video_youtube_id = get_field('video_id_from_youtube');
                         ?>
 
-                    <!-- <a target="_blank" data-fancybox="video-gallery_<?php echo $term->term_id; ?>"
-                        href="<?php echo $vimeo_url; ?>">
-                        
-                        <div class="thumbnail-wrap">
-                            <?php the_post_thumbnail('full'); ?>
-                        </div>
-                        
-                        <div class="video_title"><?php the_title(); ?></div>
-                    </a> -->
-
-                    <!-- ///////////////// -->
                     <div class="video">
                         <a href="https://www.youtube.com/embed/<?php echo $video_youtube_id;?>" class="video__link">
                             <picture>
@@ -151,7 +120,7 @@ get_header(); ?>
                 </div>
 
                 <?php }
-                    echo '</div></div>';
+                    echo '</div>';
                 }}} ?>
             </div>
         </div>
@@ -160,42 +129,78 @@ get_header(); ?>
 </section>
 
 <script>
-let list_tbs = document.querySelectorAll('.list_tbs');
-let tab_pane = document.querySelectorAll('.tab-pane');
+// let anatol-videos-navigation__item = document.querySelectorAll('.anatol-videos-navigation__item');
+// let tab_pane = document.querySelectorAll('.anatol-videos-list__inner');
 
-list_tbs[0].classList.add('active');
-tab_pane[0].classList.add('active');
-tab_pane[0].classList.add('active_active');
+// anatol-videos-navigation__item[0].classList.add('active');
+// tab_pane[0].classList.add('active');
+// tab_pane[0].classList.add('active_active');
 
-list_tbs.forEach(tab => tab.addEventListener('click', e => {
+// anatol-videos-navigation__item.forEach(tab => tab.addEventListener('click', e => {
 
-}));
+// }));
 
-for (let i = 0; i < list_tbs.length; i++) {
-    list_tbs[i].onclick = function() {
-        for (let i = 0; i < list_tbs.length; i++) {
-            list_tbs[i].classList.remove('active')
-        }
-        this.classList.add('active');
+// for (let i = 0; i < anatol-videos-navigation__item.length; i++) {
+//     anatol-videos-navigation__item[i].onclick = function() {
+//         for (let i = 0; i < anatol-videos-navigation__item.length; i++) {
+//             anatol-videos-navigation__item[i].classList.remove('active')
+//         }
+//         this.classList.add('active');
 
-        let element_class = document.querySelector(
-            `${this.innerHTML.slice(this.innerHTML.indexOf('"#')+1,this.innerHTML.indexOf('">'))}`);
-        for (let i = 0; i < tab_pane.length; i++) {
-            tab_pane[i].classList.remove('active');
-            tab_pane[i].classList.remove('active_active');
-        }
+//         l.queet element_class = documentrySelector(
+//             `${this.innerHTML.slice(this.innerHTML.indexOf('"#')+1,this.innerHTML.indexOf('">'))}`);
+//         for (let i = 0; i < tab_pane.length; i++) {
+//             tab_pane[i].classList.remove('active');
+//             tab_pane[i].classList.remove('active_active');
+//         }
 
-        element_class.classList.add('active');
+//         element_class.classList.add('active');
 
-        setTimeout(() => {
-            element_class.classList.add('active_active');
-        }, 50);
-    }
-}
+//         setTimeout(() => {
+//             element_class.classList.add('active_active');
+//         }, 50);
+//     }
+// }
+
+
+const toggleTabs = (tabWrapperClass, triggerClass, tabInnerClass) => {
+    const tabWrapper = document.querySelector(tabWrapperClass);
+    const tabTriggers = tabWrapper.querySelectorAll(triggerClass);
+    const tabInners = tabWrapper.querySelectorAll(tabInnerClass);
+
+    tabTriggers[0].classList.add('active');
+    tabInners[0].classList.add('active');
+
+    tabTriggers.forEach((trigger) =>
+        trigger.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const link = e.currentTarget.querySelector("a");
+            e.currentTarget.classList.toggle("active");
+
+            tabTriggers.forEach((item) =>
+                item.classList.remove("active")
+            );
+
+            tabInners.forEach((item) => {
+                let slug = link.getAttribute("href").split("#")[1];
+
+                item.classList.remove("active");
+
+                item.getAttribute("id") === slug ?
+                    item.classList.add("active") :
+                    item.classList.remove("active");
+            });
+        })
+    );
+};
+
+toggleTabs(
+    ".anatol-videos-list--wrapper",
+    ".anatol-videos-navigation__item",
+    ".anatol-videos-list__inner"
+);
 </script>
-<!-- end content container -->
-<!-- </div> -->
-<!-- <div class="container-fluid"> -->
 
 <!-- INIT YOUTUBE VIDEOS -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/initVideo.js"></script>

@@ -19,7 +19,7 @@
       rgba(27, 31, 37, 0.3) 0%,
       #1b1f25 100%
     ),
-    url(../wp-content/themes/anatol/images/bg-group2.jpg);
+    url(../wp-content/themes/anatol/assets/images/bg-group2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -76,6 +76,50 @@
   --form-padding: 0 2vw;
 }
 
+.support_team--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  margin: max(7.5vh, 2.5rem) auto;
+  max-width: 94%;
+}
+.support_team_cont {
+  width: 100%;
+  position: relative;
+}
+.support_team_cont .support_item {
+  width: calc((100% - 7vw) / 3);
+  margin: 0 auto;
+  line-height: 1.5;
+  text-align: center;
+}
+.support_team_cont .support_item a {
+  color: #363636;
+}
+
+.support_team_cont .support_item .st_photo {
+  width: 100%;
+  position: relative;
+}
+.st_item_name {
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  bottom: 5px;
+  background: rgb(255 255 255 / 80%);
+  font-size: max(1.1vw, 18px);
+}
+.support_team_cont .support_item img {
+  margin: 0 auto;
+}
+
+.st_content {
+  font-size: max(0.8vw, 14px);
+}
+
+.sbn_sub_title {
+  font-size: max(0.9vw, 15px);
+}
 @media screen and (max-width: 800px) {
   .support-feedbacks--wrapper {
     width: 90%;
@@ -93,6 +137,20 @@
   .feedback_customer_company {
     font-size: max(2.25vw, 16px);
   }
+  .support_team--wrapper {
+    width: 90%;
+  }
+
+  .st_item_name {
+    font-size: max(4vw, 24px);
+  }
+  .st_content {
+    font-size: max(2.75vw, 16px);
+  }
+
+  .sbn_sub_title {
+    font-size: max(3.25vw, 20px);
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -105,11 +163,24 @@
 }
 
 @media screen and (max-width: 550px) {
-  .service_form {
-    --form-padding: 0;
-    padding-top: 0;
-  }
   .request_service_form--wrapper {
     width: 90%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 900px) and (orientation: landscape) {
+  .st_item_name,
+  .feedback_title_block {
+    font-size: max(1.25vw, 16px);
+  }
+  .sbn_sub_title,
+  .st_content,
+  .feedback,
+  .feedback_customer_company {
+    font-size: max(1vw, 14px);
+  }
+
+  .feedback_title_block {
+    font-size: max(3.25vw, 20px);
   }
 }

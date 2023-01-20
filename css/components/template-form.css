@@ -487,6 +487,10 @@ input[type="submit"].button--full {
     width: 94%;
   }
 
+  .service_form {
+    --form-padding: 0;
+  }
+
   .get_in_touch_cont form,
   .contact-us-form form,
   .service_form form {
@@ -497,6 +501,11 @@ input[type="submit"].button--full {
   .form-inner__item,
   .form-inner__item--half {
     width: 100%;
+  }
+
+  .shipping-calculator-form input,
+  .shipping-calculator-form select {
+    font-size: 14px;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {

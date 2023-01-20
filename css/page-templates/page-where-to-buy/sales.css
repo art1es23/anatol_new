@@ -189,14 +189,14 @@
   font-size: max(0.75vw, 14px);
 }
 
-.quote-button {
+.button.quote-button {
   --button-horizontall-side-padding: 0.5rem;
   --button-vertical-side-padding: 0.4rem;
   max-width: 7.5rem;
   border-radius: 5px;
 }
 
-.quote-button:hover {
+.button.quote-button:hover {
   background-color: #ab1a1f;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }

@@ -73,17 +73,19 @@
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: url("/wp-content/themes/anatol/images/img/yes.png") no-repeat;
+  background: url("/wp-content/themes/anatol/assets/images/img/yes.png")
+    no-repeat;
 }
 .uk-text-warning:not(td) {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background-image: url("/wp-content/themes/anatol/images/img/no.png") no-repeat;
+  background-image: url("/wp-content/themes/anatol/assets/images/img/no.png")
+    no-repeat;
 }
 
 .uk-text-warning {
-  background-image: url("/wp-content/themes/anatol/images/img/no.png");
+  background-image: url("/wp-content/themes/anatol/assets/images/img/no.png");
 }
 
 @media screen and (max-width: 900px) {

@@ -5,23 +5,24 @@
 
 <?php
 	if (is_single() && is_post_type('anatol-products-pres')){?>
-<div class="hero" style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/volt.jpg);">
+<div class="hero"
+    style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/assets/images/head-bg/volt.jpg);">
     <?}
 		else if (is_single() && is_post_type('anatol-products-flas')){?>
     <div class="hero "
-        style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/flash.jpg);">
+        style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/assets/images/head-bg/flash.jpg);">
         <?}
 		else if (is_single() && is_post_type('anatol-products-conv')){?>
         <div class="hero "
-            style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/head_dryer.jpg);">
+            style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/assets/images/head-bg/head_dryer.jpg);">
             <?}
 			else if (is_single() && is_post_type('anatol-products-pre-')){?>
             <div class="hero "
-                style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/head_pre.jpg);">
+                style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/assets/images/head-bg/head_pre.jpg);">
                 <?}
 			else if (is_single() && is_post_type('anatol-products-acce')){?>
                 <div class="hero "
-                    style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/images/head-bg/head_acc.jpg);">
+                    style="background-image:url(<?php echo bloginfo('stylesheet_directory') ?>/assets/images/head-bg/head_acc.jpg);">
                     <?}
 			else{				
 				echo '<div class="hero products_header">';

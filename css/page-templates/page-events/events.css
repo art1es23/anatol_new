@@ -99,8 +99,8 @@
 }
 
 .svg-wrapper {
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
 }
 
 .svg-location {
@@ -171,11 +171,11 @@
 /* .event_description::before {
   content: "\E824";
 } */
-.machines_for_exhibition::before {
+/* .machines_for_exhibition::before {
   background: url(../wp-content/themes/anatol/css-new/images/machine_image.svg)
     no-repeat;
   background-size: contain;
-}
+} */
 .card_subinfo {
   display: -webkit-box;
   display: -webkit-flex;

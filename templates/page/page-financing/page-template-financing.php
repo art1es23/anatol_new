@@ -5,12 +5,12 @@ Template Name: Financing NEW
 get_header(); ?>
 
 <style>
-<?php include __DIR__ . '/../css/components/hero-templates/hero-template.css';
-include __DIR__ . '/../css/components/another-equipments.css';
-include __DIR__ . '/../css/components/template-benefits.css';
-include __DIR__ . '/../css/components/financing-options.css';
-include __DIR__ . '/../css/components/get-in-touch.css';
-include __DIR__ . '/../css/page-templates/page-financing/financing.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/another-equipments.css');
+include locate_template('css/components/template-benefits.css');
+include locate_template('css/components/financing-options.css');
+include locate_template('css/components/get-in-touch.css');
+include locate_template('css/page-templates/page-financing/financing.css');
 ?>
 </style>
 

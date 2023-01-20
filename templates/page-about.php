@@ -20,7 +20,7 @@ include locate_template('css/page-templates/page-about/anatol-map.css');
     </div>
     <div class="about-us-img--wrapper">
         <img loading="lazy" class="lozad" width="435" height="435"
-            src="<?php bloginfo('template_directory'); ?>/images/image/about_us.jpg"
+            src="<?php bloginfo('template_directory'); ?>/assets/images/image/about_us.jpg"
             alt="the one of the main warehouse of the Anatol Equipment">
     </div>
 </section>
@@ -28,10 +28,9 @@ include locate_template('css/page-templates/page-about/anatol-map.css');
 <section class="business-opportunities">
     <div class="business-opportunities__item business-img">
         <img loading="lazy" class="lozad" width="744" height="496"
-            src="<?php bloginfo('template_directory'); ?>/images/image/business.jpg"
+            src="<?php bloginfo('template_directory'); ?>/assets/images/image/business.jpg"
             alt="our professional sales managers. Who could get you the best practice of the purchasing.">
     </div>
-    <!-- <div class="business-img" style="background-image:url('<?php bloginfo('template_directory'); ?>/images/image/business.jpg');"></div> -->
     <div class="business-opportunities__item business-info">
         <div class="business-info--wrapper">
             <h2 class="section_title"><?php the_field('about_2_section_title'); ?></h2>

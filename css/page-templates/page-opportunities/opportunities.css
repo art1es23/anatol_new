@@ -410,7 +410,7 @@ body .select2-dropdown {
   content: "";
   width: 30px;
   height: 30px;
-  background-image: url(../wp-content/themes/anatol/images/img/country-earth-flag-globe-nation-national-svgrepo-com.svg);
+  background-image: url(../wp-content/themes/anatol/assets/images/img/country-earth-flag-globe-nation-national-svgrepo-com.svg);
   top: 45%;
   transform: translateY(-50%);
   background-repeat: no-repeat;
@@ -425,7 +425,7 @@ body .select2-dropdown {
 }
 .slug-list__item:nth-of-type(2):before {
   content: "";
-  background-image: url(../wp-content/themes/anatol/images/img/search-career-work-job-recruitment-employee-svgrepo-com.svg);
+  background-image: url(../wp-content/themes/anatol/assets/images/img/search-career-work-job-recruitment-employee-svgrepo-com.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 20px;

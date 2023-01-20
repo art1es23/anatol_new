@@ -26,12 +26,12 @@ include locate_template('css/components/get-in-touch-form.css');
                     <div class="contact_line">
                         <h4 class="contact_line_header">
                             <span class="svg-wrapper cont_ico ico_location">
-                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                <!-- <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                                     <g data-name="10-location" id="_10-location">
                                         <path d="M27,12A11,11,0,0,0,5,12C5,22,16,31,16,31S27,22,27,12Z" />
                                         <circle cx="16" cy="12" r="5" />
                                     </g>
-                                </svg>
+                                </svg> -->
                             </span>
                             <span><?php _e('Location', 'anatol'); ?></span>
                         </h4>
@@ -45,7 +45,7 @@ include locate_template('css/components/get-in-touch-form.css');
                     <div class="contact_line">
                         <h4 class="contact_line_header">
                             <span class="svg-wrapper cont_ico ico_phone">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M17.167,16.155a2.5,2.5,0,0,0-3.535,0l-.385.384A46.692,46.692,0,0,1,7.458,10.75l.385-.385a2.5,2.5,0,0,0,0-3.536L5.721,4.708a2.5,2.5,0,0,0-3.535,0L1.022,5.872a3.51,3.51,0,0,0-.442,4.4A46.932,46.932,0,0,0,13.722,23.417a3.542,3.542,0,0,0,4.4-.442l1.165-1.164a2.5,2.5,0,0,0,0-3.535Z" />
                                     <path
@@ -54,7 +54,7 @@ include locate_template('css/components/get-in-touch-form.css');
                                         d="M11.5,6A6.508,6.508,0,0,1,18,12.5a1,1,0,0,0,2,0A8.51,8.51,0,0,0,11.5,4a1,1,0,1,0,0,2Z" />
                                     <path
                                         d="M11.5,10A2.5,2.5,0,0,1,14,12.5a1,1,0,0,0,2,0A4.505,4.505,0,0,0,11.5,8a1,1,0,1,0,0,2Z" />
-                                </svg>
+                                </svg> -->
                             </span>
                             <span><?php _e('Phone', 'anatol'); ?></span>
                         </h4>

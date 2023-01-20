@@ -1,6 +1,6 @@
 .equipments-list {
   background-color: #000;
-  /* background-image: url(../wp-content/themes/anatol/images/background.jpg); */
+  /* background-image: url(../wp-content/themes/anatol/assets/images/background.jpg); */
 }
 .equipment {
   display: flex;
@@ -55,7 +55,7 @@
 /* SUPPORT SECTION */
 
 /* .support-section {
-  background-image: url(../wp-content/themes/anatol/images/head-bg/volt.jpg);
+  background-image: url(../wp-content/themes/anatol/assets/images/head-bg/volt.jpg);
 }
 
 .support-section::before {

@@ -267,7 +267,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/wp-content/themes/anatol/images/svg-icons/icon-arrow-right.svg);
+  background-image: url(/wp-content/themes/anatol/assets/images/svg-icons/icon-arrow-right.svg);
   position: relative;
 }
 
@@ -307,7 +307,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
-  background-image: url(/wp-content/themes/anatol/images/svg-icons/icon-check.svg);
+  background-image: url(/wp-content/themes/anatol/assets/images/svg-icons/icon-check.svg);
 }
 
 .c-story-post__footer a {

@@ -17,8 +17,8 @@ include locate_template('css/page-templates/page-support/support.css');
     <div class="support_top--wrapper container">
         <h2 id="register_now" class="section_title regional-offices__title">
             <?php _e('Real Help from Real People', 'anatol'); ?></h2>
-        <div class="support_top_pannel">
-            <div class="column_support">
+        <div class="support-inner">
+            <div class="support-inner__item suppport-info">
                 <?PHP
 					$cp_phone = get_field('cp_phone');
 					$cp_short_description = get_field('cp_short_description');
@@ -27,88 +27,39 @@ include locate_template('css/page-templates/page-support/support.css');
 					$content_button_name = get_field('content_button_name');
 					$content_button_url = get_field('content_button_url');
 					?>
-                <div class="stp_icon">
-                    <span class="custom_icon text_icon wicon-phone-solid">
-                        <svg fill="#cd2122" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M17.167,16.155a2.5,2.5,0,0,0-3.535,0l-.385.384A46.692,46.692,0,0,1,7.458,10.75l.385-.385a2.5,2.5,0,0,0,0-3.536L5.721,4.708a2.5,2.5,0,0,0-3.535,0L1.022,5.872a3.51,3.51,0,0,0-.442,4.4A46.932,46.932,0,0,0,13.722,23.417a3.542,3.542,0,0,0,4.4-.442l1.165-1.164a2.5,2.5,0,0,0,0-3.535Z" />
-                            <path
-                                d="M11.5,0a1,1,0,0,0,0,2A10.512,10.512,0,0,1,22,12.5a1,1,0,1,0,2,0A12.515,12.515,0,0,0,11.5,0Z" />
-                            <path
-                                d="M11.5,6A6.508,6.508,0,0,1,18,12.5a1,1,0,0,0,2,0A8.51,8.51,0,0,0,11.5,4a1,1,0,1,0,0,2Z" />
-                            <path
-                                d="M11.5,10A2.5,2.5,0,0,1,14,12.5a1,1,0,0,0,2,0A4.505,4.505,0,0,0,11.5,8a1,1,0,1,0,0,2Z" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="sp_top">
-                    <h4 class="stp_title">
-                        <?PHP echo get_field('cp_title'); ?>
-                    </h4>
-                </div>
-                <div class="stp_content">
-                    <div class="spm_contacts">
-                        <?PHP if(!empty($cp_short_description)) { ?>
-                        <div class="spm_short_description spm_contact">
-                            <?PHP echo $cp_short_description; ?>
-                        </div>
-                        <?PHP } ?>
-                        <?PHP if(!empty($cp_phone)) { ?>
-                        <div class="spm_phone spm_contact">
-                            <span class="text_icon wicon-phone-solid svg-wrapper">
-                                <svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.167,16.155a2.5,2.5,0,0,0-3.535,0l-.385.384A46.692,46.692,0,0,1,7.458,10.75l.385-.385a2.5,2.5,0,0,0,0-3.536L5.721,4.708a2.5,2.5,0,0,0-3.535,0L1.022,5.872a3.51,3.51,0,0,0-.442,4.4A46.932,46.932,0,0,0,13.722,23.417a3.542,3.542,0,0,0,4.4-.442l1.165-1.164a2.5,2.5,0,0,0,0-3.535Z" />
-                                    <path
-                                        d="M11.5,0a1,1,0,0,0,0,2A10.512,10.512,0,0,1,22,12.5a1,1,0,1,0,2,0A12.515,12.515,0,0,0,11.5,0Z" />
-                                    <path
-                                        d="M11.5,6A6.508,6.508,0,0,1,18,12.5a1,1,0,0,0,2,0A8.51,8.51,0,0,0,11.5,4a1,1,0,1,0,0,2Z" />
-                                    <path
-                                        d="M11.5,10A2.5,2.5,0,0,1,14,12.5a1,1,0,0,0,2,0A4.505,4.505,0,0,0,11.5,8a1,1,0,1,0,0,2Z" />
-                                </svg>
-                            </span>
-                            <a href="tel:8475821825">
-                                <?PHP echo $cp_phone; ?>
-                            </a>
-                        </div>
-                        <?PHP } ?>
-                        <?PHP if(!empty($content_phone)) { ?>
-                        <div class="spm_phone spm_contact">
-                            <span class="text_icon wicon-phone-solid svg-wrapper">
-                                <svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M17.167,16.155a2.5,2.5,0,0,0-3.535,0l-.385.384A46.692,46.692,0,0,1,7.458,10.75l.385-.385a2.5,2.5,0,0,0,0-3.536L5.721,4.708a2.5,2.5,0,0,0-3.535,0L1.022,5.872a3.51,3.51,0,0,0-.442,4.4A46.932,46.932,0,0,0,13.722,23.417a3.542,3.542,0,0,0,4.4-.442l1.165-1.164a2.5,2.5,0,0,0,0-3.535Z" />
-                                    <path
-                                        d="M11.5,0a1,1,0,0,0,0,2A10.512,10.512,0,0,1,22,12.5a1,1,0,1,0,2,0A12.515,12.515,0,0,0,11.5,0Z" />
-                                    <path
-                                        d="M11.5,6A6.508,6.508,0,0,1,18,12.5a1,1,0,0,0,2,0A8.51,8.51,0,0,0,11.5,4a1,1,0,1,0,0,2Z" />
-                                    <path
-                                        d="M11.5,10A2.5,2.5,0,0,1,14,12.5a1,1,0,0,0,2,0A4.505,4.505,0,0,0,11.5,8a1,1,0,1,0,0,2Z" />
-                                </svg>
-                            </span>
-                            <a href="tel:8475821825">
-                                <?PHP echo $content_phone; ?>
-                            </a>
-                        </div>
-                        <?PHP } ?>
-                        <?PHP if(!empty($content_email)) { ?>
-                        <div class="spm_email spm_contact">
-                            <span class="text_icon wicon-envelope-solid">
 
-                            </span> <a href="mailto:<?PHP echo $content_email; ?>">
-                                <?PHP echo $content_email; ?>
-                            </a>
-                        </div>
-                        <?PHP } ?>
-                    </div>
+                <span class="suppport-info__icon svg-wrapper svg-phone--red"></span>
+                <h4 class="suppport-info__title">
+                    <?PHP echo get_field('cp_title'); ?>
+                </h4>
+
+                <div class="suppport-info__description">
+                    <?PHP if(!empty($cp_short_description)) { ?>
+                    <p class="spm_short_description suppport-info__excerpt">
+                        <?PHP echo $cp_short_description; ?>
+                    </p>
+                    <?PHP } ?>
+                    <?PHP if(!empty($cp_phone)) { ?>
+                    <a class="contact-link" href="tel:8475821825">
+                        <?PHP echo $cp_phone; ?>
+                    </a>
+                    <?PHP } ?>
+                    <?PHP if(!empty($content_phone)) { ?>
+                    <a class="contact-link" href="tel:8475821825">
+                        <?PHP echo $content_phone; ?>
+                    </a>
+                    <?PHP } ?>
+                    <?PHP if(!empty($content_email)) { ?>
+                    <a class="contact-link" href="mailto:<?PHP echo $content_email; ?>">
+                        <?PHP echo $content_email; ?>
+                    </a>
+                    <?PHP } ?>
                 </div>
 
                 <?PHP if(!empty($content_button_name)) { ?>
-                <!-- <div class="stp_button"> -->
-                <a href="#request_service_form" class="button track-button" data-label="Contact Us">
+                <a href="#request_service_form" class="button red-button draw-red" data-label="Contact Us">
                     <?PHP echo $content_button_name; ?>
                 </a>
-                <!-- </div> -->
                 <?PHP } ?>
             </div>
             <?PHP
@@ -122,25 +73,13 @@ include locate_template('css/page-templates/page-support/support.css');
 					$button_class_click = get_sub_field('button_class_click');
 					?>
 
-            <div class="column_support">
+            <div class="support-inner__item suppport-info">
                 <?PHP if(!empty($icon_class)) { ?>
-                <span class="stp_icon custom_icon <?PHP echo $icon_class; ?> svg-wrapper">
-                    <!-- <svg version="1.1" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g fill="none" fill-rule="evenodd" id="Page-1" stroke-width="1">
-                            <g fill="none" id="icon-138-certificate">
-                                <path
-                                    d="M13,18.9494914 L13,22 L25.9950534,22 C27.1023548,22 28,21.1099416 28,19.9998938 L28,7.00010618 C28,5.89547804 27.1029738,5 25.9950534,5 L6.00494659,5 C4.89764516,5 4,5.89005841 4,7.00010618 L4,19.9998938 C4,21.104522 4.89702623,22 6.00494659,22 L8,22 L8,18.9494914 C7.38140648,18.3182229 7,17.4536526 7,16.5 C7,14.5670033 8.56700328,13 10.5,13 C12.4329967,13 14,14.5670033 14,16.5 C14,17.4536526 13.6185935,18.3182229 13,18.9494914 L13,18.9494914 L13,18.9494914 Z M9,19.6631845 L9,24.5999756 L10.5,23.1000061 L12,24.5999756 L12,19.6631845 C11.5453723,19.8791545 11.0367987,20 10.5,20 C9.96320134,20 9.45462768,19.8791545 9,19.6631845 L9,19.6631845 L9,19.6631845 Z M7,10 L7,11 L25,11 L25,10 L7,10 L7,10 Z M16,13 L16,14 L25,14 L25,13 L16,13 L16,13 Z M19,16 L19,17 L25,17 L25,16 L19,16 L19,16 Z M10.5,19 C11.8807119,19 13,17.8807119 13,16.5 C13,15.1192881 11.8807119,14 10.5,14 C9.11928806,14 8,15.1192881 8,16.5 C8,17.8807119 9.11928806,19 10.5,19 L10.5,19 Z"
-                                    id="certificate" />
-                            </g>
-                        </g>
-                    </svg> -->
-                </span>
+                <span class="suppport-info__icon svg-wrapper <?PHP echo $icon_class; ?>"></span>
                 <?PHP } ?>
 
                 <?PHP if(!empty($title)) { ?>
-                <h4 class="stp_title">
+                <h4 class="suppport-info__title">
                     <?PHP echo $title; ?>
                 </h4>
                 <?PHP } ?>
@@ -152,8 +91,7 @@ include locate_template('css/page-templates/page-support/support.css');
                     if(strpos($button_url['url'], '#') === 0) {
                 ?>
 
-                <a id="<?php echo $button_class_click ?>" href="#"
-                    class="stp_button button transparent_button track-button"
+                <a id="<?php echo $button_class_click ?>" href="#" class="stp_button button red-button draw-red"
                     data-logined="<?php echo is_user_logged_in()?>" data-category="Buttons"
                     data-label="Warranty Registration - Support page">
                     <?PHP echo $button_text; ?>
@@ -161,7 +99,7 @@ include locate_template('css/page-templates/page-support/support.css');
                 <?PHP } else { ?>
 
                 <a href="<?php echo $button_url['url']; ?>" target="<?php echo $button_url['target']; ?>"
-                    class="stp_button button transparent_button track-button" data-category="Buttons"
+                    class="stp_button button red-button draw-red" data-category="Buttons"
                     data-label="View Faqs - Support page">
                     <?PHP echo $button_text; ?>
                 </a>

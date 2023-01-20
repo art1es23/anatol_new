@@ -88,7 +88,7 @@
   transition: border 0.3s ease-in;
 }
 .vf_iagree input:checked + .agree-checkbox::before {
-  background: url(/wp-content/themes/anatol/images/img/compare_sprite.png)
+  background: url(/wp-content/themes/anatol/assets/images/img/compare_sprite.png)
     no-repeat -40px 0;
   border: none;
 }

@@ -4,7 +4,7 @@
       rgb(27 31 37 / 50%) 0%,
       rgb(27 31 37 / 90%) 100%
     ),
-    url(/wp-content/themes/anatol/images/image/anatol_poster1.jpg);
+    url(/wp-content/themes/anatol/assets/images/image/anatol_poster1.jpg);
   min-height: max(40vh, 20rem);
   display: flex;
   align-items: center;

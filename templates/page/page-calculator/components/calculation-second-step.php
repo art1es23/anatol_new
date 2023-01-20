@@ -64,8 +64,8 @@
     </div>
     <div class="form-inner__item">
         <div class="form-inner__item--full cvbnm">
-            <button type="submit" class="button btn-two btn-primary track-button" data-category="Buttons"
-                data-label="Make ROI calculation">
+            <button type="submit" class="button red-button draw-red btn-two btn-primary track-button"
+                data-category="Buttons" data-label="Make ROI calculation">
                 <?php _e('Click here and we`ll do the math!', 'anatol'); ?>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 <span class="sr-only">Loading...</span>

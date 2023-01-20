@@ -85,6 +85,6 @@
 
 @media screen and (max-width: 450px) {
   .main-hero-slider__btn a {
-    --button-width: 7.5rem;
+    --button-width: 10rem;
   }
 }

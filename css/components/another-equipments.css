@@ -1,11 +1,11 @@
 /* another-equipment */
 .another-equipment {
-  --bg-image: url(/wp-content/themes/anatol/images/fon6.webp);
+  --bg-image: url(/wp-content/themes/anatol/assets/images/fon6.webp);
   width: 100%;
   overflow: hidden;
   /* background-image: image-set(
-    "/wp-content/themes/anatol/images/fon6.webp" type("image/webp"),
-    "/wp-content/themes/anatol/images/fon6.jpg" type("image/jpg")
+    "/wp-content/themes/anatol/assets/images/fon6.webp" type("image/webp"),
+    "/wp-content/themes/anatol/assets/images/fon6.jpg" type("image/jpg")
   ); */
   background-image: var(--bg-image);
   background-position: center;
@@ -171,19 +171,19 @@
 }
 
 .list-equipment__item--press .list-equipment__item--back .mouse-parallax {
-  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/001.webp);
+  background-image: url(/wp-content/themes/anatol/assets/images/mouse-parallax/001.webp);
 }
 .list-equipment__item--dryers .list-equipment__item--back .mouse-parallax {
-  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/003.webp);
+  background-image: url(/wp-content/themes/anatol/assets/images/mouse-parallax/003.webp);
 }
 .list-equipment__item--flash .list-equipment__item--back .mouse-parallax {
-  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/004.webp);
+  background-image: url(/wp-content/themes/anatol/assets/images/mouse-parallax/004.webp);
 }
 .list-equipment__item--pre-press .list-equipment__item--back .mouse-parallax {
-  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/005.webp);
+  background-image: url(/wp-content/themes/anatol/assets/images/mouse-parallax/005.webp);
 }
 .list-equipment__item--accessories .list-equipment__item--back .mouse-parallax {
-  background-image: url(/wp-content/themes/anatol/images/mouse-parallax/006.webp);
+  background-image: url(/wp-content/themes/anatol/assets/images/mouse-parallax/006.webp);
 }
 .list-equipment .link_to_item {
   color: #fff;
@@ -296,7 +296,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .link_to_item {
+  .button.link_to_item {
     display: none;
   }
   /* .another-equipment__title {

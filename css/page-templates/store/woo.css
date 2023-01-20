@@ -232,7 +232,7 @@
   justify-content: flex-end;
   position: relative;
   line-height: 1;
-  font-size: max(0.8vw, 14px);
+  font-size: max(0.8vw, 16px);
 
   padding: 1rem 2rem;
 }
@@ -255,6 +255,14 @@
   border-radius: 50%;
 }
 
+.cart_content .woocommerce-notices-wrapper {
+  position: relative;
+  top: initial;
+  left: initial;
+  transform: initial;
+  width: 100%;
+}
+
 .cart_content .woocommerce-message {
   flex-direction: row;
   justify-content: flex-start;
@@ -262,52 +270,6 @@
 
 .cart_content a.restore-item {
   color: #ab1a1f;
-}
-
-/* MY ACCOUNT */
-/* ORDERS */
-
-.woocommerce-orders-table tr {
-  border: 1px solid rgb(171 26 31 / 20%);
-  /* border-bottom: 1px solid #ab1a1f; */
-}
-.page-template-page-my-account
-  .woocommerce-MyAccount-orders
-  .woocommerce-orders-table__header,
-.page-template-page-my-account
-  .woocommerce-MyAccount-orders
-  .woocommerce-orders-table__cell {
-  /* border: 1px solid; */
-  font-weight: 600;
-  padding: 0.75rem 0.5rem;
-}
-
-/* ACCOUNT DETAILS */
-.woocommerce h3 {
-  margin: 0;
-}
-
-.edit-account,
-.edit-account .form-row,
-.woocommerce-form-row,
-.edit-account fieldset {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.edit-account legend {
-  font-size: max(1vw, 18px);
-  font-weight: 600;
-  margin: 0.75rem 0;
-}
-.woocommerce-form-row span {
-  font-size: max(0.8vw, 14px);
-}
-.woocommerce-Address,
-.woocommerce-Address-title {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }
 
 @media screen and (max-width: 1080px) {
@@ -420,7 +382,7 @@
     grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
   }
   .product_content_row {
-    width: 80%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -430,6 +392,7 @@
     transform: initial;
     left: initial;
     top: initial;
+    width: 90%;
   }
   .woocommerce-message {
     flex-direction: column-reverse;
@@ -439,6 +402,12 @@
   }
   .woocommerce-message::before {
     display: none;
+  }
+  /* .cart_content .woocommerce-notices-wrapper {
+    width: 100%;
+  } */
+  .cart_content .woocommerce-message {
+    text-align: left;
   }
   .button.wc-forward {
     margin: auto;

@@ -127,7 +127,7 @@ include locate_template('css/page-templates/single-pages/page-anatoltv/page-anat
 
 <div class="download_ebook_b innerr">
     <a class="close_pop" style="float: right;"><img loading="lazy" class="lozad"
-            src="<?php bloginfo('template_directory'); ?>/images/close.svg" style="width: 20px" alt=""></a>
+            src="<?php bloginfo('template_directory'); ?>/assets/images/close.svg" style="width: 20px" alt=""></a>
     <div class="form-title">Download eBook</div>
     <div id="contact_form_pop" class="form_pop">
         <?php get_template_part('templates/forms/ebook-form'); ?>

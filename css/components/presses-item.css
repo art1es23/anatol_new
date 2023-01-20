@@ -60,7 +60,7 @@
   color: #363636;
   font-family: var(--base-font-family);
   font-weight: 700;
-  font-size: max(1.75vw, 23px);
+  font-size: max(1.75vw, 20px);
   text-align: center;
   display: flex;
   align-items: center;

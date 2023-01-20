@@ -218,109 +218,45 @@
                                 <p><?php the_field('support_description'); ?></p>
                             </div>
 
-                            <div class="support_top_pannel">
-                                <div class="column_support">
+                            <div class="support-inner">
+                                <div class="support-inner__item suppport-info">
 
-                                    <span class="stp_icon custom_icon text_icon wicon-phone-solid">
-                                        <svg fill="#cd2122" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M17.167,16.155a2.5,2.5,0,0,0-3.535,0l-.385.384A46.692,46.692,0,0,1,7.458,10.75l.385-.385a2.5,2.5,0,0,0,0-3.536L5.721,4.708a2.5,2.5,0,0,0-3.535,0L1.022,5.872a3.51,3.51,0,0,0-.442,4.4A46.932,46.932,0,0,0,13.722,23.417a3.542,3.542,0,0,0,4.4-.442l1.165-1.164a2.5,2.5,0,0,0,0-3.535Z" />
-                                            <path
-                                                d="M11.5,0a1,1,0,0,0,0,2A10.512,10.512,0,0,1,22,12.5a1,1,0,1,0,2,0A12.515,12.515,0,0,0,11.5,0Z" />
-                                            <path
-                                                d="M11.5,6A6.508,6.508,0,0,1,18,12.5a1,1,0,0,0,2,0A8.51,8.51,0,0,0,11.5,4a1,1,0,1,0,0,2Z" />
-                                            <path
-                                                d="M11.5,10A2.5,2.5,0,0,1,14,12.5a1,1,0,0,0,2,0A4.505,4.505,0,0,0,11.5,8a1,1,0,1,0,0,2Z" />
-                                        </svg>
-                                    </span>
+                                    <span class="suppport-info__icon svg-wrapper svg-phone--red"></span>
 
-                                    <h4 class="sp_top stp_title"><?php _e('Anatol Support Contacts', 'anatol'); ?></h4>
+                                    <h4 class="suppport-info__title">
+                                        <?php _e('Anatol Support Contacts', 'anatol'); ?></h4>
 
-                                    <div class="stp_content">
-                                        <div class="spm_short_description spm_contact">
-                                            <?php _e('We are always ready to help!', 'anatol'); ?></div>
+                                    <div class="suppport-info__description">
+                                        <p class="spm_short_description suppport-info__excerpt">
+                                            <?php _e('We are always ready to help!', 'anatol'); ?></p>
 
-                                        <div class="spm_phone spm_contact">
-                                            <span class="text_icon wicon-phone-solid svg-wrapper">
-                                                <svg fill="#000000" viewBox="0 0 24 24"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M17.167,16.155a2.5,2.5,0,0,0-3.535,0l-.385.384A46.692,46.692,0,0,1,7.458,10.75l.385-.385a2.5,2.5,0,0,0,0-3.536L5.721,4.708a2.5,2.5,0,0,0-3.535,0L1.022,5.872a3.51,3.51,0,0,0-.442,4.4A46.932,46.932,0,0,0,13.722,23.417a3.542,3.542,0,0,0,4.4-.442l1.165-1.164a2.5,2.5,0,0,0,0-3.535Z" />
-                                                    <path
-                                                        d="M11.5,0a1,1,0,0,0,0,2A10.512,10.512,0,0,1,22,12.5a1,1,0,1,0,2,0A12.515,12.515,0,0,0,11.5,0Z" />
-                                                    <path
-                                                        d="M11.5,6A6.508,6.508,0,0,1,18,12.5a1,1,0,0,0,2,0A8.51,8.51,0,0,0,11.5,4a1,1,0,1,0,0,2Z" />
-                                                    <path
-                                                        d="M11.5,10A2.5,2.5,0,0,1,14,12.5a1,1,0,0,0,2,0A4.505,4.505,0,0,0,11.5,8a1,1,0,1,0,0,2Z" />
-                                                </svg>
-                                            </span>
-                                            <a href="tel:8475821825">847-582-1825</a>
-                                        </div>
+                                        <a class="contact-link" href="tel:8475821825">847-582-1825</a>
                                     </div>
 
-                                    <div class="stp_button get_a_quote button red-button">
-                                        <?php _e('Contact Us', 'anatol'); ?></div>
+                                    <button class="stp_button get_a_quote button red-button draw-red">
+                                        <?php _e('Contact Us', 'anatol'); ?></button>
                                 </div>
-                                <div class="column_support">
-                                    <span class="stp_icon custom_icon wicon-contract">
-                                        <!-- <svg fill="#cd2122" enable-background="new 0 0 96 96" id="Layer_1" version="1.1"
-                                            viewBox="0 0 96 96" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <path
-                                                d="  M67.877,37.687V33L58.58,23H32.123c-2.209,0-4,1.791-4,4v42c0,2.209,1.791,4,4,4h31.754c2.209,0,4-1.791,4-4V42.657"
-                                                stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-miterlimit="10" stroke-width="2" />
-                                            <path d="M58.58,22.751V29c0,2.209,1.791,4,4,4h5.297" stroke="#ffffff"
-                                                stroke-miterlimit="10" stroke-width="2" />
-                                            <g>
-                                                <circle cx="40.296" cy="36.078" r="4.706" stroke="#ffffff"
-                                                    stroke-miterlimit="10" stroke-width="2" />
-                                                <path
-                                                    d="   M36.179,38.354l-0.382-0.894l-1.668,6.219l2.162-0.758l1.313,1.689l1.102-4.108C37.626,40.114,36.728,39.346,36.179,38.354z"
-                                                    stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-miterlimit="10" stroke-width="2" />
-                                                <path
-                                                    d="   M44.754,37.587l-0.34,0.767c-0.549,0.992-1.448,1.761-2.528,2.149l1.102,4.108l1.492-1.737l1.983,0.806L44.754,37.587z"
-                                                    stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
-                                                    stroke-miterlimit="10" stroke-width="2" />
-                                            </g>
-                                            <line stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-miterlimit="10" stroke-width="2" x1="34.129" x2="57.869"
-                                                y1="55.999" y2="55.999" />
-                                            <line stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
-                                                stroke-miterlimit="10" stroke-width="2" x1="34.129" x2="47.861"
-                                                y1="63.006" y2="63.006" />
-                                        </svg> -->
-                                    </span>
+                                <div class="support-inner__item suppport-info">
+                                    <span class="suppport-info__icon custom_icon wicon-contract"></span>
 
-                                    <h4 class="stp_title sbn_title"><?php _e('Warranty Registration', 'anatol'); ?></h4>
+                                    <h4 class="suppport-info__title sbn_title">
+                                        <?php _e('Warranty Registration', 'anatol'); ?></h4>
                                     <p class="stp_content">
                                         <?php _e('Please complete all form fields. By submitting this form you agree to all Warranty Terms &amp; Conditions. You must complete a form for EACH Anatol machine you wish to register.', 'anatol'); ?>
                                     </p>
 
-                                    <a id="register_warranty_onclick" href="#"
-                                        class="stp_button button transporent_button track-button"
+                                    <button id="register_warranty_onclick" class="stp_button button red-button draw-red"
                                         data-category="Buttons" data-logined="<?php echo is_user_logged_in()?>"
                                         data-label="Warranty Registration - Support page">
-                                        <!-- <span> -->
                                         <?php _e('Register Now', 'anatol'); ?>
-                                        <!-- </span> -->
-                                    </a>
+                                    </button>
                                 </div>
-                                <div class="column_support">
+                                <div class="support-inner__item suppport-info">
 
-                                    <span class="stp_icon custom_icon wicon-question">
-                                        <svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.90039 8.07954C7.90039 3.30678 15.4004 3.30682 15.4004 8.07955C15.4004 11.4886 11.9913 10.8067 11.9913 14.8976"
-                                                stroke="#cd2122" stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M12 19.01L12.01 18.9989" stroke="#cd2122" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
+                                    <span class="suppport-info__icon custom_icon wicon-question"></span>
 
-                                    <h4 class="stp_title sbn_title"><?php _e('Questions &amp; Answers', 'anatol'); ?>
+                                    <h4 class="suppport-info__title sbn_title">
+                                        <?php _e('Questions &amp; Answers', 'anatol'); ?>
                                     </h4>
 
                                     <p class="stp_content">
@@ -328,12 +264,9 @@
 We’ve compiled a list of commonly asked questions our customers ask most frequently. You’ll find your answers here.', 'anatol'); ?>
                                     </p>
 
-                                    <a href="/support/faq/" target=""
-                                        class="stp_button button transporent_button track-button"
+                                    <a href="/support/faq/" target="" class="stp_button button red-button draw-red"
                                         data-category="Buttons" data-label="View Faqs - Support page">
-                                        <!-- <span> -->
                                         <?php _e('View FAQs', 'anatol'); ?>
-                                        <!-- </span> -->
                                     </a>
                                 </div>
                             </div>

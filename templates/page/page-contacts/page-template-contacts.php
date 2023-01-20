@@ -14,7 +14,7 @@ include __DIR__ . '/../css/page-templates/page-contact/contacts.css';
       180deg,
       rgba(255, 255, 255, 0.9) 0%,
       #ffffff 100%
-    ), url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/images/bg-group.jpg);">
+    ), url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/assets/images/bg-group.jpg);">
     <div class="hero--wrapper container">
         <h1 class="hero__title page-title">
             <?php if( get_field( "alternative_title" )) { the_field("alternative_title"); } ?></h1>
