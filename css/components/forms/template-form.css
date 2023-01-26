@@ -1,0 +1,536 @@
+/* Default form styles */
+label {
+  font-size: max(0.8vw, 14px);
+  text-align: left;
+  /* display: none; */
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.get_in_touch_cont label,
+.contact-us-form label,
+.request_service_form label {
+  display: none;
+}
+
+input,
+textarea,
+select {
+  --horizontall-side-padding: 1rem;
+  --vertical-side-padding: 0.75rem;
+  --input-font-size: max(0.75vw, 14px);
+  --input-background-color: #fff;
+  --input-base-color: #000;
+  --input-border-color: #999;
+  --input-border: 1px solid var(--input-border-color);
+
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+
+  /* outline: none; */
+  color: var(--input-base-color);
+  background-color: var(--input-background-color);
+  font-size: var(--input-font-size);
+  border: var(--input-border);
+  padding: var(--vertical-side-padding) var(--horizontall-side-padding);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  appearance: none;
+
+  /* font-weight: 600; */
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  -webkit-border-radius: initial;
+  appearance: auto;
+}
+
+::placeholder {
+  --placeholder-base-color: #777;
+  color: var(--placeholder-base-color);
+  font-family: "Montserrat", sans-serif;
+}
+textarea {
+  resize: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  appearance: none;
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  appearance: none;
+  --button-width: auto;
+  box-shadow: none;
+}
+
+input[type="submit"].button--full {
+  --button-width: 100%;
+}
+
+/* Form wrapper */
+
+.form--wrapper {
+  display: flex;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.form--wrapper.hidden {
+  display: none;
+}
+
+/* Form */
+.form {
+  --form-padding: max(3.5vh, 1.5rem) max(2.5vw, 1.5rem);
+  --form-background-color: #fff;
+  --form-min-width: 40vw;
+  --form-max-width: 100%;
+  --form-inner-gap: 2.5vh;
+  --form-inner-width: 35%;
+
+  display: flex;
+  background-color: var(--form-background-color);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--form-inner-gap);
+  position: relative;
+  min-width: var(--form-min-width);
+  max-width: var(--form-max-width);
+  margin: auto;
+  padding: var(--form-padding);
+  width: var(--form-inner-width);
+  /* display: none; */
+}
+
+.form--wrapper .form {
+  --form-inner-gap: 1.5vh;
+}
+
+/* .get_in_touch_cont form,
+.contact-us-form form,
+.request_service_form form {
+  --form-inner-gap: 2.5vh;
+} */
+
+.form.hidden {
+  display: none;
+}
+
+/* Close button */
+.close-button {
+  --size-close-button: 2.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--size-close-button);
+  height: var(--size-close-button);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-button--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.close-button__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: black;
+  transform: translate(-50%, -1px);
+}
+
+.close-button__item--top {
+  transform: translate(-50%, -1px) rotate(45deg);
+}
+.close-button__item--bottom {
+  transform: translate(-50%, -1px) rotate(-45deg);
+}
+
+/* Form title */
+.form-title {
+  font-family: var(--base-font-family);
+  font-size: max(2vw, 26px);
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+  line-height: 1;
+  padding: 0 0.25rem;
+  /* max-width: 80%; */
+}
+
+/* Form description */
+
+.form-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1vh;
+  font-size: max(0.8vw, 14px);
+  font-family: "Montserrat", sans-serif;
+}
+/* Form inner */
+.form-inner,
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--form-inner-gap);
+}
+
+.form-inner--wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vh;
+}
+
+.form-inner__item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--form-inner-gap);
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.form-inner__item--half,
+.form-inner__item--full {
+  gap: calc(var(--form-inner-gap) / 2) var(--form-inner-gap);
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.form-inner__item--half {
+  width: calc((100% - 1.25vw) / 2);
+}
+
+.form-inner__item--full {
+  width: 100%;
+}
+
+/* Warranty form */
+
+.log_warranty {
+  --form-max-width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.log_warranty__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: max(0.9vw, 16px);
+  font-weight: 600;
+}
+
+.btn_wrap_checks {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--main-color);
+  max-width: 60%;
+  width: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.btn_wrap_checks::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 1px;
+  height: 60%;
+}
+
+.btn_wrap_checks__item {
+  flex-grow: 1;
+  padding: 0.75rem 0.5rem;
+  min-width: 50%;
+  color: #fff;
+}
+
+.check_wrap {
+  --input-background-color: #fff;
+  --input-base-color: #777;
+  --input-border: 1px solid var(--input-base-color);
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  color: #000;
+  gap: min(5vw, 30%);
+  padding: 0.75vh;
+  border: var(--input-border);
+  background-color: var(--input-background-color);
+}
+
+.check_wrap label {
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+}
+.check_wrap input[type="checkbox"] {
+  width: auto;
+}
+
+/* Login form */
+
+.xoo-el-form-container ul.xoo-el-tabs li.xoo-el-active,
+.xoo-el-form-container button.btn.button.xoo-el-action-btn,
+.xoo-el-form-container ul.xoo-el-tabs li:hover {
+  background-color: #c12126;
+  color: #ffffff;
+}
+
+.xoo-el-sidebar {
+  background-image: url(https://anatol.com/wp-content/uploads/2021/10/Screenshot_4.png);
+}
+
+.xoo-el-form-label {
+  display: flex;
+  align-items: center;
+}
+
+/* Status message after submiting form */
+
+.status {
+  display: flex;
+  flex-direction: column;
+  font-size: max(1.25vw, 22px);
+  background-color: var(--base-color);
+  color: #000;
+  min-width: 70%;
+  min-height: 5vh;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transform: translate(-100%, 0);
+  width: 35%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.75s ease-in;
+  align-self: center;
+  text-align: center;
+}
+
+.status.visible {
+  transform: translate(0%, 0);
+  width: 85%;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.75s ease-in;
+}
+#get_in_touch_form select option {
+  color: #000;
+}
+
+.warranty-form {
+  margin: auto;
+}
+
+.register_warranty_wrap {
+  --form-min-width: 50vw;
+}
+
+/* Disabling labels */
+.get_quote label,
+.subscribe_us_form label {
+  display: none;
+}
+
+.form.service_form {
+  --form-padding: 0 max(2.5vw, 1.5rem);
+}
+
+@media screen and (max-width: 1080px) {
+  .form {
+    --form-min-width: 75vw;
+    --form-inner-gap: 2vh;
+    --form-padding: max(5vh, 1.5rem) max(3.5vw, 1.5rem);
+  }
+
+  .form-inner__item,
+  .form-inner__item--half {
+    --form-inner-gap: 2vh;
+  }
+
+  input,
+  textarea,
+  select {
+    /* --horizontall-side-padding: 1vw;
+    --vertical-side-padding: 1.5vh; */
+    min-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .register_warranty_wrap {
+    --form-min-width: 90vw;
+  }
+  .form--wrapper {
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form {
+    --form-min-width: 100%;
+    --form-padding: max(5vh, 2.5rem) max(5vw, 2.5rem);
+    height: auto;
+    justify-content: center;
+  }
+
+  .form,
+  .form-inner,
+  .form-inner__item,
+  .form-inner__item--half {
+    --form-inner-gap: 1rem;
+  }
+
+  .form--wrapper .form {
+    /* overflow-y: scroll; */
+    min-height: 100vh;
+    --form-inner-gap: 0.75rem;
+  }
+
+  /* .get_in_touch_cont .form,
+  .get_in_touch_cont .form-inner,
+  .get_in_touch_cont .form-inner__item,
+  .get_in_touch_cont .form-inner__item--half,
+  .contact-us-form .form,
+  .contact-us-form .form-inner,
+  .contact-us-form .form-inner__item,
+  .contact-us-form .form-inner__item--half,
+  .request_service_form .form,
+  .request_service_form .form-inner,
+  .request_service_form .form-inner__item,
+  .request_service_form .form-inner__item--half {
+    --form-inner-gap: 1.75vh;
+  } */
+
+  .form--wrapper .form-inner,
+  .form--wrapper .form-inner__item,
+  .form--wrapper .form-inner__item--half {
+    --form-inner-gap: 0.75rem;
+  }
+
+  .form-inner__item--half {
+    width: 100%;
+  }
+
+  .form-inner__item {
+    flex-direction: column;
+  }
+  input[type="submit"] {
+    --button-width: 100%;
+  }
+
+  .register_warranty_wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .close-button {
+    top: 1.5%;
+    right: 1.5%;
+  }
+
+  .warranty-form {
+    width: 100%;
+  }
+
+  .register_warranty_wrap .button {
+    width: 100%;
+  }
+
+  .form.log_warranty {
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  input,
+  textarea,
+  select {
+    /* --vertical-side-padding: 1.5vh;
+    --horizontall-side-padding: 2.5vw; */
+    --input-font-size: max(3vw, 14px);
+  }
+  .form {
+    --form-min-width: 100%;
+    width: 94%;
+  }
+
+  .form.service_form {
+    --form-padding: 0;
+  }
+
+  .get_in_touch_cont form,
+  .contact-us-form form,
+  .service_form form {
+    padding-top: 0;
+  }
+
+  .form-inner,
+  .form-inner__item,
+  .form-inner__item--half {
+    width: 100%;
+  }
+
+  .shipping-calculator-form input,
+  .shipping-calculator-form select {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+  .form {
+    --form-min-width: 100%;
+  }
+}

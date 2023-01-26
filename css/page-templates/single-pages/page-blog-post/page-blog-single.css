@@ -50,7 +50,7 @@
 }
 
 .blog-post__content a:hover {
-  color: #ab1a1f;
+  color: #cd2122;
 }
 
 /* Related blog posts slider*/
@@ -196,7 +196,7 @@
     padding: 1rem 0.35rem;
 
     z-index: 99;
-    background-color: #ab1a1f;
+    background-color: #cd2122;
     transform: translate(0, -50%);
     transition: all 0.5s ease-in;
     writing-mode: vertical-rl;

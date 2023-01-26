@@ -399,7 +399,7 @@
         <div class="form-inner__item">
             <div class="form-inner__item--full">
                 <label><?php _e('Additional Info', 'anatol'); ?></label>
-                <textarea class="" name="description"
+                <textarea class="" name="description" rows="6"
                     placeholder="<?php _e('Additional Info', 'anatol'); ?>"></textarea>
             </div>
         </div>

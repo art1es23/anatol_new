@@ -18,7 +18,7 @@
 .page-content p,
 .page-content ul li {
   text-align: justify;
-  font-size: max(0.9vw, 15px);
+  font-size: max(0.9vw, 13px);
 }
 
 .page-content ul {
@@ -50,7 +50,7 @@
 }
 
 .page_title_text a {
-  color: #545454;
+  color: #cd2122;
 }
 /* End */
 

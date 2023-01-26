@@ -71,7 +71,7 @@ section.service_full .section_button a:hover,
 section.service_full .section_button a:active,
 section.service_full .section_button a:focus {
   text-decoration: none;
-  background: #ab1a1f;
+  background: #cd2122;
   color: #fff;
 }
 section.service_full .section_button a:hover::before,

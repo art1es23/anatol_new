@@ -98,7 +98,7 @@
 
 .amount {
   font-weight: bold;
-  color: #ab1a1f;
+  color: #cd2122;
   font-size: max(1vw, 18px);
 }
 
@@ -137,7 +137,7 @@
   /* --button-width: auto;
     --button-horizontall-side-padding: 1.75rem;
     --button-vertical-side-padding: 0.75rem;
-    --button-background-color: #ab1a1f;
+    --button-background-color: #cd2122;
     --button-base-color: #fff;
     --button-font-size: max(0.75vw, 12px);
     --button-box-shadow: none; */
@@ -179,8 +179,8 @@
 .woocommerce button.button:hover,
 .woocommerce input.button:hover {
   background-color: #fff;
-  border-color: #ab1a1f;
-  color: #ab1a1f;
+  border-color: #cd2122;
+  color: #cd2122;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
@@ -243,11 +243,11 @@
   position: absolute;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #ab1a1f;
+  background-color: #cd2122;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
-  background-image: url("data:image/svg+xml,%3Csvg height='15px' version='1.1' viewBox='0 0 18 15' width='18px' xmlns='http://www.w3.org/2000/svg' xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle/%3E%3Cdesc/%3E%3Cdefs/%3E%3Cg fill='%23ab1a1f' fill-rule='evenodd' id='Page-1' stroke='%23ffffff' stroke-width='1'%3E%3Cg fill='%23ffffff' id='Core' transform='translate(-423.000000, -47.000000)'%3E%3Cg id='check' transform='translate(423.000000, 47.500000)'%3E%3Cpath d='M6,10.2 L1.8,6 L0.4,7.4 L6,13 L18,1 L16.6,-0.4 L6,10.2 Z' id='Shape'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg height='15px' version='1.1' viewBox='0 0 18 15' width='18px' xmlns='http://www.w3.org/2000/svg' xmlns:sketch='http://www.bohemiancoding.com/sketch/ns' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle/%3E%3Cdesc/%3E%3Cdefs/%3E%3Cg fill='%23cd2122' fill-rule='evenodd' id='Page-1' stroke='%23ffffff' stroke-width='1'%3E%3Cg fill='%23ffffff' id='Core' transform='translate(-423.000000, -47.000000)'%3E%3Cg id='check' transform='translate(423.000000, 47.500000)'%3E%3Cpath d='M6,10.2 L1.8,6 L0.4,7.4 L6,13 L18,1 L16.6,-0.4 L6,10.2 Z' id='Shape'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   top: 50%;
   left: 0;
   content: "";
@@ -269,7 +269,7 @@
 }
 
 .cart_content a.restore-item {
-  color: #ab1a1f;
+  color: #cd2122;
 }
 
 @media screen and (max-width: 1080px) {
@@ -331,7 +331,7 @@
     padding: 1rem 0.35rem;
 
     z-index: 99;
-    background-color: #ab1a1f;
+    background-color: #cd2122;
     transform: translate(0, -50%);
     transition: all 0.5s ease-in;
     writing-mode: vertical-rl;

@@ -409,7 +409,7 @@
         <div class="form-inner__item">
             <div class="form-inner__item--full">
                 <label>Your message</label>
-                <textarea class="clear_form" name="description"
+                <textarea class="clear_form" name="description" rows="6"
                     placeholder="<?php _e('Your message', 'anatol'); ?>"></textarea>
             </div>
         </div>

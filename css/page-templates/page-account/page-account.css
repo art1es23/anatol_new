@@ -14,7 +14,7 @@
   color: #363636;
   font-family: var(--base-font-family);
   font-weight: 600;
-  font-size: 20px;
+  font-size: max(1vw, 20px);
   margin-bottom: 5px;
   display: inline-block;
   position: relative;
@@ -43,9 +43,9 @@
 }
 .dont_have_warranty {
   text-align: center;
-  margin-bottom: 30px;
-  font-family: "Lato", sans-serif;
-  font-size: 22px;
+  /* margin-bottom: 30px; */
+  font-family: "Roboto", sans-serif;
+  font-size: max(1vw, 20px);
   font-weight: 600;
 }
 .dont_have_warranty_btn {
@@ -77,8 +77,8 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  background: #ab1a1f;
-  border: 2px solid #ab1a1f;
+  background: #cd2122;
+  border: 2px solid #cd2122;
   box-sizing: border-box;
   text-shadow: none;
   text-transform: uppercase;
@@ -186,7 +186,6 @@ input[type="tel"],
 input[type="date"],
 textarea {
   border: 1px solid #dcdcdc;
-  outline: none !important;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.12);
   -moz-border-radius: 0;
@@ -196,8 +195,8 @@ textarea {
 
   border-radius: 0;
   color: #353535;
-  font-size: 14px;
-  padding: 12px 15px;
+  font-size: max(0.75vw, 14px);
+  padding: 0.75rem 1rem;
 
   transition: all 0.3s ease;
 }
@@ -401,7 +400,7 @@ textarea {
   flex-direction: column;
 }
 .woocommerce-OrderUpdate-description p:first-child {
-  color: #ab1a1f;
+  color: #cd2122;
 }
 
 .woocommerce-table--order-details th,
@@ -466,7 +465,7 @@ textarea {
   }
 
   .hide-tabs-button.hide-tabs-button--active svg {
-    fill: #ab1a1f;
+    fill: #cd2122;
     transform: rotate(180deg);
   }
 

@@ -8,10 +8,8 @@ add_action( 'wp_print_scripts', 'anatol_dequeue_script', 100 );
 get_header(); ?>
 
 <style>
-<?php // include locate_template('css/components/hero-templates/hero-template.css');
-// include locate_template('css/components/template-form.css';
-include locate_template('css/components/template-benefits.css');
-include locate_template('css/components/financing-options.css');
+<?php include locate_template('css/components/sections/section-customer-experience.css');
+include locate_template('css/components/sections/section-financing-benefits.css');
 include locate_template('css/page-templates/page-where-to-buy/sales.css');
 ?>
 </style>
@@ -70,7 +68,7 @@ include locate_template('css/page-templates/page-where-to-buy/sales.css');
 <div class="financing_info_text">
     <div class="financing_info--wrapper container">
         <?php the_field('the_benefits_of'); ?>
-        <a class="where_financing draw-red"
+        <a class="button where_financing draw-red"
             href="><?php the_field('financing_btn_url'); ?>"><?php the_field('financing_btn_text'); ?></a>
     </div>
 

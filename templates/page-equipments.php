@@ -4,8 +4,8 @@
 get_header();?>
 
 <style>
-<?php include locate_template('css/page-templates/page-equipments/equipments.css');
-include locate_template('css/components/contact-support.css');
+<?php include locate_template('css/components/sections/section-contact-support.css');
+include locate_template('css/page-templates/page-equipments/equipments.css');
 ?>
 </style>
 <?php get_template_part('templates/components/hero-templates/template-part-head-bg-black'); ?>
@@ -49,7 +49,7 @@ include locate_template('css/components/contact-support.css');
     <?php  }} ?>
 </div>
 
-<section class="support-section fix-bg" id="">
+<section class="support-section" id="">
     <div class="support-section--wrapper container">
         <?php
             $anatol_equipment_title = get_field('anatol_equipment_title');	

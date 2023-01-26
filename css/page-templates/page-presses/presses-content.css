@@ -2,13 +2,9 @@
 .manual-presses--wrapper,
 .specialty-automatic-presses--wrapper {
   margin: max(7.5vh, 2.5rem) auto;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 5vh 0; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
-  grid-gap: 5vh 2.5vw;
+  grid-template-columns: repeat(auto-fit, minmax(25.5rem, 1fr));
+  grid-gap: max(5vh, 2.5rem) max(2.5vw, 1.5rem);
 }
 
 .automatic_presses--wrapper {

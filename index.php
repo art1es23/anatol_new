@@ -2,8 +2,9 @@
 
 get_header(); ?>
 <style>
-<?php include 'css/components/hero-templates/hero-template.css';
-include 'css/page-templates/page-blog/blog.css';
+<?php include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/components/pagination.css');
+include locate_template('css/page-templates/page-blog/blog.css');
 ?>
 </style>
 <?php get_template_part('templates/components/hero-templates/template-part-head-blog'); ?>

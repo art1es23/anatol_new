@@ -18,7 +18,8 @@ get_header(); ?>
 
 <style>
 <?php // include locate_template('css/components/hero-templates/hero-template.css');
-include locate_template('css/components/section-comments.css');
+include locate_template('css/libs/swiper-bundle.css');
+include locate_template('css/components/sections/section-comments.css');
 include locate_template('css/components/sidebars/sidebar-right.css');
 include locate_template('css/page-templates/single-pages/page-blog-post/page-blog-single.css');
 ?>

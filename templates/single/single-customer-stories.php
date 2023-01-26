@@ -8,6 +8,7 @@ get_header(); ?>
 
 <style>
 <?php // include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/libs/swiper-bundle.css');
 include locate_template('css/page-templates/single-pages/page-customer-stories-single/page-cs-single.css');
 ?>
 </style>

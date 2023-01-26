@@ -363,8 +363,8 @@
 
                 <div class="header-main__item site-header-main-right">
                     <div class="header-cart"></div>
-                    <div class="button red-button draw-red header-quote get_a_quote">
-                        <?php _e('Get a Quote', 'anatol'); ?></div>
+                    <button class="button red-button draw-red header-quote get_a_quote">
+                        <?php _e('Get a Quote', 'anatol'); ?></button>
                 </div>
 
             </div>

@@ -19,18 +19,9 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-
 get_header(); ?>
 
-
 <?PHP get_template_part('templates/components/hero-templates/template-part-head-press'); ?>
-<style>
-<?php include 'css/components/related-products-slider.css';
-// include 'css/components/equipments-list.css';
-include 'css/page-templates/store/woo.css';
-include 'css/page-templates/store/page-woo-item.css';
-?>
-</style>
 
 <?php while ( have_posts() ) : the_post(); ?>
 <section class="equipment_info">
@@ -39,9 +30,6 @@ include 'css/page-templates/store/page-woo-item.css';
 <?php endwhile; ?>
 
 <?PHP wc_get_template_part( '/single-product/up-sells'); ?>
-
-
-
 
 <!-- Slider Init -->
 <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>

@@ -26,7 +26,7 @@
 }
 .calculator form .btn:hover,
 .calculator form .btn:focus {
-  background: #ab1a1f;
+  background: #cd2122;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 .calculator form .btn.load .spinner-border {

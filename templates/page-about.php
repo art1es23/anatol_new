@@ -2,8 +2,8 @@
 /* Template Name: About NEW*/
 get_header(); ?>
 <style>
-<?php include locate_template('css/components/contact-support.css');
-include locate_template('css/components/about-description.css');
+<?php include locate_template('css/components/sections/section-description.css');
+include locate_template('css/components/sections/section-contact-support.css');
 include locate_template('css/page-templates/page-about/business-opportunities.css');
 include locate_template('css/page-templates/page-about/anatol-map.css');
 ?>
@@ -19,17 +19,25 @@ include locate_template('css/page-templates/page-about/anatol-map.css');
         </div>
     </div>
     <div class="about-us-img--wrapper">
-        <img loading="lazy" class="lozad" width="435" height="435"
-            src="<?php bloginfo('template_directory'); ?>/assets/images/image/about_us.jpg"
-            alt="the one of the main warehouse of the Anatol Equipment">
+        <picture>
+            <source srcset="<?php bloginfo('template_directory');?>/assets/images/image/about_us.webp"
+                type="image/webp">
+            <img loading="lazy" class="lozad" width="435" height="435"
+                src="<?php bloginfo('template_directory');?>/assets/images/image/about_us.jpg"
+                alt="the one of the main warehouse of the Anatol Equipment">
+        </picture>
     </div>
 </section>
 
 <section class="business-opportunities">
     <div class="business-opportunities__item business-img">
-        <img loading="lazy" class="lozad" width="744" height="496"
-            src="<?php bloginfo('template_directory'); ?>/assets/images/image/business.jpg"
-            alt="our professional sales managers. Who could get you the best practice of the purchasing.">
+        <picture>
+            <source srcset="<?php bloginfo('template_directory');?>/assets/images/image/business.webp"
+                type="image/webp">
+            <img loading="lazy" class="lozad" width="744" height="496"
+                src="<?php bloginfo('template_directory');?>/assets/images/image/business.jpg"
+                alt="our professional sales managers. Who could get you the best practice of the purchasing.">
+        </picture>
     </div>
     <div class="business-opportunities__item business-info">
         <div class="business-info--wrapper">

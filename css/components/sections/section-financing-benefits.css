@@ -1,0 +1,128 @@
+.financing_info_text {
+  width: 100%;
+}
+
+.financing_info--wrapper {
+  margin: max(7.5vh, 2.5rem) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vw;
+}
+.more_finance {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  font-size: max(1vw, 16px);
+
+  font-family: "Montserrat", sans-serif;
+}
+.more_finance h2 {
+  font-family: var(--base-font-family);
+  color: #353535;
+  font-size: max(3vw, 2rem);
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1vw;
+  position: relative;
+  line-height: 1;
+}
+.more_finance h2::before {
+  display: block;
+  content: "";
+  width: 3rem;
+  height: 4px;
+  background-color: #cd2122;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.more_finance_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  font-size: max(0.9vw, 14px);
+  text-align: justify;
+
+  font-family: "Montserrat", sans-serif;
+}
+.item_finance_info {
+  padding-left: 2.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35vw;
+}
+
+.item_finance_info::before {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: rgba(240, 203, 203, 0.29);
+  /* font-family: "anatol";
+  font-size: 11px;
+  font-weight: bold;
+  color: #cd2122;
+  content: "\E830"; */
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* top: -5px; */
+  background-position: center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-image: url(/wp-content/themes/anatol/assets/images/svg-icons/icon-check.svg);
+}
+.item_finance_info h3 {
+  font-weight: bold;
+}
+.where_financing {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  /* font-weight: bold; */
+  /* font-size: 14px; */
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1080px) {
+  .financing_info--wrapper {
+    gap: 3vw;
+  }
+  .more_finance_info {
+    gap: 1.75vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .financing_info--wrapper {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .financing_info--wrapper {
+    gap: 7.5vw;
+  }
+  .more_finance {
+    gap: 3vw;
+  }
+  .more_finance h2 {
+    padding-bottom: 3vw;
+  }
+  .item_finance_info {
+    gap: 2vw;
+  }
+  .more_finance_info {
+    gap: 2.5vw;
+  }
+}

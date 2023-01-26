@@ -421,7 +421,7 @@
         <div class="form-inner__item">
             <div class="form-inner__item--full">
                 <label><?php _e('Additional Info', 'anatol'); ?></label>
-                <textarea class="" columns="4" name="description"
+                <textarea class="" rows="6" name="description"
                     placeholder="<?php _e('Additional Info', 'anatol'); ?>"></textarea>
             </div>
         </div>

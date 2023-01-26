@@ -102,9 +102,9 @@
 .support-section .section_button a:active,
 .support-section .section_button a:focus {
   text-decoration: none;
-  background: #ab1a1f;
+  background: #cd2122;
   color: #fff;
-  border: 1px solid #ab1a1f;
+  border: 1px solid #cd2122;
 }
 .support-section .section_button a:hover::before,
 .support-section .section_button a:active::before,
@@ -258,8 +258,8 @@
 }
 
 @media screen and (max-width: 500px) {
-  .equipment__btn {
-    --button-width: 60%;
+  .button.equipment__btn {
+    --button-width: 100%;
   }
 
   .equipment__info {

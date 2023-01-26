@@ -1,5 +1,5 @@
 <style>
-<?php include locate_template('css/components/template-form.css');
+<?php include locate_template('css/components/forms/template-form.css');
 ?>
 </style>
 

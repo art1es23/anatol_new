@@ -8,9 +8,8 @@
 get_header(); ?>
 
 <style>
-<?php include locate_template('css/components/hero-templates/hero-template.css');
-// include locate_template('css/components/template-form.css');
-// include locate_template('css/components/get-in-touch.css');
+<?php // include locate_template('css/libs/swiper-bundle.css');
+include locate_template('css/components/hero-templates/hero-template.css');
 include locate_template('css/page-templates/page-calculator/calculator.css');
 ?>
 </style>

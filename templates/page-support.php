@@ -5,9 +5,8 @@ get_template_part('templates/components/hero-templates/template-part-head-big');
  ?>
 
 <style>
-<?php // include locate_template('css/components/hero-templates/hero-template.css');
-// include locate_template('css/components/template-form.css');
-include locate_template('css/components/support-section.css');
+<?php include locate_template('css/libs/swiper-bundle.css');
+include locate_template('css/components/sections/section-support.css');
 include locate_template('css/components/get-in-touch.css');
 include locate_template('css/page-templates/page-support/support.css');
 ?>

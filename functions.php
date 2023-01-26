@@ -133,34 +133,26 @@ function is_post_type($type){
 function theme_stylesheets() {
 	// wp_enqueue_style('AnatolIconsFont', get_template_directory_uri() . '/css/anatol-font.min.css', '', '1.1', 'all');
 
-	wp_enqueue_style('swiper-css', get_template_directory_uri() . '/css/libs/swiper-bundle.css');
+	// wp_enqueue_style('swiper-css', get_template_directory_uri() . '/css/libs/swiper-bundle.css');
 	wp_enqueue_style('style-main', get_template_directory_uri() . '/style.css');
 
 	if ( is_shop() ||  is_product() || is_product_category() || is_page('cart') ) { 
-		wp_enqueue_style( 'another-equipment-css', get_template_directory_uri() . '/css/components/another-equipments.css' );
+			wp_enqueue_style('swiper-css', get_template_directory_uri() . '/css/libs/swiper-bundle.css');
+
 		wp_enqueue_style( 'hero-section-css', get_template_directory_uri() . '/css/components/hero-templates/hero-template.css' );
 
-		// wp_enqueue_style( 'product-css', get_template_directory_uri() . '/css/components/equipments-list.css' );
-		
-		wp_enqueue_style( 'equip-item-css', get_template_directory_uri() . '/css/components/equipments-list.css' );
-		wp_enqueue_style( 'press-item-css', get_template_directory_uri() . '/css/components/presses-item.css' );
-		wp_enqueue_style( 'woo-related-products-css', get_template_directory_uri() . '/css/components/related-products-slider.css' );
+		// wp_enqueue_style( 'equip-item-css', get_template_directory_uri() . '/css/components/sections/section-list-equipments.css' );
+		wp_enqueue_style( 'press-item-css', get_template_directory_uri() . '/css/components/items/presses-item.css' );
+		wp_enqueue_style( 'woo-related-products-css', get_template_directory_uri() . '/css/components/sliders/slider-related-products.css' );
 		wp_enqueue_style( 'woo-css', get_template_directory_uri() . '/css/page-templates/store/woo.css' );
 		wp_enqueue_style( 'woo-sidebar-filter', get_template_directory_uri() . '/css/components/sidebars/sidebar-woocommerce.css' );
 		wp_enqueue_style( 'woo-product-css', get_template_directory_uri() . '/css/page-templates/store/page-woo-item.css' );
-		
-
-		// wp_enqueue_style( 'woocommerce-css', get_template_directory_uri() . '/css/woocommerce.css' );
-		///////// wp_enqueue_style('style.min.css','/wp-content/plugins/prdctfltr/lib/css/style.min.css', '', '6.5.8', 'all');
 	}
 
 	if (is_page(1360)) {
-		wp_enqueue_style( 'hero-section-css', get_template_directory_uri() . '/css/components/hero-templates/hero-template.css' );
-		// wp_enqueue_style( 'default-form-template', get_template_directory_uri() . '/css/components/template-form.css' );
 		wp_enqueue_style( 'woo-css', get_template_directory_uri() . '/css/page-templates/store/woo.css' );		
 		wp_enqueue_style( 'woo-product-css', get_template_directory_uri() . '/css/page-templates/store/page-woo-item.css' );
 		wp_enqueue_style( 'woo-cart-css', get_template_directory_uri() . '/css/page-templates/store/cart.css' );
-
 	}
 
 	if ( is_archive('vacancies')) {

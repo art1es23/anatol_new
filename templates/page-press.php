@@ -3,12 +3,9 @@
 get_header(); ?>
 
 <style>
-<?php // include locate_template('css/components/hero-templates/hero-template.css');
-include locate_template('css/components/presses-item.css');
-include locate_template('css/page-templates/page-presses/presses-content.css');
-include locate_template('css/components/automatic-presses.css');
-include locate_template('css/page-templates/page-presses/manual-presses.css');
-include locate_template('css/page-templates/page-presses/specialty-automatic-presses.css');
+<?php include locate_template('css/libs/swiper-bundle.css');
+include locate_template('css/components/items/presses-item.css');
+include locate_template('css/components/sections/section-presses-list.css');
 ?>
 </style>
 
@@ -27,7 +24,7 @@ include locate_template('css/page-templates/page-presses/specialty-automatic-pre
                 </div>
 
                 <div class="content_part">
-                    <div class="equipment_title">Automatic Presses</div>
+                    <h3 class="equipment_title">Automatic Presses</h3>
                 </div>
             </a>
 
@@ -44,7 +41,7 @@ include locate_template('css/page-templates/page-presses/specialty-automatic-pre
                 </div>
 
                 <div class="content_part">
-                    <div class="equipment_title">Manual Presses</div>
+                    <h3 class="equipment_title">Manual Presses</h3>
                 </div>
             </a>
 
@@ -60,7 +57,7 @@ include locate_template('css/page-templates/page-presses/specialty-automatic-pre
                 </div>
 
                 <div class="content_part">
-                    <div class="equipment_title">Specialty Automatic Presses</div>
+                    <h3 class="equipment_title">Specialty Automatic Presses</h3>
                 </div>
             </a>
 
@@ -105,8 +102,8 @@ include locate_template('css/page-templates/page-presses/specialty-automatic-pre
                 </div>
 
                 <div class="content_part">
-                    <a href="<?= get_permalink(); ?>" class="equipment_item">
-                        <div class="equipment_title"><?php echo get_the_title(); ?></div>
+                    <a href="<?= get_permalink(); ?>" class="equipment_title">
+                        <?php echo get_the_title(); ?>
                     </a>
                     <?PHP if(!empty(get_sub_field('description'))) { ?>
                     <blockquote>
@@ -166,8 +163,8 @@ include locate_template('css/page-templates/page-presses/specialty-automatic-pre
             </div>
 
             <div class="content_part">
-                <a href="<?= get_permalink(); ?>" class="equipment_item">
-                    <div class="equipment_title"><?php echo get_the_title(); ?></div>
+                <a href="<?= get_permalink(); ?>" class="equipment_title">
+                    <?php echo get_the_title(); ?>
                 </a>
 
                 <?PHP if(!empty(get_sub_field('description'))) { ?>
@@ -223,8 +220,8 @@ include locate_template('css/page-templates/page-presses/specialty-automatic-pre
             </div>
 
             <div class="content_part">
-                <a href="<?= get_permalink(); ?>" class="equipment_item">
-                    <div class="equipment_title"><?php echo get_the_title(); ?></div>
+                <a href="<?= get_permalink(); ?>" class="equipment_title">
+                    <?php echo get_the_title(); ?>
                 </a>
 
                 <?PHP if(!empty(get_sub_field('description'))) { ?>

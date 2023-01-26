@@ -1,5 +1,5 @@
 .calculator {
-  max-width: 1060px;
+  /* max-width: 1060px; */
   margin: 60px auto;
 }
 
@@ -55,7 +55,7 @@
 }
 .calculator form .btn:hover,
 .calculator form .btn:focus {
-  background: #ab1a1f;
+  background: #cd2122;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 .calculator form .btn.load .spinner-border {
@@ -195,7 +195,7 @@
   width: calc(50% - 30px);
 } */
 .calculator .result .cards .card-header {
-  background-color: #ab1a1f;
+  background-color: #cd2122;
 }
 .calculator .result .cards .row-flex {
   display: flex;
@@ -281,7 +281,7 @@
   }
   .calculator .form-inner {
     --form-inner-gap: 3.5vh;
-    --form-padding: 5vh 3.5vw;
+    --form-padding: 0;
   }
 
   .calculator .result .cards .card {
@@ -302,4 +302,16 @@
   #Enterlastname > label {
     display: none;
   }
+  .form.step {
+    --form-padding: 0;
+  }
+  .calculator .form,
+  .calculator .form-inner,
+  .calculator .form-inner__item,
+  .calculator .form-inner__item--half {
+    --form-inner-gap: 1.5rem;
+  }
+  /* .step-container {
+    --form-padding: max(5vh, 2.5rem) 0;
+  } */
 }

@@ -6,7 +6,7 @@
   margin: initial;
 }
 
-.contact-us-form__title {
+h2.contact-us-form__title {
   color: #fff;
   font-family: var(--base-font-family);
   font-size: max(3.5vw, 42px);
@@ -28,7 +28,7 @@
     width: 85%;
   }
 
-  .contact-us-form__title {
+  h2.contact-us-form__title {
     font-size: max(8vw, 37px);
   }
 }

@@ -84,7 +84,7 @@
   font-family: "anatol";
   font-size: 25px;
   line-height: 30px;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .list-info .anatol-tv__item--right ul {
   display: block;
@@ -104,7 +104,7 @@
   font-family: "anatol";
   font-size: 25px;
   line-height: 30px;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 
 .list-info .cs_row_icon {
@@ -187,7 +187,7 @@
   display: flex;
   gap: 0.25rem;
   align-items: center;
-  background-color: #ab1a1f;
+  background-color: #cd2122;
   position: relative;
   padding: 1.5vh 1vw 1.5vh 10vw;
   font-size: max(1.25vw, 16px);
@@ -232,7 +232,7 @@
   top: 50%;
   left: 0;
   transform: translate(-50%, -50%);
-  background-color: #ab1a1f;
+  background-color: #cd2122;
 }
 
 .details_link {

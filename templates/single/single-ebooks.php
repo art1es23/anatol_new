@@ -7,6 +7,7 @@ get_header(); ?>
 
 <style>
 <?php // include locate_template('css/components/hero-templates/hero-template.css');
+include locate_template('css/libs/swiper-bundle.css');
 include locate_template('css/components/sliders/slider-similar-items.css');
 include locate_template('css/components/another-equipments.css');
 include locate_template('css/page-templates/page-ebooks/ebooks.css');
@@ -57,9 +58,9 @@ include locate_template('css/page-templates/single-pages/page-ebook-post/page-eb
 
             <?php if ( has_post_thumbnail()) {
                     $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
-                    echo '<a class="ebook-post-single__img" href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >';
+                    echo '<div class="ebook-post-single__img" href="' . $large_image_url[0] . '" title="' . the_title_attribute('echo=0') . '" >';
                     the_post_thumbnail('');
-                    echo '</a>';
+                    echo '</div>';
                 }
             } ?>
         </div>

@@ -1,3 +1,4 @@
+const _getElemSwiper = (className) => document.querySelector(className);
 const sliderWrapper = (
   sliderContainer,
   slidesPerView,
@@ -39,35 +40,65 @@ const sliderWrapper = (
 };
 // export { sliderWrapper };
 
-const heroSlider = document.querySelector(".main-hero-slider");
-const blogSlider = document.querySelector(".dashboard__item--container");
-const productSlider = document.querySelector("#image-carousel-container");
-const relatedSliders = document.querySelectorAll(".related-products--wrapper");
-const autoPresses = document.querySelector(".automatic_presses--wrapper");
-const getinTouch = document.querySelector(".get_in_contact--wrapper");
+const checkElemSwiper = (
+  classNameSliderWrapper,
+  countSlides = 1,
+  gapBetweenSlides = 0,
+  effectStyle = "fade"
+) => {
+  if (_getElemSwiper(classNameSliderWrapper)) {
+    sliderWrapper(
+      classNameSliderWrapper,
+      countSlides,
+      gapBetweenSlides,
+      effectStyle
+    );
+  }
+};
 
-const supportTeam = document.querySelector(".support_team--wrapper");
-const feedbacks = document.querySelector(".support-feedbacks--wrapper");
+checkElemSwiper(".main-hero-slider");
+checkElemSwiper(".dashboard__item--container", 2, 60, "slide");
+checkElemSwiper(".image-carousel-container");
+checkElemSwiper(".related-products--wrapper", 3, 30, "slide");
 
-const relatedStories = document.querySelector(".related-stories");
-const relatedBlogPosts = document.querySelector(".related-articles--wrapper");
-const similarItems = document.querySelector(".similar-items--wrapper");
+checkElemSwiper(".automatic_presses--wrapper", 3, 30, "slide");
+checkElemSwiper(".get_in_contact--wrapper", 1, 0, "slide");
+checkElemSwiper(".support_team--wrapper", 3, 30, "slide");
+checkElemSwiper(".support-feedbacks--wrapper", 3, 30, "coverflow");
 
-if (heroSlider) sliderWrapper(heroSlider, 1, 0, "fade");
-if (blogSlider) sliderWrapper(blogSlider, 2, 60, "slide");
-if (productSlider) sliderWrapper(productSlider, 1, 0, "fade");
-if (relatedSliders) {
-  relatedSliders.forEach((item) => sliderWrapper(item, 3, 30));
-}
-if (autoPresses) sliderWrapper(autoPresses, 3, 30);
-if (getinTouch) sliderWrapper(getinTouch, 1, 0, "slide");
+checkElemSwiper(".related-stories", 1, 60, "slide");
+checkElemSwiper(".related-articles--wrapper", 3, 30, "slide");
+checkElemSwiper(".similar-items--wrapper", 2, 60, "slide");
 
-if (supportTeam) sliderWrapper(supportTeam, 3, 30);
-if (feedbacks) sliderWrapper(feedbacks, 3, 30, "coverflow");
+// const heroSlider = document.querySelector(".main-hero-slider");
+// const blogSlider = document.querySelector(".dashboard__item--container");
+// const productSlider = document.querySelector("#image-carousel-container");
+// const relatedSliders = document.querySelectorAll(".related-products--wrapper");
+// const autoPresses = document.querySelector(".automatic_presses--wrapper");
+// const getinTouch = document.querySelector(".get_in_contact--wrapper");
 
-if (relatedStories) sliderWrapper(relatedStories, 1, 0);
-if (relatedBlogPosts) sliderWrapper(relatedBlogPosts, 3, 30);
-if (similarItems) sliderWrapper(similarItems, 2, 60);
+// const supportTeam = document.querySelector(".support_team--wrapper");
+// const feedbacks = document.querySelector(".support-feedbacks--wrapper");
+
+// const relatedStories = document.querySelector(".related-stories");
+// const relatedBlogPosts = document.querySelector(".related-articles--wrapper");
+// const similarItems = document.querySelector(".similar-items--wrapper");
+
+// if (heroSlider) sliderWrapper(heroSlider, 1, 0, "fade");
+// if (blogSlider) sliderWrapper(blogSlider, 2, 60, "slide");
+// if (productSlider) sliderWrapper(productSlider, 1, 0, "fade");
+// if (relatedSliders) {
+//   relatedSliders.forEach((item) => sliderWrapper(item, 3, 30));
+// }
+// if (autoPresses) sliderWrapper(autoPresses, 3, 30);
+// if (getinTouch) sliderWrapper(getinTouch, 1, 0, "slide");
+
+// if (supportTeam) sliderWrapper(supportTeam, 3, 30);
+// if (feedbacks) sliderWrapper(feedbacks, 3, 30, "coverflow");
+
+// if (relatedStories) sliderWrapper(relatedStories, 1, 0);
+// if (relatedBlogPosts) sliderWrapper(relatedBlogPosts, 3, 30);
+// if (similarItems) sliderWrapper(similarItems, 2, 60);
 
 ///// NEED INVESTIGATE
 

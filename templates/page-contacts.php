@@ -5,7 +5,8 @@ get_header(); ?>
 
 <style>
 <?php include locate_template('css/components/hero-templates/hero-template.css');
-include locate_template('css/components/template-form.css');
+// include locate_template('css/components/template-form.css');
+include locate_template('css/components/sections/section-regional-offices.css');
 include locate_template('css/page-templates/page-contact/contacts.css');
 ?>
 </style>

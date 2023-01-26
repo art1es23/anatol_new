@@ -13,7 +13,7 @@
     method="post">
     <input type="hidden" name="currency" value="<?php echo $roi_user->currency; ?>">
     <input type="hidden" name="phone_code" value="<?php echo $roi_user->phone_code; ?>">
-    <input type="hidden" name="roi_user_id" value="<?php echo $roi_user->roi_user_id; ?>">
+    <input class="formData-field" type="hidden" name="roi_user_id" value="<?php echo $roi_user->roi_user_id; ?>">
     <div class="form-inner__item">
         <div class="form-inner__item--full">
             <label>

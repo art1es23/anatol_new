@@ -366,8 +366,8 @@
         <div class="form-inner__item">
             <div class="form-inner__item--full">
                 <label><?php _e('Problem/Issue', 'anatol'); ?>*</label>
-                <textarea id="" class="" name="description" placeholder="<?php _e('Problem/Issue', 'anatol'); ?>*"
-                    required></textarea>
+                <textarea id="" class="" rows="6" name="description"
+                    placeholder="<?php _e('Problem/Issue', 'anatol'); ?>*" required></textarea>
                 </td>
             </div>
         </div>

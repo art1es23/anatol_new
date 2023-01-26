@@ -192,7 +192,7 @@
 }
 
 .anatol-tv__link {
-  color: #ab1a1f;
+  color: #cd2122;
 }
 
 /* Video articles ~ Preview from YouTube */
@@ -252,7 +252,7 @@
 
 .video:hover .video__button-shape,
 .video__button:focus .video__button-shape {
-  fill: #ab1a1f;
+  fill: #cd2122;
   fill-opacity: 1;
 }
 .video__button-icon {

@@ -1,9 +1,5 @@
-<!-- style="--bg-image: url(<?php echo bloginfo('url');?>/wp-content/themes/anatol/assets/images/fon6.webp);" -->
-
 <style>
-<?php locate_template('css/components/another-equipments.css');
-
-// echo locate_template();
+<?php include locate_template('css/components/sections/section-another-equipments.css');
 ?>
 </style>
 

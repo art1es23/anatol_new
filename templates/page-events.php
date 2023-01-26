@@ -3,8 +3,7 @@
 
 get_header(); ?>
 <style>
-<?php // include 'css/components/template-form.css';
-// include locate_template('css/components/hero-templates/hero-template.css');
+<?php // include locate_template('css/libs/swiper-bundle.css');
 include locate_template('css/components/get-in-touch.css');
 include locate_template('css/page-templates/page-events/events.css');
 ?>
@@ -122,35 +121,8 @@ include locate_template('css/page-templates/page-events/events.css');
                         </div>
                         <?PHP } ?>
 
-                        <!-- <?PHP if(!empty(get_field("gallery", $uv->ID)) && !empty(get_field("logo", $uv->ID))) {?>
-                        <?PHP } ?>
-
-                        <?PHP if(!empty(get_field("gallery", $uv->ID))) {?>
-                        <div class="gallery-link">
-                            <a href="javascript:;" class="fancyLaunch" data-open-id="gallery-<?php echo $uv->ID ?>"
-                                data-fancybox-trigger="preview-<?php echo $uv->ID ?>">Open Gallery</a>
-                        </div>
-
-                        <div id="images" class="cs_photos">
-                            <?php $images = get_field("gallery", $uv->ID); $size = 'full'; 
-                      
-                      if( $images ): ?>
-                            <?php foreach( $images as $image ): ?>
-                            <a data-fancybox="preview-<?php echo $uv->ID ?>" class="image-show"
-                                href="<?php echo $image['url']; ?>">
-                                <img loading="lazy" width="857" height="323" class="lozad"
-                                    src="<?php echo $image['sizes']['thumbnail']; ?>"
-                                    alt="<?php echo $image['alt']; ?>" />
-                            </a>
-                            <?php endforeach; ?>
-                            <?php endif; ?>
-                        </div> -->
-
-                        <?PHP echo '';} ?>
-
-                        <?PHP if(!empty(get_field("website", $uv->ID))) {?>
-                        <!-- <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?> -->
-                        <?PHP echo '<a class="cs_website href="get_field("website", $uv->ID)" target="_blank">'.__('Visit website').'</a>'; ?>
+                        <?PHP if(!empty(get_field("website", $uv->ID))) {
+                             echo '<a href="'.get_field("website", $uv->ID).'" target="_blank" class="cs_website">'.__('Visit website').'</a>'; ?>
                         <?PHP } ?>
                     </div>
 
@@ -255,7 +227,7 @@ include locate_template('css/page-templates/page-events/events.css');
                     } ?>
 
                         <?PHP if(!empty(get_field("website", $uv->ID))) {?>
-                        <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
+                        <?PHP echo '<a href="'.get_field("website", $uv->ID).'" target="_blank" class="cs_website">'.__('Visit website').'</a>'; ?>
                         <?PHP } ?>
                     </div>
                     <?PHP } ?>
@@ -350,7 +322,7 @@ include locate_template('css/page-templates/page-events/events.css');
                       } ?>
 
                         <?PHP if(!empty(get_field("website", $uv->ID))) {?>
-                        <?PHP echo '<a class="cs_website href="'.get_field("website", $uv->ID).'" target="_blank">'.__('Visit website').'</a>'; ?>
+                        <?PHP echo '<a href="'.get_field("website", $uv->ID).'" target="_blank" class="cs_website">'.__('Visit website').'</a>'; ?>
                         <?PHP } ?>
                     </div>
                     <?PHP } ?>
@@ -363,9 +335,5 @@ include locate_template('css/page-templates/page-events/events.css');
 </div>
 
 <?php get_template_part('templates/components/section-templates/get-in-touch'); ?>
-
-<!-- Slider Init -->
-<!-- <script defer src="<?php echo get_template_directory_uri();?>/js/libs/swiper/swiper-bundle.min.js"></script>
-<script defer src="<?php echo get_template_directory_uri();?>/js/sliders-swiper.js"></script> -->
 
 <?php get_footer(); ?>

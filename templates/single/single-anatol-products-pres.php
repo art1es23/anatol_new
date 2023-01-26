@@ -6,13 +6,11 @@
 get_header(); ?>
 
 <style>
-<?php // include locate_template('css/components/hero-templates/hero-template.css');
-// include locate_template('css/components/template-form.css');
-include locate_template('css/components/equipments-list.css');
-include locate_template('css/components/support-section.css');
-include locate_template('css/components/another-equipments.css');
+<?php include locate_template('css/libs/swiper-bundle.css');
+include locate_template('css/components/sections/section-list-equipments.css');
+include locate_template('css/components/sections/section-support.css');
 include locate_template('css/components/tabs.css');
-include locate_template('css/components/related-products-slider.css');
+include locate_template('css/components/sliders/slider-related-products.css');
 include locate_template('css/page-templates/page-product/product.css');
 ?>
 </style>
@@ -24,18 +22,18 @@ include locate_template('css/page-templates/page-product/product.css');
         <div class="equipment_info__item equipment_info__item--left">
 
             <?php get_template_part('templates/components/section-templates/equipment/single-parts/thumbnails'); ?>
+
             <?php $enable_new_product_ico = get_field('enable_new_product_ico');
                 if(get_field('enable_new_product_ico') === true ) {?>
             <div class="sticker_new">NEW</div>
+            <?php } ?>
 
-            <?php
-                } else { ?> <?php } ?>
             <?php
                 $enable_price_off_ico = get_field('enable_price_off_ico');
                 if(get_field('enable_price_off_ico') === true ) {?>
             <div class="sticker_price_off">15% off</div>
-            <?php
-                } else { ?> <?php } ?>
+            <?php } ?>
+
             <?php
                 $enable_no_air_compressor_required = get_field('enable_no_air_compressor_required');
                 if(get_field('enable_no_air_compressor_required') === true ) {?>
@@ -43,14 +41,12 @@ include locate_template('css/page-templates/page-product/product.css');
                 <img src="<?php bloginfo("template_url"); ?>/assets/images/icons/no_air_ico.webp"
                     alt="No air compressor sticker!" width="54" height="54">
             </div>
-            <?php
-                } else { ?>
             <?php } ?>
         </div>
 
         <div class="equipment_info__item equipment_info__item--right">
 
-            <div class="equipment_info__description"> <?php the_field('short_description'); ?></div>
+            <div class="equipment_info__description"><?php the_field('short_description'); ?></div>
             <div class="get_a_quote button red-button draw-red"><?php _e('Get a Quote', 'anatol'); ?></div>
 
             <?php $full_price = get_field('eq_full_price'); if( !empty($full_price) ): ?>

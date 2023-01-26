@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5vh;
-  padding-bottom: 5vh;
+  gap: max(2.5vh, 1.5rem);
+  padding-bottom: max(2.5vh, 1.5rem);
 }
 
 .vacancies-list {
@@ -130,7 +130,7 @@ body
 body
   .select2-container--default
   .select2-results__option[aria-selected="true"] {
-  background-color: #ab1a1f;
+  background-color: #cd2122;
   color: #fff;
 }
 
@@ -146,7 +146,7 @@ body .select2-dropdown {
 /* Calculator ??? */
 .gradient-yellow-red-h,
 .calculator .result .cards .card .card-header {
-  background: #ab1a1f;
+  background: #cd2122;
 }
 /*  */
 
@@ -186,7 +186,7 @@ body .select2-dropdown {
 }
 
 .vacancy__title:hover {
-  color: #ab1a1f !important;
+  color: #cd2122 !important;
 }
 
 .vacancy__description {
@@ -213,10 +213,10 @@ body .select2-dropdown {
 }
 
 .slug-list__item:hover {
-  color: #ab1a1f;
+  color: #cd2122;
 }
 
-.vacancy__button {
+.button.vacancy__button {
   --button-horizontall-side-padding: 0;
   --button-vertical-side-padding: 0.35rem;
   --button-background-color: transparent;
@@ -229,7 +229,7 @@ body .select2-dropdown {
   text-transform: initial;
 }
 
-.vacancy__button:hover {
+.button.vacancy__button:hover {
   --button-base-color: var(--main-color);
 }
 
@@ -239,9 +239,9 @@ body .select2-dropdown {
 }
 
 .beautiful-taxonomy-filters-select option:hover {
-  /* background-color: #ab1a1f; */
+  /* background-color: #cd2122; */
   /* color: #fff; */
-  color: #ab1a1f;
+  color: #cd2122;
   cursor: pointer;
 }
 
@@ -368,6 +368,13 @@ body .select2-dropdown {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .button.vacancy__button {
+    --button-width: 100%;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .post-type-archive-vacancies .page_title {
     font-size: 34px;
@@ -397,7 +404,7 @@ body .select2-dropdown {
   box-sizing: border-box;
   border: 1px solid #353535;
   display: block;
-  background-color: #ab1a1f;
+  background-color: #cd2122;
   color: #fff;
   cursor: pointer;
 }

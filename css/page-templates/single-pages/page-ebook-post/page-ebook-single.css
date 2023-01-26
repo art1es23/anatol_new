@@ -39,10 +39,11 @@
   --section-title-font-size: max(2vw, 1.5rem);
 }
 
-.ebook-post-single__list {
+.ebook-post-single__list,
+.ebook-post-single__item ul {
   display: flex;
   flex-direction: column;
-  gap: 0.75vh;
+  gap: 0.5vh;
   list-style: initial;
   padding-left: 1.25rem;
 }
@@ -50,7 +51,7 @@
 .ebook-post-single-info {
   display: flex;
   flex-direction: column;
-  gap: 0.75vh;
+  gap: 0.5vh;
   position: relative;
   width: 100%;
   padding: 1.75vh 0;
@@ -86,7 +87,7 @@
   }
 
   .ebook-post-single__item {
-    width: 85%;
+    width: 90%;
   }
 
   .ebook-post-single__img {

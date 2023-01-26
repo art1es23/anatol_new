@@ -3,10 +3,11 @@
 
 get_header(); ?>
 <style>
-<?php include locate_template('css/page-templates/frontpage/header-hero-slider.css');
+<?php // include locate_template('css/components/another-equipments.css');
+include locate_template('css/libs/swiper-bundle.css');
+include locate_template('css/page-templates/frontpage/header-hero-slider.css');
 include locate_template('css/page-templates/frontpage/section-choose-us.css');
 include locate_template('css/page-templates/frontpage/regional-offices.css');
-include locate_template('css/components/another-equipments.css');
 include locate_template('css/page-templates/frontpage/testimonials.css');
 include locate_template('css/page-templates/frontpage/section-video.css');
 ?>
@@ -94,7 +95,6 @@ include locate_template('css/page-templates/frontpage/section-video.css');
     <?php get_template_part('templates/components/section-templates/another-equipments'); ?>
 
     <section class="dashboard-section">
-        <!-- <div class="section_two_cont"> -->
         <div class="dashboard__item latest-blogs">
             <div class="dashboard__head">
                 <?php
@@ -127,7 +127,6 @@ include locate_template('css/page-templates/frontpage/section-video.css');
                         $query->the_post(); ?>
                     <div class="swiper-slide latest-blogs__item blog-post">
                         <div class="blog-post__img">
-                            <!-- <div class="blog-post__img"><?php the_post_thumbnail('blog_thumb'); ?></div> -->
                             <picture>
                                 <source data-srcset="<?php the_field('thumb_for_post'); ?>" type="image/webp">
                                 <img class="swiper-lazy lozad" loading="lazy"

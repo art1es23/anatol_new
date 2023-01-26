@@ -83,11 +83,11 @@ if (!class_exists('ROICalculator')) {
 
     function update_roi_user_fields($data, $user_id)
     {
-      update_field("first_name", $data['firstName'], $user_id);
-      update_field("last_name", $data['lastName'], $user_id);
+      update_field("first_name", $data['firstname'], $user_id);
+      update_field("last_name", $data['lastname'], $user_id);
       update_field("email", $data['email'], $user_id);
-      update_field("country", $data['country'], $user_id);
-      update_field("state", $data['state'], $user_id);
+      update_field("country", $data['cf_1085'], $user_id);
+      update_field("state", $data['cf_1093'], $user_id);
      //update_field("currency", $data['currency'], $user_id);
      // update_field("phone_code", $data['phone_code'], $user_id);
     }
@@ -104,7 +104,7 @@ if (!class_exists('ROICalculator')) {
         'printer_per_hour'  => $data['printerPerHour']
       );
 
-      $i = add_row('calculation_requests', $row, $data['userId']);
+      $i = add_row('calculation_requests', $row, $data['roi_user_id']);
 
       return $i;
     }
@@ -126,6 +126,7 @@ if (!class_exists('ROICalculator')) {
         $roi_user_id = wp_insert_post($new_calculation);
       }
       $data['roi_user_id'] = $roi_user_id;
+
       // Add fields
       $this->update_roi_user_fields($data, $roi_user_id);
       // Add return post id

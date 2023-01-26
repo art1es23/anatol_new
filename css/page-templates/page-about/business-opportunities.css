@@ -9,9 +9,13 @@
   align-items: center;
   justify-content: center;
 }
+.business-img picture,
 .business-img img {
   width: 100%;
-  object-fit: cover;
+}
+
+.business-img img {
+  transform: scale(1.05);
 }
 .business-info {
   width: 40%;

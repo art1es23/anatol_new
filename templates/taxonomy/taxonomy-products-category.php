@@ -5,11 +5,9 @@ $anatol_cat_title = single_term_title("", false);
 ?>
 
 <style>
-<?php // include locate_template('css/components/hero-templates/hero-template.css');
-include locate_template('css/components/presses-item.css');
-include locate_template('css/components/equipments-list.css');
+<?php include locate_template('css/components/items/presses-item.css');
+include locate_template('css/components/sections/section-list-equipments.css');
 include locate_template('css/page-templates/page-conveyers/conveyers.css');
-include locate_template('css/components/another-equipments.css');
 ?>
 </style>
 

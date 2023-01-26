@@ -224,13 +224,13 @@ section.anatol_videos .tab-content {
 .tabs_navi__item:focus,
 .tabs_navi__item:active {
   outline: 0;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .tabs_navi__item:hover svg,
 .tabs_navi__item:focus svg,
 .tabs_navi__item:active svg {
-  fill: #ab1a1f;
-  border-color: #ab1a1f;
+  fill: #cd2122;
+  border-color: #cd2122;
 }
 
 /* .single_tabs .content {
@@ -263,7 +263,7 @@ section.anatol_videos .tab-content {
   > li:nth-child(1)
   > label {
   cursor: default;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .single_tabs
   input[name="tab-control"]:nth-of-type(1):checked
@@ -271,8 +271,8 @@ section.anatol_videos .tab-content {
   > li:nth-child(1)
   > label
   svg {
-  fill: #ab1a1f;
-  border-color: #ab1a1f;
+  fill: #cd2122;
+  border-color: #cd2122;
 }
 @media (max-width: 600px) {
   .single_tabs
@@ -303,7 +303,7 @@ section.anatol_videos .tab-content {
   > li:nth-child(2)
   > label {
   cursor: default;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .single_tabs
   input[name="tab-control"]:nth-of-type(2):checked
@@ -311,8 +311,8 @@ section.anatol_videos .tab-content {
   > li:nth-child(2)
   > label
   svg {
-  fill: #ab1a1f;
-  border-color: #ab1a1f;
+  fill: #cd2122;
+  border-color: #cd2122;
 }
 @media (max-width: 600px) {
   .single_tabs
@@ -343,7 +343,7 @@ section.anatol_videos .tab-content {
   > li:nth-child(3)
   > label {
   cursor: default;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .single_tabs
   input[name="tab-control"]:nth-of-type(3):checked
@@ -351,8 +351,8 @@ section.anatol_videos .tab-content {
   > li:nth-child(3)
   > label
   svg {
-  fill: #ab1a1f;
-  border-color: #ab1a1f;
+  fill: #cd2122;
+  border-color: #cd2122;
 }
 @media (max-width: 600px) {
   .single_tabs
@@ -383,7 +383,7 @@ section.anatol_videos .tab-content {
   > li:nth-child(4)
   > label {
   cursor: default;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .single_tabs
   input[name="tab-control"]:nth-of-type(4):checked
@@ -391,8 +391,8 @@ section.anatol_videos .tab-content {
   > li:nth-child(4)
   > label
   svg {
-  fill: #ab1a1f;
-  border-color: #ab1a1f;
+  fill: #cd2122;
+  border-color: #cd2122;
 }
 @media (max-width: 600px) {
   .single_tabs
@@ -423,7 +423,7 @@ section.anatol_videos .tab-content {
   > li:nth-child(5)
   > label {
   cursor: default;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .single_tabs
   input[name="tab-control"]:nth-of-type(5):checked
@@ -431,8 +431,8 @@ section.anatol_videos .tab-content {
   > li:nth-child(5)
   > label
   svg {
-  fill: #ab1a1f;
-  border-color: #ab1a1f;
+  fill: #cd2122;
+  border-color: #cd2122;
 }
 @media (max-width: 600px) {
   .single_tabs
@@ -464,7 +464,7 @@ section.anatol_videos .tab-content {
   > li:nth-child(6)
   > label {
   cursor: default;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .single_tabs
   input[name="tab-control"]:nth-of-type(6):checked
@@ -472,8 +472,8 @@ section.anatol_videos .tab-content {
   > li:nth-child(6)
   > label
   svg {
-  fill: #ab1a1f;
-  border-color: #ab1a1f;
+  fill: #cd2122;
+  border-color: #cd2122;
 }
 @media (max-width: 600px) {
   .single_tabs
@@ -504,7 +504,7 @@ section.anatol_videos .tab-content {
   > li:nth-child(7)
   > label {
   cursor: default;
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .single_tabs
   input[name="tab-control"]:nth-of-type(7):checked
@@ -512,8 +512,8 @@ section.anatol_videos .tab-content {
   > li:nth-child(7)
   > label
   svg {
-  fill: #ab1a1f;
-  border-color: #ab1a1f;
+  fill: #cd2122;
+  border-color: #cd2122;
 }
 @media (max-width: 600px) {
   .single_tabs

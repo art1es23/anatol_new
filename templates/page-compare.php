@@ -4,7 +4,7 @@
 get_header(); ?>
 
 <style>
-<?php include locate_template('css/components/get-in-touch.css');
+<?php // include locate_template('css/components/get-in-touch.css');
 include locate_template('css/components/another-equipments.css');
 
 include locate_template('css/page-templates/page-compare/compare-filter.css');

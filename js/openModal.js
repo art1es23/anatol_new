@@ -76,9 +76,6 @@ const openModalForms = () => {
         notLoginMessage.classList.add("hidden");
         userMessage.classList.add("hidden");
 
-        console.log("====================================");
-        console.log("listen");
-        console.log("====================================");
         document
           .querySelector(".xoo-el-container")
           .classList.add("xoo-el-popup-active");

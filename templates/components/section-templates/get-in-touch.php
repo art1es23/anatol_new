@@ -1,7 +1,8 @@
 <style>
-<?php include locate_template('css/components/template-form.css');
-include locate_template('css/components/get-in-touch.css');
-include locate_template('css/components/get-in-touch-form.css');
+<?php include locate_template('css/libs/swiper-bundle.css');
+include locate_template('css/components/forms/template-form.css');
+include locate_template('css/components/sections/section-get-in-touch.css');
+include locate_template('css/components/forms/get-in-touch-form.css');
 ?>
 </style>
 

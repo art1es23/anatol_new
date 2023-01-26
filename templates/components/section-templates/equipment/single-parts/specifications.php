@@ -1,4 +1,3 @@
-
 <h3 class="tab_item_title"><?php the_field('specifications_title'); ?></h3>
 <!--<div class="row">
   <div class="col">
@@ -21,27 +20,32 @@
     </ul>
   </div>
 </div>-->
-<div class="row">
-  <div class="col">
-    <?php
+<!-- <div class="row">
+  <div class="col"> -->
+<?php
     if (have_rows('specifications')) :
       $i = 1;
       $class = ''; ?>
-      <div class="tab-content specifications-wrap" id="specifications-tab-content">
-        <?php
+<div class="tab-content specifications-wrap" id="specifications-tab-content">
+    <?php
         while (have_rows('specifications')) : the_row();
           $class = ($i == 1) ? 'active show' : '';
           ?>
-          <div class="tab-pane fade <?php echo $class; ?>" id="specification-model-content-<?php echo $i; ?>" role="tabpanel" aria-labelledby="specification-model-tab-<?php echo $i; ?>">
-            <div class="h-3 title">
-              <?php the_sub_field('model'); ?>
-            </div>
-            <?php the_sub_field('table'); ?>
-          </div>
-          <?php
+    <div class="tab-pane fade <?php echo $class; ?>" id="specification-model-content-<?php echo $i; ?>" role="tabpanel"
+        aria-labelledby="specification-model-tab-<?php echo $i; ?>">
+
+        <?php if(!empty(get_sub_field('model'))) {?>
+        <div class="h-3 title">
+            <?php the_sub_field('model'); ?>
+        </div>
+        <?php };?>
+
+        <?php the_sub_field('table'); ?>
+    </div>
+    <?php
           $i++;
         endwhile; ?>
-      </div>
-    <?php endif; ?>
-  </div>
 </div>
+<?php endif; ?>
+<!-- </div>
+</div> -->

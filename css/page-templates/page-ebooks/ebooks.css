@@ -64,7 +64,7 @@
   position: absolute;
   width: 0;
   height: 1px;
-  background-color: #ab1a1f;
+  background-color: #cd2122;
   bottom: 1px;
   transition: width 0.15s cubic-bezier(0.68, 0, 0.265, 1);
 }
@@ -87,7 +87,7 @@
 }
 
 .ebook-post:hover .ebook-post__title {
-  color: #ab1a1f;
+  color: #cd2122;
 }
 .ebook-post__excerpt {
   --ebook-post-excerpt-font-size: max(0.75vw, 12px);
@@ -268,7 +268,7 @@
     display: none;
   }
   .ebook-post__btn {
-    border-bottom: 1px solid #ab1a1f;
+    border-bottom: 1px solid #cd2122;
   }
 
   .ebook-post__img {

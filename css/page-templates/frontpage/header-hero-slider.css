@@ -26,10 +26,10 @@
   opacity: 0;
   transition: all ease 2s;
 }
-.main-hero-slider__btn a {
+/* .main-hero-slider__btn a {
   -webkit-box-shadow: 5px 4px 18px -7px #000000;
   box-shadow: 5px 4px 18px -7px #000000;
-}
+} */
 .main-hero-slider__btn--center {
   left: 50%;
 }

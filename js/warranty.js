@@ -42,41 +42,71 @@
 // });
 
 document.addEventListener("DOMContentLoaded", (evt) => {
-  const warrantyForm = document.querySelector(".warranty-form");
+  const warrantyForm = document.querySelector("#__warrantyWebForm");
 
   const postData = async (url, data) => {
     let response = await fetch(url, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+      body: data,
     });
 
-    return await response.json();
+    return await response;
   };
 
-  //   // const postData = async (url, data) => {
-  //   //   let response = await fetch(url, {
-  //   //     method: "POST",
-  //   //     body: data,
-  //   //   });
+  // function registerWarranty(formData) {
+  //   $.post(
+  //     anatol_ajax_warranty,
+  //     {
+  //       action: "register_warranty_action",
+  //       data: formData,
+  //     }
+  //   );
+  // }
+  const concatDescription = (
+    inputFieldsClasName,
+    descriptionFieldClassName
+  ) => {
+    const customDescriptionInputsValues = Array.from(
+      warrantyForm.querySelectorAll(inputFieldsClasName)
+    ).reduce((target, input) => {
+      target.hasOwnProperty(input.name)
+        ? (target[input.name] = target[input.name] + ", " + input.value)
+        : (target[input.name] = input.value);
 
-  //   //   return await response;
-  //   // };
+      return target;
+    }, {});
 
-  warrantyForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+    const customDescriptionField = warrantyForm.querySelector(
+      descriptionFieldClassName
+    );
+
+    customDescriptionField.value = JSON.stringify(
+      customDescriptionInputsValues
+    );
+  };
+
+  warrantyForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    concatDescription(".customDescriptionField", ".customDescription");
 
     let formData = {};
 
-    const formInputs = Array.from(item.querySelectorAll(".formData-field"));
+    const formInputs = Array.from(
+      item.querySelectorAll(".formDataWarrantyField")
+    );
 
     formData = formInputs.reduce((target, input) => {
       const name = input.getAttribute("name");
       target[name] = input.value;
       return target;
     }, {});
+
+    console.log("====================================");
+    console.log(formData);
+    console.log("====================================");
+
+    // registerWarranty(formData);
 
     postData(
       "https://test22.anatol.space/wp-admin/admin-ajax.php?action=register_warranty_action",

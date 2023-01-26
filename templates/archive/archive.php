@@ -15,7 +15,8 @@ get_header(); ?>
 
 <style>
 <?php // include 'css/components/hero-templates/hero-template.css';
-include 'css/page-templates/page-blog/blog.css';
+include locate_template('css/components/pagination.css');
+include locate_template('css/page-templates/page-blog/blog.css');
 ?>
 </style>
 

@@ -26,23 +26,29 @@
         <form id="__warrantyWebForm" class="form-inner warranty-form-inner" name="warranty-form"
             action="https://vtiger.anatol.com/modules/Webforms/capture.php" method="post" accept-charset="utf-8"
             enctype="multipart/form-data">
-            <input type="hidden" name="__vtrftk" value="sid:a21f8a2b77ec0714570d72b1b68110cbda729a83,1641293985">
-            <input type="hidden" name="publicid" value="9d662c4339b2c705df5c8d793b785b48">
+
+            <input type="hidden" name="__vtrftk" value="sid:2bd3d9ffe459be6c692b88bac30945e665375f8a,1674725141">
+            <input type="hidden" name="publicid" value="b1cc3a66422a95bdfc9969bedc9c6e59">
             <input type="hidden" name="urlencodeenable" value="1">
             <input type="hidden" name="name" value="Warranty Registration">
-            <input type="text" name="cf_979" value="Data Warranty Registration" style="display:none;">
-            <input type="hidden" name="id" value="<?php echo $current_user->ID ?>">
+
+            <input type="text" name="cf_1131" value="Data Warranty Registration" style="display:none;">
+
+            <input type="hidden" name="id" class="formDataWarrantyField" value="<?php echo $current_user->ID ?>">
+
+            <input type="hidden" name="description" class="formDataWarrantyField customDescription">
+
             <div class="form-inner__item">
                 <div class="form-inner__item--half">
                     <label for="firstname"><?php _e('First Name', 'anatol'); ?>*</label>
-                    <input type="text" class="inputwarranty" name="firstName"
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="firstname"
                         value='<?php echo $current_user->user_firstname?>' id="first_name_warranty"
                         placeholder="<?php _e('First Name', 'anatol'); ?>" required>
                 </div>
 
                 <div class="form-inner__item--half">
                     <label for="lastname"><?php _e('Last Name', 'anatol'); ?>*</label>
-                    <input type="text" class="inputwarranty" name="lastName"
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="lastname"
                         value='<?php echo $current_user->user_lastname?>' id="last_name_warranty"
                         placeholder="<?php _e('Last Name', 'anatol');?>" required>
                 </div>
@@ -51,13 +57,13 @@
             <div class="form-inner__item">
                 <div class="form-inner__item--half">
                     <label for="addresslineone"><?php _e('Address Line', 'anatol'); ?> 1*</label>
-                    <input type="text" class="inputwarranty" name="addressOne" id="address_line_one"
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="lane" id="address_line_one"
                         placeholder="<?php _e('Address Line', 'anatol'); ?> 1" required>
                 </div>
 
                 <div class="form-inner__item--half">
                     <label for="addresslinetwo"><?php _e('Address Line', 'anatol'); ?> 2*</label>
-                    <input type="text" class="inputwarranty" name="addressTwo" id="address_line_two"
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="cf_1386" id="address_line_two"
                         placeholder="<?php _e('Address Line', 'anatol'); ?> 2" required>
                 </div>
             </div>
@@ -65,13 +71,13 @@
             <div class="form-inner__item">
                 <div class="form-inner__item--half">
                     <label for="citywarranty"><?php _e('City', 'anatol'); ?>*</label>
-                    <input type="text" class="inputwarranty" name="city" id="city_warranty"
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="city" id="city_warranty"
                         placeholder="<?php _e('City', 'anatol'); ?>" required>
                 </div>
 
                 <div class="form-inner__item--half">
                     <label for="statewarranty"><?php _e('State or Province', 'anatol'); ?>*</label>
-                    <input type="text" class="inputwarranty" name="state" id="state_warranty"
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="cf_1137" id="state_warranty"
                         placeholder="<?php _e('State or Province', 'anatol'); ?>" required>
                 </div>
             </div>
@@ -79,13 +85,13 @@
             <div class="form-inner__item">
                 <div class="form-inner__item--half">
                     <label for="zipwarranty"><?php _e('ZIP or Postal Code', 'anatol'); ?>*</label>
-                    <input type="text" class="inputwarranty" name="zip" id="zip_warranty"
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="code" id="zip_warranty"
                         placeholder="<?php _e('ZIP or Postal Code', 'anatol'); ?>" required>
                 </div>
 
                 <div class="form-inner__item--half">
                     <label for="phonewarranty"><?php _e('Phone', 'anatol'); ?>*</label>
-                    <input type="tel" class="inputwarranty" name="phone" id="phone_warranty"
+                    <input type="tel" class="inputwarranty formDataWarrantyField" name="phone" id="phone_warranty"
                         placeholder="<?php _e('Phone', 'anatol'); ?>" required>
                 </div>
             </div>
@@ -93,7 +99,7 @@
             <div class="form-inner__item">
                 <div class="form-inner__item--half">
                     <label for="emailwarranty"><?php _e('Email', 'anatol'); ?>*</label>
-                    <input type="email" class="inputwarranty" name="email"
+                    <input type="email" class="inputwarranty formDataWarrantyField" name="email"
                         value='<?php echo $current_user->user_email?>' id="email_warranty"
                         placeholder="<?php _e('Email', 'anatol'); ?>" required>
                 </div>
@@ -103,8 +109,8 @@
                     <div class="check_wrap">
                         <!-- <span> -->
                         <label>
-                            <input class="inputwarranty" type="checkbox" name="check" value="mail"
-                                id="check_email_warranty">
+                            <input class="inputwarranty customDescriptionField" type="checkbox"
+                                name="contactWithClientVia" value="mail" id="check_email_warranty">
                             <?php _e('Email', 'anatol'); ?>
                         </label>
                         <!-- <label for="check_email_warranty"><?php _e('Email', 'anatol'); ?></label>
@@ -113,8 +119,8 @@
                         <!-- </span>
                         <span> -->
                         <label>
-                            <input class="inputwarranty" type="checkbox" name="check" value="phone"
-                                id="check_phone_warranty">
+                            <input class="inputwarranty customDescriptionField" type="checkbox"
+                                name="contactWithClientVia" value="phone" id="check_phone_warranty">
                             <?php _e('Phone', 'anatol'); ?>
                         </label>
                         <!-- <label for="check_phone_warranty"><?php _e('Phone', 'anatol'); ?></label>
@@ -128,28 +134,29 @@
             <div class="form-inner__item">
                 <div class="form-inner__item--half">
                     <label for="equipmentpurchasedwarranty"><?php _e('Equipment Purchased', 'anatol'); ?>*</label>
-                    <input type="text" class="inputwarranty" name="equipment" id="equipment_warranty"
-                        placeholder="<?php _e('Equipment Purchased', 'anatol'); ?>" required>
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="cf_1139"
+                        id="equipment_warranty" placeholder="<?php _e('Equipment Purchased', 'anatol'); ?>" required>
                 </div>
 
                 <div class="form-inner__item--half">
                     <label for="serialnumberwarranty"><?php _e('Serial Number', 'anatol'); ?>*</label>
-                    <input type="text" class="inputwarranty" name="serial" id="serial_number_warranty"
-                        placeholder="<?php _e('Serial Number', 'anatol'); ?>" required>
+                    <input type="text" class="inputwarranty formDataWarrantyField" name="cf_945"
+                        id="serial_number_warranty" placeholder="<?php _e('Serial Number', 'anatol'); ?>" required>
                 </div>
             </div>
 
             <div class="form-inner__item">
                 <div class="form-inner__item--half">
                     <label for="purchasedatewarranty"><?php _e('Purchase Date', 'anatol'); ?>*</label>
-                    <input type="date" class="inputwarranty" name="purchaseDate" id="purchase_date_warranty"
-                        placeholder="<?php _e('Purchase Date', 'anatol'); ?>" required>
+                    <input type="date" class="inputwarranty customDescriptionField" name="purchaseDate"
+                        id="purchase_date_warranty" placeholder="<?php _e('Purchase Date', 'anatol'); ?>" required>
                 </div>
 
                 <div class="form-inner__item--half">
                     <label for="installationdatewarranty"><?php _e('Installation Date', 'anatol'); ?>*</label>
-                    <input type="date" class="inputwarranty" name="installationDate" id="installation_date_warranty"
-                        placeholder="<?php _e('Installation Date', 'anatol'); ?>" required>
+                    <input type="date" class="inputwarranty customDescriptionField" name="installationDate"
+                        id="installation_date_warranty" placeholder="<?php _e('Installation Date', 'anatol'); ?>"
+                        required>
                 </div>
             </div>
 

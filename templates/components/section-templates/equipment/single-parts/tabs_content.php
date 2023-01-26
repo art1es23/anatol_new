@@ -75,17 +75,18 @@
                 <div class="tab_item">
                     <div class="tab_item_cont home_equipments">
                         <h3 class="tab_item_title"><?php the_field('description_title'); ?></h3>
+
                         <?php the_field('main_description'); ?>
 
-                        <?php if (the_field('video_in_description_tab')) { ?>
+                        <?php if (!empty(get_field('video_in_description_tab'))) { ?>
 
                         <div class="video">
                             <a href="https://www.youtube.com/embed/<?php echo $video_id;?>" class="video__link">
                                 <picture>
                                     <source type="image/webp"
-                                        srcset="https://i.ytimg.com/vi_webp/<?php echo $video_id;?>/maxresdefault.webp">
+                                        srcset="https://i.ytimg.com/vi_webp/<?php echo $video_id;?>/hqdefault.webp">
                                     <img width="1280" height="720" loading="lazy" class="lozad video__media"
-                                        src="https://i.ytimg.com/vi/<?php echo $video_id;?>/maxresdefault.jpg">
+                                        src="https://i.ytimg.com/vi/<?php echo $video_id;?>/hqdefault.jpg">
                                 </picture>
                             </a>
                             <button class="video__button" aria-label="Play video">
@@ -98,7 +99,7 @@
                             </button>
                         </div>
 
-                        <?php the_field('legend_under_video'); ?>
+                        <p class="video__legend"><?php echo get_field('legend_under_video');?></p>
                         <?php }?>
 
                     </div>
@@ -186,20 +187,22 @@
                         <div class="download_buttons">
                             <?php if(!empty($download_brochure)) {?>
                             <div class="download_line">
-                                <div class="d_line_title"><?php _e('Download Brochure', 'anatol'); ?></div>
+                                <h3 class="d_line_title"><?php _e('Download Brochure', 'anatol'); ?></h3>
                                 <a href="<?php echo $download_brochure['url']; ?>" class="button  red-button draw-red"
                                     target="_blank"><?php _e('Download Brochure', 'anatol'); ?></a>
                             </div>
                             <?php } ?>
                             <div class="download_line">
-                                <div class="d_line_title"><?php _e('Certification & Warranty', 'anatol'); ?></div>
+                                <h3 class="d_line_title"><?php _e('Certification & Warranty', 'anatol'); ?></h3>
                                 <?php if(!empty($download_warranty)) {?>
                                 <a href="<?php echo $download_warranty['url']; ?>" class="button  red-button draw-red"
                                     target="_blank"><?php _e('Certification & Warranty', 'anatol'); ?></a>
                                 <?php } ?>
                                 <!-- <br /> -->
+                            </div>
+                            <div class="warranty-description-wrapper">
                                 <?php echo $warranty_description; ?>
-                                <!-- <br /> -->
+
                                 <?php echo $certification_description; ?>
                             </div>
                         </div>
